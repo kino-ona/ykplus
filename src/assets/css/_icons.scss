@@ -1,0 +1,48 @@
+@charset "utf-8";
+@import "mixins";
+
+/** Icons 
+****************************************/
+.ic-25 {
+	width:25px;
+	height:25px;
+	background-size:25px;
+}
+.ic-28 {
+	width:28px;
+	height:28px;
+	background-size:28px;
+}
+
+[class^='ic-'] {
+	display: inline-block;
+	background: {
+		repeat: no-repeat;
+		position: center center;
+		size: cover;
+	}
+	&.ic_notice {
+		background-image: url(../images/icons/icon_notice.png);
+	}
+	&.ic_menu {
+		background-image: url(../images/icons/icon_menu.png);
+	}
+
+  /** App bar ***********/
+  &.ic_app-home {
+    background-image: url(../images/icons/icon_app-home.png);
+  }
+  &.ic_app-search {
+    background-image: url(../images/icons/icon_app-search.png);
+  }
+  &.ic_app-my {
+    background-image: url(../images/icons/icon_app-my.png);
+  }
+  &.ic_app-history {
+    background-image: url(../images/icons/icon_app-history.png);
+  }
+  &.ic_app-challenge {
+    background-image: url(../images/icons/icon_app-challenge.png);
+    background-size:25px;
+  }
+}

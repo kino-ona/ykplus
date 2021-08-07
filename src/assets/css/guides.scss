@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import "mixins";
+
+.guides {
+  padding:20px;
+  dl {
+    margin-bottom:5%;
+    border-bottom:2px solid #000;
+  }
+  dt {
+    margin-bottom:15px;
+    font-weight: 700;
+    font-size:20px;
+  }
+  dd {
+    margin-bottom:10px;
+    background-color:#eeeeee;
+    padding:15px;
+    > p {
+      font-size:14px;
+      font-weight: 700;
+      padding-bottom:15px;
+    }
+  }
+}
