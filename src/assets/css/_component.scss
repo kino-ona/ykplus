@@ -5,49 +5,47 @@
 /** Button 
 ****************************************/
 .btn {
-	display: inline-block;
+	display: inline;
 	width: auto;
 	font-size: 15px;
-	&.default {
-		background-color:#7B7D7E;
-		color:#fff;
-		font-weight: 500;
-		height: 50px;
-		line-height: 50px;
-		vertical-align: middle;
-	}
-	&.cancel {
-		background-color:#d1d1d1;
+	background-color:#fff;
+	color:#000;
+	font-weight: 700;
+	height: 48px;
+	padding:15px 10px 14px;
+	vertical-align: middle;
+	&.primary {
+		background-color:#009AFF;
 		color:#fff;
 	}
-	&.black {
-		background-color:#000;
-		width: 100%;
+	&.secondary {
+		background-color:#999999;
 		color:#fff;
 	}
-	&_line {
-		display:inline-block;
-		width:100%;
-		border:1px solid #0053a7;
-		color:#0053a7;
-		line-height:40px;
-		text-align:center;
-		&[disabled] {
-			border-color:#e0e0e0;
-			color:#999;
-		}
-	}
+
 	&_wrap {
-		display: block;
+		display: flex;
 		width:100%;
 		margin:0 auto;
-		padding:60px 0;
+		padding:0 0;
 		text-align: center;
 		.btn {
+			flex:1;
 			& + .btn {
-				margin-left:10px;
+				margin-left:5px;
 			}
 		}
+	}
+	i {
+		margin-left: 5px;
+	}
+	i.down {
+		@include iconAngle($direction: 'down', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
+		vertical-align: middle;
+	}
+	i.up {
+		@include iconAngle($direction: 'up', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
+		vertical-align: middle;
 	}
 }
 
@@ -428,7 +426,7 @@
 
 /** Accordion 
 ****************************************/
-.Accordion {
+.ui-accordion {
 	margin: 0 0 50px;
 	border-top: 1px solid #000;
 	.item {

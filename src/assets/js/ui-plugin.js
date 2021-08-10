@@ -64,13 +64,11 @@ var Accordion = (function ($) {
 			case 'item':
 				item.el.focus();
 				break;
-
 			case 'panel':
 			case 'target':
 			case 'control':
 				item[target].focus();
 				break;
-
 			case 'first':
 				item.$panel.find('a, :input').first().each(function () {
 					this.focus();
@@ -96,7 +94,6 @@ var Accordion = (function ($) {
 		var controlHeight = thisItem.$control.outerHeight();
 		if (!thisItem.inTransition) {
 			thisItem.$el.height(controlHeight); // repaint for iOS, kind of a hack
-
 			thisItem.el.getBoundingClientRect();
 			thisItem.el.style.transition = this.opts.transition;
 			thisItem.inTransition = true;
@@ -245,24 +242,19 @@ var Accordion = (function ($) {
 			if (!$target.attr('role')) {
 				$target.attr('role', 'tab');
 			}
-
 			if (!$panel.attr('role')) {
 				$panel.attr('role', 'tabpanel');
 			}
 
 			var attribute = $el.attr(self.opts.attribute);
 			var isExpanded = attribute === self.opts.expanded;
-
 			if (!attribute) {
 				$el.attr(self.opts.attribute, isExpanded ? self.opts.expanded : self.opts.contracted);
 			}
-
 			$target.attr('aria-expanded', isExpanded);
-
 			if (!self.opts.allowMultiple) {
 				$target.attr('aria-selected', isExpanded);
 			}
-
 			$panel.attr('aria-hidden', !isExpanded);
 
 			switch (self.opts.setFocus) {
@@ -270,17 +262,14 @@ var Accordion = (function ($) {
 					if ($el.attr('tabindex')) return;
 					$el.attr('tabindex', '-1');
 					break;
-
 				case 'panel':
 					if ($panel.attr('tabindex')) return;
 					$panel.attr('tabindex', '-1');
 					break;
-
 				case 'target':
 					if ($target.attr('tabindex')) return;
 					$target.attr('tabindex', '0');
 					break;
-
 				case 'control':
 					if ($control.attr('tabindex')) return;
 					$control.attr('tabindex', '-1');
@@ -288,20 +277,17 @@ var Accordion = (function ($) {
 			}
 
 			var id = $target.attr('id');
-
 			if (!id) {
 				id = self.opts.prefix + self.count + '-' + (i + 1);
 				$target.attr('id', id);
 			} else {
 				$target.attr('data-original-id', true);
 			}
-
 			if (!$panel.attr('aria-labelledby')) {
 				$panel.attr('aria-labelledby', id);
 			} else {
 				$panel.attr('data-original-labelledBy', true);
 			}
-
 			return {
 				$el: $el,
 				el: item,
@@ -329,13 +315,11 @@ var Accordion = (function ($) {
 			$target.removeAttr('role aria-expanded aria-selected tabindex');
 			$panel.removeAttr('role aria-hidden tabindex');
 			$control.removeAttr('tabindex');
-
 			if (!$target.attr('data-original-id')) {
 				$target.removeAttr('id');
 			} else {
 				$target.removeAttr('data-original-id');
 			}
-
 			if (!$panel.attr('data-original-labelledBy')) {
 				$panel.removeAttr('aria-labelledby');
 			} else {
@@ -363,25 +347,20 @@ var Accordion = (function ($) {
 			});
 		}
 	};
-
 	var Group = function Group(el, options) {
 		count += 1;
 		this.count = count;
 		this.$el = $(el);
 		this.opts = $.extend({}, defaults, options);
 		this._enabled = true;
-
 		if (!this.$el.attr('role')) {
 			this.$el.attr('role', 'tablist');
 		}
-
 		if (this.opts.allowMultiple) {
 			this.$el.attr('aria-multiselectable', 'true');
 		}
-
 		this.items = createItems.call(this);
 		bindEvents.call(this);
-
 		if (this.opts.hashEnabled) {
 			checkHash.call(this);
 		}
@@ -391,19 +370,15 @@ var Accordion = (function ($) {
 	Group.prototype.expand = expand;
 	Group.prototype.contract = contract;
 	Group.prototype.contractAll = contractAll;
-
 	Group.prototype.enable = function () {
 		this._enabled = true;
 		return this;
 	};
-
 	Group.prototype.disable = function () {
 		this._enabled = false;
 		return this;
 	};
-
 	Group.prototype.destroy = destroy;
-
 	return Group;
 
 }(jQuery));
