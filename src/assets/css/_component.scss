@@ -159,78 +159,6 @@
 	}
 }
 
-
-/** TAB UI
-****************************************/
-.tab_wrap {
-	.tablist {
-		display: table;
-		width: 100%;
-		table-layout: fixed;
-		li {
-			display: table-cell;
-			text-align: center;
-			.tab, input[type="radio"] + label {
-				display: inline-block;
-				min-width: 140px;
-				border: 0;
-				background: transparent;
-				color: #000;
-				cursor: pointer;
-				&:after {
-					display: none;
-				}
-				&[aria-selected="true"], input[type="radio"]:checked + label {
-					border: 0;
-					&:after {
-						display: none;
-					}
-				}
-			}
-		}
-	}
-	.tab_contents {
-		clear: both;
-		.tab-cont {
-			display: none;
-			&.current {
-				display: block;
-			}
-		}
-		.tab_panel {
-			padding: 20px 0;
-		}
-	}
-}
-.tab-pagination {
-	position: relative;
-	width: 100%;
-	.tab-row {
-		display: flex;
-		flex-wrap: nowrap;
-		overflow-x: scroll;
-		-webkit-overflow-scrolling: touch;
-		&::-webkit-scrollbar {
-			display: none;
-		}
-	}
-	p, .p {
-		float:left;
-		height:auto;
-		min-width: fit-content;
-		margin: 0 10px 0 0;
-		button {
-			text-align: center;
-			position:relative;
-			display: flex;
-			align-items: center;
-			width:100%;
-			cursor: pointer;
-		}
-	}
-}
-
-
 /** Layer Popup 
 ****************************************/
 .layer_body {
@@ -496,3 +424,39 @@
 .dropdown_list.active .item_list {
 	display: block
 }
+
+
+/** Accordion 
+****************************************/
+.Accordion {
+	margin: 0 0 50px;
+	border-top: 1px solid #000;
+	.item {
+		box-sizing: content-box;
+		overflow: hidden;
+		background: #eee;
+		border-bottom: 1px solid #000;
+	}
+	.target {
+		display: block;
+		padding: 10px 20px;
+		background: #ccc;
+		color: #000;
+		text-decoration: none;
+		outline: 0;
+		transition: background .3s;
+		cursor: pointer;
+		&:focus {
+			background: #bbb;
+		}
+	}
+	.panel {
+		padding: 15px 20px;
+		outline: 0;
+	}
+	.panel[aria-hidden="true"],
+	[data-status="disabled"] .panel {
+		display: none;
+	}
+}
+
