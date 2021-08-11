@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"제품 상세 페이지",
+		"webroot":"."
+	})
+	<link rel="stylesheet" href="../assets/css/ui.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+    "headtype": {
+			"layout":"subtype1"
+		},
+    "subtitle":""
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body" id="container">
+		
+		<div class="prd_detail">
+
+			<section class="section prdmain_sec">
+				<div class="slider_wrap">
+					<div id="Prdct-Swipe" class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<p class="img"><img src="../assets/images/dummy/@product01.png"/></p>
+							</div>
+							<div class="swiper-slide">
+								<p class="img"><img src="../assets/images/dummy/@product01.png"/></p>
+							</div>
+							<div class="swiper-slide">
+								<p class="img"><img src="../assets/images/dummy/@product01.png"/></p>
+							</div>
+							<div class="swiper-slide">
+								<p class="img"><img src="../assets/images/dummy/@product01.png"/></p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination custom"></div>
+				</div>
+				<div class="prd_info">
+					<div class="cate"><a href="#">디펜드 <i> </i></a></div>
+					<div class="tit_wrap">				
+						<h3 class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</h3>
+						<p class="price"><span>34,800</span>원 <span>20,000</span> <span>34%</span></p>
+					</div>
+					<div class="btn_wrap">
+						<a href="#" class="btn black"> <i> </i>조르기</a>
+						<a href="#" class="btn black"> <i> </i>공유하기</a>
+					</div>
+					<ul class="info_list">
+						<li>
+							<i>적립혜택</i>구매포인트 100원 (1%)
+						</li>
+						<li>
+							<i>배송정보</i>(조건) 1~3일 내 배송 <i> </i>
+							<span>* 단 최근 택배물량 증가로 인하여 택배사에서 배송이 다소 지연될 수 있습니다.</span>
+						</li>
+					</ul>
+					<ul class="prd_notice_list">
+						<li>
+							<i>쿠폰할인</i><span>-1680</span>원 <p><a href="#">쿠폰받기</a></p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<div id="" class="tab_wrap" data-tab="">
+				<div class="overlay">
+					<ul class="tablist" role="tablist">
+						<li><a href="#" class="tab">상품정보</a></li>
+						<li><a href="#" class="tab">구매정보</a></li>
+						<li><a href="#" class="tab">리뷰<span class="cnt">(1250)</span></a></li>
+						<li><a href="#" class="tab">문의</a></li>
+					</ul>
+				</div>
+				<div class="tab_contents">					
+					<div class="tab_panel" aria-hidden="false">
+						<div class="row">
+							<p class="img"><img src="../assets/images/dummy/@prd_detail.png"/></p>
+						</div>
+						<div class="btn_wrap">
+							<button class="btn">button default</button>
+						</div>
+					</div>
+					<div class="tab_panel" aria-hidden="false"></div>
+					<div class="tab_panel" aria-hidden="false"></div>
+					<div class="tab_panel" aria-hidden="false"></div>
+				</div>
+			</div>
+			
+			<section class="section review_sec">
+				<h3>리뷰<span class="cnt">(153)</span></h3>				
+				<p class="img"><img src="../assets/images/dummy/banner_review01.png"/></p>
+				<div class="score_sec">
+					<div class="scorestar"></div>
+					<p>구매자들의 93.5%가 이 상품을 좋아합니다.</p>
+				</div>
+				<div class="user_review_sec">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div class="btn_wrap">
+						<button class="btn">button default</button>
+					</div>
+				</div>
+			</section>
+
+			<div class="brandpage-cta">
+				<a href="#"><div>
+					<p class="img"><img src="../assets/images/common/logo-depend.png"><span class="a11y">디펜드</span></p>
+					<p>디펜드 브랜드 상품 전체보기</p>
+					<i></i>
+				</div></a>
+			</div>
+
+			<section class="section custinfo_sec">
+				<h4>문의</h4>
+				<dl>
+					<dt class="tit"><a href=""></a></dt>
+					<dd></dd>
+					<dt class="tit"><a href=""></a></dt>
+					<dd></dd>
+					<dt class="tit"><a href=""></a></dt>
+					<dd>
+						<p></p>
+						<p></p>
+						<div class="btn_wrap">
+							<button class="btn">button default</button>
+						</div>
+					</dd>
+				</dl>
+			</section>
+			
+			<section class="section algorithm_sec">
+				<div class="tit_wrap">
+					<h4>동일 브랜드의 다른 상품들</h4>
+					<p class="btn_all"><a href="#">전체보기</a></p>
+				</div>
+				<div id="Recmmd_1-Swipe" class="row swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy-01.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">하기스 네이처메이드 하기스 네이처메이드 하기스 네이처메이드</p>
+							<p class="info">3단계 여아 132매(밴드형)</p>             
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy-02.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">하기스 네이처메이드 밤부</p>
+							<p class="info">1단계 공용 186매(밴드형)</p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy-01.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">하기스 네이처메이드</p>
+							<p class="info">1단계 공용 186매(밴드형)</p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<span class="label _new">New<span class="a11y">신상품</span></span>
+							<p class="img"><img src="../assets/images/dummy/dummy-02.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">하기스 네이처메이드 썸머</p>
+							<p class="info">팬티 3단계 공용 132매(밴드형)</p>
+						</a></div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="section algorithm_sec">
+				<div class="tit_wrap">
+					<h4>다른 친구가 함께 구매한 상품들</h4>
+					<p class="btn_all"><a href="#">전체보기</a></p>
+				</div>
+				<div id="Recmmd_2-Swipe" class="row swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy-01.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">하기스 네이처메이드 하기스 네이처메이드 하기스 네이처메이드</p>
+							<p class="info">3단계 여아 132매(밴드형)</p>             
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy-02.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">하기스 네이처메이드 밤부</p>
+							<p class="info">1단계 공용 186매(밴드형)</p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy-01.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">하기스 네이처메이드</p>
+							<p class="info">1단계 공용 186매(밴드형)</p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<span class="label _new">New<span class="a11y">신상품</span></span>
+							<p class="img"><img src="../assets/images/dummy/dummy-02.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">하기스 네이처메이드 썸머</p>
+							<p class="info">팬티 3단계 공용 132매(밴드형)</p>
+						</a></div>
+					</div>
+				</div>
+			</section>
+		
+		</div>
+	</div>
+	<!--// contents body -->
+
+	<div class="fixed_float">
+		<div id="fbtn-gift" class="fbtn-gift">
+			<a href="#"><p class="img"><img src="../assets/images/icons/fbtn-gift.png"/><span class="a11y">선물하기</span></p>
+		</div>
+		<div id="fbtn-like" class="fbtn-like">
+			<a href="#"><p class="img"><img src="../assets/images/icons/fbtn-like.png"/><span class="a11y">관심상품</span></p>
+		</div>
+	</div>
+	
+	<div class="fixed_bottom">
+		<div class="fixed_btn"><a href="#">장바구니</a></div>
+		<div class="fixed_btn"><a href="#">바로구매</a></div>
+	</div>
+	
+	<!-- footer
+	@@include('../inc/footer.inc',{
+		"webroot":".",
+		"footertype":""
+	})
+			//footer -->
+</body>
+<script>
+	var swiper = new Swiper('#Prdct-Swipe', {
+		slidesPerView: 1,
+		paginationClickable: true,
+		keyboard: true,
+		speed: 400,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'custom',
+			renderCustom: function (swiper, current, total) {
+				return '<span class="pagi-cur">0' + current + ' </span><span class="pagi-total"> / 0' + total + '</span>';
+			}
+		},
+	});
+</script>
+<script>
+	var swiper = new Swiper('#Recmmd_1-Swipe', {
+		slidesPerView: 2.5,
+		speed: 400,
+		spaceBetween: 27,
+	});
+</script>
+<script>
+	var swiper = new Swiper('#Recmmd_2-Swipe', {
+		slidesPerView: 2.5,
+		speed: 400,
+		spaceBetween: 27,
+	});
+</script>
+</html>

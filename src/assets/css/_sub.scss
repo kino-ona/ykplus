@@ -1,9 +1,243 @@
 @charset "utf-8";
 @import "mixins";
 
+//global common
+.section {
+	position: relative;
+	width: 100%;
+	margin: 0 auto 130px;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	h3 {
+		font-size: 26px;
+		font-weight: 400;
+		letter-spacing: -0.01em;
+		margin-bottom: 30px;
+	}
+}
+.tab_wrap {
+	.tab_contents {
+		.tab_panel {
+			padding-top: 15px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+}
+.algorithm_sec {
+	margin: 60px 0;
+	text-align: center;
+	.row {
+		padding-left: 25px;
+	}
+	.swiper-slide {
+		a {
+			width: 100%;
+			display: inline-block;
+			.img {
+				margin-bottom: 20px;
+			}
+			.prd_name {
+				font-size: 15px;
+				font-weight: 500;
+				margin-bottom: 5px;
+				@include ellipse(1);
+			}
+			.info {
+				font-size: 15px;
+				font-weight: 400;
+				color: #666;
+				@include ellipse(1);
+			}
+			.label {
+				position: absolute;
+				z-index: 1;
+				top: 15px;
+				right: 15px;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				text-align: center;
+				color: #fff;
+				font-weight: 900;
+				line-height: 1;
+				padding-top: 17px;
+				&._new {
+					background-color: #E2211C;
+				}
+				&._best {
+					background-color: orange;
+				}
+			}
+		}
+	}
+}
+.fixed_float {
+	// display: none;
+	z-index: 99;
+	position: fixed;
+	width: auto;
+	display: flex;
+	bottom: 76px;
+	right: 12px;
+	[class^="fbtn"] {
+		width: 50px;
+		height: 50px;
+		box-sizing: border-box;
+		background-color: #fff;
+		border-radius: 50%;
+		border: 1px solid #D9DBDD;
+		padding: 12px;
+		&:not(:last-of-type) {
+			margin-right: 8px;
+		}
+		> a {
+			position: relative;
+			.img {
+				width: 100%;
+			}
+		}
+	}
+}
+.fixed_bottom {
+	z-index: 99;
+	position: fixed;
+	width: 100%;
+	display: flex;
+	bottom: 0;
+	.fixed_btn {
+		flex: 1;
+    display: inline;
+    padding: 0;
+		height: 64px;
+		line-height: 64px;
+		text-align: center;
+    vertical-align: middle;
+    border-radius: 0;
+		opacity: 1;
+		&:first-of-type {
+			background-color: #AFB1B2;
+		}
+		&:last-of-type {
+			background-color: #009AFF;
+		}
+		a {
+			color: #fff;
+			font-size: 18px;
+			font-weight: 700;			
+		}
+	}
+}
+
+
 /** Shop 
 ****************************************/
+.prd_detail {
 
+	.prdmain_sec {
+		width: 100%;
+		.row {
+			padding: 0 25px;
+			> div {
+				display: block;
+				max-width: 100%;
+			}
+		}
+		.slider_wrap {
+			background-color: #FAFAFA;
+			position: relative;
+		}
+		.swiper-container {
+			width: 100%;
+			padding-top:100%;
+		}
+		.swiper-wrapper {
+			position:absolute;
+			top:0;
+		}
+		.swiper-slide {
+			.img {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+		.swiper-pagination.custom {
+			bottom: 30px;
+		}
+		.swiper-slide {
+			text-align: center;
+			.img {
+				display: inline-block;
+				max-width: 210px;
+				width: 100%;
+			}
+		}
+		.prd_info {
+			.tit_wrap {
+				padding: 30px 10px 0;
+				.brand {
+					font-size: 15px;
+					color: #068601;
+					font-weight: 500;
+					margin-bottom: 5px;
+				}
+				.tit {
+					text-align: left;
+					font-size: 26px;
+					line-height: 38px;
+					font-weight: 900;
+					margin-bottom: 30px;
+				}
+				.desc {
+					font-size: 15px;
+					line-height: 25px;
+					font-weight: 350;
+					margin-bottom: 30px;
+				}
+				ul.info_list {
+					padding-top: 30px;
+					border-top: 1px solid #E5E5E5;
+					li {
+						position: relative;
+						margin-left: 45px;
+						font-size: 15px;
+						font-weight: 350;
+						margin-bottom: 10px;
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+						i {
+							position: absolute;
+							top: 0;
+							left: -48px;
+							font-size: inherit;
+							font-weight: 500;
+							font-style: normal;
+						}
+					}
+				}
+			}
+			.btn_wrap {
+				padding-top: 40px;
+				padding-bottom: 0;
+				.btn {
+					height: 60px;
+					line-height: 60px;
+					font-size: 18px;
+					font-weight: 500;
+					i {
+						background: {
+	
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 /** Benefit 
 ****************************************/
@@ -17,10 +251,8 @@
 ****************************************/
 
 
-
 /** Challenge 
 ****************************************/
-
 
 
 /** Brand 
