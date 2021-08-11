@@ -1,5 +1,5 @@
 
-@@if (headtype.layout==='default') { <!-- 기본형(메인) //-->
+@@if (headtype.layout==='default') {
 	<header class="header">
 		<div class="row">
 			<h1 class="logo"><a href="/"><span class="a11y">오늘플러스</span></a></h1>
@@ -11,7 +11,7 @@
 		</div>
 	</header>
 }
-@@if (headtype.layout==='subtype1') { <!-- 페이지 타이틀 없는 경우 //-->
+@@if (headtype.layout==='subtype1') {
 	<header class="header sub-head">
 		<div class="row">
 			<div class="back">
@@ -23,7 +23,7 @@
 		</div>
 	</header>
 }
-@@if (headtype.layout==='subtype2') { <!-- 페이지 타이틀 있는 경우 //-->
+@@if (headtype.layout==='subtype2') {
 	<header class="header sub-head">
 		<div class="row">
 			<div class="back">

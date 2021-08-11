@@ -112,6 +112,23 @@
 			</dl>
 
 			<dl>
+				<dt>Content Body</dt>
+				<dd>
+					- 컨텐츠 영역이 Header 아래인 경우  <br><br>
+					&lt;div class="contents_body"&gt;<br>
+						&nbsp; &nbsp; &lt;div class=""&gt; ... &lt;/div&gt;<br>
+					&lt;/div&gt;
+				</dd>
+
+				<dd>
+					- 컨텐츠 영역이 TOP 인 경우  <br><br>
+					&lt;div class="contents_body"&gt;<br>
+						&nbsp; &nbsp; &lt;div class="contents_top"&gt; ... &lt;/div&gt;<br>
+					&lt;/div&gt;
+				</dd>
+			</dl>
+
+			<dl>
 				<dt>Icons</dt>
 				<dd>
 					<p>Icon Box Size 20px</p>
@@ -159,6 +176,18 @@
 						<button class="btn secondary"><i class="up left"></i> button secondary</button>
 						<button class="btn secondary">button secondary <i class="down"></i></button>
 						<button class="btn secondary">button secondary <i class="up"></i></button>
+					</div>
+				</dd>
+				<dd>
+					- 결과 유출 버튼 타입 : 바닥 고정/full area<br><br>
+					&lt;div class="fixed_bottom"&gt; <br>
+					&nbsp; &nbsp; 	&lt;div class="fixed_btn"&gt;&lt;a href="#" class="btn gray-btn"&gt;장바구니&lt;/a&gt;&lt;/div&gt;<br>
+					&nbsp; &nbsp; 	&lt;div class="fixed_btn"&gt;&lt;a href="#" class="btn blue-btn"&gt;바로구매&lt;/a&gt;&lt;/div&gt;<br>
+					&lt;/div&gt;<br>
+
+					<div class="fixed_bottom" style="bottom:80px;"> 
+						<div class="fixed_btn"><a href="#" class="btn gray-btn">장바구니</a></div>
+						<div class="fixed_btn"><a href="#" class="btn blue-btn">바로구매</a></div>
 					</div>
 				</dd>
 			</dl>
@@ -236,7 +265,10 @@
 	<!-- footer -->
 	@@include('./inc/footer.inc',{
 		"webroot":".",
-		"footertype":""
+		"footertype":"",
+    "appbar": {
+			"visibles":"show"
+		}
 	})
 	<!-- //footer -->
 </body>

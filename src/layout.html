@@ -9,12 +9,12 @@
 </head>
 <body>
 	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
-	<!-- header -->
   <!--
   기본형 헤더 == layout : default
   서브페이지 > 타이틀 없는 경우 == layout : subtype1
   서브페이지 > 타이틀 있는 경우 == layout : subtype2
 //-->
+	<!-- header -->
 	@@include('./inc/header.inc',{ 
 		"webroot":".",
     "headtype": {
@@ -27,14 +27,24 @@
 	<!-- contents body -->
 	<div class="contents_body">
 
+    <div>
+      
+    </div>
 		
 	</div>
 	<!--// contents body -->
 
+  <!--
+  appbar: "visibles":"show" : 앱바가 보이는 경우
+  appbar: "visibles":"" : 앱바가 안보이는 경우
+//-->
 	<!-- footer -->
 	@@include('./inc/footer.inc',{
 		"webroot":".",
-		"footertype":""
+		"footertype":"",
+    "appbar": {
+			"visibles":"show"
+		}
 	})
 	<!-- //footer -->
 </body>

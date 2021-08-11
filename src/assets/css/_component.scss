@@ -23,7 +23,12 @@
 		height: 42px;
 		padding:10px 10px;
 	}
-
+	&.blue-btn {
+		background-color: #009AFF;
+	}
+	&.gray-btn {
+		background-color: #AFB1B2;
+	}
 	&_wrap {
 		display: block;
 		width:100%;
@@ -52,6 +57,38 @@
 		@include iconAngle($direction: 'up', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
 		vertical-align: middle;
 	}
+}
+
+.fixed_btn {
+	flex: 1;
+	display: inline;
+	padding: 0;
+	height: 64px;
+	line-height: 64px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 0;
+	opacity: 1;
+	background-color: #fff;
+	.btn {
+		display: block;
+		width:100%;
+		height:100%;
+		border-radius: 0;	
+		border:0;
+		font-size:1.125rem;
+		font-weight: 700;
+		color:#fff;
+	}
+}
+.fixed_bottom {
+	z-index: 99;
+	position: fixed;
+	width: 100%;
+	left:0;
+	right:0;
+	bottom: 0;
+	display: flex;
 }
 
 

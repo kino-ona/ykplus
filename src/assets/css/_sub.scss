@@ -100,41 +100,10 @@
 		}
 	}
 }
-.fixed_bottom {
-	z-index: 99;
-	position: fixed;
-	width: 100%;
-	display: flex;
-	bottom: 0;
-	.fixed_btn {
-		flex: 1;
-    display: inline;
-    padding: 0;
-		height: 64px;
-		line-height: 64px;
-		text-align: center;
-    vertical-align: middle;
-    border-radius: 0;
-		opacity: 1;
-		&:first-of-type {
-			background-color: #AFB1B2;
-		}
-		&:last-of-type {
-			background-color: #009AFF;
-		}
-		a {
-			color: #fff;
-			font-size: 18px;
-			font-weight: 700;			
-		}
-	}
-}
-
 
 /** Shop 
 ****************************************/
 .prd_detail {
-
 	.prdmain_sec {
 		width: 100%;
 		.row {
@@ -223,17 +192,6 @@
 			.btn_wrap {
 				padding-top: 40px;
 				padding-bottom: 0;
-				.btn {
-					height: 60px;
-					line-height: 60px;
-					font-size: 18px;
-					font-weight: 500;
-					i {
-						background: {
-	
-						}
-					}
-				}
 			}
 		}
 	}
