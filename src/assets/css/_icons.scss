@@ -3,6 +3,11 @@
 
 /** Icons 
 ****************************************/
+.ic-20 {
+	width:20px;
+	height:20px;
+	background-size:20px;
+}
 .ic-25 {
 	width:25px;
 	height:25px;
@@ -26,6 +31,12 @@
 	}
 	&.ic_menu {
 		background-image: url(../images/icons/icon_menu.png);
+	}
+	&.ic_share {
+		background-image: url(../images/icons/icon_share.png);
+	}
+	&.ic_like {
+		background-image: url(../images/icons/icon_heart.png);
 	}
 
   /** App bar ***********/

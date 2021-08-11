@@ -10,9 +10,17 @@
 <body>
 	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
 	<!-- header -->
+	<!--
+    기본형 헤더 == layout : default
+    서브페이지 > 타이틀 없는 경우 == layout : subtype1
+    서브페이지 > 타이틀 있는 경우 == layout : subtype2
+  //-->
 	@@include('./inc/header.inc',{ 
 		"webroot":".",
-		"headtype":""
+    "headtype": {
+			"layout":"default"
+		},
+    "subtitle":""
 	})
 	<!-- //header -->
 
@@ -47,7 +55,9 @@
 			<dl>
 				<dt>Head</dt>
 				<dd>
-					<!-- Main header -->
+					&lt;header class="header"&gt; &lt;/header&gt;
+					<br><br>
+					<!-- Default/Main header -->
 					<header class="header">
 						<div class="row">
 							<h1 class="logo"><a href="/"><span class="a11y">오늘플러스</span></a></h1>
@@ -58,9 +68,15 @@
 							</div>
 						</div>
 					</header>
-					<!--// Main header -->
+					<!--// Default/Main header -->
 				</dd>
 				<dd>
+					&lt;header class="header sub-head"&gt;<br>
+						...<br>
+						&lt;h1 class="page_title"&gt;페이지 타이틀&lt;/h1&gt;<br>
+						...<br>
+					&lt;/header&gt;
+					<br><br>
 					<!-- Sub header -->
 					<header class="header sub-head">
 						<div class="row">
@@ -76,6 +92,10 @@
 					<!--// Sub header -->
 				</dd>
 				<dd>
+					&lt;header class="header sub-head"&gt;<br>
+						...<br>
+					&lt;/header&gt;
+					<br><br>
 					<!-- Sub header -->
 					<header class="header sub-head">
 						<div class="row">
@@ -94,6 +114,11 @@
 			<dl>
 				<dt>Icons</dt>
 				<dd>
+					<p>Icon Box Size 20px</p>
+					<i class="ic-20 ic_share"></i>
+					<i class="ic-20 ic_like"></i>
+				</dd>
+				<dd>
 					<p>Icon Box Size 25px</p>
 					<i class="ic-25 ic_notice"></i>
 					<i class="ic-25 ic_menu"></i>
@@ -111,20 +136,29 @@
 			<dl>
 				<dt>Button</dt>
 				<dd>
-					<button class="btn">button default</button>
-					<button class="btn primary">button primary</button>
-					<button class="btn secondary">button secondary</button>
+					<button class="btn primary">button primary - H 48px</button>
+					<button class="btn secondary">button secondary - H 44px</button>
 				</dd>
 				<dd>
 					<div class="btn_wrap">
-						<button class="btn">button default</button>
-						<button class="btn">button default</button>
+						<button class="btn primary">button primary</button>
+						<button class="btn primary">button primary</button>
 					</div>
 				</dd>
 				<dd>
 					<div class="btn_wrap">
-						<button class="btn">button default <i class="down"></i></button>
-						<button class="btn">button default <i class="up"></i></button>
+						<button class="btn primary"><i class="down left"></i> button primary</button>
+						<button class="btn primary"><i class="up left"></i> button primary</button>
+						<button class="btn primary">button primary <i class="down"></i></button>
+						<button class="btn primary">button primary <i class="up"></i></button>
+					</div>
+				</dd>
+				<dd>
+					<div class="btn_wrap">
+						<button class="btn secondary"><i class="ic-20 ic_share left"></i> button secondary</button>
+						<button class="btn secondary"><i class="up left"></i> button secondary</button>
+						<button class="btn secondary">button secondary <i class="down"></i></button>
+						<button class="btn secondary">button secondary <i class="up"></i></button>
 					</div>
 				</dd>
 			</dl>

@@ -12,33 +12,37 @@
 	color:#000;
 	font-weight: 700;
 	height: 48px;
-	padding:15px 10px 14px;
-	border-radius: 32px;
+	border-radius: 50px;
 	vertical-align: middle;
+	border:1px solid #EFF1F2;
 	&.primary {
-		background-color:#009AFF;
-		color:#fff;
+		height: 48px;
+		padding:10px 10px;
 	}
 	&.secondary {
-		background-color:#999999;
-		color:#fff;
+		height: 42px;
+		padding:10px 10px;
 	}
 
 	&_wrap {
-		display: flex;
+		display: block;
 		width:100%;
 		margin:0 auto;
 		padding:0 0;
-		text-align: center;
 		.btn {
-			flex:1;
-			& + .btn {
-				margin-left:5px;
-			}
+			display: inline-flex;
+			align-items: center;
 		}
 	}
 	i {
 		margin-left: 5px;
+		&.left {
+			margin-left:0;
+			margin-right:5px;
+		}
+	}
+	[class^='ic-'] {
+		margin-top:-2px;
 	}
 	i.down {
 		@include iconAngle($direction: 'down', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
