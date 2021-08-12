@@ -32,7 +32,10 @@
 .cart_list {
   .item {
     position:relative;
-    padding:16px 20px;
+    margin:16px 20px;
+    &:after {
+      @extend %clearer;
+    }
   }
   .chkwrap {
     position:absolute;
@@ -40,24 +43,77 @@
     top:0;
     width:8.125rem;
     height:8.125rem;
-    border:1px solid red;
+    z-index: 1;
+    input[type=checkbox] + label {
+      width:100%;
+      height:100%;
+      background-position:0 0;
+    }
   }
   .thumb {
+    float:left;
     position:relative;
     width:8.125rem;
+    height:8.125rem;
     padding-left:1.875rem;
-    padding-bottom:34.76%;
     overflow: hidden;
     > p {
       position:absolute;
       right:0;
       top:0;
-      // width:100%;
-      // height:100%;
-
-    // padding-bottom:1.875rem;
+      width:6.25rem;
+      height:6.25rem;
+      padding:11px;
       background-color: #F5F7F8;
-      background-color:blue;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+  }
+  .details {
+    float:left;
+    max-width:calc(100% - 10rem);
+    width:100%;
+    margin-left:18px;
+    .name {
+      margin-bottom:12px;
+      @include ellipse(2);
+      font-size:0.938rem;
+      font-weight: 700;
+      a {
+        font-size:inherit;
+        font-weight: inherit;
+      }
+    }
+  }
+  .amount {
+    position:relative;
+    max-width:100px;
+    input[type=text] {
+      height:30px;
+      padding-left: 30px;
+      padding-right:30px;
+      text-align: center;
+    }
+    .calc {
+      position:absolute;
+      width:30px;
+      height:30px;
+      &._minus {
+        left:0;
+        border-right:1px solid #D8DBDD;
+        &:before {
+          content: '';
+          display: inline-block;
+          width:10px;
+          height:1px;
+          background-color: #000;
+          vertical-align: middle;
+        }
+      }
+      &._plus {
+        right:0;
+        border-left:1px solid #D8DBDD;
+      }
     }
   }
 }
