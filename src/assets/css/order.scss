@@ -1,0 +1,24 @@
+@charset "utf-8";
+@import "mixins";
+
+/** Shop > Order
+****************************************/
+.cart_wrap{
+  .row {
+    display: block;
+  }
+}
+.cart_head {
+  height:48px;
+  padding-top:15px;
+  background-color:#F5F7F8;
+  &:after {
+    @extend %clearer;
+  }
+  .cart_checker {
+    float:left;
+  }
+  .bundle_control {
+    float:right;
+  }
+}

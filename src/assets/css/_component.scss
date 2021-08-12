@@ -103,7 +103,7 @@
 }
 
 
-/** Checkbox/Radiobox 
+/** Checkbox/Radio
 ****************************************/
 .chkwrap {
 	min-height: 20px;
@@ -112,17 +112,16 @@
 		& + label {
 			display: inline-block;
 			cursor: pointer;
-			min-width:100px;
 			padding-left: 28px;
-			margin-left: 5px;
+			padding-top:5px;
+			padding-bottom:5px;
 			color: #999;
-			font-size: 12px;
-			font-weight: 500;
+			font-size:0.938rem;
 			background: {
-				image: url(../images/icon/uncheck.png);
+				image: url('../images/common/uncheck.png');
 				repeat: no-repeat;
 				size: 20px;
-				position: 0 3px;
+				position: 0 center;
 			}
 			span {
 				display: inline-block;
@@ -141,7 +140,47 @@
 		}
 		&:checked + label {
 			color: #000;
-			background-image: url(../images/icon/check.png);
+			background-image: url('../images/common/check.png');
+		}
+	}
+}
+.radiowrap {
+	display: inline-block;
+	min-height:30px;
+	margin-right:40px;
+	input[type=radio] {
+		display:none;
+		& + label {
+			display: inline-block;
+			position:relative;
+			padding: 5px 0 5px 30px;
+			cursor: pointer;
+			background: {
+				image: url('../images/common/radio.png');
+				repeat: no-repeat;
+				size:20px;
+				position: left center;
+			}
+			font-size:0.938rem;
+			vertical-align: middle;
+			+ span {
+				color:inherit;
+				font-size: inherit;
+			}
+			span {
+				color:inherit;
+				font-size: inherit;
+			}
+		}
+		&:checked + label {
+			background-image: url('../images/common/radio-on.png');
+		}
+		&:disabled + label {
+			color:#999999;
+			background-image: url('../images/common/radio-disable.png');
+			span {
+				color:#999999;
+			}
 		}
 	}
 }

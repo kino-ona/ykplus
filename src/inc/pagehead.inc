@@ -14,7 +14,7 @@
 	<meta property="og:url" content="@" />
   <meta property="og:image" content="@" />
   <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0"/>
-  <title>오늘플러스</title>
+  <title>오늘플러스 | @@pagetitle</title>
   <!-- <link rel="shortcut icon" href="@@webroot/assets/images/common/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="@@webroot/assets/images/common/apple-touch-icon.png" /> -->
   <script type="text/javascript" src="@@webroot/assets/js/jquery-3.4.1.min.js"></script>
