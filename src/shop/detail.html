@@ -41,7 +41,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="swiper-pagination custom"></div>
+					<div class="swiper-pagination"></div>
 				</div>
 				<div class="prdinfo">
 					<div class="row">
@@ -55,8 +55,8 @@
 							</p>
 						</div>
 						<div class="btn_wrap">
-							<a href="#" class="btn secondary"> <i> </i>조르기</a>
-							<a href="#" class="btn secondary"> <i> </i>공유하기</a>
+							<button class="btn tertiary"><i class="ic-20 ic_share left"></i> 조르기</button>
+							<button class="btn tertiary"><i class="ic-20 ic_like left"></i> 공유하기</button>
 						</div>
 						<ul class="info_list">
 							<li>
@@ -71,13 +71,13 @@
 					<ul class="remark_list">
 						<li>
 							<p>쿠폰할인</p><span class="discount"><em>-1680</em>원</span>
-							<a href="#" class="btn_small">쿠폰받기</a>
+							<button class="btn small">쿠폰받기</button>
 						</li>
 					</ul>
 				</div>
 			</div>
 
-			<section class="section prddetail_sec" id="">
+			<section class="section prddetail_sec">
 				<div class="tab_wrap">
 					<ul class="tablist" role="tablist">
 						<li><button class="tab">상품정보</button></li>
@@ -91,7 +91,7 @@
 						<p class="img"><img src="../assets/images/dummy/@prd_detail.png"/></p>
 						<div class="row">
 							<div class="btn_wrap">
-								<button class="btn">상세정보 펼쳐보기</button>
+								<button class="btn primary">상세정보 펼쳐보기 <i class="down"></i></button>
 							</div>
 						</div>
 					</div>
@@ -139,9 +139,22 @@
 						</div>
 						<div class="reviewcontent">
 							<div class="viewbox">
-								<p class="img"><img src="../assets/images/dummy/@userreview01.png"/></p>
-								<p class="img"><img src="../assets/images/dummy/@userreview02.png"/></p>
-								<p class="img"><img src="../assets/images/dummy/@userreview03.png"/></p>
+								<div id="Viewbox_1-Swipe" class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/@userreview01.png"/></p>
+										</a></div>
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/@userreview02.png"/></p>
+										</a></div>
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/@userreview03.png"/></p>
+										</a></div>
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/@userreview01.png"/></p>
+										</a></div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -177,16 +190,29 @@
 						</div>
 						<div class="reviewcontent">
 							<div class="viewbox">
-								<p class="img"><img src="../assets/images/dummy/@userreview01.png"/></p>
-								<p class="img"><img src="../assets/images/dummy/@userreview02.png"/></p>
-								<p class="img"><img src="../assets/images/dummy/@userreview03.png"/></p>
+								<div id="Viewbox_2-Swipe" class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/@userreview01.png"/></p>
+										</a></div>
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/@userreview02.png"/></p>
+										</a></div>
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/@userreview03.png"/></p>
+										</a></div>
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/@userreview01.png"/></p>
+										</a></div>
+									</div>
+								</div>
 							</div>
 							<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="btn_wrap">
-							<button class="btn">리뷰 전체보기</button>
+							<button class="btn primary">리뷰 전체보기 <i class="down"></i></button>
 						</div>
 					</div>
 				</div>
@@ -206,13 +232,13 @@
 						<h4>문의</h4>
 					</div>
 					<dl>
-						<dt class="tit">자주 묻는 질문</dt>
+						<dt>자주 묻는 질문</dt>
 						<dd>주문, 배송, 회원 관련 등 자주묻는 질문들이에요.</dd>
-						<dt class="tit">상품문의</dt>
-						<dd>24시간 접수가능<span>*고객센터 운영시간에 순차적으로 답변드립니다.</span></dd>
-						<dt class="tit">전화문의</dt>
+						<dt>상품문의</dt>
+						<dd>24시간 접수가능. <br>*고객센터 운영시간에 순차적으로 답변드립니다.</dd>
+						<dt>전화문의</dt>
 						<dd>
-							<p>1661-2562</p>
+							<p><em>1661-2562</em></p>
 							<p>평일 09:00~18:00 (점심 12:00~13:00) <br>주말/공휴일 휴무</p>
 							<div class="btn_wrap">
 								<a class="btn" href="tel:1661-2562">전화하기</a>
@@ -232,25 +258,37 @@
 				<div id="Recmmd_1-Swipe" class="row swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy-01.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">하기스 네이처메이드 하기스 네이처메이드 하기스 네이처메이드</p>
-							<p class="info">3단계 여아 132매(밴드형)</p>             
+							<p class="img"><img src="../assets/images/dummy/@dummy01.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+							<div class="price">
+								<div>
+									<span class="discount"><em>34</em>%</span>
+									<span class="origin">134,800<span>원</span> </span>
+								</div>
+								<span class="sale">20,000 </span>
+							</div>           
 						</a></div>
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy-02.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">하기스 네이처메이드 밤부</p>
-							<p class="info">1단계 공용 186매(밴드형)</p>
+							<p class="img"><img src="../assets/images/dummy/@dummy02.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+							<div class="price">
+								<div>
+									<span class="discount"><em>34</em>%</span>
+									<span class="origin">34,800<span>원</span> </span>
+								</div>
+								<span class="sale">20,000 </span>
+							</div>
 						</a></div>
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy-01.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">하기스 네이처메이드</p>
-							<p class="info">1단계 공용 186매(밴드형)</p>
-						</a></div>
-						<div class="swiper-slide"><a href="#">
-							<span class="label _new">New<span class="a11y">신상품</span></span>
-							<p class="img"><img src="../assets/images/dummy/dummy-02.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">하기스 네이처메이드 썸머</p>
-							<p class="info">팬티 3단계 공용 132매(밴드형)</p>
+							<p class="img"><img src="../assets/images/dummy/@dummy03.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+							<div class="price">
+								<div>
+									<span class="discount"><em>34</em>%</span>
+									<span class="origin">34,800<span>원</span> </span>
+								</div>
+								<span class="sale">20,000 </span>
+							</div>
 						</a></div>
 					</div>
 				</div>
@@ -266,25 +304,37 @@
 				<div id="Recmmd_2-Swipe" class="row swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy-01.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">하기스 네이처메이드 하기스 네이처메이드 하기스 네이처메이드</p>
-							<p class="info">3단계 여아 132매(밴드형)</p>             
+							<p class="img"><img src="../assets/images/dummy/@dummy04.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+							<div class="price">
+								<div>
+									<span class="discount"><em>34</em>%</span>
+									<span class="origin">34,800<span>원</span> </span>
+								</div>
+								<span class="sale">20,000 </span>
+							</div>       
 						</a></div>
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy-02.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">하기스 네이처메이드 밤부</p>
-							<p class="info">1단계 공용 186매(밴드형)</p>
+							<p class="img"><img src="../assets/images/dummy/@dummy05.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+							<div class="price">
+								<div>
+									<span class="discount"><em>34</em>%</span>
+									<span class="origin">34,800<span>원</span> </span>
+								</div>
+								<span class="sale">20,000 </span>
+							</div>
 						</a></div>
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy-01.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">하기스 네이처메이드</p>
-							<p class="info">1단계 공용 186매(밴드형)</p>
-						</a></div>
-						<div class="swiper-slide"><a href="#">
-							<span class="label _new">New<span class="a11y">신상품</span></span>
-							<p class="img"><img src="../assets/images/dummy/dummy-02.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">하기스 네이처메이드 썸머</p>
-							<p class="info">팬티 3단계 공용 132매(밴드형)</p>
+							<p class="img"><img src="../assets/images/dummy/@dummy06.png" alt="하기스 네이처메이드"></p>
+							<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+							<div class="price">
+								<div>
+									<span class="discount"><em>34</em>%</span>
+									<span class="origin">34,800<span>원</span> </span>
+								</div>
+								<span class="sale">20,000 </span>
+							</div>
 						</a></div>
 					</div>
 				</div>
@@ -327,25 +377,36 @@
 		speed: 400,
 		pagination: {
 			el: '.swiper-pagination',
-			type: 'custom',
-			renderCustom: function (swiper, current, total) {
-				return '<span class="pagi-cur">0' + current + ' </span><span class="pagi-total"> / 0' + total + '</span>';
-			}
+			type: 'bullets',
 		},
 	});
 </script>
 <script>
-	var swiper = new Swiper('#Recmmd_1-Swipe', {
-		slidesPerView: 2.5,
+	var swiper = new Swiper('#Viewbox_1-Swipe', {
+		slidesPerView: 3.15,
 		speed: 400,
-		spaceBetween: 27,
+		spaceBetween: 10,
+	});
+</script>
+<script>
+	var swiper = new Swiper('#Viewbox_2-Swipe', {
+		slidesPerView: 3.15,
+		speed: 400,
+		spaceBetween: 10,
+	});
+</script>
+<script>
+	var swiper = new Swiper('#Recmmd_1-Swipe', {
+		slidesPerView: 2.45,
+		speed: 400,
+		spaceBetween: 10,
 	});
 </script>
 <script>
 	var swiper = new Swiper('#Recmmd_2-Swipe', {
-		slidesPerView: 2.5,
+		slidesPerView: 2.45,
 		speed: 400,
-		spaceBetween: 27,
+		spaceBetween: 10,
 	});
 </script>
 </html>
