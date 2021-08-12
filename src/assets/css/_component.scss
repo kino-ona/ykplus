@@ -12,6 +12,8 @@
 	color:#000;
 	font-weight: 700;
 	height: 48px;
+	padding-left:10px;
+	padding-right:10px;
 	border-radius: 50px;
 	vertical-align: middle;
 	border:1px solid #EFF1F2;
@@ -23,11 +25,20 @@
 		height: 42px;
 		padding:10px 10px;
 	}
+	&.tertiary {
+		background-color: #EFF1F2;
+	}
+	&.small {
+		height:28px;
+		font-size:0.813rem;
+	}
 	&.blue-btn {
 		background-color: #009AFF;
+		border-color:#009AFF;
 	}
 	&.gray-btn {
 		background-color: #AFB1B2;
+		border-color:#AFB1B2;
 	}
 	&_wrap {
 		display: block;
@@ -292,6 +303,38 @@
 		display: block;
 	}
 }
+
+
+/** Tab
+****************************************/
+.tab_wrap {
+	.tablists {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		overflow: hidden;
+		&:after {
+			@extend %clearer;
+		}
+	}
+	li {
+		float: left;
+	}
+	.tab {
+		cursor: pointer;
+	}
+	.tab_contents {
+		clear:both;
+	}
+	.tab_panel {
+		text-align: left;
+		&[aria-hidden="true"] {
+			display: none;
+		}
+	}
+}
+
+
 
 /** Toast Popup 
 ****************************************/

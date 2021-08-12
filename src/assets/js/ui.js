@@ -41,3 +41,20 @@ $('.ui-accordion').each(function () {
 		}
 	}
 });
+
+
+/** Tab control 
+****************************************/
+var actvTabList = function(tabid, actNum){
+	var basicTabs = new Tabs('#' + tabid);
+	if(!actNum) actNum = 0;
+	
+	basicTabs.activate(actNum);
+}
+$('.tab_wrap').each(function(){  // default
+	var tabIdx = $(this).attr('id');
+	
+	if(!$(this).hasClass('manualfn')){
+		var basicTabs = new Tabs('#' + tabIdx);
+	}	
+});
