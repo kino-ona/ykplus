@@ -24,7 +24,7 @@
 		<div class="shop_wrap contents_top">
 
 			<div class="prdmain_sec"> 
-				<div class="slider_wrap">
+				<div class="prdkv_wrap">
 					<div id="Prdct-Swipe" class="swiper-container">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
@@ -43,7 +43,7 @@
 					</div>
 					<div class="swiper-pagination custom"></div>
 				</div>
-				<div class="prd_info">
+				<div class="prdinfo">
 					<div class="row">
 						<div class="tit_wrap">
 							<div class="cate"><a href="#">디펜드 <i class="btn_arrow-next"> </i></a></div>
@@ -60,68 +60,139 @@
 						</div>
 						<ul class="info_list">
 							<li>
-								<i>적립혜택</i>구매포인트 100원 (1%)
+								<p>적립혜택</p>구매포인트 100원 (1%)
 							</li>
 							<li>
-								<i>배송정보</i>(조건) 1~3일 내 배송 <i> </i>
-								<span>* 단 최근 택배물량 증가로 인하여 택배사에서 배송이 다소 지연될 수 있습니다.</span>
+								<p>배송정보</p>(조건) 1~3일 내 배송 <i class="btn_tooltip">?</i>
+								<span class="annot">* 단 최근 택배물량 증가로 인하여 택배사에서 배송이 다소 지연될 수 있습니다.</span>
 							</li>
 						</ul>
 					</div>
-					<ul class="prd_notice_list">
+					<ul class="remark_list">
 						<li>
-							<i>쿠폰할인</i><span class="discount">-1680</span>원 <p><a href="#">쿠폰받기</a></p>
+							<p>쿠폰할인</p><span class="discount"><em>-1680</em>원</span>
+							<a href="#" class="btn_small">쿠폰받기</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 
-			<div id="" class="tab_wrap" data-tab="">
-				<div class="overlay">
+			<section class="section prddetail_sec" id="">
+				<div class="tab_wrap">
 					<ul class="tablist" role="tablist">
-						<li><a href="#" class="tab">상품정보</a></li>
-						<li><a href="#" class="tab">구매정보</a></li>
-						<li><a href="#" class="tab">리뷰<span class="cnt">(1250)</span></a></li>
-						<li><a href="#" class="tab">문의</a></li>
+						<li><button class="tab">상품정보</button></li>
+						<li><button class="tab">구매정보</button></li>
+						<li><button class="tab">리뷰<span class="cnt">1250</span></button></li>
+						<li><button class="tab">문의</button></li>
 					</ul>
 				</div>
 				<div class="tab_contents">					
 					<div class="tab_panel" aria-hidden="false">
+						<p class="img"><img src="../assets/images/dummy/@prd_detail.png"/></p>
 						<div class="row">
-							<p class="img"><img src="../assets/images/dummy/@prd_detail.png"/></p>
-						</div>
-						<div class="btn_wrap row">
-							<button class="btn">상세정보 펼쳐보기</button>
+							<div class="btn_wrap">
+								<button class="btn">상세정보 펼쳐보기</button>
+							</div>
 						</div>
 					</div>
 					<div class="tab_panel" aria-hidden="false"></div>
 					<div class="tab_panel" aria-hidden="false"></div>
 					<div class="tab_panel" aria-hidden="false"></div>
 				</div>
-			</div>
+			</section>
 			
 			<section class="section review_sec">
 				<div class="row">
 					<div class="tit_wrap">
 						<h3>리뷰<span class="cnt">153</span></h3>
 					</div>
-					<p class="img"><img src="../assets/images/dummy/banner_review01.png"/></p>
-					<div class="score_sec">
-						<div class="scorestar"></div>
-						<p>구매자들의 93.5%가 이 상품을 좋아합니다.</p>
+				</div>
+				<div class="banner _default">
+					<p>생생한 리뷰를 남기고, 포인트를 받으세요!<span>포토리뷰 100원, 일반리뷰 50원을 적립해드립니다.</span></p>
+				</div>
+				<div class="prdscore">
+					<div class="prdscore_info">
+						<div class="star_wrap">
+							<span class="star on"></span>
+							<span class="star on"></span>
+							<span class="star on"></span>
+							<span class="star on"></span>
+							<span class="star off"></span>
+							<span class="num">4.5/5</span>
+						</div>
 					</div>
-					<div class="user_review_sec">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div class="btn_wrap row">
+					<p>구매자들의 <span>93.5%</span>가 이 상품을 좋아합니다.</p>
+				</div>
+				<div class="userreview_sec">
+					<div class="item">
+						<div class="star_wrap">
+							<span class="star on"></span>
+							<span class="star on"></span>
+							<span class="star on"></span>
+							<span class="star half"></span>
+							<span class="star off"></span>
+							<span class="num">3.5</span>
+						</div>
+						<div class="reviewinfo">
+							<p class="date">2021.04.08</p>
+							<p class="userid">emdfpm84</p>
+						</div>
+						<div class="reviewcontent">
+							<div class="viewbox">
+								<p class="img"><img src="../assets/images/dummy/@userreview01.png"/></p>
+								<p class="img"><img src="../assets/images/dummy/@userreview02.png"/></p>
+								<p class="img"><img src="../assets/images/dummy/@userreview03.png"/></p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="star_wrap">
+							<span class="star on"></span>
+							<span class="star on"></span>
+							<span class="star on"></span>
+							<span class="star half"></span>
+							<span class="star off"></span>
+							<span class="num">3.5</span>
+						</div>
+						<div class="reviewinfo">
+							<p class="date">2021.04.08</p>
+							<p class="userid">emdfpm84</p>
+						</div>
+						<div class="reviewcontent">
+							<p class="message">생각처럼 만족스러웠습니다.</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="star_wrap">
+							<span class="star on"></span>
+							<span class="star on"></span>
+							<span class="star on"></span>
+							<span class="star half"></span>
+							<span class="star off"></span>
+							<span class="num">3.5</span>
+						</div>
+						<div class="reviewinfo">
+							<p class="date">2021.04.08</p>
+							<p class="userid">emdfpm84</p>
+						</div>
+						<div class="reviewcontent">
+							<div class="viewbox">
+								<p class="img"><img src="../assets/images/dummy/@userreview01.png"/></p>
+								<p class="img"><img src="../assets/images/dummy/@userreview02.png"/></p>
+								<p class="img"><img src="../assets/images/dummy/@userreview03.png"/></p>
+							</div>
+							<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="btn_wrap">
 							<button class="btn">리뷰 전체보기</button>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<div class="cta_banner _full _de">
+			<div class="banner _full _de">
 				<a href="#"><div class="row">
 					<p class="img"><img src="../assets/images/common/logo_depend.png"><span class="a11y">디펜드</span></p>
 					<p class="txt">디펜드 브랜드 상품 전체보기</p>
@@ -135,16 +206,16 @@
 						<h4>문의</h4>
 					</div>
 					<dl>
-						<dt class="tit"><a href=""></a></dt>
-						<dd></dd>
-						<dt class="tit"><a href=""></a></dt>
-						<dd></dd>
-						<dt class="tit"><a href=""></a></dt>
+						<dt class="tit">자주 묻는 질문</dt>
+						<dd>주문, 배송, 회원 관련 등 자주묻는 질문들이에요.</dd>
+						<dt class="tit">상품문의</dt>
+						<dd>24시간 접수가능<span>*고객센터 운영시간에 순차적으로 답변드립니다.</span></dd>
+						<dt class="tit">전화문의</dt>
 						<dd>
-							<p></p>
-							<p></p>
+							<p>1661-2562</p>
+							<p>평일 09:00~18:00 (점심 12:00~13:00) <br>주말/공휴일 휴무</p>
 							<div class="btn_wrap">
-								<button class="btn">전화하기</button>
+								<a class="btn" href="tel:1661-2562">전화하기</a>
 							</div>
 						</dd>
 					</dl>
