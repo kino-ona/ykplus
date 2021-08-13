@@ -3,3 +3,46 @@
 
 /** Main 
 ****************************************/
+.main_body {
+  width:100%;
+	min-height:100%;
+	padding-top:55px;
+}
+.search_wrap {
+  margin-bottom:15px;
+  input {
+    padding-right:50px;
+    background-color: #F5F7F8;
+    border-color:#F5F7F8;
+    border-radius: 23px;
+  }
+  .btn {
+    position:absolute;
+    right:30px;
+    border:0;
+    width:30px;
+    height:30px;
+    padding:0;
+    background-color: transparent;
+    text-align: center;
+    outline: 1px;
+    i {
+      margin-left:0;
+    }
+  }
+}
+.keyvisual {
+  padding-left:20px;
+  padding-right:20px;
+  // width:100%;
+  .figure {
+    position:relative;
+    padding-bottom:106.25%;
+    overflow: hidden;
+    background: {
+      size:cover;
+      position:center center;
+      repeat: no-repeat;
+    }
+  }
+}

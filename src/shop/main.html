@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/main.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"default"
+		},
+		"subtitle":""
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="main_body">
+		<div class="search_wrap">
+			<div class="row">
+				<input type="text" placeholder="무엇을 도와드릴까요?">
+				<button class="btn" tabindex="0"><i class="ic-20 ic_search"></i></button>
+			</div>
+		</div>
+		<div id="kvswipe" class="keyvisual swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="#">
+						<div class="figure" style="background-image:url(../assets/images/dummy/@mkeyvisual01.jpg)"></div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footertype":"",
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
