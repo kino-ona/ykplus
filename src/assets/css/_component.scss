@@ -96,6 +96,8 @@
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%) rotate(225deg);
+				width:6px;
+				height:6px;
 				border-left: 1px solid #000;
 				border-bottom: 1px solid #000;
 			}
@@ -696,5 +698,23 @@
 	.panel[aria-hidden="true"],
 	[data-status="disabled"] .panel {
 		display: none;
+	}
+}
+
+/** Price 
+****************************************/
+.price {
+	font-size:0.938rem;
+	font-weight: 700;
+	line-height:1;
+	.unit {
+		display: inline;
+		margin-left:3px;
+		font-size:0.813rem;
+		vertical-align: middle;
+	}		
+	.origin {
+		
+		font-weight: 700;
 	}
 }

@@ -384,6 +384,18 @@ body {
 		height:100%;
 	}
 }
+.today_txt {
+	display: inline-block;
+	width:2.938rem;
+	height:1.625rem;
+	margin-right:5px;
+	background: {
+		image: url(../images/common/txtlogo.png);
+		size:cover;
+		position:0 0;
+		repeat: no-repeat;
+	}
+}
 .row {
 	position:relative;
   display: flex;
