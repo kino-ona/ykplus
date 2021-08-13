@@ -1,119 +1,134 @@
 @charset "utf-8";
 @import "mixins";
 
+
+.price {
+	font-size:0.938rem;
+	font-weight: 700;
+	line-height:1;
+	.unit {
+		display: inline;
+		margin-left:3px;
+		font-size:0.813rem;
+		vertical-align: middle;
+	}		
+}
+
 /** Shop > Order
 ****************************************/
 .cart_wrap{
-  .row {
-    display: block;
-    height:100%;
-  }
+	.row {
+		display: block;
+		height:100%;
+	}
 }
 .cart_head {
-  height:48px;
-  background-color:#F5F7F8;
-  &:after {
-    @extend %clearer;
-  }
-  .cart_checker {
-    float:left;
+	height:48px;
+	background-color:#F5F7F8;
+	&:after {
+		@extend %clearer;
+	}
+	.cart_checker {
+		float:left;
 		display: inline-flex;
 		align-items: center;
-    height:100%;
-  }
-  .bundle_control {
-    float:right;
+		height:100%;
+	}
+	.bundle_control {
+		float:right;
 		display: inline-flex;
 		align-items: center;
-    height:100%;
-  }
+		height:100%;
+	}
 }
 
 .cart_list {
-  .item {
-    position:relative;
-    margin:16px 20px;
-    &:after {
-      @extend %clearer;
-    }
-  }
-  .chkwrap {
-    position:absolute;
-    left:0;
-    top:0;
-    width:8.125rem;
-    height:8.125rem;
-    z-index: 1;
-    input[type=checkbox] + label {
-      width:100%;
-      height:100%;
-      background-position:0 0;
-    }
-  }
-  .thumb {
-    float:left;
-    position:relative;
-    width:8.125rem;
-    height:8.125rem;
-    padding-left:1.875rem;
-    overflow: hidden;
-    > p {
-      position:absolute;
-      right:0;
-      top:0;
-      width:6.25rem;
-      height:6.25rem;
-      padding:11px;
-      background-color: #F5F7F8;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-  }
-  .details {
-    float:left;
-    max-width:calc(100% - 10rem);
-    width:100%;
-    margin-left:18px;
-    .name {
-      margin-bottom:12px;
-      @include ellipse(2);
-      font-size:0.938rem;
-      font-weight: 700;
-      a {
-        font-size:inherit;
-        font-weight: inherit;
-      }
-    }
-  }
-  .amount {
-    position:relative;
-    max-width:100px;
-    input[type=text] {
-      height:30px;
-      padding-left: 30px;
-      padding-right:30px;
-      text-align: center;
-    }
-    .calc {
-      position:absolute;
-      width:30px;
-      height:30px;
-      &._minus {
-        left:0;
-        border-right:1px solid #D8DBDD;
-        &:before {
-          content: '';
-          display: inline-block;
-          width:10px;
-          height:1px;
-          background-color: #000;
-          vertical-align: middle;
-        }
-      }
-      &._plus {
-        right:0;
-        border-left:1px solid #D8DBDD;
-      }
-    }
-  }
+	.item {
+		position:relative;
+		border-bottom:8px solid #F0F0F0;
+		> div{
+			margin:24px 20px;
+			&:after {
+				@extend %clearer;
+			}
+		}
+	}
+	.chkwrap {
+		position:absolute;
+		left:20px;
+		top:0;
+		width:8.125rem;
+		height:8.125rem;
+		z-index: 1;
+		input[type=checkbox] + label {
+			width:100%;
+			height:100%;
+			background-position:0 0;
+		}
+	}
+	.thumb {
+		float:left;
+		position:relative;
+		width:8.125rem;
+		height:6.5rem;
+		padding-left:1.875rem;
+		overflow: hidden;
+		> p {
+			position:absolute;
+			right:0;
+			top:0;
+			width:6.25rem;
+			height:6.25rem;
+			padding:11px;
+			background-color: #F5F7F8;
+			border-radius: 20px;
+			overflow: hidden;
+		}
+	}
+	.details {
+		float:left;
+		max-width:calc(100% - 10rem);
+		width:100%;
+		margin-left:18px;
+		margin-bottom:1rem;
+		.name {
+			margin-bottom:12px;
+			@include ellipse(2);
+			font-size:0.938rem;
+			font-weight: 700;
+			a {
+				font-size:inherit;
+				font-weight: inherit;
+			}
+		}
+	}
+	.amount {
+		position:relative;
+		max-width:100px;
+		margin-bottom:12px;
+		input[type=text] {
+			height:30px;
+			padding-left: 30px;
+			padding-right:30px;
+			text-align: center;
+		}
+		.calc {
+			position:absolute;
+			width:30px;
+			height:30px;
+			&._minus {
+				left:0;
+				border-right:1px solid #D8DBDD;
+			}
+			&._plus {
+				right:0;
+				border-left:1px solid #D8DBDD;
+			}
+		}
+	}
+	.delivery_summary {
+		clear:both;
+		padding-top:1rem;
+		border-top:1px solid #F2F2F2;
+	}
 }

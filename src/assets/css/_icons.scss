@@ -57,3 +57,36 @@
     background-size:25px;
   }
 }
+
+._plus {
+	position: relative;
+	&:before, &:after {
+		content: "";
+		position:absolute;
+		background:#000;
+	}
+	&:before {
+		left:50%;
+		top:50%;
+		width:1px;
+		height:10px;
+		transform:translate(-50%, -50%);
+	}
+	&:after {
+		left:50%;
+		top:50%;
+		width:10px;
+		height:1px;
+		transform:translate(-50%, -50%);
+	}
+}
+._minus {
+	&:before {
+		content: '';
+		display: inline-block;
+		width:10px;
+		height:1px;
+		background-color: #000;
+		vertical-align: middle;
+	}
+}

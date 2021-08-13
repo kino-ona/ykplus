@@ -44,6 +44,8 @@
 		height:auto;
 		border:0;
 		background-color: transparent;
+		padding-left:0;
+		padding-right:0;
 		font-size:0.938rem;
 		font-weight: 400;
 		color:#666666;
@@ -76,6 +78,10 @@
 		@include iconAngle($direction: 'up', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
 		vertical-align: middle;
 	}
+}
+.btn_delete {
+	right:20px;
+	@include iconX($size:14px, $thick: 1px, $color: #666, $padding: 2px, $display: inline-block, $position: absolute); 
 }
 
 .fixed_btn {
