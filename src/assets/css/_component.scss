@@ -182,29 +182,6 @@
 	}
 }
 
-.btn_all {
-	font-size: 0.938rem;
-	line-height: 1.5rem;
-	font-weight: 700;
-	i {
-		width: 10px;
-    height: 24px;
-		margin-left: 4px;
-		position: relative;
-		display: inline-block;
-		vertical-align: middle;
-		&::before  {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%) rotate(225deg);
-			border-left: 1px solid #000;
-			border-bottom: 1px solid #000;
-		}
-	}
-}
-
 /** Checkbox/Radio
 ****************************************/
 .chkwrap {
