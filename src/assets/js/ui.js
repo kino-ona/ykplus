@@ -1,6 +1,43 @@
 $(document).ready(function () {
-
+	headFixed();
 });
+
+function headFixed(){
+	var $header = $(".header"),
+		  headerH = $header.outerHeight();
+
+	var lastSt = 0;
+	$(window).scroll(function() {
+		var st = $(this).scrollTop();
+		if (st > 50) {
+			$header.addClass('fixed');
+		}else{
+			$header.removeClass('fixed');
+		}	
+
+		if (st > lastSt) {
+			$header.removeClass('show').addClass('hide')
+		} else {
+			$header.removeClass('hide').addClass('show')
+		}
+
+		lastSt = st;
+	});
+	$.fn.scrollStopped = function(callback) {
+		var that = this, $this = $(that);
+		$this.scroll(function(ev) {
+			clearTimeout($this.data('scrollTimeout'));
+			$this.data('scrollTimeout', setTimeout(callback.bind(that), 250, ev));
+		});
+	};
+	$(window).scrollStopped(function(ev){
+		if ($('.header').length > 0) {
+			$('.header').removeClass('hide').addClass('show')
+		}
+	});
+}
+
+
 
 /** Accordion 
 ****************************************/

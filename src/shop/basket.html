@@ -54,13 +54,41 @@
 
 						<div class="delivery_summary">
 							<p class="ti">배송비</p>
-							<em>기본배송</em>
+							<p class="fee">기본배송</p>
 						</div>
 						<div class="btn_wrap">
-							<button>선물하기</button>
-							<button>바로구매</button>
+							<button class="btn primary">선물하기</button>
+							<button class="btn primary lead-btn">바로구매</button>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div>
+						<button class="btn_delete"><span class="a11y">삭제</span></button>
+						<p class="chkwrap"><input type="checkbox" id="check-02"><label for="check-02"><span class="a11y">상품 선택</span></label></p>
+						<div class="thumb"><p><img src="../assets/images/dummy/@product_thumn01.png" alt="상품명"></p></div>
+						<div class="details">
+							<p class="name">
+								<a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+							</p>
+							<div class="edit">
+								<div class="amount">
+									<button class="calc _minus" type="button" data-inc="-1"><span class="a11y">수량빼기</span></button>
+									<button class="calc _plus" type="button" data-inc="1"><span class="a11y">수량더하기</span></button>
+									<input type="text" value="999" readonly>
+								</div>
+								<p class="price">99,999,000<span class="unit">원</span></p>
+							</div>
 						</div>
 
+						<div class="delivery_summary">
+							<p class="ti">배송비</p>
+							<p class="fee">기본배송</p>
+						</div>
+						<div class="btn_wrap">
+							<button class="btn primary">선물하기</button>
+							<button class="btn primary lead-btn">바로구매</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -74,7 +102,7 @@
 		"webroot":"..",
 		"footertype":"",
 		"appbar": {
-			"visibles":""
+			"visibles":"show"
 		}
 	})
 	<!-- //footer -->

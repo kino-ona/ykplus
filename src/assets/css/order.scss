@@ -128,7 +128,26 @@
 	}
 	.delivery_summary {
 		clear:both;
+		display: flex;
 		padding-top:1rem;
 		border-top:1px solid #F2F2F2;
+		p {
+			flex:1;
+			font-size:0.938rem;
+		}
+		.fee {
+			font-weight: 700;
+			text-align: right;
+		}
+	}
+	.btn_wrap {
+		display: flex;
+		margin-top:20px;
+		.btn {
+			flex:1;
+			& + .btn {
+				margin-left:8px;
+			}
+		}
 	}
 }
