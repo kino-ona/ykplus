@@ -83,6 +83,28 @@
 		@include iconAngle($direction: 'up', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
 		vertical-align: middle;
 	}
+	&_all {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		line-height: inherit;
+		i {
+			margin-left: 4px;
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			&::before  {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(225deg);
+				border-left: 1px solid #000;
+				border-bottom: 1px solid #000;
+			}
+		}
+	}
 }
 .btn_delete {
 	right:20px;

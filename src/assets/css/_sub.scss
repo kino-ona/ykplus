@@ -30,28 +30,6 @@
 		vertical-align: middle;
 	}
 	.btn {
-		&_all {
-			position: absolute;
-			right: 0;
-			top: 50%;
-			transform: translateY(-50%);
-			line-height: inherit;
-			i {
-				margin-left: 4px;
-				position: relative;
-				display: inline-block;
-				vertical-align: middle;
-				&::before  {
-					content: '';
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%) rotate(225deg);
-					border-left: 1px solid #000;
-					border-bottom: 1px solid #000;
-				}
-			}
-		}
 		&.primary {
 			border-color: #D8DBDD;
 		}
