@@ -444,7 +444,7 @@
 		font-weight: 700;
 		vertical-align: middle;
 		cursor: pointer;
-		&.active {
+		&[tabindex="0"] {
 			font-weight: 900;
 		}
 	}

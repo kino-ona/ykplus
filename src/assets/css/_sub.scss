@@ -349,7 +349,7 @@
 			.tab {
 				padding: 12px 6px;
 				font-size: 1rem;
-				&.active {
+				&[tabindex="0"] {
 					color: #009AFF;
 					border-bottom: 3px solid #009AFF;
 				}
