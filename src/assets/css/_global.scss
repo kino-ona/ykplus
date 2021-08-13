@@ -84,7 +84,7 @@ input[type=text], input[type=password], input[type=number], input[type=tel], inp
 	border-radius: 4px;
 	outline: none;
 	color:#000;
-	font-size: 15px;
+	font-size: 0.938rem;
 	-webkit-appearance: none;
 	&:not([readonly]) {
 		&:focus {
@@ -111,7 +111,7 @@ textarea {
 	outline: none;
 	resize: none;
 	-webkit-appearance: none;
-	font-size: 15px;
+	font-size: 0.938rem;
 	background-color:#fff;
 	border: 1px solid #D8DBDD;
 	border-radius: 4px;
@@ -125,17 +125,17 @@ textarea {
 		color:#666;
 	}
 	::-webkit-input-placeholder{
-		font-size: 14px;
+		font-size: 0.875rem;
 		font-weight: 300;
 		color:#999;
 	}
 	::-moz-placeholder{
-		font-size: 14px;
+		font-size: 0.875rem;
 		font-weight: 300;
 		color:#999;
 	}
 	::-ms-placeholder {
-		font-size: 14px;
+		font-size: 0.875rem;
 		font-weight: 300;
 		color:#999;
 	}
@@ -158,7 +158,7 @@ select{
 	border: 1px solid #D8DBDD;
 	border-radius: 4px;
 	outline: none;
-	font-size: 15px;
+	font-size: 0.938rem;
 	option {
 		padding: 5px 10px;
 		background-color:#F6F8FA;
@@ -171,17 +171,17 @@ input::-ms-clear {
 	display: none;
 }
 ::-webkit-input-placeholder{
-	font-size: 14px;
+	font-size: 0.875rem;
 	font-weight: 300;
 	color:#999;
 }
 ::-moz-placeholder{
-	font-size: 14px;
+	font-size: 0.875rem;
 	font-weight: 300;
 	color:#999;
 }
 ::-ms-placeholder {
-	font-size: 14px;
+	font-size: 0.875rem;
 	font-weight: 300;
 	color:#999;
 }
@@ -194,7 +194,7 @@ input,button,select {vertical-align:middle;}
 	text-decoration:none; -webkit-tap-highlight-color:transparent;
 	font-family: 'NanumSquareRound', 'Helvetica', 'Malgun Gothic', sans-serif, Arial;
 	color: #111111;
-	font-size: 16px;
+	font-size: 1rem;
 }
 * {	
 	&[aria-hidden="true"] {
@@ -275,7 +275,7 @@ hr {
 	}
 	.num {
 		font-family: 'Roboto';
-		font-weight: 900;
+		font-weight: 700;
 		vertical-align: middle;
 	}
 }

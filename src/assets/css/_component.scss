@@ -7,7 +7,7 @@
 .btn {
 	display: inline;
 	width: auto;
-	font-size: 15px;
+	font-size: 0.938rem;
 	background-color:#fff;
 	color:#000;
 	font-weight: 700;
@@ -83,6 +83,20 @@
 		@include iconAngle($direction: 'up', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
 		vertical-align: middle;
 	}
+	&_tooltip {
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		color: #009AFF;
+		font-family: "Roboto";
+		font-style: normal;
+		font-size: 0.688rem;
+		line-height: 14px;
+		font-weight: 700;
+		border-radius: 50%;
+		border: 0.075rem solid #009AFF;
+		text-align: center;
+	}
 	&_all {
 		line-height: inherit;
 		i {
@@ -101,44 +115,29 @@
 			}
 		}
 	}
-}
-.btn_delete {
-	right:20px;
-	@include iconX($size:14px, $thick: 1px, $color: #666, $padding: 2px, $display: inline-block, $position: absolute); 
-}
-.btn_arrow-next {
-	display: inline-block;
-	width: auto;
-	height: 100%;
-	i {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-		&::before  {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%) rotate(225deg);
-			border-left: 1px solid #000;
-			border-bottom: 1px solid #000;
+	&_arrow-next {
+		display: inline-block;
+		width: auto;
+		height: 100%;
+		i {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			&::before  {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(225deg);
+				border-left: 1px solid #000;
+				border-bottom: 1px solid #000;
+			}
 		}
 	}
-}
-
-.btn_tooltip {
-	display: inline-block;
-	width: 14px;
-	height: 14px;
-	color: #009AFF;
-	font-family: "Roboto";
-	font-style: normal;
-	font-size: 0.688rem;
-	line-height: 14px;
-	font-weight: 900;
-	border-radius: 50%;
-	border: 0.075rem solid #009AFF;
-	text-align: center;
+	&_delete {
+		right:20px;
+		@include iconX($size:14px, $thick: 1px, $color: #666, $padding: 2px, $display: inline-block, $position: absolute); 
+	}
 }
 
 .fixed_bottom {
@@ -304,7 +303,7 @@
 		.acco_target {
 			display:block;
 			position:relative;
-			font-size:14px;
+			font-size:0.875rem;
 			font-weight: 700;
 			outline: none;
 			i {
@@ -423,7 +422,7 @@
 		text-align:center;
 		p {
 			white-space: nowrap;
-			font-size: 20px;
+			font-size: 1.25rem;
 			font-weight: 300;
 		}
 		strong {
@@ -544,7 +543,7 @@
 		}
 		dt {	
 			font-weight: 500;
-			font-size: 16px;
+			font-size: 1rem;
 			label {	
 				font-weight: inherit;
 				font-size: inherit;
@@ -601,7 +600,7 @@
 		input[type="text"] {
 			width: 100%;
 			padding:10px 20px 9px 20px;
-			font-size: 12px;
+			font-size: 0.75rem;
 			border:0;
 			background-color: transparent;
 			color:#000;
