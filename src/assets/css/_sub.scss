@@ -29,26 +29,31 @@
 		letter-spacing: inherit;
 		vertical-align: middle;
 	}
-	.btn_all {
-		position: absolute;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
-		line-height: inherit;
-		i {
-			margin-left: 4px;
-			position: relative;
-			display: inline-block;
-			vertical-align: middle;
-			&::before  {
-				content: '';
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%) rotate(225deg);
-				border-left: 1px solid #000;
-				border-bottom: 1px solid #000;
+	.btn {
+		&_all {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			line-height: inherit;
+			i {
+				margin-left: 4px;
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				&::before  {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%) rotate(225deg);
+					border-left: 1px solid #000;
+					border-bottom: 1px solid #000;
+				}
 			}
+		}
+		&.primary {
+			border-color: #D8DBDD;
 		}
 	}
 	> .section {
@@ -73,10 +78,21 @@
 				margin-bottom: 20px;
 			}
 		}
+		.tit_wrap {
+			h4 {
+				max-width: 75%;
+				font-weight: 500;
+				em {
+					font-size: inherit;
+					line-height: inherit;
+					font-weight: 900;
+				}
+			}
+		}
 		.prd_name {
 			font-size: 0.938rem;
 			line-height: 1.25rem;
-			font-weight: 900;
+			font-weight: 700;
 			text-overflow: ellipsis;
 			display: -webkit-box;
 			-webkit-box-orient: vertical;
@@ -91,20 +107,18 @@
 				flex-flow: row nowrap;
 				align-items: center;
 			}
-			span {
-				font-family: 'Roboto';
-				line-height: inherit;
-				letter-spacing: -0.02em;
-			}
 			.discount {
 				color: #FF2B4C;
 				font-size: 0.813rem;
 				margin-left: 1px;
 				padding-bottom: 2px;
+				font-family: 'Roboto';
+				letter-spacing: -0.02em;
 				em {
 					color: inherit;
 					font-family: inherit;
 					font-size: 1.125rem;
+					line-height: inherit;
 					font-weight: 900;
 					letter-spacing: inherit;
 					vertical-align: unset;
@@ -113,17 +127,19 @@
 			.origin {
 				position: relative;
 				margin-left: 8px;
+				font-family: 'Roboto';
+				letter-spacing: -0.02em;
 				font-size: 1.125rem;
 				font-weight: 900;
-				letter-spacing: inherit;
 				padding-right: 2px;
 				padding-bottom: 1px;
 				span {
 					position: absolute;
 					left: 100%;
-					bottom: 3px;
+					bottom: 4px;
 					font-size: 0.813rem;
 					font-weight: 700;
+					letter-spacing: inherit;
 				}
 			}
 			.sale {
@@ -270,6 +286,7 @@
 				> .btn {
 					flex: 1;
 					display: inline-block;
+					border: none;
 					&:first-of-type {
 						margin-right: 8px;
 					}
@@ -381,6 +398,7 @@
 			font-size: 1.125rem;
 		}
 		.banner {
+			margin-top: 12px;
 			position: relative;
 			background-color: #F0F8DC;
 			border-radius: 20px;
@@ -389,28 +407,31 @@
 			&::before {
 				content: '';
 				display: inline-block;
+				width: 72px;
+				height: 53px;
 				position: absolute;
 				top: -20px;
 				right: 8px;
-				width: 72px;
-				height: 53px;
 				background: {
 					image: url(../images/dummy/@bannerimg01.png);
-					size: 72px;
+					size: 100%;
 					position: center center;
 					repeat: no-repeat;
 				}
 			}
-			> p {
+			p {
 				text-align: left;
 				font-size: 0.938rem;
-				font-weight: 700;
+				color: #1E3B13;
+				font-weight: 900;
+				opacity: .9;
+				letter-spacing: 0;
 				span {
-					margin-top: 5px;
+					margin-top: 8px;
 					display: block;
 					color: #666;
 					font-size: 0.813rem;
-					letter-spacing: -0.02em;
+					opacity: 1;
 				}
 			}
 		}
@@ -499,15 +520,12 @@
 			.btn {
 				display: block;
 				width: 100%;
-				padding-left: 0;
-				padding-right: 0;
 			}
 		}
 	}
 	.banner._de {
 		.txt {
 			font-weight: 900;
-			letter-spacing: -0.02em;
 			padding-left: 10px;
 			padding-right: 10px;
 		}
@@ -562,8 +580,21 @@
 					margin-bottom: 6px;
 				}
 			}
-			.btn_wrap {
-				margin-top: 18px;
+		}
+		.btn_wrap {
+			margin: 18px 0 0;
+			.btn {
+				margin-top: 0;
+				flex: 1;
+				display: inline-block;
+				padding: 11px 38px;
+				height: auto;
+				vertical-align: middle;
+				line-height: 20px;
+				background-color: #fff;
+				i {
+					margin: 0;
+				}
 			}
 		}
 	}
