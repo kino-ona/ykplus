@@ -30,6 +30,12 @@
 		vertical-align: middle;
 	}
 	.btn {
+		&_all {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 		&.primary {
 			border-color: #D8DBDD;
 		}
