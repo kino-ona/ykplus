@@ -83,29 +83,41 @@
 	right:20px;
 	@include iconX($size:14px, $thick: 1px, $color: #666, $padding: 2px, $display: inline-block, $position: absolute); 
 }
-
-.fixed_btn {
-	flex: 1;
-	display: inline;
-	padding: 0;
-	height: 64px;
-	line-height: 64px;
-	text-align: center;
-	vertical-align: middle;
-	border-radius: 0;
-	opacity: 1;
-	background-color: #fff;
-	.btn {
-		display: block;
-		width:100%;
-		height:100%;
-		border-radius: 0;	
-		border:0;
-		font-size:1.125rem;
-		font-weight: 700;
-		color:#fff;
+.btn_arrow-next {
+	display: inline-block;
+	width: auto;
+	height: 100%;
+	i {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+		&::before  {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(225deg);
+			border-left: 1px solid #000;
+			border-bottom: 1px solid #000;
+		}
 	}
 }
+
+.btn_tooltip {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	color: #009AFF;
+	font-family: "Roboto";
+	font-style: normal;
+	font-size: 0.688rem;
+	line-height: 14px;
+	font-weight: 900;
+	border-radius: 50%;
+	border: 0.075rem solid #009AFF;
+	text-align: center;
+}
+
 .fixed_bottom {
 	z-index: 99;
 	position: fixed;
@@ -114,8 +126,56 @@
 	right:0;
 	bottom: 0;
 	display: flex;
+	.fixed_btn {
+		flex: 1;
+		display: inline;
+		padding: 0;
+		height: 64px;
+		line-height: 64px;
+		text-align: center;
+		vertical-align: middle;
+		border-radius: 0;
+		opacity: 1;
+		background-color: #fff;
+		.btn {
+			display: block;
+			width:100%;
+			height:100%;
+			border-radius: 0;	
+			border:0;
+			font-size:1.125rem;
+			font-weight: 700;
+			color:#fff;
+		}
+	}
 }
-
+.fixed_float {
+	// display: none;
+	z-index: 99;
+	position: fixed;
+	width: auto;
+	display: flex;
+	bottom: 76px;
+	right: 12px;
+	[class^="fbtn"] {
+		width: 50px;
+		height: 50px;
+		box-sizing: border-box;
+		background-color: #fff;
+		border-radius: 50%;
+		border: 1px solid #D9DBDD;
+		padding: 12px;
+		&:not(:last-of-type) {
+			margin-right: 8px;
+		}
+		> a {
+			position: relative;
+			.img {
+				width: 100%;
+			}
+		}
+	}
+}
 
 /** Checkbox/Radio
 ****************************************/
@@ -362,32 +422,42 @@
 /** Tab
 ****************************************/
 .tab_wrap {
-	.tablists {
+	width: 100%;
+	.tablist {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
 		margin: 0;
-		padding: 0;
+		padding: 0 20px;
 		list-style: none;
 		overflow: hidden;
 		&:after {
 			@extend %clearer;
 		}
-	}
-	li {
-		float: left;
+		li {
+			flex: 1;
+			text-align: center;
+		}
 	}
 	.tab {
+		max-width: 100%;
+		font-weight: 700;
+		vertical-align: middle;
 		cursor: pointer;
+		&.active {
+			font-weight: 900;
+		}
 	}
 	.tab_contents {
-		clear:both;
+		clear: both;
+		overflow: hidden;
 	}
 	.tab_panel {
-		text-align: left;
 		&[aria-hidden="true"] {
 			display: none;
 		}
 	}
 }
-
 
 
 /** Toast Popup 
@@ -604,4 +674,3 @@
 		display: none;
 	}
 }
-
