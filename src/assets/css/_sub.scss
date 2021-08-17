@@ -27,7 +27,7 @@
 		line-height: inherit;
 		font-weight: 700;
 		letter-spacing: inherit;
-		vertical-align: middle;
+		vertical-align: baseline;
 		padding-bottom: 1px;
 	}
 	.btn {
@@ -337,29 +337,57 @@
 					vertical-align: baseline;
 				}
 			}
-			.btn {
-				position: absolute;
-				right: 0;
-				top: 50%;
-				transform: translateY(-50%);
+		}
+	}
+	.coupon_list {
+		border-top: 1px solid #D8DBDD;
+		padding: 25px 0;		
+		p {
+			display: inline-block;
+			width:72px;
+			font-size: 0.938rem;
+			font-weight: 900;
+			vertical-align: baseline;
+		}
+		.discount {
+			display: inline-block;
+			color: #FF2B4C;
+			font-family: 'Roboto';
+			font-size: 0.938rem;
+			font-weight: 700;
+			vertical-align: baseline;
+			em {
+				color: inherit;
+				font-size:inherit;
+				font-weight: 900;
+				letter-spacing: inherit;
+				vertical-align: baseline;
 			}
+		}
+		.btn {
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 	.prddetail_sec {
-		padding-top: 6px;
+		padding-top: 15px;
 		.tab_wrap {
 			.tab {
+				width:100%;
 				padding: 12px 6px;
-				font-size: 1rem;
 				&[tabindex="0"] {
 					color: #009AFF;
 					border-bottom: 3px solid #009AFF;
 				}
 				.cnt {
+					display: inline-block;
 					color: inherit;
 					font-family: 'Roboto';
 					font-size: 0.813rem;
-					padding-bottom: 0.156rem;
+					// padding-bottom: 0.156rem;
+					vertical-align: middle;
 				}
 			}
 			.tab_contents {
@@ -378,6 +406,7 @@
 		}
 	}
 	.review_sec {
+		margin-bottom:0;
 		.cnt {
 			color: #009AFF;
 			font-size: 1.125rem;
@@ -492,10 +521,13 @@
 					padding-top: 13px;
 				}
 				.message {
-					padding-top: 10px;
+					padding-top: 12px;
 					font-size: 0.938rem;
 					line-height: 1.5rem;
-					font-weight: 900;
+				}
+				.img {
+					border-radius: 20px;
+					overflow: hidden;
 				}
 			}
 		}
@@ -540,7 +572,7 @@
 		dt {
 			font-size: 0.938rem;
 			line-height: 1.25rem;
-			font-weight: 900;
+			font-weight: 700;
 			margin-bottom: 10px;
 		}
 		dd {
@@ -556,7 +588,7 @@
 				line-height: inherit;
 				em {
 					font-family: 'Roboto';
-					font-size: 1.375rem;
+					font-size: 1.5rem;
 					line-height: 1.6;
 					font-weight: 700;
 					letter-spacing: -0.02em;
