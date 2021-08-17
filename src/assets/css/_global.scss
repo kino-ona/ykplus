@@ -481,6 +481,8 @@ body {
 	padding:30px 20px 120px;
 	.row {
 		display: block;
+		padding-left:0;
+		padding-right:0;
 	}
 	.logo {
 		width:115px;
@@ -498,6 +500,39 @@ body {
 			font-size:0.938rem;
 			font-weight: 700;
 			color:#666666;
+		}
+	}
+	.etc {
+		margin-top:15px;
+		a {
+			position:relative;
+			display: inline-block;
+			margin-top:15px;
+			margin-right:5px;
+			padding-right:10px;
+			font-size:0.938rem;
+			color:#666666;
+			strong {
+				font-weight: 700;
+				font-size:inherit;
+				color:inherit;
+			}
+			&:after {
+				content: '';
+				position:absolute;
+				right:0;
+				top:2px;
+				width:1px; 
+				height:10px;
+				background-color: #D3D3D3;
+			}
+			&:last-child {
+				padding-right:0;
+				margin-right:0;
+				&::after {
+					display: none;
+				}
+			}
 		}
 	}
 }
