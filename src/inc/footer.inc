@@ -27,15 +27,17 @@
 				<i class="ic-28 ic_app-home"></i>
 				<span>홈</span>
 			</button>
-			<button class="tab">
+			<button class="tab _left">
 				<i class="ic-28 ic_app-search"></i>
 				<span>검색</span>
 			</button>
 			<button class="tab tab-challenge">
-				<i class="ic-28 ic_app-challenge"></i>
+				<div class="top">
+					<p class="mid"><i class="ic_app-challenge"></i></p>
+        </div>
 				<span>오늘<i></i>도전</span>
 			</button>
-			<button class="tab">
+			<button class="tab _right">
 				<i class="ic-28 ic_app-my"></i>
 				<span>마이</span>
 			</button>

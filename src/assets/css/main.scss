@@ -66,6 +66,7 @@ html {
 .section {
   padding-left:20px;
   padding-right:20px;
+  padding-bottom:35px;
   margin: 0;
 }
 .sec_heading {
@@ -168,6 +169,7 @@ html {
   .figure {
     position:relative;
     padding-bottom:106.25%;
+    border-radius: 20px;
     overflow: hidden;
     background: {
       size:cover;
@@ -227,7 +229,6 @@ html {
   }
 }
 .shopmain_sec {
-  margin-bottom: 25px;
   .maininfo {
     margin-top: 10px;
     .row {
@@ -273,6 +274,8 @@ html {
 
 .sec_talk {
   .banner {
+    border-radius: 20px;
+    overflow: hidden;
     background: {
       size: 100%;
       position: center center;
@@ -329,6 +332,7 @@ html {
     }
     .item_conts {
       max-width: calc(100% - 95px);
+      margin-top:-5px;
       .date {
         display: block;
         font-family: 'Roboto';
@@ -360,6 +364,8 @@ html {
     .figure {
       max-width: 80px;
       margin-left: 12px;
+      border-radius: 20px;
+      overflow: hidden;
     }
   }
 }
@@ -381,7 +387,7 @@ html {
   }
 }
 .sec_best {
-  margin-bottom: 25px;
+  padding-bottom:60px;
   .item {
     position: relative;
     &::before {
@@ -516,7 +522,7 @@ html {
     }
 		.figure {
 			position: relative;
-			padding-bottom: 61.67%;
+			padding-bottom: 62%;
 			overflow: hidden;
 			img {
 				position: absolute;
@@ -544,11 +550,9 @@ html {
       }
       .sale {
         display: inline-block;
-        margin-left: 6px;
         font-size: 0.938rem;
       }
       .discount {
-        margin-left: 8px;
         font-size: 1.25rem;
       }
     }
@@ -571,7 +575,6 @@ html {
     .item_conts {
       max-width: 100%;
       width: 100%;
-      padding-left: 20px;
       padding-right: 20px;
       .name {
         font-size: 0.938rem;
@@ -580,19 +583,22 @@ html {
         letter-spacing: -0.02em;
         @include ellipse(2);        
       }
-      .price {
-        margin-top: 10px;
-        .origin {
-          font-size: 1.125rem;
-        }
-        .sale {
-          display: inline-block;
-        }
-      }
     }
     .figure {
       max-width: 78px;
       margin-right: 20px;
+    }
+  }
+  .price {
+    margin-top: 10px;
+    span {
+      margin-right:6px;
+    }
+    .origin {
+      font-size: 1.125rem;
+    }
+    .sale {
+      display: inline-block;
     }
   }
   .btn_wrap {
@@ -621,17 +627,29 @@ html {
   }
 }
 .sec_info {
+  padding-right:0;
+  .sec_heading {
+    padding-right:20px;
+    .btn_all {
+      right:20px;
+    }
+  }
   .swiper-container {
     margin-top: 20px;
     padding-right: 25px;
   }
   .swiper-slide {
+    &:last-child {
+      margin-right:0;
+    }
     a {
       width: 100%;
       display: inline-block;
       .img {
         min-height: 100%;
         position: relative;
+        border-radius: 20px;
+        overflow: hidden;
       }
     }
   }
@@ -654,12 +672,14 @@ html {
       margin-top: 15px;
       font-size: 1.125rem;
       font-weight: 700;
+      @include ellipse(2);
     }
     .txt {
       margin-top: 8px;
       display: block;
       font-size: 0.813rem;
       letter-spacing: -0.02em;
+      @include ellipse(1);
     }
   }
   .btn_all {
