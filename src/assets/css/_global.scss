@@ -489,6 +489,17 @@ body {
 			size:auto 28px;
 		}
 	}
+	.btn_outlink {
+		position:absolute;
+		top:0;
+		right:0;
+		padding-top:7px;
+		background-color: transparent;
+		font-weight: 500;
+		line-height:1;
+		color:#666666;
+	}
+
 	.info {
 		display: block;
 		margin-top:28px;

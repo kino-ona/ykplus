@@ -2,6 +2,7 @@
 	<footer class="footer">
 		<div class="row">
 			<p class="logo"><span class="a11y">유한킴벌리</span></p>
+			<a href="#" class="btn small btn_outlink">시설관리자</a>
 			<div class="info">
 				<p>유한킴벌리(주) 사업자정보</p>
 				<p>고객센터 <a href="tel:080-500-5200">080-500-5200</a></p>
