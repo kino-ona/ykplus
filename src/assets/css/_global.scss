@@ -307,9 +307,6 @@ hr {
 	}
 	.img {
 		display: inline-block;
-		img {
-			width: 100%;
-		}
 	}
 }
 
@@ -541,6 +538,7 @@ body {
 .app_bar {
 	position:fixed;
 	height:80px;
+	z-index: 9;
 	left:0;
 	right:0;
 	bottom:0;
