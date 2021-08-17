@@ -8,6 +8,13 @@
 				<p>평일 09:00 ~ 17:30 / 점심 12:00~13:00</p>
 				<p>(주말/공휴일 휴무)</p>
 			</div>
+			<div class="etc">
+				<a href="#">이용약관</a>
+				<a href="#">프리미엄 멤버십 이용약관</a>
+				<a href="#">제휴확인</a>
+				<a href="#"><strong>개인정보 처리방침</strong></a>
+				<a href="#">사업자정보 확인</a>
+			</div>
 		</div>
 	</footer>
 	<script type="text/javascript" src="@@webroot/assets/js/ui.js"></script>
