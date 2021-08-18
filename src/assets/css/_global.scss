@@ -424,6 +424,8 @@ body {
 	height:50px;
 	z-index: 10;
 	@include transition(.5s, ease-in-out);
+	padding: 0 0 calc(constant(safe-area-inset-top) + 5px);
+	padding: 0 0 calc(env(safe-area-inset-top) + 5px);
 	&.fixed {
 		background-color: rgba(255,255,255, .95);
 	}
@@ -553,10 +555,8 @@ body {
 	left:0;
 	right:0;
 	bottom:0;
-	// background-color: #fff;
-	// box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.15);
-	// -webkit-box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.15);
-	// -moz-box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.15);
+	padding: 0 0 calc(constant(safe-area-inset-bottom));
+	padding: 0 0 calc(env(safe-area-inset-bottom));
 	.tabs {
     display: flex;
     flex-direction: row;
@@ -568,31 +568,28 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		border-top: 1px solid rgba(167, 161, 161, 0.69);
 		background-color: #fff;
+		border-top:1px solid rgba(0,0,0, 0.03);
 		span {
 			display: block;
-			margin-top:6px;
+			margin-top:4px;
 			font-size:0.813rem;
 		}
 		&._left {
-			border-top-right-radius: 10px;
-			border-top: 1px solid rgba(167, 161, 161, 0.69);
+			border-top-right-radius: 25px;
 		}
 		&._right {
-			border-top-left-radius: 10px;
-			border-top: 1px solid rgba(167, 161, 161, 0.69);
+			border-top-left-radius: 25px; 
 		}
 	}
 	.tab-challenge {
-		// width:54px;
 		height: 100%;
 		background-color: transparent;
 		border: none;
 		justify-content: inherit;
 		display: flex;
 		span {
-			margin-top:10px;
+			margin-top:9px;
 			font-weight: 900;
 			color:#009AFF;
 			i {
@@ -619,13 +616,12 @@ body {
 			}
 		}
 		.top {
-			width: 103%;
-			height: 52%;
-			border-bottom-left-radius: 100px;
-			border-bottom-right-radius: 100px;
+			width: 113%;
+			height: 51%;
+			border-bottom-left-radius: 115px;
+			border-bottom-right-radius: 115px;
 			background-color: transparent;
-			box-shadow: 0px 30px 0px 25px #fff;
-			border-bottom: 1px solid rgba(167, 161, 161, 0.69);
+			box-shadow: 0px 35px 0px 17px #fff;
 			display: flex;
 		}
 		.mid {
@@ -638,8 +634,15 @@ body {
       height: 54px;
       position: relative;
       justify-content: center;
-			-webkit-transform: translate(0, -50%);
-      transform: translate(0, -50%);
+			-webkit-transform: translate(0, -40%);
+      transform: translate(0, -40%);
+		}
+	}
+	@media screen and (min-width:768px) and (max-width:1024px) {
+		.tab-challenge {
+			.top {
+				width:105%;
+			}
 		}
 	}
 }

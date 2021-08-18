@@ -13,10 +13,9 @@
   <meta property="og:description" content="오늘플러스, 유한킴벌리, Yuhan-Kimberly"/>
 	<meta property="og:url" content="@" />
   <meta property="og:image" content="@" />
-  <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0"/>
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>오늘플러스 | @@pagetitle</title>
-  <!-- <link rel="shortcut icon" href="@@webroot/assets/images/common/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="@@webroot/assets/images/common/apple-touch-icon.png" /> -->
+  <link rel="shortcut icon" href="@@webroot/assets/images/common/favicon.ico" type="image/x-icon" />
   <script type="text/javascript" src="@@webroot/assets/js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="@@webroot/assets/js/ui-plugin.js"></script>
   <link rel="stylesheet" href="@@webroot/assets/css/ui.css"/>

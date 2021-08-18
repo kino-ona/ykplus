@@ -211,19 +211,24 @@ html {
     text-align: right;
     color: #fff;
     font-weight: 400;
+    font-size: 0.7rem;
     .swiper-pagination-current {
+      font-family: 'roboto';
       color: #fff;
       font-size: 0.75rem;
       line-height: 1.25rem;
       font-weight: 700;
+      vertical-align: baseline;
     }
     .swiper-pagination-total {
+      font-family: 'roboto';
       color: #fff;
       font-size: 0.75rem;
       line-height: 1.25rem;
       font-weight: inherit;
+      vertical-align: baseline;
     }
-    padding: 5px 10px;
+    padding: 1px 10px 2px;
     background-color: rgba(0, 0, 0, .2);
     border-radius: 20px;
   }
