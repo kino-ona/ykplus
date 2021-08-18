@@ -3,8 +3,7 @@
 
 
 .price {
-	font-size:0.938rem;
-	font-weight: 700;
+	font-family: 'roboto';
 	line-height:1;
 	.unit {
 		display: inline;
@@ -39,9 +38,17 @@
 		display: inline-flex;
 		align-items: center;
 		height:100%;
+		button {
+			text-decoration: underline;
+		}
 	}
 }
-
+.delivery_type {
+	padding:20px 20px;
+	border-bottom:1px solid #D8DBDD;
+	font-size:0.938rem;
+	font-weight: 700;
+}
 .cart_list {
 	.item {
 		position:relative;
@@ -87,11 +94,13 @@
 	}
 	.details {
 		float:left;
-		max-width:calc(100% - 10rem);
+		max-width:calc(100% - 150px);
 		width:100%;
 		margin-left:18px;
-		margin-bottom:1rem;
+		margin-bottom:2.5rem;
+		padding-top:5px;
 		.name {
+			padding-right:25px;
 			margin-bottom:12px;
 			@include ellipse(2);
 			font-size:0.938rem;
@@ -102,19 +111,31 @@
 			}
 		}
 	}
+	.edit {
+		.price {
+			float: left;
+			padding-top:4px;
+			padding-bottom:7px;
+			font-size:1.125rem;
+		}
+		&:after {
+			@extend %clearer;
+		}
+	}
 	.amount {
+		float:right;
 		position:relative;
-		max-width:100px;
-		margin-bottom:12px;
+		max-width:85px;
+		text-align: right;
 		input[type=text] {
 			height:30px;
-			padding-left: 30px;
-			padding-right:30px;
+			padding-left: 20px;
+			padding-right:20px;
 			text-align: center;
 		}
 		.calc {
 			position:absolute;
-			width:30px;
+			width:25px;
 			height:30px;
 			&._minus {
 				left:0;
@@ -130,6 +151,7 @@
 		clear:both;
 		display: flex;
 		padding-top:1rem;
+		padding-bottom:1rem;
 		border-top:1px solid #F2F2F2;
 		p {
 			flex:1;
@@ -137,6 +159,30 @@
 		}
 		.fee {
 			font-weight: 700;
+			text-align: right;
+		}
+		.price {
+			font-size:1.125rem;
+		}
+		[class^='ic-'] {
+			margin-top:-2px;
+			vertical-align: middle;
+		}
+	}
+	.total_count {
+		clear:both;
+		display: flex;
+		p {
+			flex:1;
+			font-size:0.938rem;
+		}
+		.ti {
+			padding-top:5px;
+			font-weight: 700;
+		}
+		.price {
+			font-weight: 700;
+			font-size:1.5rem;
 			text-align: right;
 		}
 	}
@@ -148,6 +194,39 @@
 			& + .btn {
 				margin-left:8px;
 			}
+		}
+	}
+}
+.totla_price {
+	padding:24px 20px;
+	> dl {
+		padding:6px 0;
+		dt {
+			float:left;
+			font-size:0.938rem;
+			color:#666666;
+		}
+		dd {
+			float:right;
+			font-size:1.125rem;
+			.unit {
+				font-size:0.938rem;
+			}
+		}
+		&.total {
+			dt {
+				padding-top:5px;
+			}
+			.price {
+				font-size:1.5rem;
+				color:#009AFF;
+				.unit {
+					color:#000;
+				}
+			}
+		}
+		&:after {
+			@extend %clearer;
 		}
 	}
 }

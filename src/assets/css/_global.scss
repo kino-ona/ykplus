@@ -646,3 +646,34 @@ body {
 		}
 	}
 }
+
+.empty_data {
+	position:relative;
+	width:100%;
+	padding:50px 0;
+	text-align:center;
+	&._full {
+		height:calc(100vh - 100px);
+	}
+	.mark {
+		display: block;
+		margin:0 auto 20px;
+		width:48px;
+		height:48px;
+		background: {
+			image: url(../images/common/nodata_mark.png);
+			size:cover;
+			position:center center;
+			repeat: no-repeat;
+		}
+	}
+	> p {
+		position:absolute;
+		left:50%;
+		top:50%;
+		@include transform(translate(-50%, -50%));
+		color:#666666;
+		font-size:0.938rem;
+		line-height:1.5;
+	}
+}

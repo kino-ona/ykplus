@@ -202,14 +202,24 @@
 			<dl>
 				<dt>Layer Popup</dt>
 				<dd>
-					<p>작업중</p>
+					<p>팝업 작업 중</p>
+					<button aria-haspopup="dialog" aria-controls="sample_popup" id="sample_opener" aria-pressed="false" class="btn small">팝업 열기</button>
+					<div class="overlay-popup" role="dialog" id="sample_popup" aria-labelledby="sample_opener" aria-modal="true">
+						<div class="contents">
+							<button class="btn_close"><i></i></button>
+							<div class="inner">
+								<p>Sample</p>
+							</div>
+						</div>
+						<div class="overlay-dimmed"></div>
+					</div>
 				</dd>
 			</dl>
 
 			<dl>
 				<dt>Toast Popup</dt>
 				<dd>
-					<p>작업중</p>
+					<p>작업 중</p>
 				</dd>
 			</dl>
 
@@ -300,6 +310,27 @@
 							</div>
 						</div>
 					</div>
+
+				</dd>
+			</dl>
+
+			<dl>
+				<dt>Nodata Markup</dt>
+				<dd>
+					<div class="empty_data">
+						<p><i class="mark"></i>데이터가 없습니다.</p>
+					</div>
+					
+
+					&lt;div class="empty_data"&gt;<br>
+					&nbsp; &nbsp;	&lt;p&gt;&lt;i class="mark"&gt;&lt;/i&gt;데이터가 없습니다.&lt;/p&gt;<br>
+					&lt;/div&gt;<br><br><br>
+
+					- 화면 100% 채우는 경우<br><br>
+					&lt;div class="empty_data _full"&gt;<br>
+					&nbsp; &nbsp;	&lt;p&gt;&lt;i class="mark"&gt;&lt;/i&gt;데이터가 없습니다.&lt;/p&gt;<br>
+					&lt;/div&gt;<br>
+
 
 				</dd>
 			</dl>
