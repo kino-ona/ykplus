@@ -261,13 +261,13 @@ hr {
 			position: center center;
 		}
 		&.on {
-			background-image: url(../images/dummy/@score-star_1.png);
+			background-image: url(../images/dummy/score-star_1.png);
 		}
 		&.off {
-			background-image: url(../images/dummy/@score-star_0.png);
+			background-image: url(../images/dummy/score-star_0.png);
 		}
 		&.half {
-			background-image: url(../images/dummy/@score-star_half.png);
+			background-image: url(../images/dummy/score-star_half.png);
 		}
 		&:last-of-type {
 			margin-right: 0;
