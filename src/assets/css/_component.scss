@@ -442,6 +442,58 @@
 	}
 }
 
+/** Overlay Popup
+****************************************/
+[role="dialog"] {
+  position: fixed;
+}
+[aria-haspopup="dialog"] {
+  cursor: pointer;
+}
+[class^="overlay-"] {
+  display: none;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+	.contents {
+		position: relative;
+		z-index: 1001;
+		width: calc(100% - 40px);
+		max-width: 360px;
+		margin: 0 auto;
+		background-color: #fff;
+		border-radius: 10px;
+		overflow-y: auto;
+  	-webkit-overflow-scrolling: touch;
+		> .inner {
+			padding: 30px 20px;
+			font-size:14px;
+			line-height:1.6;
+			p {
+				font-size:13px;
+				line-height:1.6;
+			}
+		}
+	}
+	.btn_close {
+		position:absolute;
+		right:15px;
+		top:15px;
+		i {
+			@include iconX($size: 15px, $thick: 1px, $color: #000, $padding: 0, $display: inline-block, $position: relative)
+		}
+	}
+}
+.overlay-dimmed {
+  display: block;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+}
+
 
 /** Tab
 ****************************************/

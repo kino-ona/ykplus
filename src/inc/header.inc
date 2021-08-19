@@ -5,8 +5,9 @@
 			<h1 class="logo"><a href="/"><span class="a11y">오늘플러스</span></a></h1>
 
 			<div class="util">
-				<a href="#" class="ic-25 ic_notice"><span class="a11y">알림</span></a>
-				<a href="#" class="ic-25 ic_menu"><span class="a11y">메뉴</span></a>
+				<a href="#" class="ic-25 ic_notice" alt="알림"><span class="a11y">알림</span></a>
+				<a href="#" class="ic-25 ic_cart" alt="장바구니"><span class="a11y">장바구니</span></a>
+				<a href="#" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 	</header>
@@ -18,7 +19,8 @@
 				<a href="#" onclick="history.back(-1);"><i></i><span class="a11y">이전페이지</span></a>
 			</div>
 			<div class="util">
-				<a href="#" class="ic-25 ic_menu"><span class="a11y">메뉴</span></a>
+				<a href="#" class="ic-25 ic_cart" alt="장바구니"><span class="a11y">장바구니</span></a>
+				<a href="#" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 	</header>
@@ -31,7 +33,8 @@
 			</div>
 			<h1 class="page_title">@@subtitle</h1>
 			<div class="util">
-				<a href="#" class="ic-25 ic_menu"><span class="a11y">메뉴</span></a>
+				<a href="#" class="ic-25 ic_cart" alt="장바구니"><span class="a11y">장바구니</span></a>
+				<a href="#" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 	</header>
