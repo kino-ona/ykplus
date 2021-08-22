@@ -104,6 +104,7 @@ input[type=text], input[type=password], input[type=number], input[type=tel], inp
 		}
 	}
 }
+
 textarea {
 	width:100%;
 	min-height: 100px;
@@ -114,7 +115,7 @@ textarea {
 	font-size: 0.938rem;
 	background-color:#fff;
 	border: 1px solid #D8DBDD;
-	border-radius: 4px;
+	border-radius:8px;
 	&:not([readonly]) {
 		&:focus {
 			background-color:#F6F8FA;
@@ -150,13 +151,13 @@ select{
 	padding: 12px 15px;
 	background-color:#fff;
 	background: {
-		image: url(../images/icon/icon_down.png);
+		image: url(../images/common/select_down.png);
 		repeat:no-repeat;
-		size: 8px;
+		size: 16px;
 		position: calc(100% - 15px) center;
 	}
 	border: 1px solid #D8DBDD;
-	border-radius: 4px;
+	border-radius: 8px;
 	outline: none;
 	font-size: 0.938rem;
 	option {

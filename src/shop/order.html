@@ -22,10 +22,118 @@
 	<!-- contents body -->
 	<div class="contents_body">
 		
-		<div class="cart_wrap">
-			<div class="empty_data _full">
-        <p><i class="mark"></i>주문한 내역이 없습니다.</p>
-      </div>
+		<div class="order_wrap">
+			<div class="order_info">
+				<p class="title">주문자 정보 
+					<button class="btn toggle_trigger" aria-controls="orderer_modify" type="button" aria-pressed="false"><span class="a11y">상세정보보기</span><i></i></button>
+				</p>
+
+				<div id="orderer_modify" class="content_toggle orderer_info">
+					<dl class="horizon">
+						<dt>주문하신분</dt>
+						<dd>이정선 <button class="btn small">변경</button></dd>
+					</dl>
+					<dl class="horizon">
+						<dt>연락처</dt>
+						<dd>010-8550-5678</dd>
+					</dl>
+					<dl class="horizon">
+						<dt>이메일</dt>
+						<dd>somko@naver.com</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="order_info">
+				<p class="title">배송지 정보 
+					<button class="btn toggle_trigger" aria-controls="shipping_modify" type="button" aria-pressed="false"><span class="a11y">상세정보보기</span><i></i></button>
+				</p>
+
+				<div id="shipping_modify" class="content_toggle shipping_info">
+					<div class="cnthead">
+						<p class="chkwrap"><input type="checkbox" id="check00"><label for="check00">주문자와 동일</label></p>
+						<button class="btn small">변경</button>
+					</div>
+					<dl class="vertical">
+						<dt>홍길동</dt>
+						<dd>010-0000-0000</dd>
+						<dd>서울시 송파구 올림픽로 300 롯데월드타워 29층 (우)05551</dd>
+					</dl>
+
+					<div class="shipping_type">
+						<p class="radiowrap"><input type="radio" name="s_type" id="ship01"><label for="ship01">기본 배송지</label></p>
+						<p class="radiowrap"><input type="radio" name="s_type" id="ship02"><label for="ship02">최근 배송지</label></p>
+						<p class="radiowrap"><input type="radio" name="s_type" id="ship03"><label for="ship03">신규</label></p>
+						<button class="btn primary full">주소록</button>
+					</div>
+
+					<div class="shipping_message">
+						<p>배송메세지</p>
+						<p>
+							<select>
+								<option>배송 메세지를 선택해주세요.</option>
+								<option></option>
+							</select>
+						</p>
+						<div class="txtarea">
+							<textarea id="shipping_message"></textarea>
+							<p class="txcnt"><span>0</span> / 2000</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="order_info">
+				<p class="title">주문상품 정보
+					<button class="btn toggle_trigger" aria-controls="product_modify" type="button" aria-pressed="false"><span class="a11y">상세정보보기</span><i></i></button>
+				</p>
+
+				<div id="product_modify" class="content_toggle product_info">
+					<div class="order_list">
+						<div class="item">
+							<div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+							<div class="details">
+								<p class="name">
+									<a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+								</p>
+								<div class="info">
+									<p class="price">999,000<span class="unit">원</span></p>
+									<p class="cnt">100개</p>
+								</div>
+							</div>
+
+							<div class="price_data">
+								<dl>
+									<dt>쿠폰할인</dt>
+									<dd><p class="discount">-4,380<span class="unit">원</span></dd>
+								</dl>
+								<dl>
+									<dt>할인가</dt>
+									<dd><p class="price">0<span class="unit">원</span></dd>
+								</dl>
+								<div class="total">
+									<dl>
+										<dt>상품가 합계</dt>
+										<dd><p class="price">999,000<span class="unit">원</span></dd>
+									</dl>
+									<dl>
+										<dt>쿠폰할인</dt>
+										<dd><p class="price">999,000<span class="unit">원</span></dd>
+									</dl>
+									<dl>
+										<dt>배송비</dt>
+										<dd><p class="price">999,000<span class="unit">원</span></dd>
+									</dl>
+									<dl>
+										<dt>주문금액 합계</dt>
+										<dd><p class="price">999,000<span class="unit">원</span></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!--// cart_wrap -->
 
@@ -35,12 +143,26 @@
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
 		"webroot":"..",
-		"footertype":"",
+		"footer": {
+			"visibles":"hide"
+		},
 		"appbar": {
 			"visibles":"hide"
 		}
 	})
 	<!-- //footer -->
+	<script>
+	$(document).ready(function() {
+		$('#shipping_message').on('keyup', function() {
+			$('.txtarea .txcnt').html("<span>"+$(this).val().length+"</span> / 2,000");
+
+			if($(this).val().length > 2000) {
+				$(this).val($(this).val().substring(0, 2000));
+				$('.txtarea .txcnt').html("<span>2,000</span> / 2,000");
+			}
+		});
+	});
+	</script>
   
 </body>
 

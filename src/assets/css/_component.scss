@@ -5,6 +5,9 @@
 /** Button 
 ****************************************/
 .btn {
+	a {
+		display:inline-block;
+	}
 	display: inline;
 	width: auto;
 	font-size: 0.938rem;
@@ -31,6 +34,9 @@
 	&.small {
 		height:28px;
 		font-size:0.813rem;
+	}
+	&.full {
+		width:100%;
 	}
 	&.blue-btn {
 		background-color: #009AFF;
@@ -215,7 +221,7 @@
 			padding-top:5px;
 			padding-bottom:5px;
 			color: #111;
-			font-size:0.938rem;
+			font-size:15px;
 			background: {
 				image: url('../images/common/uncheck.png');
 				repeat: no-repeat;
@@ -260,7 +266,7 @@
 				size:20px;
 				position: left center;
 			}
-			font-size:0.938rem;
+			font-size:15px;
 			vertical-align: middle;
 			+ span {
 				color:inherit;

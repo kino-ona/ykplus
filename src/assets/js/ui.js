@@ -2,6 +2,7 @@ $(document).ready(function () {
 	headFixed();
 
 	if($('[role="dialog"]').length > 0) popupLayer();
+	if($('.toggle_trigger').length > 0) toggleContent();
 });
 /** Aria boolean 
 ****************************************/
@@ -24,7 +25,6 @@ var popupLayer = function() {
 		e.preventDefault();
 	});
 }
-
 
 function headFixed(){
 	var $header = $(".header"),
@@ -204,5 +204,13 @@ var popupControl = function(){
 		toggleBool($opener,'aria-pressed');
 		$(this).closest('[role="dialog"]').hide();
 		$opener.focus();
+	});
+}
+
+/** toggle contents
+****************************************/
+var toggleContent = function() {
+	$(document).on('click', '.toggle_trigger:not(".manual_fn")', function(e) {
+		toggleControl(this);
 	});
 }

@@ -1,4 +1,4 @@
-
+@@if (footer.visibles==='show') { 
 	<footer class="footer">
 		<div class="row">
 			<p class="logo"><span class="a11y">유한킴벌리</span></p>
@@ -18,6 +18,7 @@
 			</div>
 		</div>
 	</footer>
+}
 	<script type="text/javascript" src="@@webroot/assets/js/ui.js"></script>
 
 @@if (appbar.visibles==='show') { 

@@ -16,6 +16,7 @@
 /** Shop > Order
 ****************************************/
 .cart_wrap{
+	padding-bottom:64px;
 	.row {
 		display: block;
 		height:100%;
@@ -39,6 +40,7 @@
 		align-items: center;
 		height:100%;
 		button {
+			color:#000;
 			text-decoration: underline;
 		}
 	}
@@ -52,9 +54,15 @@
 .cart_list {
 	.item {
 		position:relative;
-		border-bottom:8px solid #F0F0F0;
+		border-bottom:1px solid #D8DBDD;
+		&:last-child {
+			border-bottom:0;
+		}
 		> div{
 			margin:24px 20px;
+			&:first-child {
+				border-bottom:1px solid #D8DBDD;
+			}
 			&:after {
 				@extend %clearer;
 			}
@@ -96,15 +104,16 @@
 		float:left;
 		max-width:calc(100% - 150px);
 		width:100%;
-		margin-left:18px;
+		margin-left:15px;
 		margin-bottom:2.5rem;
 		padding-top:5px;
 		.name {
 			padding-right:25px;
 			margin-bottom:12px;
 			@include ellipse(2);
-			font-size:0.938rem;
+			font-size:15px;
 			font-weight: 700;
+			line-height:1.5;
 			a {
 				font-size:inherit;
 				font-weight: inherit;
@@ -123,20 +132,22 @@
 		}
 	}
 	.amount {
-		float:right;
 		position:relative;
-		max-width:85px;
-		text-align: right;
+		display: inline-block;
+		max-width:110px;
 		input[type=text] {
-			height:30px;
+			height:34px;
 			padding-left: 20px;
 			padding-right:20px;
+			border-right:0;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
 			text-align: center;
 		}
 		.calc {
 			position:absolute;
-			width:25px;
-			height:30px;
+			width:34px;
+			height:34px;
 			&._minus {
 				left:0;
 				border-right:1px solid #D8DBDD;
@@ -144,18 +155,32 @@
 			&._plus {
 				right:0;
 				border-left:1px solid #D8DBDD;
+				border-right:1px solid #D8DBDD;
 			}
 		}
+	}
+	._submit {
+		display: inline-block;
+		width:55px;
+		height:34px;
+		margin-left:-5px;
+		font-size:13px;
+		font-weight: 700;
+		border:1px solid #D8DBDD;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
 	}
 	.delivery_summary {
 		clear:both;
 		display: flex;
 		padding-top:1rem;
 		padding-bottom:1rem;
-		border-top:1px solid #F2F2F2;
 		p {
 			flex:1;
 			font-size:0.938rem;
+		}
+		.ti {
+			color:#666666;
 		}
 		.fee {
 			font-weight: 700;
@@ -163,10 +188,6 @@
 		}
 		.price {
 			font-size:1.125rem;
-		}
-		[class^='ic-'] {
-			margin-top:-2px;
-			vertical-align: middle;
 		}
 	}
 	.total_count {
@@ -178,7 +199,7 @@
 		}
 		.ti {
 			padding-top:5px;
-			font-weight: 700;
+			color:#666666;
 		}
 		.price {
 			font-weight: 700;
@@ -188,7 +209,7 @@
 	}
 	.btn_wrap {
 		display: flex;
-		margin-top:20px;
+		margin-top:10px;
 		.btn {
 			flex:1;
 			& + .btn {
@@ -198,9 +219,11 @@
 	}
 }
 .totla_price {
-	padding:24px 20px;
+	margin-top:-1px;
+	padding-top:24px;
+	border-top:8px solid #F0F0F0;
 	> dl {
-		padding:6px 0;
+		padding:6px 20px;
 		dt {
 			float:left;
 			font-size:0.938rem;
@@ -214,19 +237,231 @@
 			}
 		}
 		&.total {
+			padding:20px 20px 22px;
+			margin-top:14px;
+			background-color: #F5F7F8;
 			dt {
 				padding-top:5px;
 			}
 			.price {
-				font-size:1.5rem;
+				font-size:28px;
 				color:#009AFF;
-				.unit {
-					color:#000;
-				}
 			}
 		}
 		&:after {
 			@extend %clearer;
+		}
+	}
+}
+.order_info {
+	border-bottom:8px solid #F0F0F0;
+	.title {
+		position:relative;
+		width:100%;
+		height:64px;
+		display: inline-flex;
+		align-items: center;
+		padding-left:20px;
+		padding-right:20px;
+		font-size:15px;
+		font-weight: 700;
+		.btn {
+			border:0;
+			position: absolute;
+			right:0px;
+			width:64px;
+			height:64px;
+			&[aria-pressed="true"] {
+				i {
+					@include iconAngle($direction: 'up', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
+				vertical-align: middle;
+				}
+			}
+		}
+		i {
+			@include iconAngle($direction: 'down', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
+		vertical-align: middle;
+		}
+	}
+	.content_toggle {
+		display: none;
+		border-top:1px solid #D8DBDD;
+	}
+	.orderer_info {
+		padding:24px 20px;
+	}
+	.horizon {
+		margin-top:5px;
+		&:first-child {
+			margin-top:0;
+		}
+		dt, dd {
+			float:left;
+			display: flex;
+			align-items: center;
+			min-height:38px;
+			font-size:15px;
+		}
+		dt {
+			width:95px;
+		}
+		dd {
+			width:calc(100% - 95px);
+			font-weight: 700;
+			.btn {
+				margin-left:10px;
+			}
+		}
+		&:after {
+			@extend %clearer;
+		}
+	}
+	.cnthead {
+		position:relative;
+		padding:15px 20px;
+		background-color: #F5F7F8;
+		label {
+			font-weight: 700;
+		}
+		.btn {
+			position: absolute;
+			right:20px;
+			top:25%;
+		}
+	}
+	.vertical {
+		padding:24px 20px 0;
+		dt {
+			padding-bottom:4px;
+			font-weight: 700;
+		}
+		dt, dd {
+			font-size:15px;
+			margin-bottom:5px;
+		}
+		dd {
+			line-height:1.4;
+			color:#666666;
+		}
+	}
+	.shipping_type {
+		padding:0 20px;
+		margin-top:10px;
+		margin-bottom:10px;
+		.radiowrap {
+			margin-right:15px;
+		}
+		.btn {
+			margin-top:10px;
+		}
+	}
+}
+.shipping_message {
+	margin:24px 0 0;
+	padding:24px 20px;
+	background-color: #F5F7F8;
+	> p {
+		padding-bottom:8px;
+		font-size:15px;
+		color:#666666;
+	}
+	.txtarea {
+		position:relative;
+		border:1px solid #D8DBDD;
+		padding-bottom:30px;
+		border-radius: 8px;
+		background-color: #fff;
+		textarea {
+			min-height:60px;
+			height:60px;
+			border:0;
+			resize: none;
+			&:not([readonly]):focus {
+				background-color: #fff;
+			}
+		}
+		.txcnt {
+			position:absolute;
+			bottom:12px;
+			right:16px;
+			span {
+				color:#009AFF;
+			}
+		}
+	}
+}
+.product_info {
+	padding:24px 0;
+}
+.order_list {
+	padding-left:20px;
+	padding-right:20px;
+	.item {
+		&:after {
+			@extend %clearer;
+		}
+	}
+	.thumb {
+		float:left;
+		width:116px;
+		> p {
+			width: 100px;
+			padding:12px 11px;
+			background-color: #F5F7F8;
+			border-radius: 20px;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			-ms-border-radius: 20px;
+			-o-border-radius: 20px;
+		}
+	}
+	.details {
+		float:left;
+		width:calc(100% - 116px);
+		.name {
+			@include ellipse(2);
+			font-size: 15px;
+			line-height:1.4;
+		}
+		.info {
+			display: flex;
+			margin-top:10px;
+			> p {
+				flex:1;
+			}
+			.price {
+				font-size: 18px;
+			}
+			.cnt {
+				font-size:15px;
+				color:#999999;
+				text-align: right;
+			}
+		}
+	}
+	.price_data {
+		clear:both;
+		display: block;
+		margin:0 -20px 0;
+		padding-top:20px;
+		dl {
+			display: flex;
+			width:100%;
+			padding-left:20px;
+			padding-right:20px;
+			margin-bottom:10px;
+		}
+		dt, dd {
+			flex:1;
+		}
+		dd {
+			text-align: right;
+		}
+		.total {
+			margin-top:10px;
+			padding-top:20px;
+			padding-bottom:20px;
+			background-color: #F5F7F8;
 		}
 	}
 }
