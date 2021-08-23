@@ -45,10 +45,13 @@
 /** Shop > Order
 ****************************************/
 .cart_wrap{
-	padding-bottom:70px;
+	padding-bottom:64px;
 	.row {
 		display: block;
 		height:100%;
+	}
+	.total_price {
+		padding-bottom:0;
 	}
 }
 .cart_head {
@@ -315,7 +318,7 @@
 			position: absolute;
 			right:0px;
 			width:64px;
-			height:64px;
+			height:60px;
 			&[aria-pressed="true"] {
 				i {
 					@include iconAngle($direction: 'up', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
@@ -331,6 +334,12 @@
 	.content_toggle {
 		display: none;
 		border-top:1px solid #D8DBDD;
+		&.total_price {
+			padding-top:0;
+			.price_data dl {
+				margin-bottom:0;
+			}
+		}
 	}
 	.orderer_info {
 		padding:24px 20px;
