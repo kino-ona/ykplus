@@ -68,7 +68,7 @@
 							</p>
 							<!-- 배송비 안내 팝업 -->
 							<div class="overlay-popup" role="dialog" id="delivery_popup" aria-labelledby="delivery_opener" aria-modal="true">
-								<div class="contents">
+								<div class="contents tooltip">
 									<button class="btn_close"><i></i></button>
 									<div class="inner">
 										<p>주문금액기 3만원 미만시 배송비 2,500원이 청구됩니다.</p>
@@ -114,7 +114,7 @@
 							<p class="fee">기본배송 <i aria-haspopup="dialog" aria-controls="delivery_popup" id="delivery_opener" aria-pressed="false" class="ic-20 ic_exclamation"><span class="a11y">배송비 안내</span></i></p>
 							<!-- 배송비 안내 팝업 -->
 							<div class="overlay-popup" role="dialog" id="delivery_popup" aria-labelledby="delivery_opener" aria-modal="true">
-								<div class="contents">
+								<div class="contents tooltip">
 									<button class="btn_close"><i></i></button>
 									<div class="inner">
 										<p>주문금액기 3만원 미만시 배송비 2,500원이 청구됩니다.</p>
@@ -132,7 +132,7 @@
 			</div>
 			<!--// -->
 
-			<div class="totla_price">
+			<div class="total_price">
 				<dl>
 					<dt>할인가 합계</dt>
 					<dd class="price">1,000<span class="unit">원</span></dd>
@@ -145,10 +145,16 @@
 					<dt>배송비</dt>
 					<dd class="price">무료</dd>
 				</dl>
-				<dl class="total">
-					<dt>총 주문금액 합계</dt>
-					<dd class="price">9,999,900<span class="unit">원</span></dd>
-				</dl>
+				<div class="total">
+					<dl>
+						<dt>총 할인가 합계</dt>
+						<dd class="price">21,900<span class="unit">원</span></dd>
+					</dl>
+					<dl class="sum">
+						<dt>총 주문금액 합계</dt>
+						<dd class="price">9,999,900<span class="unit">원</span></dd>
+					</dl>
+				</div>
 			</div>
 
 			<div class="fixed_bottom"> 

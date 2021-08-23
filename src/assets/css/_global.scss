@@ -81,10 +81,10 @@ input[type=text], input[type=password], input[type=number], input[type=tel], inp
 	padding: 12px 15px;
 	background-color:#fff;
 	border: 1px solid #D8DBDD;
-	border-radius: 4px;
+	border-radius: 8px;
 	outline: none;
 	color:#000;
-	font-size: 0.938rem;
+	font-size: 15px;
 	-webkit-appearance: none;
 	&:not([readonly]) {
 		&:focus {
@@ -93,10 +93,8 @@ input[type=text], input[type=password], input[type=number], input[type=tel], inp
 		}
 	}
 	&:read-only {
+		background-color:#F6F8FA;
 		color:#666;
-		&.fc_bk {
-			color:#000;
-		}
 	}
 	&.datepicker {
 		&:read-only {
@@ -112,7 +110,7 @@ textarea {
 	outline: none;
 	resize: none;
 	-webkit-appearance: none;
-	font-size: 0.938rem;
+	font-size: 15px;
 	background-color:#fff;
 	border: 1px solid #D8DBDD;
 	border-radius:8px;
@@ -126,17 +124,17 @@ textarea {
 		color:#666;
 	}
 	::-webkit-input-placeholder{
-		font-size: 0.875rem;
+		font-size: 15px;
 		font-weight: 300;
 		color:#999;
 	}
 	::-moz-placeholder{
-		font-size: 0.875rem;
+		font-size: 15px;
 		font-weight: 300;
 		color:#999;
 	}
 	::-ms-placeholder {
-		font-size: 0.875rem;
+		font-size: 15px;
 		font-weight: 300;
 		color:#999;
 	}
@@ -154,12 +152,12 @@ select{
 		image: url(../images/common/select_down.png);
 		repeat:no-repeat;
 		size: 16px;
-		position: calc(100% - 15px) center;
+		position: right 5px center;
 	}
 	border: 1px solid #D8DBDD;
 	border-radius: 8px;
 	outline: none;
-	font-size: 0.938rem;
+	font-size: 15px;
 	option {
 		padding: 5px 10px;
 		background-color:#F6F8FA;

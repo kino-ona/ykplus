@@ -12,12 +12,13 @@ function toggleBool(props, attrName) {
 	});
 }
 
-/** Pverlay popup Set
+/** Overlay popup Set
 ****************************************/
 var popupLayer = function() {
 	$(document).on('click', '[aria-haspopup="dialog"]:not(".manual_fn")', function(e){
 		var diaId = '#' + $(this).attr('aria-controls');
 		openLayer(diaId);
+		console.log(diaId)
 		e.preventDefault();
 	});
 	$(document).on('click', '[role="dialog"] .overlay_closer button, .btn_close', function(e){
@@ -137,6 +138,7 @@ var isOpen = false;
 var openLayer = function(target){
 	var $target = $(target),
 		$opener = $('#' + $target.attr('aria-labelledby'));
+		// console.log(target)
 
 	currentPosition = $(window).scrollTop();
 	$target.show();

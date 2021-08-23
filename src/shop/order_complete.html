@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"주문완료",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/order.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"subtype2"
+		},
+		"subtitle":"주문완료"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="order_wrap order-complete">
+			<div class="complete_message">
+				<i></i>주문이 완료되었습니다.
+			</div>
+			<div class="order_info">
+				<p class="title">배송지 정보</p>
+				<div class="content_detail">
+					<dl class="vertical">
+						<dt>홍길동</dt>
+						<dd>
+							<p>010-1234-1234</p>
+							<p>서울 강남구 봉은사로 43길 6-8 (논현동, 5층)</p>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<!--// 배송지 정보 -->
+
+			<div class="order_info">
+				<p class="title">주문 정보 
+					<button class="btn small btn_ordlist" type="button">구매내역</button>
+				</p>
+				<div class="content_detail">
+					<dl class="horizon">
+						<dt>주문번호</dt>
+						<dd>20210719114606-24200233263</dd>
+					</dl>
+					<dl class="horizon">
+						<dt>결제정보</dt>
+						<dd>신용카드 결제성공<span>(승인번호:11456731)</span></dd>
+					</dl>
+					<dl class="horizon sum">
+						<dt>결제금액</dt>
+						<dd><p class="price">999,000<span class="unit">원</span></p></dd>
+					</dl>
+				</div>
+			</div>
+			<!--// 주문 정보 -->
+
+			<div class="order_info">
+				<p class="title">주문 상품</p>
+				<div class="content_detail">
+					<div class="order_list">
+						<!-- item -->
+						<div class="item">
+							<div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+							<div class="details">
+								<p class="name">
+									<a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+								</p>
+								<div class="info">
+									<p class="price">999,000<span class="unit">원</span></p>
+									<p class="cnt">100개</p>
+								</div>
+							</div>
+							<div class="btn_wrap">
+								<a href="#" class="btn primary full">주문내역 보기</a>
+							</div>
+						</div>
+						<!--// item -->
+					</div>
+				</div>
+			</div>
+			<!--// 주문 상품 -->
+
+			<div class="order_info border-none">
+				<p class="title">이런 상품은 어떠세요?</p>
+				<div class="content_detail algorithm_sec">
+					<div id="Recmmd-Swipe" class="row swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a href="#">
+								<p class="img"><img src="../assets/images/dummy/dummy04.png" alt="하기스 네이처메이드"></p>
+								<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+								<div class="price">
+									<div>
+										<span class="discount"><em>34</em>%</span>
+										<span class="origin">34,800<span>원</span> </span>
+									</div>
+									<span class="sale">20,000 </span>
+								</div>       
+							</a></div>
+							<div class="swiper-slide"><a href="#">
+								<p class="img"><img src="../assets/images/dummy/dummy05.png" alt="하기스 네이처메이드"></p>
+								<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+								<div class="price">
+									<div>
+										<span class="discount"><em>34</em>%</span>
+										<span class="origin">34,800<span>원</span> </span>
+									</div>
+									<span class="sale">20,000 </span>
+								</div>
+							</a></div>
+							<div class="swiper-slide"><a href="#">
+								<p class="img"><img src="../assets/images/dummy/dummy06.png" alt="하기스 네이처메이드"></p>
+								<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+								<div class="price">
+									<div>
+										<span class="discount"><em>34</em>%</span>
+										<span class="origin">34,800<span>원</span> </span>
+									</div>
+									<span class="sale">20,000 </span>
+								</div>
+							</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--// 이런 상품은 어떠세요? -->
+
+			<div class="btn_wrap _foo">
+				<a href="#" class="btn secondary gray-btn">장바구니 이동</a>
+				<a href="#" class="btn secondary blue-btn">메인으로 가기</a>
+			</div>
+
+		</div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"show"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+<script>
+	var swiper = new Swiper('#Recmmd-Swipe', {
+		slidesPerView: 2.45,
+		speed: 400,
+		spaceBetween: 10,
+	});
+</script>
+
+
+</body>
+</html>

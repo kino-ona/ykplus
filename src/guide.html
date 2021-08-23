@@ -187,10 +187,13 @@
 				</dd>
 				<dd>
 					- 결과 유출 버튼 타입 : 바닥 고정/full area<br><br>
-					&lt;div class="fixed_bottom"&gt; <br>
-					&nbsp; &nbsp; 	&lt;div class="fixed_btn"&gt;&lt;a href="#" class="btn gray-btn"&gt;장바구니&lt;/a&gt;&lt;/div&gt;<br>
-					&nbsp; &nbsp; 	&lt;div class="fixed_btn"&gt;&lt;a href="#" class="btn blue-btn"&gt;바로구매&lt;/a&gt;&lt;/div&gt;<br>
-					&lt;/div&gt;<br>
+<pre>					
+&lt;div class="fixed_bottom"&gt;
+&nbsp; &nbsp; 	&lt;div class="fixed_btn"&gt;&lt;a href="#" class="btn gray-btn"&gt;장바구니&lt;/a&gt;&lt;/div&gt;
+&nbsp; &nbsp; 	&lt;div class="fixed_btn"&gt;&lt;a href="#" class="btn blue-btn"&gt;바로구매&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+					<br>
 
 					<div class="fixed_bottom" style="bottom:80px;"> 
 						<div class="fixed_btn"><a href="#" class="btn gray-btn">장바구니</a></div>
@@ -202,17 +205,65 @@
 			<dl>
 				<dt>Layer Popup</dt>
 				<dd>
-					<p>팝업 작업 중</p>
-					<button aria-haspopup="dialog" aria-controls="sample_popup" id="sample_opener" aria-pressed="false" class="btn small">팝업 열기</button>
-					<div class="overlay-popup" role="dialog" id="sample_popup" aria-labelledby="sample_opener" aria-modal="true">
-						<div class="contents">
+					<button aria-haspopup="dialog" aria-controls="tooltip_popup" id="tooltip_opener" aria-pressed="false" class="btn small">tootip 타입 열기</button>
+					<div class="overlay-popup" role="dialog" id="tooltip_popup" aria-labelledby="tooltip_opener" aria-modal="true">
+						<div class="contents tooltip">
 							<button class="btn_close"><i></i></button>
 							<div class="inner">
-								<p>Sample</p>
+								<p>tootip</p>
 							</div>
 						</div>
 						<div class="overlay-dimmed"></div>
 					</div>
+					<br><br>
+					<button aria-haspopup="dialog" aria-controls="sample_popup" id="sample_opener" aria-pressed="false" class="btn small">default layer popup 열기</button>
+					<div class="overlay-popup" role="dialog" id="sample_popup" aria-labelledby="sample_opener" aria-modal="true">
+						<div class="contents">
+							<div class="heading">
+								팝업 타이틀 <button class="btn_close"><i></i></button>
+							</div>
+							<div class="inner">
+								<p>sample_popup</p>
+							</div>
+							<div class="btn_wrap">
+								<a href="#" class="btn primary">Confirm</a>
+							</div>
+						</div>
+						<div class="overlay-dimmed"></div>
+					</div>
+					<br>
+<pre>
+&lt;button aria-haspopup="dialog" aria-controls="sample_popup-fn"  id="samplefn-opener" aria-pressed="false" 
+class="btn small" &gt;default layer popup 열기&lt;/button&gt;<br>
+&lt;div class="overlay-popup" role="dialog" id="sample_popup" aria-labelledby="sample_opener" aria-modal="true"&gt;
+&lt;div class="contents"&gt;팝업 내용&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<br><br>
+					<button aria-haspopup="dialog" aria-controls="sample_popup-fn" id="samplefn-opener" aria-pressed="false" class="btn small manual_fn" onclick="openLayer('#sample_popup-fn')">function - layer popup 열기</button>
+					<div class="overlay-popup" role="dialog" id="sample_popup-fn" aria-labelledby="samplefn-opener" aria-modal="true">
+						<div class="contents">
+							<div class="heading">
+								팝업 타이틀 <button class="btn_close"><i></i></button>
+							</div>
+							<div class="inner">
+								<p>sample fn popup</p>
+							</div>
+							<div class="btn_wrap">
+								<a href="#" class="btn primary">Confirm</a>
+							</div>
+						</div>
+						<div class="overlay-dimmed"></div>
+					</div>
+					<br>
+<pre>
+&lt;button aria-haspopup="dialog" aria-controls="팝업아이디" id="samplefn-opener" aria-pressed="false" 
+class="btn small <span style="color:red;font-weight: 700;">manual_fn</span>" <span style="color:red;font-weight: 700;">onclick="openLayer('#팝업아이디')"</span>&gt;function - layer popup 열기&lt;/button&gt;<br>
+&lt;div class="overlay-popup" role="dialog" id="팝업아이디" aria-labelledby="samplefn-opener" aria-modal="true"&gt;
+&lt;div class="contents"&gt;팝업 내용&lt;/div&gt;
+&lt;/div&gt;<br>
+팝업닫기 - <span style="color:red;font-weight: 700;">closeLayer('#팝업아이디'); </span>
+</pre>
 				</dd>
 			</dl>
 
