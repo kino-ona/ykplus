@@ -21,6 +21,135 @@
 
 	<!-- contents body -->
 	<div class="contents_body">
+    <div style="text-align: center;">
+<a href="#" aria-haspopup="dialog" aria-controls="alert-layer01" id="alert01-opener" aria-pressed="false" class="btn secondary">작성 가능한 리뷰가 없는 경우(알럿)</a>
+<br><br>
+
+<a href="#" aria-haspopup="dialog" aria-controls="alert-layer02" id="alert02-opener" aria-pressed="false" class="btn secondary">리뷰 작성 가능여부 확인 팝업(알럿)</a>
+<br><br>
+
+<a href="#" aria-haspopup="dialog" aria-controls="coupon-layer" id="coupon-opener" aria-pressed="false"  class="btn small manual_fn" onclick="openLayer('#coupon-layer')">쿠폰변경</a>
+<br><br>
+
+<a href="#" aria-haspopup="dialog" aria-controls="coupon_ord-layer" id="coupon_ord-opener" aria-pressed="false" class="btn primary full manual_fn" onclick="openLayer('#coupon_ord-layer')">장바구니 쿠폰/쇼핑지원금/배송비 쿠폰<i></i></a>
+<br><br>
+
+    </div>
+
+    <!-- 작성 가능한 리뷰가 없는 경우 팝업 -->
+		<div class="overlay-popup alert-layer" role="dialog" id="alert-layer01" aria-labelledby="alert01-opener" aria-modal="true">
+			<div class="contents">
+				<div class="inner">
+          <p>작성 가능한 리뷰가 없습니다.</p>
+        </div>
+        <div class="btn_wrap">
+          <a href="#" onclick="closeLayer('#alert-layer01');return false;" class="btn primary">확인</a>
+        </div>
+      </div>
+      <div class="overlay-dimmed"></div>
+    </div>
+    <!--// 작성 가능한 리뷰가 없는 경우 팝업 -->
+
+    <!-- 리뷰 작성 가능여부 확인 팝업 -->
+		<div class="overlay-popup alert-layer" role="dialog" id="alert-layer02" aria-labelledby="alert02-opener" aria-modal="true">
+			<div class="contents">
+				<div class="inner">
+          <p>리뷰 작성은 배송완료 후<br>작성 가능합니다.</p>
+        </div>
+        <div class="btn_wrap">
+          <a href="#" onclick="closeLayer('#alert-layer02');return false;" class="btn primary">확인</a>
+        </div>
+      </div>
+      <div class="overlay-dimmed"></div>
+    </div>
+    <!--// 리뷰 작성 가능여부 확인 팝업 -->
+
+    <!-- 상품쿠폰 팝업 -->
+		<div class="overlay-popup coupon-layer" role="dialog" id="coupon-layer" aria-labelledby="coupon-opener" aria-modal="true">
+			<div class="contents">
+				<div class="heading">
+					상품쿠폰 적용 <button class="btn_close"><i></i></button>
+				</div>
+				<div class="inner">
+					<dl class="benefit">
+						<dt>적용 쿠폰 선택</dt>
+						<dd>
+							<div class="radiowrap">
+								<input type="radio" name="coupon00" id="cp01"><label for="cp01">쿠폰 적용 안함</label>
+							</div>
+						</dd>
+						<dd>
+							<div class="radiowrap">
+								<input type="radio" name="coupon00" id="cp02"><label for="cp02">
+									~ 4,780원<br>[고객감사] 자녀생일 20% 할인쿠폰
+									<span>단일상품, 세트상품 적용가능(체험팩 등 일부상품 제외)</span>
+									<span class="expiry-date">유효기간: ~2021.07.28</span>
+								</label>
+							</div>
+						</dd>
+						<dd>
+							<div class="radiowrap">
+								<input type="radio" name="coupon00" id="cp03"><label for="cp03">
+									무료배송 쿠폰
+								</label>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" onclick="closeLayer('#coupon-layer')" class="btn primary">적용하기</a>
+				</div>
+			</div>
+			<div class="overlay-dimmed"></div>
+		</div>
+		<!--// 상품쿠폰 팝업 -->
+
+    <!-- 장바구니 쿠폰 팝업 -->
+		<div class="overlay-popup coupon-layer" role="dialog" id="coupon_ord-layer" aria-labelledby="coupon_ord-opener" aria-modal="true">
+			<div class="contents">
+				<div class="heading">
+					장바구니 쿠폰 적용 <button class="btn_close"><i></i></button>
+				</div>
+				<div class="inner">
+					<dl class="benefit">
+						<dt>배송비 쿠폰 선택</dt>
+						<dd>
+							<div class="radiowrap">
+								<input type="radio" name="coupon01" id="cp02_1"><label for="cp02_1">쿠폰 적용 안함</label>
+							</div>
+						</dd>
+						<dd>
+							<div class="radiowrap">
+								<input type="radio" name="coupon01" id="cp02_2"><label for="cp02_2">
+									배송비 무료
+									<span>실버등급 무료배송 쿠폰</span>
+									<span>유한킴벌리 상품 무료배송 쿠폰</span>
+									<span class="expiry-date">유효기간: ~2021.07.28</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" onclick="closeLayer('#coupon_ord-layer')" class="btn primary">적용하기</a>
+				</div>
+			</div>
+			<div class="overlay-dimmed"></div>
+		</div>
+		<!--// 장바구니 쿠폰 팝업 -->
+
+
   </div>
+  <!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"show"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
 </body>
 <input
