@@ -549,6 +549,21 @@ a.btn {
 		}
 	}
 }
+.alert-layer {
+	.contents {
+		max-width:290px;
+		.inner {
+			padding:50px 20px;
+			font-size:15px;
+			font-weight: 700;
+			text-align: center;
+			p {
+				font-size:15px;
+				font-weight: 700;
+			}
+		}
+	}
+}
 .overlay-dimmed {
   display: block;
   z-index: 1000;

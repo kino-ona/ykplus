@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"주문내역",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/order.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"subtype2"
+		},
+		"subtitle":"주문내역"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="order_wrap">
+      <div class="order_total-info">
+        <p><span>2건</span>의 주문 내역이 있습니다.</p>
+        <span>* 최근 3개월 주문내역을 확인하실 수 있습니다.</span>
+      </div>
+
+      <div class="myorder_list">
+        <!-- item -->
+        <div class="item">
+          <div class="order_state">
+            <span>배송준비중</span> <button class="btn small" type="button">배송조회</button>
+          </div>
+          <div class="order_summary">
+            <p class="name">크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P × 50 크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P × 50 + 대형 1P × 50</p>
+
+            <dl class="horizon">
+              <dt>주문번호</dt>
+              <dd>20210719114606-24200233263</dd>
+            </dl>
+            <dl class="horizon">
+              <dt>결제정보</dt>
+              <dd>2021.05.14 / 14:41:32</dd>
+            </dl>
+            <dl class="horizon">
+              <dt>결제금액</dt>
+              <dd>
+                <p class="price">21,980<span class="unit">원</span></p>
+                <button class="btn t-btn" type="button">주문상세<i></i></button>
+              </dd>
+            </dl>
+
+            <div class="btn_wrap">
+              <a href="#" class="btn secondary">전체 상품 취소</a>
+              <a href="#" class="btn secondary">반품요청</a>
+            </div>
+          </div>
+        </div>
+        <!--// item -->
+
+        <div class="item">
+          <div class="order_state">
+            거래완료 <button class="btn small" type="button">배송조회</button>
+          </div>
+          <div class="order_summary">
+            <p class="name">크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P × 50 크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P × 50 + 대형 1P × 50</p>
+
+            <dl class="horizon">
+              <dt>주문번호</dt>
+              <dd>20210719114606-24200233263</dd>
+            </dl>
+            <dl class="horizon">
+              <dt>결제정보</dt>
+              <dd>2021.05.14 / 14:41:32</dd>
+            </dl>
+            <dl class="horizon">
+              <dt>결제금액</dt>
+              <dd>
+                <p class="price">21,980<span class="unit">원</span></p>
+                <button class="btn t-btn" type="button">주문상세<i></i></button>
+              </dd>
+            </dl>
+
+            <div class="btn_wrap">
+              <a href="#" aria-haspopup="dialog" aria-controls="alert-layer01" id="alert01-opener" aria-pressed="false" class="btn secondary">리뷰작성</a>
+              <a href="#" class="btn secondary">구매확정</a>
+              <a href="#" class="btn secondary">전체 상품 취소</a>
+              <a href="#" class="btn secondary">반품요청</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="order_state">
+            배송중 <button class="btn small" type="button">배송조회</button>
+          </div>
+          <div class="order_summary">
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="order_state">
+            반품완료
+          </div>
+          <div class="order_summary">
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="order_state">
+            결제대기
+          </div>
+          <div class="order_summary">
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="order_state">
+            입금 후 취소-구매자
+          </div>
+          <div class="order_summary">
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="order_state">
+            입금 전 취소-구매자
+          </div>
+          <div class="order_summary">
+          </div>
+        </div>
+
+      </div>
+      <!--// myorder_list -->
+
+    </div>
+
+    <!-- 작성 가능한 리뷰가 없는 경우 팝업 -->
+		<div class="overlay-popup alert-layer" role="dialog" id="alert-layer01" aria-labelledby="alert01-opener" aria-modal="true">
+			<div class="contents">
+				<div class="inner">
+          <p>작성 가능한 리뷰가 없습니다.</p>
+        </div>
+        <div class="btn_wrap">
+          <a href="#" onclick="closeLayer('#alert-layer01');return false;" class="btn primary">확인</a>
+        </div>
+      </div>
+      <div class="overlay-dimmed"></div>
+    </div>
+    <!--// 작성 가능한 리뷰가 없는 경우 팝업 -->
+
+    <!-- 리뷰 작성 가능여부 확인 팝업 -->
+		<div class="overlay-popup alert-layer" role="dialog" id="alert-layer02" aria-labelledby="alert02-opener" aria-modal="true">
+			<div class="contents">
+				<div class="inner">
+          <p>리뷰 작성은 배송완료 후<br>작성 가능합니다.</p>
+        </div>
+        <div class="btn_wrap">
+          <a href="#" onclick="closeLayer('#alert-layer02');return false;" class="btn primary">확인</a>
+        </div>
+      </div>
+      <div class="overlay-dimmed"></div>
+    </div>
+    <!--// 리뷰 작성 가능여부 확인 팝업 -->
+
+
+  </div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"show"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>

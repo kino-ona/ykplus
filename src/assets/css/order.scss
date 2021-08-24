@@ -41,6 +41,14 @@
 		}
 	}
 }
+.horizon {
+	&:after {
+		@extend %clearer;
+	}
+	dt, dd {
+		font-size:15px;
+	}
+}
 
 /** Shop > Order
 ****************************************/
@@ -354,7 +362,6 @@
 			display: flex;
 			align-items: center;
 			min-height:38px;
-			font-size:15px;
 		}
 		dt {
 			width:95px;
@@ -368,9 +375,6 @@
 			& + dd {
 				margin-top:8px;
 			}
-		}
-		&:after {
-			@extend %clearer;
 		}
 		&.edit {
 			dt, dd {
@@ -908,6 +912,102 @@
 		.swiper-container {
 			margin-top:0;
 			padding-right:20px;
+		}
+	}
+}
+.order_total-info {
+	padding:22px 20px 20px;
+	background-color: #F5F7F8;
+	p {
+		font-size:15px;
+		font-weight: 700;
+		> span {
+			font-size:inherit;
+			font-weight: inherit;
+			color:#009AFF;
+		}
+	}
+	> span {
+		display: block;
+		margin-top:5px;
+		font-size:13px;
+		color:#999999;
+	}
+}
+.myorder_list {
+	[class*=order_]{
+		position:relative;
+		padding:23px 20px;
+	}
+	.item {
+		border-bottom:8px solid #F0F0F0;
+	}
+	.order_state {
+		border-bottom:1px solid #D8DBDD;
+		.btn {
+			position:absolute;
+			right:20px;
+			top:50%;
+			@include transform(translateY(-50%));
+		}
+	}
+	.order_summary {
+		.name {
+			margin-bottom:20px;
+			font-size:15px;
+			font-weight: 700;
+			line-height:1.4;
+		}
+		.horizon {
+			margin-top:8px;
+			&:first-child {
+				margin-top:0;
+			}
+			dt, dd {
+				float:left;
+				display: flex;
+				align-items: center;
+				min-height:20px;
+			}
+			dt {
+				width:95px;
+				color:#666666;
+			}
+			dd {
+				position:relative;
+				width:calc(100% - 95px);
+				font-family: 'roboto';
+				color:#000;
+			}
+			.t-btn {
+				position:absolute;
+				right:0;
+				font-size:15px;
+				color:#000;
+				i {
+					margin-top:-2px;
+					@include iconAngle($direction: 'right', $width: 6px, $height: 10px, $thick: 1px, $color: #111, $display: inline-block);
+					vertical-align: middle;
+				}
+			}
+		}
+		.btn_wrap {
+			margin-top:20px;
+			padding-left:0;
+			padding-right:0;
+			.btn {
+				display: inline-block;
+				width:calc(50% - 3px);
+				margin-right:2px;
+				margin-bottom:5px;
+				border-radius: 8px;
+				background-color: #F5F7F8;
+				font-weight:400;
+				font-size:14px;
+				&:nth-child(2n) {
+					margin-right:0;
+				}
+			}
 		}
 	}
 }

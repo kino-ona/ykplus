@@ -264,6 +264,22 @@ class="btn small <span style="color:red;font-weight: 700;">manual_fn</span>" <sp
 &lt;/div&gt;<br>
 팝업닫기 - <span style="color:red;font-weight: 700;">closeLayer('#팝업아이디'); </span>
 </pre>
+<br><br>
+
+					<button aria-haspopup="dialog" aria-controls="alert_popup" id="alert_opener" aria-pressed="false" class="btn small">alert type popup 열기</button>
+					<div class="overlay-popup alert-layer" role="dialog" id="alert_popup" aria-labelledby="alert_opener" aria-modal="true">
+						<div class="contents">
+							<div class="inner">
+								<p>팝업 타이틀 없는 알럿 타입 팝업</p>
+							</div>
+							<div class="btn_wrap">
+								<a href="#" onclick="closeLayer('#alert_popup')" class="btn primary">Confirm</a>
+							</div>
+						</div>
+						<div class="overlay-dimmed"></div>
+					</div>
+
+
 				</dd>
 			</dl>
 
