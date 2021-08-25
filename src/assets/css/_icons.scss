@@ -3,6 +3,11 @@
 
 /** Icons 
 ****************************************/
+.ic-16 {
+	width:16px;
+	height:16px;
+	background-size:16px;
+}
 .ic-20 {
 	width:20px;
 	height:20px;
@@ -85,6 +90,16 @@
 		background-image: url(../images/icons/icon_share.png);
 	}
 
+	&.ic_breplies {
+		background-image: url(../images/icons/ic_board-replies.png);
+	}
+	&.ic_blikes {
+		background-image: url(../images/icons/ic_board-likes.png);
+	}
+	&.ic_blikes_clicked {
+		background-image: url(../images/icons/ic_board-likes_clicked.png);
+	}
+	
   /** App bar ***********/
   &.ic_app-home {
     background-image: url(../images/icons/icon_app-home.png);

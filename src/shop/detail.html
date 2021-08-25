@@ -72,7 +72,7 @@
 					<div class="row">
 						<p>쿠폰할인 </p>
 						<span class="discount"><em>-1680</em> 원</span>
-						<button class="btn small">쿠폰받기</button>
+						<button class="btn small" onclick="openLayer('coupon_popup-fn')">쿠폰받기</button>
 					</div>
 				</div>
 			</div>
@@ -80,147 +80,278 @@
 			<section class="section prddetail_sec">
 				<div class="tab_wrap" id="PrdDetail">
 					<ul class="tablist" role="tablist">
-						<li><button class="tab ">상품정보</button></li>
-						<li><button class="tab ">구매정보</button></li>
-						<li><button class="tab ">리뷰<span class="cnt">1250</span></button></li>
-						<li><button class="tab ">문의</button></li>
+						<li><button class="tab">상품정보</button></li>
+						<li><button class="tab">구매정보</button></li>
+						<li><button class="tab">리뷰<span class="cnt">1250</span></button></li>
+						<li><button class="tab">문의</button></li>
 					</ul>
-					<div class="tab_contents">					
-						<div class="tab_panel" aria-hidden="false">
-							<p class="img"><img src="../assets/images/dummy/shop_dummy001.jpg"/></p>
+					<!-- 20210825 제품상세 탭 영역 -->
+					<div class="tab_contents">
+						<div class="tab_panel" role="tabpanel">
+							<div class="panel_inner">
+								<p class="img"><img src="../assets/images/dummy/shop_dummy001.jpg"/></p>
+							</div>
+							<div class="see_more row">
+								<div class="btn_wrap">
+									<button class="btn primary">상세정보 펼쳐보기 <i class="down"></i></button>
+								</div>
+							</div>
 						</div>
-						<div class="tab_panel" aria-hidden="false">
-							<p style="width: 100%; background-color: #999; color: #fff; text-align: center; padding: 40px 25px;">test 2</p>
+						<div class="tab_panel" role="tabpanel">
+							<div class="detail_conts">
+								<p class="title">상품고지정보
+									<button class="btn toggle_trigger" aria-controls="detail_info" type="button" aria-pressed="false"><span class="a11y">상세정보보기</span><i></i></button>
+								</p>
+								<div id="detail_info" class="content_toggle detail_info">
+									<div class="detail_data">
+										<table cellpadding="0" cellspacing="0">
+											<tr><td>상품명</td><td>디펜드 맘스 안심패드 30개입 (EA)</td></tr>
+											<tr><td>품명 및 모델명</td><td>디펜드 맘스 안심패드 30개입</td></tr>
+											<tr><td>인증, 허가 사항</td><td>공산품</td></tr>
+											<tr><td>제조국 또는 원산지</td><td>대한민국</td></tr>
+											<tr><td>제조사</td><td>(주) 유한킴벌리</td></tr>
+											<tr><td>A/S 책임자와 전화번호</td><td>맘큐 고객센터: <a href="tel:080-500-5200">080-500-5200</a></td></tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="detail_conts">
+								<p class="title">교환/반품안내
+									<button class="btn toggle_trigger" aria-controls="as_info" type="button" aria-pressed="false"><span class="a11y">상세정보보기</span><i></i></button>
+								</p>
+								<div id="as_info" class="content_toggle as_info">
+									<div class="detail_data">
+										<dl>
+											<dt>반품/교환 가능기간</dt>
+											<dd>
+												<p>상품 수령일로부터 7일 이내 가능.</p>
+												<p>단, 상품 내용이 표시/광고 내용과 다르거나 계약내용과 다른 경우에는 상품 수령일로부터 3개월 이내, 혹은 그 사실을 안 날 또는 알 수 있었던 날부터 30일 이내 가능</p>
+											</dd>
+											<dt>반품/교환 방법</dt>
+											<dd>
+												<p>맘큐 물류센터 배송상품의 경우 고객센터로 반폼/교환 신청하면 지정 택배사인 CJ대한통운이나 롯데택배에서 직접 방문하여 수거.</p>
+												<p class="_1d">보내실 곳 : 306-200 대전광역시 대덕구 대덕대로 1277번길 90 (문평동, 유한킴벌리(주)대전공장) 맘큐담당자</p>
+											</dd>
+											<dt>반품/교환 배송비</dt>
+											<dd>
+												<p class="tit">고객 단순 변심인 경우 :반품만 가능</p>
+												<p class="_1d">반품 변송 배송비 무료</p>
+												<p class="_1d">반품시 환불금액</p>
+												<ul class="_2d">
+													<li>유료배송 상품: 결제금액 중 최소 배송비 2,500원 제외 후 환불</li>
+													<li>무료배송 상품: 결제금액에서 최소 배송비 2,500원 차감 후 환불</li>													
+												</ul>
+												<p class="tit">상품불량 및 오배송인 경우: 반품 또는 교환 가능</p>
+												<p class="_1d">반품시 반송 배송비 무료, 교환시 왕복 배송비 무료</p>
+												<p class="_1d">반품시 결제금액 전액 환불</p>
+											</dd>
+											<dt>반품/교환 불가 사유</dt>
+											<dd>
+												<p class="_1d">반품/교환 가능기간이 경과한 경우</p>
+												<p class="_1d">구성품이 누락된 경우(세트, 추가구성상품, 사은품, N+1등)</p>
+												<p class="_1d">상품의 TAG/라벨을 제거하거나, 고객 사유로 상품 및 박스/포장 등이 훼손된 경우</p>
+												<p class="_1d">고객의 사용 또는 일부 소비, 시간의 경과에 의해 상품가치가 현저히 감소한 경우</p>
+												<p class="_1d">배송된 상품이 하자 없음을 확인 후 설치가 완료된 경우</p>
+												<p class="_1d">고객의 요청에 따라 개별적으로 주문 제작되는 상품의 경우</p>
+												<p class="_1d">스킨 상품 사용 후 트러블이 발생한 경우 진료 확인서, 소견서 등 증빙 서류 제출시 가능(제반 비용 고객 부담)</p>
+												<p class="_1d">기타, ‘전자상거래 등에서의 소비자 보호에 관한 법률’이 정하는 소비자 청약철회 제한에 해당하는 경우</p>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="tab_panel" aria-hidden="false">
-							<p style="width: 100%; background-color: #666; color: #fff; text-align: center; padding: 40px 25px;">test 3</p>
+						<div class="tab_panel" role="tabpanel">
+							<section class="section review_sec">
+								<div class="row">
+									<div class="tit_wrap">
+										<h3>리뷰<span class="cnt">153</span></h3>
+									</div>
+								</div>
+								<div class="banner _default">
+									<p>생생한 리뷰를 남기고, 포인트를 받으세요!<span>포토리뷰 100원, 일반리뷰 50원을 적립해드립니다.</span></p>
+								</div>
+								<div class="prdscore">
+									<div class="prdscore_info">
+										<div class="star_wrap">
+											<span class="star on"></span>
+											<span class="star on"></span>
+											<span class="star on"></span>
+											<span class="star on"></span>
+											<span class="star off"></span>
+											<span class="num">4.5/5</span>
+										</div>
+									</div>
+									<p>구매자들의 <span>93.5%</span>가 이 상품을 좋아합니다.</p>
+								</div>
+								<!-- 20210825 리뷰 영역 수정 -->
+								<div class="detail_conts">
+									<div class="title">
+										<div class="chkwrap"> 
+											<input type="checkbox" id="check"><label for="check">포토/영상 리뷰만 모아보기</label>
+										</div>
+										<button class="btn toggle_trigger" aria-controls="review_wrap" type="button" aria-pressed="false">인기순<span class="a11y">인기순 보기</span><i></i></button>
+									</div>
+									<div id="review_wrap" class="content_toggle review_wrap">
+										<div class="item">
+											<div class="user_info">
+												<div class="headdata">
+													<p class="img"><img src="../assets/images/dummy/dummy_user01.png"/><span class="a11y">사용자 프로필사진</span></p>
+													<p class="userid">emdfpm84</p>
+													<p class="date">2021.04.08</p>
+												</div>
+												<div class="star_wrap">
+													<span class="num">3.5</span>
+													<span class="star on"></span>
+													<span class="star on"></span>
+													<span class="star on"></span>
+													<span class="star half"></span>
+													<span class="star off"></span>
+												</div>
+											</div>
+											<div class="review">
+												<p class="message">생각처럼 만족스러웠습니다.</p>
+												<div class="btn_wrap">
+													<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked left"></i> 좋아요 <span>20</span></button>
+													<button class="btn"><i class="ic-16 ic_breplies left"></i> 답글쓰기 <span></span></button>
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<div class="user_info">
+												<div class="headdata">
+													<p class="img"><img src="../assets/images/dummy/dummy_user03.png"/><span class="a11y">사용자 프로필사진</span></p>
+													<p class="userid">emdfpm84</p>
+													<p class="date">2021.04.08</p>
+												</div>
+												<div class="star_wrap">
+													<span class="num">3.5</span>
+													<span class="star on"></span>
+													<span class="star on"></span>
+													<span class="star on"></span>
+													<span class="star half"></span>
+													<span class="star off"></span>
+												</div>
+											</div>
+											<div class="review">
+												<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
+												<div class="btn_wrap">
+													<button class="btn"><i class="ic-16 ic_blikes left"></i> 좋아요 <span>20</span></button>
+													<button class="btn"><i class="ic-16 ic_breplies left"></i> 답글 <span>2</span></button>
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<div class="user_info">
+												<div class="headdata">
+													<p class="img"><img src="../assets/images/dummy/dummy_user01.png"/><span class="a11y">사용자 프로필사진</span></p>
+													<p class="userid">emdfpm84</p>
+													<p class="date">2021.04.08</p>
+												</div>
+												<div class="star_wrap">
+													<span class="num">3.5</span>
+													<span class="star on"></span>
+													<span class="star on"></span>
+													<span class="star on"></span>
+													<span class="star half"></span>
+													<span class="star off"></span>
+												</div>
+											</div>
+											<div class="review">
+												<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
+												<div class="btn_wrap">
+													<button class="btn"><i class="ic-16 ic_blikes left"></i> 좋아요 <span>20</span></button>
+													<button class="btn"><i class="ic-16 ic_breplies left"></i> 답글쓰기 <span></span></button>
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<div class="user_info">
+												<div class="headdata">
+													<p class="img"><img src="../assets/images/dummy/dummy_user02.png"/><span class="a11y">사용자 프로필사진</span></p>
+													<p class="userid">emdfpm84</p>
+													<p class="date">2021.04.08</p>
+												</div>
+												<div class="star_wrap">
+													<span class="num">3.5</span>
+													<span class="star on"></span>
+													<span class="star on"></span>
+													<span class="star on"></span>
+													<span class="star half"></span>
+													<span class="star off"></span>
+												</div>
+											</div>
+											<div class="review">
+												<div id="Viewbox_1-Swipe" class="swiper-container">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide"><a href="#">
+															<p class="img"><img src="../assets/images/dummy/userreview01.png"/></p>
+														</a></div>
+														<div class="swiper-slide"><a href="#">
+															<p class="img"><img src="../assets/images/dummy/userreview02.png"/></p>
+														</a></div>
+														<div class="swiper-slide"><a href="#">
+															<p class="img"><img src="../assets/images/dummy/userreview03.png"/></p>
+														</a></div>
+														<div class="swiper-slide"><a href="#">
+															<p class="img"><img src="../assets/images/dummy/userreview01.png"/></p>
+														</a></div>
+													</div>
+												</div>
+												<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
+												<div class="btn_wrap">
+													<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked left"></i> 좋아요 <span>20</span></button>
+													<button class="btn"><i class="ic-16 ic_breplies left"></i> 답글 <span>2</span></button>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="btn_wrap">
+												<button class="btn primary">리뷰 전체보기 <i class="right"></i></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--// 20210825 리뷰 영역 수정 -->
+							</section>
 						</div>
-						<div class="tab_panel" aria-hidden="false">
-							<p style="width: 100%; background-color: #444; color: #fff; text-align: center; padding: 40px 25px;">test 4</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="btn_wrap">
-						<button class="btn primary">상세정보 펼쳐보기 <i class="down"></i></button>
-					</div>
-				</div>
-			</section>
-			
-			<section class="section review_sec">
-				<div class="row">
-					<div class="tit_wrap">
-						<h3>리뷰<span class="cnt">153</span></h3>
-					</div>
-				</div>
-				<div class="banner _default">
-					<p>생생한 리뷰를 남기고, 포인트를 받으세요!<span>포토리뷰 100원, 일반리뷰 50원을 적립해드립니다.</span></p>
-				</div>
-				<div class="prdscore">
-					<div class="prdscore_info">
-						<div class="star_wrap">
-							<span class="star on"></span>
-							<span class="star on"></span>
-							<span class="star on"></span>
-							<span class="star on"></span>
-							<span class="star off"></span>
-							<span class="num">4.5/5</span>
-						</div>
-					</div>
-					<p>구매자들의 <span>93.5%</span>가 이 상품을 좋아합니다.</p>
-				</div>
-				<div class="userreview_sec">
-					<div class="item">
-						<div class="star_wrap">
-							<span class="star on"></span>
-							<span class="star on"></span>
-							<span class="star on"></span>
-							<span class="star half"></span>
-							<span class="star off"></span>
-							<span class="num">3.5</span>
-						</div>
-						<div class="reviewinfo">
-							<p class="date">2021.04.08</p>
-							<p class="userid">emdfpm84</p>
-						</div>
-						<div class="reviewcontent">
-							<div class="viewbox">
-								<div id="Viewbox_1-Swipe" class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide"><a href="#">
-											<p class="img"><img src="../assets/images/dummy/userreview01.png"/></p>
-										</a></div>
-										<div class="swiper-slide"><a href="#">
-											<p class="img"><img src="../assets/images/dummy/userreview02.png"/></p>
-										</a></div>
-										<div class="swiper-slide"><a href="#">
-											<p class="img"><img src="../assets/images/dummy/userreview03.png"/></p>
-										</a></div>
-										<div class="swiper-slide"><a href="#">
-											<p class="img"><img src="../assets/images/dummy/userreview01.png"/></p>
-										</a></div>
+						<div class="tab_panel" role="tabpanel">
+							<div class="panel_inner">
+								<div class="row">
+									<div class="tit_wrap">
+										<h3>문의</h3>
+									</div>
+									<div class="banner _full">
+										<p><em>제품, 구매, 배송 등</em>궁금하신 내용을 편하게 문의해주세요.</p>
+									</div>
+									<div class="cta_wrap">
+										<p class="title">상품문의</p>
+										<p class="desc">주문, 배송, 회원 관련 등 자주묻는 질문들이에요.</p>
+										<div class="btn_wrap">
+											<button class="btn primary">자주묻는 질문보기</button>
+										</div>
+									</div>
+									<div class="cta_wrap">
+										<p class="title">1:1 상품문의</p>
+										<p class="desc">24시간 접수가능. <br>
+											*고객센터 운영시간에 순차적으로 답변드립니다.</p>
+										<div class="btn_wrap">
+											<button class="btn primary">1:1 문의남기기</button>
+										</div>
+									</div>
+									<div class="cta_wrap">
+										<p class="title">전화문의</p>
+										<p class="desc">평일 09:00~18:00 (점심 12:00~13:00) <br>
+											주말/공휴일 휴무</p>
+										<div class="btn_wrap">
+											<button class="btn primary">전화문의하기</button>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="item">
-						<div class="star_wrap">
-							<span class="star on"></span>
-							<span class="star on"></span>
-							<span class="star on"></span>
-							<span class="star half"></span>
-							<span class="star off"></span>
-							<span class="num">3.5</span>
-						</div>
-						<div class="reviewinfo">
-							<p class="date">2021.04.08</p>
-							<p class="userid">emdfpm84</p>
-						</div>
-						<div class="reviewcontent">
-							<p class="message">생각처럼 만족스러웠습니다.</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="star_wrap">
-							<span class="star on"></span>
-							<span class="star on"></span>
-							<span class="star on"></span>
-							<span class="star half"></span>
-							<span class="star off"></span>
-							<span class="num">3.5</span>
-						</div>
-						<div class="reviewinfo">
-							<p class="date">2021.04.08</p>
-							<p class="userid">emdfpm84</p>
-						</div>
-						<div class="reviewcontent">
-							<div class="viewbox">
-								<div id="Viewbox_2-Swipe" class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide"><a href="#">
-											<p class="img"><img src="../assets/images/dummy/userreview01.png"/></p>
-										</a></div>
-										<div class="swiper-slide"><a href="#">
-											<p class="img"><img src="../assets/images/dummy/userreview02.png"/></p>
-										</a></div>
-										<div class="swiper-slide"><a href="#">
-											<p class="img"><img src="../assets/images/dummy/userreview03.png"/></p>
-										</a></div>
-										<div class="swiper-slide"><a href="#">
-											<p class="img"><img src="../assets/images/dummy/userreview01.png"/></p>
-										</a></div>
-									</div>
-								</div>
-							</div>
-							<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="btn_wrap">
-							<button class="btn primary">리뷰 전체보기 <i class="down"></i></button>
-						</div>
-					</div>
+					<!--// 20210825 제품상세 탭 영역 -->
 				</div>
 			</section>
 
@@ -364,6 +495,23 @@
 		<div class="fixed_btn"><a href="#" class="btn blue-btn">바로구매</a></div>
 	</div>
 	
+	<div class="overlay-popup" role="dialog" id="coupon_popup-fn" aria-labelledby="coupon_popup-opener" aria-modal="true" style="display: block;">
+		<div class="contents" style="margin-top: 257px;">
+			<div class="heading">
+				할인정보 <button class="btn_close"><i></i></button>
+			</div>
+			<div class="inner">
+				<div class="tit_wrap">
+					<h3>최대 할인가 <span>31,650원</span>에 구매하실 수 있습니다.</h3>
+				</div>
+			</div>
+			<div class="btn_wrap">
+				<a href="#" class="btn primary" onclick="closeLayer('coupon_popup-fn')">확인</a>
+			</div>
+		</div>
+		<div class="overlay-dimmed"></div>
+	</div>
+
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
 		"webroot":"..",
@@ -391,14 +539,7 @@
 </script>
 <script>
 	var swiper = new Swiper('#Viewbox_1-Swipe', {
-		slidesPerView: 3.15,
-		speed: 400,
-		spaceBetween: 10,
-	});
-</script>
-<script>
-	var swiper = new Swiper('#Viewbox_2-Swipe', {
-		slidesPerView: 3.15,
+		slidesPerView: 3.25,
 		speed: 400,
 		spaceBetween: 10,
 	});

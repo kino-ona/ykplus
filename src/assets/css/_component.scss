@@ -107,6 +107,10 @@ a.btn {
 		@include iconAngle($direction: 'up', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
 		vertical-align: middle;
 	}
+	i.right {
+		@include iconAngle($direction: 'right', $width: 8px, $height: 15px, $thick: 1px, $color: #111, $display: inline-block);
+		vertical-align: middle;
+	}
 	&_tooltip {
 		display: inline-block;
 		width: 14px;
