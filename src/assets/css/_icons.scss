@@ -27,7 +27,24 @@
 		size: cover;
 	}
 	&.ic_notice {
+		position:relative;
 		background-image: url(../images/icons/icon_notice.png);
+		.cnt {
+			position:absolute;
+			right:0;
+			bottom:0;
+			display: block;
+			width:15px;
+			height:15px;
+			background-color: #FF2B4C;
+			border-radius: 50%;
+			font-size:10px;
+			font-weight: 700;
+			color:#fff;
+			text-align: center;
+			line-height:1.6;
+			letter-spacing: -1px;
+		}
 	}
 	&.ic_menu {
 		background-image: url(../images/icons/icon_menu.png);
@@ -47,6 +64,25 @@
 	&.ic_exclamation {
 		background-image: url(../images/icons/icon_exclamation.png);
 		background-size:16px;
+	}
+	&.ic_search {
+		background-image: url(../images/icons/icon_search-bk.png);
+	}
+	&.ic_cart {
+		background-image: url(../images/icons/icon_basket.png);
+		text-align: center;
+		.cnt {
+			display: block;
+			margin-left:0.6%;
+			width:100%;
+			height:100%;
+			font-size:10px;
+			font-weight: 700;
+			line-height:3.2;
+		}
+	}
+	&.ic_share {
+		background-image: url(../images/icons/icon_share.png);
 	}
 
   /** App bar ***********/
