@@ -440,11 +440,13 @@
 		.info_list {
 			margin-bottom: 30px;
 			li {
+				font-size: 0.938rem;
 				line-height: 1.25rem;
+				font-weight: 400!important;
 			}
 			p {
-				color: #707070;
 				font-size: inherit;
+				line-height: inherit;
 				font-weight: 700;
 			}
 			.annot {
@@ -490,13 +492,13 @@
 			.discount {
 				display: inline-block;
 				color: #FF2B4C;
-				font-family: 'Roboto';
 				font-size: 0.938rem;
-				font-weight: 700;
+				font-weight: 400;
 				vertical-align: baseline;
 				em {
+					font-family: 'Roboto';
 					color: inherit;
-					font-size:inherit;
+					font-size: inherit;
 					font-weight: 700;
 					letter-spacing: inherit;
 					vertical-align: baseline;
