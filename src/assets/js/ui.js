@@ -216,3 +216,34 @@ var toggleContent = function() {
 		toggleControl(this);
 	});
 }
+
+// tab pagination
+$(document).ready(function() {
+	if($('.tab-navigation .tab-row p').length > 0) tabposSet();
+});
+var tabposSet = function(){
+	$('.tab-navigation').each(function() {
+		var $tablist = $(this).find('.tab-row'),
+				$tabWidth = $tablist.outerWidth(true);
+		
+		$(this).find('.tab-row p').each(function() {
+			$(this).find('button').on('click', function(e){
+				$tablist.find('button').attr('aria-selected', false);
+				if(!$(this).attr('aria-selected', true)){
+					var $element = $(this);
+					$element.attr('aria-selected', true);
+				}
+				
+				$tablist.find('button').removeClass('active');
+				if(!$(this).hasClass('active')){
+					var $element = $(this);
+					$tablist.find('p').removeClass('active');
+					$element.addClass('active');
+					$element.parent('p').addClass('active');
+					
+				}
+			});
+		});
+
+	});
+}

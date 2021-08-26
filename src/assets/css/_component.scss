@@ -731,10 +731,26 @@ a.btn {
 	}
 	.dropdown_value {
 		position: relative;
+		.headtxt {
+			padding-right:30px;
+			font-size:18px;
+			font-weight: 900;
+			i {
+				display: inline-block;
+				width: 8px;
+				height: 8px;
+				background: {
+					image: url(../images/common/ico_title-plus.png);
+					size: 8px;
+					repeat: no-repeat;
+					position:0 0;
+				}
+				vertical-align: top;
+			}
+		}
 		input[type="text"] {
 			width: 100%;
 			padding:10px 20px 9px 20px;
-			font-size: 0.75rem;
 			border:0;
 			background-color: transparent;
 			color:#000;
@@ -753,7 +769,7 @@ a.btn {
 			i {
 				position: absolute;
 				right:10px;
-				top:45%;
+				top:30%;
 				@include transform(translate(0, -50%));
 				display: inline-block;
 				&:before {
@@ -761,8 +777,8 @@ a.btn {
 					display: inline-block;
 					width:5px;
  					height:5px;
-					border-top:2px solid #333;
-					border-right:2px solid #333;
+					border-top:1.5px solid #333;
+					border-right:1.5px  solid #333;
 					-webkit-transform: rotate(135deg);
 					transform: rotate(135deg);
 				}
@@ -979,5 +995,64 @@ a.btn {
 			font-size:13px;
 			color:#999999;
 		}
+	}
+}
+
+
+/** Scroll Navigation 
+****************************************/
+.tab-navigation {
+	position: relative;
+	width: 100%;
+	max-height: 34px;
+	margin-top:8px;
+	border-bottom:1px solid #D8DBDD;
+	overflow: hidden;
+	.tab-row {
+		display: flex;
+		padding-bottom: 20px;
+		padding-left: 0;
+		overflow-x: scroll;
+		border-bottom:1px solid red;
+		-webkit-overflow-scrolling: touch;
+	}
+	p {
+		flex: none;
+		float: left;
+		width: auto;
+		height: auto;
+		margin-left:20px;
+		border-radius: 0;
+		background-color: #fff;
+		opacity: 1;
+		white-space: nowrap;
+		cursor: pointer;
+		outline: none;
+		span {
+			display: block;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 1.6;
+			color: #000;
+			text-transform: uppercase;
+		}
+		&:last-child {
+			margin-right:20px;
+		}
+		&.active {
+			span {
+				&:after {
+					content: '';
+					margin-top: 4px;
+					display: block;
+					width: 100%;
+					height: 4px;
+					background-color: #000;
+				}
+			}
+		}
+	}
+	a {
+		display: inline-block;
 	}
 }
