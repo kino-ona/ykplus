@@ -447,6 +447,10 @@ body {
 	}
 	.row {
 		height:100%;
+		// padding:0;
+		// width:calc(100% - 20px);
+		// margin-left:20px;
+		// margin-right:20px;
 	}
 	h1.logo {
 		position:absolute;
@@ -486,6 +490,55 @@ body {
 		}
 		.page_close {
 			@include iconX($size:18px, $thick: 2px, $color: #000, $padding: 2px, $display: inline-block, $position: releatve); 
+		}
+	}
+	.dropdown_list {
+		width:100%;
+		text-align: center;
+		.dropdown_value {
+			display: inline-block;
+			width:auto;
+			margin:0 auto;
+		}
+		.item_box {
+			display: none;
+			position:absolute;
+			top:30px;
+			left:0;
+			width:calc(100% + 40px);
+			margin-left:-20px;
+			padding:10px 0;
+			background-color: #fff;
+			z-index: 101;
+			box-shadow: -1px 200px 119px 30px rgba(0,0,0,0.32);
+			-webkit-box-shadow: -1px 200px 119px 30px rgba(0,0,0,0.32);
+			-moz-box-shadow: -1px 200px 119px 30px rgba(0,0,0,0.32);
+			&.active {
+				display: block;
+			}
+			a {
+				display: block;
+				width:100%;
+				padding:12px 0;
+				font-size:16px;
+				&:hover, &:focus {
+					font-weight: 700;
+				}
+			}
+			.list_box {
+				position:relative;
+				z-index: 101;
+			}
+			.ic-plus {
+				display: inline-block;
+				width: 8px;
+				height: 8px;
+				background-image: url(../images/common/ico_title-plus.png);
+				background-size: 8px;
+				background-repeat: no-repeat;
+				background-position: 0 center;
+				vertical-align: top;
+			}
 		}
 	}
 }

@@ -19,7 +19,7 @@
 					<p class="headtxt">오늘<i></i> 마켓</p>
 					<button type="button" aria-label="열기" class="btn_opener"><i></i></button>
 				</div>
-				<div class="item_box" role="listbox" style="display:none;">
+				<div class="item_box" role="listbox">
 					<div class="list_box">
 						<div role="option"><a href="#">오늘<i class="ic-plus"></i> 마켓</a></div>
 						<div role="option"><a href="#">오늘<i class="ic-plus"></i> 톡</a></div>

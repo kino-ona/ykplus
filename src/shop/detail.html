@@ -24,13 +24,13 @@
 		<div class="shop_wrap contents_top">
 			<div class="prdmain_sec"> 
 				<div class="prdkv_wrap">
-					<div id="Prdct-Swipe" class="swiper-container">
+					<div id="product-swipe" class="swiper-container">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<p class="img"><img src="../assets/images/dummy/product_thumn01.png"/></p>
 							</div>
 							<div class="swiper-slide">
-								<p class="img"><img src="../assets/images/dummy/product_thumn01.png"/></p>
+								<p class="img"><img src="../assets/images/common/default_image.jpg"/></p>
 							</div>
 							<div class="swiper-slide">
 								<p class="img"><img src="../assets/images/dummy/product_thumn01.png"/></p>
@@ -122,7 +122,7 @@
 									<div class="item">
 										<div class="user_info">
 											<div class="headdata">
-												<p class="img"><img src="../assets/images/common/default_user01.png"/><span class="a11y">사용자 프로필사진</span></p>
+												<p class="img"><img src="../assets/images/common/default_user.png"/><span class="a11y">사용자 프로필사진</span></p>
 												<p class="userid">emdfpm84</p>
 												<p class="date">2021.04.08</p>
 											</div>
@@ -161,13 +161,13 @@
 											</div>
 										</div>
 										<div class="review">
-											<div id="Viewbox_1-Swipe" class="swiper-container">
+											<div id="reviewSwp01" class="swiper-container">
 												<div class="swiper-wrapper">
 													<div class="swiper-slide"><a href="#">
 														<p class="img"><img src="../assets/images/dummy/userreview01.png"/></p>
 													</a></div>
 													<div class="swiper-slide"><a href="#">
-														<p class="img"><img src="../assets/images/dummy/userreview02.png"/></p>
+														<p class="img"><img src="../assets/images/common/default_image.jpg"/></p>
 													</a></div>
 													<div class="swiper-slide"><a href="#">
 														<p class="img"><img src="../assets/images/dummy/userreview03.png"/></p>
@@ -230,7 +230,7 @@
 										<a href="#" class="btn_all">전체보기 <i> </i></a>
 									</div>
 								</div>
-								<div id="Recmmd_1-Swipe" class="row swiper-container">
+								<div id="Recmmd1_Swipe" class="row swiper-container">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"><a href="#">
 											<p class="img"><img src="../assets/images/dummy/dummy01.png" alt="하기스 네이처메이드"></p>
@@ -276,7 +276,7 @@
 										<a href="#" class="btn_all">전체보기 <i> </i></a>
 									</div>
 								</div>
-								<div id="Recmmd_2-Swipe" class="row swiper-container">
+								<div id="Recmmd2_Swipe" class="row swiper-container">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"><a href="#">
 											<p class="img"><img src="../assets/images/dummy/dummy04.png" alt="하기스 네이처메이드"></p>
@@ -425,7 +425,7 @@
 										<div class="item">
 											<div class="user_info">
 												<div class="headdata">
-													<p class="img"><img src="../assets/images/common/default_user01.png"/><span class="a11y">사용자 프로필사진</span></p>
+													<p class="img"><img src="../assets/images/common/default_user.png"/><span class="a11y">사용자 프로필사진</span></p>
 													<p class="userid">emdfpm84</p>
 													<p class="date">2021.04.08</p>
 												</div>
@@ -517,7 +517,7 @@
 												</div>
 											</div>
 											<div class="review">
-												<div id="Viewbox_1-Swipe" class="swiper-container">
+												<div id="reviewSwp02" class="swiper-container">
 													<div class="swiper-wrapper">
 														<div class="swiper-slide"><a href="#">
 															<p class="img"><img src="../assets/images/dummy/userreview01.png"/></p>
@@ -592,16 +592,42 @@
 					<!--// 20210826 제품상세 탭 영역 -->
 				</div>
 			</section>
-		
+		</div>
+
+		<div class="fixed_bottom detail-bottom">
+			<div class="fixed_btn fixed-like"><a href="#" onclick="openLayer('#thisLike_popup');" class="btn manual_fn"><i class="ic-25 ic_like"></i><span class="a11y">좋아요</span></a></div>
+			<!-- <div class="fixed_btn fixed-like"><a href="#" onclick="openLayer('#thisLike_popup');" class="btn manual_fn"><i class="ic-25 ic_like-on"></i><span class="a11y">좋아요</span></a></div> -->
+			<div class="fixed_btn"><a href="#" onclick="openLayer('#cartCheck_popup')" class="btn gray-btn">장바구니</a></div>
+			<div class="fixed_btn"><a href="#" onclick="openFixedBottom('#buy_popup')" class="btn blue-btn">바로구매</a></div>
 		</div>
 	</div>
 	<!--// contents body -->
+
+	<!-- 장바구니/바로구매 수량(옵션) 선택/변경 -->
+	<div class="fixed_bottom-pop buy_layer" role="dialog" id="buy_popup" aria-labelledby="buy_opener" aria-modal="true">
+		<div class="inner_wrap">
+			<div class="pop-close"><button onclick="closeFixedBottom('#buy_popup');" type="button"><span class="a11y">구매옵션 닫기</span></button></div>
+			<div class="opt-wrap">
+				<div class="opt-item">
+					<p class="name">스타일 언더웨어 라이프 여성 중대형 9매(EA)스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+					<div class="opt-edit">
+						<div class="amount">
+							<button class="calc _minus" type="button" data-inc="-1"><span class="a11y">수량빼기</span></button>
+							<button class="calc _plus" type="button" data-inc="1"><span class="a11y">수량더하기</span></button>
+							<input type="text" value="99" readonly>
+						</div>
 	
-	<div class="fixed_bottom detail-bottom">
-		<div class="fixed_btn fixed-like"><a href="#" class="btn"><i class="ic-25 ic_like"></i><span class="a11y">좋아요</span></a></div>
-		<div class="fixed_btn"><a href="#" class="btn gray-btn">장바구니</a></div>
-		<div class="fixed_btn"><a href="#" class="btn blue-btn">바로구매</a></div>
+						<p class="price">921,900<span class="unit">원</span></p>
+					</div>
+				</div>
+				<div class="total_price">
+					<p>주문금액 합계</p>
+					<p class="price">921,900<span class="unit">원</span></p>
+				</div>
+			</div>
+		</div>
 	</div>
+	<!--// 장바구니/바로구매 수량(옵션) 선택/변경 -->
 	
 	<!-- 쿠폰 팝업 -->
 	<div class="overlay-popup coupon_popup" role="dialog" id="coupon_popup-fn" aria-labelledby="coupon_popup-opener" aria-modal="true">
@@ -649,6 +675,41 @@
 	</div>
 	<!--// 쿠폰 팝업 -->
 
+	<!-- 찜하기 안내 팝업 -->
+	<div class="overlay-popup alert-layer" role="dialog" id="thisLike_popup" aria-labelledby="thisLike_opener" aria-modal="true">
+		<div class="contents">
+			<div class="inner">
+				<p>찜한 상품이 저장되었습니다.</p>
+				<p class="desc">마이페이지에서 확인하실 수 있습니다.</p>
+				
+				<!-- <p>이미 저장되어 있습니다.</p>
+				<p class="desc">마이페이지에서 확인하실 수 있습니다.</p>	 -->
+			</div>
+			<div class="btn_wrap">
+				<a href="#" onclick="closeLayer('#thisLike_popup')" class="btn primary">확인</a>
+			</div>
+		</div>
+		<div class="overlay-dimmed"></div>
+	</div>
+	<!--// 찜하기 안내 팝업 -->
+
+	<!-- 장바구니 수량 체크 안내 팝업 -->
+	<div class="overlay-popup alert-layer" role="dialog" id="cartCheck_popup" aria-labelledby="cartCheck_opener" aria-modal="true">
+		<div class="contents">
+			<div class="inner">
+				<p class="desc">장바구니에 선택하신 상품이 있어<br>상품 수량이 변경되었습니다.</p>
+				<p>지금 확인하시겠습니까?</p>
+			</div>
+			<div class="btn_wrap">
+				<a href="#" onclick="closeLayer('#cartCheck_popup')" class="btn tertiary">장바구니 이동</a>
+				<a href="#" onclick="closeLayer('#cartCheck_popup')" class="btn primary">쇼핑 계속하기</a>
+			</div>
+		</div>
+		<div class="overlay-dimmed"></div>
+	</div>
+	<!--// 장바구니 수량 체크 안내 팝업 -->
+
+
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
 		"webroot":"..",
@@ -663,7 +724,7 @@
 </body>
 
 <script>
-	var swiper = new Swiper('#Prdct-Swipe', {
+	var swiper = new Swiper('#product-swipe', {
 		slidesPerView: 1,
 		paginationClickable: true,
 		keyboard: true,
@@ -674,25 +735,27 @@
 		},
 	});
 </script>
+
 <script>
-	var swiper = new Swiper('#Viewbox_1-Swipe', {
-		slidesPerView: 3.25,
-		speed: 400,
-		spaceBetween: 10,
-	});
+	defaultSwipe('reviewSwp01', '3.25', 10);  // (스와이프 ID, 스와이프 노출 갯수, 사이간격);
+	defaultSwipe('Recmmd1_Swipe', '2.45', 10);
+	defaultSwipe('Recmmd2_Swipe', '2.45', 10); 
 </script>
+
 <script>
-	var swiper = new Swiper('#Recmmd_1-Swipe', {
-		slidesPerView: 2.45,
-		speed: 400,
-		spaceBetween: 10,
+	$('.amount button.calc').click(function() {
+		var $btn = $(this);
+		$('.amount input').val(function(i, val) {
+			val = val * 1 + $btn.data('inc');
+			return (val <= 0 ? '' : '') + val;
+		});
 	});
-</script>
-<script>
-	var swiper = new Swiper('#Recmmd_2-Swipe', {
-		slidesPerView: 2.45,
-		speed: 400,
-		spaceBetween: 10,
-	});
+
+	// 화면 확인용 > 리뷰 탭 내 스와이프 함수 호출 필요시 참고
+	$('.prddetail_sec .tablist').find('li').each(function(){ 
+		$(this).find('.tab').click(function(){
+			defaultSwipe('reviewSwp02', '3.25', 10); 
+		});
+	})
 </script>
 </html>

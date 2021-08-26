@@ -1075,6 +1075,111 @@
 	}
 }
 
+.opt-edit {
+	position:relative;
+	.amount {
+		position:relative;
+		display: inline-block;
+		max-width:110px;
+		input[type=text], input[type=number] {
+			height:34px;
+			padding-left: 20px;
+			padding-right:20px;
+			border-right:1px solid #D8DBDD;
+			border-radius: 4px;
+			border-radius: 4px;
+			text-align: center;
+			background-color: #fff;
+		}
+		.calc {
+			position:absolute;
+			width:34px;
+			height:34px;
+			&._minus {
+				left:0;
+				border-right:1px solid #D8DBDD;
+			}
+			&._plus {
+				right:0;
+				border-left:1px solid #D8DBDD;
+			}
+		}
+	}
+	.price {
+		position:absolute;
+		right:0;
+		top:0;
+		display: inline-block;
+		font-family: 'roboto';
+		font-size:18px;
+		font-weight: 700;
+	}
+}
+.buy_layer {
+	.pop-close {
+		width:100%;
+		height:25px;
+		text-align: center;
+		background: {
+			image: url(../images/common/btn_fixed-bg.png);
+			repeat: repeat-x;
+			position:left bottom;
+			size: auto 25px;
+		}
+		button, a {
+			display: block;
+			width:100%;
+			height:100%;
+			margin:0 auto;
+			background: {
+				image: url(../images/common/btn_fixed-bottom.png);
+				repeat: no-repeat;
+				position: center bottom;
+				size: auto 25px;
+			}
+		}
+	}
+	.inner_wrap {
+		background-color: transparent;
+	}
+	.opt-wrap {
+		padding:18px 20px;
+		background-color:#F5F7F8;
+	}
+	.opt-item {
+		padding:20px;
+		border:1px solid #D8DBDD;
+		border-radius: 8px;
+		background-color: #fff;
+		.name {
+			margin-bottom:12px;
+			font-size:15px;
+			font-weight: 700;
+			@include ellipse(1);
+		}
+	}
+	.total_price {
+		padding:20px 0 0;
+		&:after {
+			@extend %clearer;
+		}
+		p {
+			float:left;
+			width:50%;
+			padding-top:6px;
+			font-size:15px;
+			font-weight: 700;
+		}
+		.price {
+			padding-top:0;
+			font-family: 'roboto';
+			font-size:24px;
+			font-weight: 700;
+			color:#009AFF;
+			text-align: right;
+		}
+	}
+}
 
 /** Benefit 
 ****************************************/

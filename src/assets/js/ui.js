@@ -46,6 +46,11 @@ function headFixed(){
 			$header.removeClass('hide').addClass('show')
 		}
 
+		if($('.header .dropdown_list').find('.item_box').hasClass('active')) {
+			$('.header .dropdown_list').find('.dropdown_value').attr('aria-expanded', 'false');
+			$('.header .dropdown_list').find('.item_box').removeClass('active');
+		}
+
 		lastSt = st;
 	});
 	$.fn.scrollStopped = function(callback) {
@@ -137,7 +142,7 @@ function setPopupCenter($target) {
 var isOpen = false;
 var openLayer = function(target){
 	var $target = $(target),
-		$opener = $('#' + $target.attr('aria-labelledby'));
+		  $opener = $('#' + $target.attr('aria-labelledby'));
 
 	currentPosition = $(window).scrollTop();
 	$target.show();
@@ -161,7 +166,6 @@ var openLayer = function(target){
 		var popPosition = $('#'+parentPop).find('.contents').scrollTop();
 		$('#'+parentPop).css('oveflow','hidden');
 		$('#'+parentPop).find('.contents').css({'position':'fixed','overflow':'hidden'});
-
 	}
 }
 var closeLayer = function(target){
@@ -208,6 +212,52 @@ var popupControl = function(){
 	});
 }
 
+var openFixedBottom = function(target){
+	var $target = $(target),
+		  $opener = $('#' + $target.attr('aria-labelledby'));
+	var fixedbtmH = $('.fixed_bottom').height();	
+
+	currentPosition = $(window).scrollTop();
+
+	toggleBool($opener, 'aria-pressed');
+	$('body').addClass('noscroll');
+
+	if($('[role="dialog"]:visible').length <= 1 && isOpen == false) {
+		$('.contents_body').css('top',-currentPosition);
+		isOpen = true
+	}
+	toggleBool($opener, 'aria-pressed');
+	if(fixedbtmH > 0) {
+		$target.addClass('show');
+		var delay = setTimeout(function () {
+			$target.find('.inner_wrap').css({
+				'bottom': fixedbtmH
+			})
+			clearTimeout(delay);
+		}, 50);
+	}
+}
+var closeFixedBottom = function(target){
+	var $target = $(target),
+		  $opener = $('#' + $target.attr('aria-labelledby'));
+	
+	$target.removeClass('show');
+	var delay = setTimeout(function () {
+		$target.find('.inner_wrap').css({
+			'bottom': '-100%'
+		})
+		clearTimeout(delay);
+	}, 50);
+	toggleBool($opener, 'aria-pressed');
+	currentPosition = -(parseInt($('.contents_body').css('top')));	
+
+	if($('[role="dialog"]:visible').length < 1) {
+		$('body').removeClass('noscroll').find('.contents_body').css({'position':'relative','top':0});
+		$(window).scrollTop( currentPosition );
+		isOpen = false;
+	}
+}
+
 /** toggle contents
 ****************************************/
 var toggleContent = function() {
@@ -239,10 +289,53 @@ var tabposSet = function(){
 					$tablist.find('p').removeClass('active');
 					$element.addClass('active');
 					$element.parent('p').addClass('active');
-					
 				}
 			});
 		});
 
+	});
+}
+
+
+/** default swiper function
+****************************************/
+function defaultSwipe(swipeId, $perView, $space){
+	var $id = eval(swipeId);
+	if( !$perView ) $perView = "auto";
+	if( !$space ) $space = 0;
+
+	var reviewSwipe = new Swiper($id, {
+		slidesPerView: $perView,
+		spaceBetween: $space,
+		speed: 400,
+	});
+}
+
+/** dropdown list
+****************************************/
+$(document).ready(function() {
+	if( $('.dropdown_list').length > 0 ) { dropdownControl(); }
+});
+var dropdownControl = function () {
+	$(".dropdown_list .btn_opener").off('click.dropdown').on('click.dropdown', function () {
+		var $dropdown = $(this).closest('.dropdown_value'),
+			$allDropdown = $('.dropdown_value[aria-expanded="true"]').not($dropdown);
+		$dropdown.find('.btn_opener').removeClass('show');
+		$allDropdown.removeClass('active');
+		$dropdown.siblings('.item_list').removeClass('active');
+		$allDropdown.attr('aria-expanded', 'false');
+
+		if ($dropdown.attr('aria-expanded') == 'true') {
+			$dropdown.attr('aria-expanded', 'false');
+			$dropdown.siblings('.item_list').removeClass('active');
+			$dropdown.siblings('.item_box').removeClass('active');
+		} else {
+			$dropdown.attr('aria-expanded', 'true');
+			$dropdown.siblings('.item_list').addClass('active');
+			$dropdown.siblings('.item_box').addClass('active');
+			$dropdown.find('.btn_opener').addClass('show');
+		}
+
+		return false;
 	});
 }
