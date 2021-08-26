@@ -338,7 +338,9 @@
 			padding-top: 27px;
 			.tit_wrap {
 				.cate {
-					a {
+					width: 100%;
+					position: relative;
+					> a {
 						font-size: 0.938rem;
 						i {
 							transform: translate(-0.25rem, -0.05rem);
@@ -350,9 +352,19 @@
 							}
 						}
 					}
+					.btn {
+						position: absolute;
+						right: 0;
+						top: 0;
+						border: none;
+						background-color: transparent;
+						height: auto;
+						padding: 0;
+					}
 				}
 				.prd_name {
 					padding-top: 8px;
+					max-width: 95%;
 					font-size: 1.25rem;
 					line-height: 1.75rem;
 				}
@@ -438,7 +450,9 @@
 			}
 		}
 		.info_list {
-			margin-bottom: 30px;
+			border-top: 1px solid #D8DBDD;
+			padding-top: 20px;
+			margin: 20px 0;
 			li {
 				font-size: 0.938rem;
 				line-height: 1.25rem;
@@ -481,7 +495,8 @@
 		}
 		.coupon_list {
 			border-top: 1px solid #D8DBDD;
-			padding: 25px 0;		
+			padding-top: 16px;		
+			padding-bottom: 16px;		
 			p {
 				display: inline-block;
 				width:72px;
@@ -750,6 +765,8 @@
 				.img {
 					width: 32px;
 					height: 32px;
+					border-radius: 50%;
+					overflow: hidden;
 				}
 			}
 			.star_wrap {
@@ -763,8 +780,6 @@
 				}
 			}
 			.review {
-				min-width: 100%;
-				max-width: 100%;
 				.swiper-container {
 					padding-top: 16px;
 					.img {
