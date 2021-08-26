@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	@@include('../inc/pagehead.inc',{
-		"pagetitle":"제품 상세 페이지",
+		"pagetitle":"제품 상세",
 		"webroot":".."
 	})
 </head>
@@ -86,7 +86,7 @@
 					<div class="tab_contents">
 
 						<!--상세정보  -->
-						<div class="tab_panel" role="tabpanel">
+						<div class="tab_panel panel-detail" role="tabpanel">
 							<div class="panel_inner" style="max-height:640px;">
 								<p class="img"><img src="../assets/images/dummy/shop_dummy001.jpg"/></p>
 							</div>
@@ -96,6 +96,103 @@
 								</div>
 							</div>
 
+							<section class="section review_sec">
+								<div class="row">
+									<div class="tit_wrap">
+										<h3>리뷰<span class="cnt">153</span></h3>
+									</div>
+								</div>
+								<div class="banner _default">
+									<p>생생한 리뷰를 남기고, 포인트를 받으세요!<span>포토리뷰 100원, 일반리뷰 50원을 적립해드립니다.</span></p>
+								</div>
+								<div class="prdscore">
+									<div class="prdscore_info">
+										<div class="star_wrap">
+											<span class="star on"></span>
+											<span class="star on"></span>
+											<span class="star on"></span>
+											<span class="star on"></span>
+											<span class="star off"></span>
+											<span class="num">4.5/5</span>
+										</div>
+									</div>
+									<p>구매자들의 <span>93.5%</span>가 이 상품을 좋아합니다.</p>
+								</div>
+								<div class="review_wrap">
+									<div class="item">
+										<div class="user_info">
+											<div class="headdata">
+												<p class="img"><img src="../assets/images/common/default_user01.png"/><span class="a11y">사용자 프로필사진</span></p>
+												<p class="userid">emdfpm84</p>
+												<p class="date">2021.04.08</p>
+											</div>
+											<div class="star_wrap">
+												<span class="num">3.5</span>
+												<span class="star on"></span>
+												<span class="star on"></span>
+												<span class="star on"></span>
+												<span class="star half"></span>
+												<span class="star off"></span>
+											</div>
+										</div>
+										<div class="review">
+											<p class="message">생각처럼 만족스러웠습니다.</p>
+											<div class="btn_wrap">
+												<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked left"></i> 좋아요 <span>20</span></button>
+												<button class="btn"><i class="ic-16 ic_breplies left"></i> 답글쓰기 <span></span></button>
+												<a href="#" class="btn_more"><span class="a11y">더보기</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="user_info">
+											<div class="headdata">
+												<p class="img"><img src="../assets/images/dummy/dummy_user02.png"/><span class="a11y">사용자 프로필사진</span></p>
+												<p class="userid">emdfpm84</p>
+												<p class="date">2021.04.08</p>
+											</div>
+											<div class="star_wrap">
+												<span class="num">3.5</span>
+												<span class="star on"></span>
+												<span class="star on"></span>
+												<span class="star on"></span>
+												<span class="star half"></span>
+												<span class="star off"></span>
+											</div>
+										</div>
+										<div class="review">
+											<div id="Viewbox_1-Swipe" class="swiper-container">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide"><a href="#">
+														<p class="img"><img src="../assets/images/dummy/userreview01.png"/></p>
+													</a></div>
+													<div class="swiper-slide"><a href="#">
+														<p class="img"><img src="../assets/images/dummy/userreview02.png"/></p>
+													</a></div>
+													<div class="swiper-slide"><a href="#">
+														<p class="img"><img src="../assets/images/dummy/userreview03.png"/></p>
+													</a></div>
+													<div class="swiper-slide"><a href="#">
+														<p class="img"><img src="../assets/images/dummy/userreview01.png"/></p>
+													</a></div>
+												</div>
+											</div>
+											<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
+											<div class="btn_wrap">
+												<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked left"></i> 좋아요 <span>20</span></button>
+												<button class="btn"><i class="ic-16 ic_breplies left"></i> 답글 <span>2</span></button>
+												<a href="#" class="btn_more"><span class="a11y">더보기</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="btn_wrap">
+											<button class="btn primary">리뷰 전체보기 <i class="down"></i></button>
+										</div>
+									</div>
+								</div>
+							</section>
+
 							<div class="banner _full _de">
 								<a href="#"><div class="row">
 									<p class="img"><img src="../assets/images/common/logo_depend.png"><span class="a11y">디펜드</span></p>
@@ -103,8 +200,122 @@
 									<span class="btn_all"><span class="a11y">전체보기</span><i> </i></span>
 								</div></a>
 							</div>
+
+							<section class="section custinfo_sec">
+								<div class="row">
+									<div class="tit_wrap">
+										<h4>문의</h4>
+									</div>
+									<dl>
+										<dt>자주 묻는 질문</dt>
+										<dd>주문, 배송, 회원 관련 등 자주묻는 질문들이에요.</dd>
+										<dt>상품문의</dt>
+										<dd>24시간 접수가능. <br>*고객센터 운영시간에 순차적으로 답변드립니다.</dd>
+										<dt>전화문의</dt>
+										<dd>
+											<p><em>1661-2562</em></p>
+											<p>평일 09:00~18:00 (점심 12:00~13:00) <br>주말/공휴일 휴무</p>
+											<div class="btn_wrap">
+												<a class="btn tertiary" href="tel:1661-2562"><i class="ic-20 ic_tel"></i> 전화하기</a>
+											</div>
+										</dd>
+									</dl>
+								</div>
+							</section>
 							
+							<section class="section algorithm_sec">
+								<div class="row">
+									<div class="tit_wrap">
+										<h4><em>동일 브랜드</em>의 다른 상품들</h4>
+										<a href="#" class="btn_all">전체보기 <i> </i></a>
+									</div>
+								</div>
+								<div id="Recmmd_1-Swipe" class="row swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/dummy01.png" alt="하기스 네이처메이드"></p>
+											<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+											<div class="price">
+												<div>
+													<span class="discount"><em>34</em>%</span>
+													<span class="origin">134,800<span>원</span> </span>
+												</div>
+												<span class="sale">20,000 </span>
+											</div>           
+										</a></div>
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/dummy02.png" alt="하기스 네이처메이드"></p>
+											<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+											<div class="price">
+												<div>
+													<span class="discount"><em>34</em>%</span>
+													<span class="origin">34,800<span>원</span> </span>
+												</div>
+												<span class="sale">20,000 </span>
+											</div>
+										</a></div>
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/dummy03.png" alt="하기스 네이처메이드"></p>
+											<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+											<div class="price">
+												<div>
+													<span class="discount"><em>34</em>%</span>
+													<span class="origin">34,800<span>원</span> </span>
+												</div>
+												<span class="sale">20,000 </span>
+											</div>
+										</a></div>
+									</div>
+								</div>
+							</section>
+							
+							<section class="section algorithm_sec">
+								<div class="row">
+									<div class="tit_wrap">
+										<h4>다른 친구가 <em>함께 구매</em>한 상품들</h4>
+										<a href="#" class="btn_all">전체보기 <i> </i></a>
+									</div>
+								</div>
+								<div id="Recmmd_2-Swipe" class="row swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/dummy04.png" alt="하기스 네이처메이드"></p>
+											<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+											<div class="price">
+												<div>
+													<span class="discount"><em>34</em>%</span>
+													<span class="origin">34,800<span>원</span> </span>
+												</div>
+												<span class="sale">20,000 </span>
+											</div>       
+										</a></div>
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/dummy05.png" alt="하기스 네이처메이드"></p>
+											<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+											<div class="price">
+												<div>
+													<span class="discount"><em>34</em>%</span>
+													<span class="origin">34,800<span>원</span> </span>
+												</div>
+												<span class="sale">20,000 </span>
+											</div>
+										</a></div>
+										<div class="swiper-slide"><a href="#">
+											<p class="img"><img src="../assets/images/dummy/dummy06.png" alt="하기스 네이처메이드"></p>
+											<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+											<div class="price">
+												<div>
+													<span class="discount"><em>34</em>%</span>
+													<span class="origin">34,800<span>원</span> </span>
+												</div>
+												<span class="sale">20,000 </span>
+											</div>
+										</a></div>
+									</div>
+								</div>
+							</section>
 						</div>
+
 						<!-- 상품고지정보 -->
 						<div class="tab_panel panel-summary" role="tabpanel">
 							<div class="detail_conts">
@@ -172,7 +383,7 @@
 						</div>
 
 						<!-- 리뷰 -->
-						<div class="tab_panel" role="tabpanel">
+						<div class="tab_panel panel-review" role="tabpanel">
 							<section class="section review_sec">
 								<div class="row">
 									<div class="tit_wrap">
@@ -201,7 +412,14 @@
 										<div class="chkwrap"> 
 											<input type="checkbox" id="check"><label for="check">포토/영상 리뷰만 모아보기</label>
 										</div>
-										<button class="btn toggle_trigger" aria-controls="review_wrap" type="button" aria-pressed="false">인기순<span class="a11y">인기순 보기</span><i></i></button>
+										<div class="sort">
+											<select>
+												<option>최신순</option>
+												<option>인기순</option>
+												<option>추천순</option>
+												<option>평점순</option>
+											</select>
+										</div>
 									</div>
 									<div id="review_wrap" class="content_toggle review_wrap">
 										<div class="item">
@@ -335,7 +553,7 @@
 						</div>
 
 						<!-- 문의 -->
-						<div class="tab_panel" role="tabpanel">
+						<div class="tab_panel panel-qna" role="tabpanel">
 							<div class="panel_inner">
 								<div class="row">
 									<div class="tit_wrap">
@@ -374,136 +592,13 @@
 					<!--// 20210826 제품상세 탭 영역 -->
 				</div>
 			</section>
-			
-			<section class="section custinfo_sec">
-				<div class="row">
-					<div class="tit_wrap">
-						<h4>문의</h4>
-					</div>
-					<dl>
-						<dt>자주 묻는 질문</dt>
-						<dd>주문, 배송, 회원 관련 등 자주묻는 질문들이에요.</dd>
-						<dt>상품문의</dt>
-						<dd>24시간 접수가능. <br>*고객센터 운영시간에 순차적으로 답변드립니다.</dd>
-						<dt>전화문의</dt>
-						<dd>
-							<p><em>1661-2562</em></p>
-							<p>평일 09:00~18:00 (점심 12:00~13:00) <br>주말/공휴일 휴무</p>
-							<div class="btn_wrap">
-								<a class="btn tertiary" href="tel:1661-2562"><i class="ic-20 ic_tel"></i> 전화하기</a>
-							</div>
-						</dd>
-					</dl>
-				</div>
-			</section>
-			
-			<section class="section algorithm_sec">
-				<div class="row">
-					<div class="tit_wrap">
-						<h4><em>동일 브랜드</em>의 다른 상품들</h4>
-						<a href="#" class="btn_all">전체보기 <i> </i></a>
-					</div>
-				</div>
-				<div id="Recmmd_1-Swipe" class="row swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy01.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
-							<div class="price">
-								<div>
-									<span class="discount"><em>34</em>%</span>
-									<span class="origin">134,800<span>원</span> </span>
-								</div>
-								<span class="sale">20,000 </span>
-							</div>           
-						</a></div>
-						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy02.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
-							<div class="price">
-								<div>
-									<span class="discount"><em>34</em>%</span>
-									<span class="origin">34,800<span>원</span> </span>
-								</div>
-								<span class="sale">20,000 </span>
-							</div>
-						</a></div>
-						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy03.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
-							<div class="price">
-								<div>
-									<span class="discount"><em>34</em>%</span>
-									<span class="origin">34,800<span>원</span> </span>
-								</div>
-								<span class="sale">20,000 </span>
-							</div>
-						</a></div>
-					</div>
-				</div>
-			</section>
-			
-			<section class="section algorithm_sec">
-				<div class="row">
-					<div class="tit_wrap">
-						<h4>다른 친구가 <em>함께 구매</em>한 상품들</h4>
-						<a href="#" class="btn_all">전체보기 <i> </i></a>
-					</div>
-				</div>
-				<div id="Recmmd_2-Swipe" class="row swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy04.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
-							<div class="price">
-								<div>
-									<span class="discount"><em>34</em>%</span>
-									<span class="origin">34,800<span>원</span> </span>
-								</div>
-								<span class="sale">20,000 </span>
-							</div>       
-						</a></div>
-						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy05.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
-							<div class="price">
-								<div>
-									<span class="discount"><em>34</em>%</span>
-									<span class="origin">34,800<span>원</span> </span>
-								</div>
-								<span class="sale">20,000 </span>
-							</div>
-						</a></div>
-						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy06.png" alt="하기스 네이처메이드"></p>
-							<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
-							<div class="price">
-								<div>
-									<span class="discount"><em>34</em>%</span>
-									<span class="origin">34,800<span>원</span> </span>
-								</div>
-								<span class="sale">20,000 </span>
-							</div>
-						</a></div>
-					</div>
-				</div>
-			</section>
 		
 		</div>
 	</div>
 	<!--// contents body -->
-
-	<!-- <div class="fixed_float">
-		<div id="fbtn-gift" class="fbtn-gift">
-			<a href="#"><p class="img"><img src="../assets/images/icons/fbtn-gift.png"/><span class="a11y">선물하기</span></p></a>
-		</div>
-		<div id="fbtn-like" class="fbtn-like">
-			<a href="#"><p class="img"><img src="../assets/images/icons/fbtn-like.png"/><span class="a11y">관심상품</span></p></a>
-		</div>
-	</div> -->
 	
-	<div class="fixed_bottom">
-		<div class="fixed_btn"><a href="#" class="btn"><span class="a11y">좋아요</span></a></div>
+	<div class="fixed_bottom detail-bottom">
+		<div class="fixed_btn fixed-like"><a href="#" class="btn"><i class="ic-25 ic_like"></i><span class="a11y">좋아요</span></a></div>
 		<div class="fixed_btn"><a href="#" class="btn gray-btn">장바구니</a></div>
 		<div class="fixed_btn"><a href="#" class="btn blue-btn">바로구매</a></div>
 	</div>
