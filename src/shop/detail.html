@@ -84,8 +84,10 @@
 					</ul>
 					<!-- 20210826 제품상세 탭 영역 -->
 					<div class="tab_contents">
+
+						<!--상세정보  -->
 						<div class="tab_panel" role="tabpanel">
-							<div class="panel_inner">
+							<div class="panel_inner" style="max-height:640px;">
 								<p class="img"><img src="../assets/images/dummy/shop_dummy001.jpg"/></p>
 							</div>
 							<div class="see_more row">
@@ -93,13 +95,23 @@
 									<button class="btn primary">상세정보 펼쳐보기 <i class="down"></i></button>
 								</div>
 							</div>
+
+							<div class="banner _full _de">
+								<a href="#"><div class="row">
+									<p class="img"><img src="../assets/images/common/logo_depend.png"><span class="a11y">디펜드</span></p>
+									<p class="txt">디펜드 브랜드 상품 전체보기</p>
+									<span class="btn_all"><span class="a11y">전체보기</span><i> </i></span>
+								</div></a>
+							</div>
+							
 						</div>
-						<div class="tab_panel" role="tabpanel">
+						<!-- 상품고지정보 -->
+						<div class="tab_panel panel-summary" role="tabpanel">
 							<div class="detail_conts">
 								<p class="title">상품고지정보
-									<button class="btn toggle_trigger" aria-controls="detail_info" type="button" aria-pressed="false"><span class="a11y">상세정보보기</span><i></i></button>
+									<button class="btn toggle_trigger" aria-controls="detail_info" type="button" aria-pressed="true"><span class="a11y">상세정보보기</span><i></i></button>
 								</p>
-								<div id="detail_info" class="content_toggle detail_info">
+								<div id="detail_info" class="content_toggle detail_info" style="display: block;">
 									<div class="detail_data">
 										<table cellpadding="0" cellspacing="0">
 											<tr><td>상품명</td><td>디펜드 맘스 안심패드 30개입 (EA)</td></tr>
@@ -158,6 +170,8 @@
 								</div>
 							</div>
 						</div>
+
+						<!-- 리뷰 -->
 						<div class="tab_panel" role="tabpanel">
 							<section class="section review_sec">
 								<div class="row">
@@ -319,6 +333,8 @@
 								<!--// 20210826 리뷰 영역 수정 -->
 							</section>
 						</div>
+
+						<!-- 문의 -->
 						<div class="tab_panel" role="tabpanel">
 							<div class="panel_inner">
 								<div class="row">
@@ -358,15 +374,7 @@
 					<!--// 20210826 제품상세 탭 영역 -->
 				</div>
 			</section>
-
-			<div class="banner _full _de">
-				<a href="#"><div class="row">
-					<p class="img"><img src="../assets/images/common/logo_depend.png"><span class="a11y">디펜드</span></p>
-					<p class="txt">디펜드 브랜드 상품 전체보기</p>
-					<span class="btn_all"><span class="a11y">전체보기</span><i> </i></span>
-				</div></a>
-			</div>
-
+			
 			<section class="section custinfo_sec">
 				<div class="row">
 					<div class="tit_wrap">
@@ -485,21 +493,23 @@
 	</div>
 	<!--// contents body -->
 
-	<div class="fixed_float">
+	<!-- <div class="fixed_float">
 		<div id="fbtn-gift" class="fbtn-gift">
 			<a href="#"><p class="img"><img src="../assets/images/icons/fbtn-gift.png"/><span class="a11y">선물하기</span></p></a>
 		</div>
 		<div id="fbtn-like" class="fbtn-like">
 			<a href="#"><p class="img"><img src="../assets/images/icons/fbtn-like.png"/><span class="a11y">관심상품</span></p></a>
 		</div>
-	</div>
+	</div> -->
 	
 	<div class="fixed_bottom">
+		<div class="fixed_btn"><a href="#" class="btn"><span class="a11y">좋아요</span></a></div>
 		<div class="fixed_btn"><a href="#" class="btn gray-btn">장바구니</a></div>
 		<div class="fixed_btn"><a href="#" class="btn blue-btn">바로구매</a></div>
 	</div>
 	
-	<div class="overlay-popup" role="dialog" id="coupon_popup-fn" aria-labelledby="coupon_popup-opener" aria-modal="true">
+	<!-- 쿠폰 팝업 -->
+	<div class="overlay-popup coupon_popup" role="dialog" id="coupon_popup-fn" aria-labelledby="coupon_popup-opener" aria-modal="true">
 		<div class="contents">
 			<div class="heading">
 				할인정보 <button class="btn_close"><i></i></button>
@@ -511,7 +521,7 @@
 				</div>
 				<ul>
 					<li>
-						<div><span class="discount">-4,380</span> 원</div>
+						<div><span class="discount">-994,380</span> 원</div>
 						<div>
 							<p>실버 등급쿠폰 15%</p>
 							<p>~2021.07.28</p>
@@ -527,14 +537,14 @@
 						<div><a href="#" class="btn_coupon"><span class="a11y">받기</span></a></div>
 					</li>
 				</ul>
-				<dl>
+				<dl class="help_list">
 					<dd>결제페이지에서 쿠폰을 선택해야 실제 할인적용됩니다.</dd>
 					<dd>미보유 쿠폰은 위에서 쿠폰을 다운받아야 결제페이지에서 쿠폰을 선택할 수 있습니다.</dd>
 				</dl>
 				<div class="tit_wrap">
 					<p class="tit">리멤버쿠폰(다음 구매시 할인혜택)</p>
 				</div>
-				<div class="coupon"><span class="a11y">[리멤버] 더블하트 통합 15% 할인쿠폰 할인</span></div>
+				<div class="coupon"><img src="../assets/images/dummy/coupon01.png" alt="[리멤버] 더블하트 통합 15% 할인쿠폰 할인"></div>
 			</div>
 			<div class="btn_wrap">
 				<a href="#" class="btn primary manual_fn" onclick="closeLayer('#coupon_popup-fn')">확인</a>
@@ -542,6 +552,7 @@
 		</div>
 		<div class="overlay-dimmed"></div>
 	</div>
+	<!--// 쿠폰 팝업 -->
 
 	<!-- footer -->
 	@@include('../inc/footer.inc',{

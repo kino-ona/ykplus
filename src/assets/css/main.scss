@@ -702,3 +702,101 @@ html {
     }
   }
 }
+
+/** Main 
+****************************************/
+
+/** Main > Market *********************/
+.sub-main {
+  .section {
+    padding-top:0;
+    overflow: hidden;
+  }
+  .top_banner {
+    padding:16px 20px;
+    .banner {
+      width:100%;
+      padding:17px 10px;
+      border-radius:30px;
+      background-color: #F5F7F8;
+      text-align: center;
+      p {
+        font-size:15px;
+        span {
+          font-size:15px;
+          font-weight: 900;
+          color:#009AFF;
+        }
+      }
+    }
+  }
+  .subtop_swipe {
+    margin-bottom:30px;
+    .figure {
+      position:relative;
+      padding-top:55.556%;
+      background: {
+        repeat: no-repeat;
+        position:center center;
+        size:cover;
+      }
+    }
+    .swiper-pagination-fraction {
+      width:54px;
+      height:20px;
+      left:inherit;
+      right:10px;
+      padding:1px 0;
+      background-color: rgba(0,0,0, 0.2);
+      border-radius: 50px;
+      font-family: 'roboto';
+      font-size:12px;
+      color:#fff;
+      span {
+        margin:0 1px;
+        font-family: 'roboto';
+        font-size:12px;
+        color:#fff;
+        font-weight: 300;
+      }
+      .swiper-pagination-current {
+        font-weight: 700;
+      }
+    }
+  }
+  .product_list {
+    margin-left:-24px;
+    margin-right:-24px;
+    .item {
+      position:relative;
+      width:50%;
+      margin-left:0;
+      border-left:4px solid #fff;
+      border-right:4px solid #fff;
+      &:nth-of-type(2n-1) {
+        clear:none;
+      }
+    }
+    .chkwrap.likechk {
+      position:absolute;
+      right:10px;
+      top:10px;
+      z-index: 1;
+    }
+    .price {
+      .discount {
+        font-size:18px;
+      }
+    }
+    .btn_wrap._foo {
+      min-height:50px;
+      padding-left:18px;
+      padding-right:18px;
+      padding-bottom:18px;
+    }
+    .btn-buy {
+      border:1px solid #099AFF;
+      color:#099AFF;
+    }
+  }
+}

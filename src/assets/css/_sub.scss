@@ -530,7 +530,7 @@
 	.prddetail_sec {
 		padding-top: 15px;
 		padding-bottom: 0;
-		margin-bottom: 0; //
+		margin-bottom: 0;
 		.tab_wrap {
 			.tab {
 				width:100%;
@@ -553,7 +553,7 @@
 			}
 		}
 		.panel_inner {
-			max-height: 640px;
+			overflow: hidden;
 			.row {
 				margin-top: 40px;
 			}
@@ -609,6 +609,11 @@
 				.btn_wrap {
 					padding: 0;
 				}
+			}
+		}
+		.panel-summary {
+			.detail_conts {
+				border-bottom-width: 1px;
 			}
 		}
 		.btn_wrap {
@@ -934,116 +939,97 @@
 
 }
 
-#coupon_popup-fn {
-	.heading {
-		font-size: 0.938rem;
-	}
-	.inner {
-		padding-top: 24px;
-	}
-	.tit_wrap {
-		margin-bottom: 16px;
-		h3 {
-			font-weight: 900;
-			margin-bottom: 24px;
-		}
-		.tit {
+.coupon_popup {
+	.contents {
+		.heading {
 			font-size: 0.938rem;
-			font-weight: 700;
 		}
-	}
-	ul {
-		border-top: 1px solid #D8DBDD;
-		li {
-			display: flex;
-			width: 100%;
-			padding: 16px 16px 16px 4px;
-			border-bottom: 1px solid #D8DBDD;
-			> div {
+		.inner {
+			padding-top: 24px;
+		}
+		.tit_wrap {
+			margin-bottom: 16px;
+			h3 {
+				font-weight: 900;
+				margin-bottom: 24px;
+			}
+			.tit {
 				font-size: 0.938rem;
 				font-weight: 700;
-				vertical-align: baseline;
 			}
-			> div:first-of-type {
-				white-space: nowrap;
-				align-self: center;
-			}
-			> div:nth-of-type(2) {
-				flex: 1;
-				padding-left: 20px;
-				padding-right: 20px;
-				> p {
-					text-align: left;
-					line-height: 1.25rem;
-					&:first-of-type {
-						font-size: 0.938rem;
-						margin-bottom: 2px;
-					}
-					&:last-of-type {
-						color: #666;
-						font-size: 0.813rem;
+		}
+		ul {
+			border-top: 1px solid #D8DBDD;
+			li {
+				display: flex;
+				width: 100%;
+				padding: 16px 5px 16px;
+				border-bottom: 1px solid #D8DBDD;
+				> div {
+					font-size: 0.938rem;
+					font-weight: 700;
+					vertical-align: baseline;
+				}
+				> div:first-of-type {
+					flex: .3;
+					white-space: nowrap;
+					align-self: center;
+				}
+				> div:nth-of-type(2) {
+					flex: .55;
+					padding-left: 10px;
+					> p {
+						text-align: left;
+						line-height: 1.25rem;
+						&:first-of-type {
+							font-size: 0.938rem;
+							margin-bottom: 2px;
+						}
+						&:last-of-type {
+							color: #666;
+							font-size: 0.813rem;
+						}
 					}
 				}
-			}
-			> div:last-of-type {
-				align-self: center;
-				.btn_coupon {
-					display: inline-block;
-					width: 20px;
-					height: 36px;
-					background: {
-						image: url(../images/icons/btn_coupon.png);
-						size: 20px;
-						repeat: no-repeat;
-						position: center center;
-					}
-					&._clicked {
+				> div:last-of-type {
+					flex:.15;
+					align-self: center;
+					text-align: center;
+					.btn_coupon {
+						display: inline-block;
+						width: 20px;
+						height: 36px;
 						background: {
-							image: url(../images/icons/btn_coupon_clicked.png);
+							image: url(../images/icons/btn_coupon.png);
+							size: 20px;
+							repeat: no-repeat;
+							position: center center;
+						}
+						&._clicked {
+							background: {
+								image: url(../images/icons/btn_coupon_clicked.png);
+							}
 						}
 					}
 				}
 			}
-		}
-		.discount {
-			font-family: "Roboto";
-			font-size: inherit;
-			line-height: inherit;
-			font-weight: 700;
-			vertical-align: inherit;
-		}
-	}
-	dl {
-		margin-top: 12px;
-		margin-bottom: 25px;
-		dd {
-			position: relative;
-			padding-left: 10px;
-			color: #999;
-			margin-bottom: 10px;
-			&::before {
-				content: '*';
-				position: absolute;
-				left: 0;
-				width: 1px;
-				height: inherit;
-				top: 0;
+			.discount {
+				font-family: "Roboto";
 				font-size: inherit;
 				line-height: inherit;
-				font-weight: inherit;
+				font-weight: 700;
+				vertical-align: inherit;
 			}
 		}
-	}
-	.coupon {
-		display: block;
-		width: 100%;
-		height: 100%;
-		min-height: 74px;
-		background: {
-			image: url(../images/dummy/coupon01.png);
-			size: 100%;
-			repeat: no-repeat;
-			position: center center;
+		dl {
+			margin-top: 12px;
+			margin-bottom: 25px;
+		}
+		.coupon {
+			display: block;
+			width: 100%;
+			height: 100%;
+			min-height: 74px;
 		}
 	}
 }

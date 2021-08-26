@@ -138,7 +138,6 @@ var isOpen = false;
 var openLayer = function(target){
 	var $target = $(target),
 		$opener = $('#' + $target.attr('aria-labelledby'));
-		// console.log(target)
 
 	currentPosition = $(window).scrollTop();
 	$target.show();
