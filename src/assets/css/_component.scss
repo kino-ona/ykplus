@@ -495,7 +495,7 @@ a.btn {
 		margin: 10px auto;
 		background-color: #fff;
 		border-radius: 20px;
-		overflow-y: auto;
+		overflow-y: hidden;
   	-webkit-overflow-scrolling: touch;
 		> .inner {
 			max-height:60vh;

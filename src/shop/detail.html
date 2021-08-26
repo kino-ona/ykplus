@@ -72,7 +72,7 @@
 					<div class="row">
 						<p>쿠폰할인 </p>
 						<span class="discount"><em>-1680</em> 원</span>
-						<button class="btn small" onclick="openLayer('coupon_popup-fn')">쿠폰받기</button>
+						<button class="btn small manual_fn" onclick="openLayer('#coupon_popup-fn')">쿠폰받기</button>
 					</div>
 				</div>
 			</div>
@@ -214,6 +214,7 @@
 												<div class="btn_wrap">
 													<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked left"></i> 좋아요 <span>20</span></button>
 													<button class="btn"><i class="ic-16 ic_breplies left"></i> 답글쓰기 <span></span></button>
+													<a href="#" class="btn_more"><span class="a11y">더보기</span></a>
 												</div>
 											</div>
 										</div>
@@ -238,6 +239,7 @@
 												<div class="btn_wrap">
 													<button class="btn"><i class="ic-16 ic_blikes left"></i> 좋아요 <span>20</span></button>
 													<button class="btn"><i class="ic-16 ic_breplies left"></i> 답글 <span>2</span></button>
+													<a href="#" class="btn_more"><span class="a11y">더보기</span></a>
 												</div>
 											</div>
 										</div>
@@ -258,10 +260,14 @@
 												</div>
 											</div>
 											<div class="review">
+												<div class="videoplay_area">
+													<iframe width="100%" height="100%" src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+												</div>
 												<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
 												<div class="btn_wrap">
 													<button class="btn"><i class="ic-16 ic_blikes left"></i> 좋아요 <span>20</span></button>
 													<button class="btn"><i class="ic-16 ic_breplies left"></i> 답글쓰기 <span></span></button>
+													<a href="#" class="btn_more"><span class="a11y">더보기</span></a>
 												</div>
 											</div>
 										</div>
@@ -302,6 +308,7 @@
 												<div class="btn_wrap">
 													<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked left"></i> 좋아요 <span>20</span></button>
 													<button class="btn"><i class="ic-16 ic_breplies left"></i> 답글 <span>2</span></button>
+													<a href="#" class="btn_more"><span class="a11y">더보기</span></a>
 												</div>
 											</div>
 										</div>
@@ -495,18 +502,45 @@
 		<div class="fixed_btn"><a href="#" class="btn blue-btn">바로구매</a></div>
 	</div>
 	
-	<div class="overlay-popup" role="dialog" id="coupon_popup-fn" aria-labelledby="coupon_popup-opener" aria-modal="true" style="display: block;">
-		<div class="contents" style="margin-top: 257px;">
+	<div class="overlay-popup" role="dialog" id="coupon_popup-fn" aria-labelledby="coupon_popup-opener" aria-modal="true">
+		<div class="contents">
 			<div class="heading">
 				할인정보 <button class="btn_close"><i></i></button>
 			</div>
 			<div class="inner">
 				<div class="tit_wrap">
 					<h3>최대 할인가 <span>31,650원</span>에 구매하실 수 있습니다.</h3>
+					<p class="tit">할인쿠폰</p>
 				</div>
+				<ul>
+					<li>
+						<div><span class="discount">-4,380</span> 원</div>
+						<div>
+							<p>실버 등급쿠폰 15%</p>
+							<p>~2021.07.28</p>
+						</div>
+						<div><a href="#" class="btn_coupon _clicked"><span class="a11y">완료</span></a></div>
+					</li>
+					<li>
+						<div><span class="discount">-4,380</span> 원</div>
+						<div>
+							<p>8월 이달의 쿠폰 더블하트 5% 쿠폰</p>
+							<p>~2021.07.28</p>
+						</div>
+						<div><a href="#" class="btn_coupon"><span class="a11y">받기</span></a></div>
+					</li>
+				</ul>
+				<dl>
+					<dd>결제페이지에서 쿠폰을 선택해야 실제 할인적용됩니다.</dd>
+					<dd>미보유 쿠폰은 위에서 쿠폰을 다운받아야 결제페이지에서 쿠폰을 선택할 수 있습니다.</dd>
+				</dl>
+				<div class="tit_wrap">
+					<p class="tit">리멤버쿠폰(다음 구매시 할인혜택)</p>
+				</div>
+				<div class="coupon"><span class="a11y">[리멤버] 더블하트 통합 15% 할인쿠폰 할인</span></div>
 			</div>
 			<div class="btn_wrap">
-				<a href="#" class="btn primary" onclick="closeLayer('coupon_popup-fn')">확인</a>
+				<a href="#" class="btn primary manual_fn" onclick="closeLayer('#coupon_popup-fn')">확인</a>
 			</div>
 		</div>
 		<div class="overlay-dimmed"></div>

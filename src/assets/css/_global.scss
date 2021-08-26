@@ -308,6 +308,20 @@ hr {
 		display: inline-block;
 	}
 }
+[class^="overlay-"] {
+	.heading {
+		font-weight: 700;
+	}
+	.tit_wrap {
+		h3 {
+			font-weight: 700;
+			span {
+				color: #009AFF;
+				font-weight: inherit;
+			}
+		}
+	}
+}
 
 /** accessibility **/
 .a11y {
