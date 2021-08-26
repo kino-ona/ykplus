@@ -108,7 +108,7 @@ a.btn {
 		vertical-align: middle;
 	}
 	i.right {
-		@include iconAngle($direction: 'right', $width: 8px, $height: 15px, $thick: 1px, $color: #111, $display: inline-block);
+		@include iconAngle($direction: 'right', $width: 6px, $height: 12px, $thick: 1px, $color: #111, $display: inline-block);
 		vertical-align: middle;
 	}
 	&_tooltip {
@@ -990,7 +990,8 @@ a.btn {
 			padding-bottom: 83.34%;
 			overflow: hidden;
 			img {
-				max-width: 110px;
+				// max-width: 110px;
+				max-width:70%;
 				position: absolute;
 				top:50%;
 				left:50%;
@@ -1008,6 +1009,10 @@ a.btn {
 				padding:10px 20px;
 			}
 		}
+    .btn-buy {
+      border:1px solid #099AFF;
+      color:#099AFF;
+    }
 	}
 	&._mix {
 		.item {
@@ -1050,6 +1055,69 @@ a.btn {
 		.sale {
 			display: block;
 			margin-top:3px;
+		}
+	}
+	&.horizon {
+		margin-bottom:10px;
+		.item {
+			display: block;
+			float:none;
+			width:100%;
+			padding:20px;
+			margin:0;
+			background-color: #fff;
+			border-bottom:1px solid #D8DBDD;
+			&:last-child {
+				border-bottom:0;
+			}
+			&:after {
+				@extend %clearer;
+			}
+			.figure {
+				float:left;
+				width:calc(41% - 20px);
+				padding-bottom:34.75%;
+				margin-right:20px;
+				border-radius: 20px;
+				background-color: #F5F7F8;
+				// img {
+				// 	padding:18px;
+				// }
+				.likechk {
+					position:absolute;
+					right:10px;
+					bottom:10px;
+					input[type=checkbox] + label {
+						width:26px;
+						height:26px;
+						background-size:26px;
+					}
+				}
+			}
+			.info {
+				float:left;
+				width:calc(100% - 130px);
+				width:59%;
+				margin-top:10px;
+			}
+			.btn_wrap._foo {
+				padding:0;
+				margin-top:12px;
+			}
+		}
+		.name {
+			@include ellipse(1);
+		}
+		.price {
+			margin-top:4px;
+			span {
+				display: inline-block;
+				margin-right:6px;
+				vertical-align: baseline;
+				&:last-child {
+					margin-right:0;
+				}
+			}
 		}
 	}
 }

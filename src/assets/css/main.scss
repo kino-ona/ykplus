@@ -795,9 +795,37 @@ html {
       padding-right:18px;
       padding-bottom:18px;
     }
-    .btn-buy {
-      border:1px solid #099AFF;
-      color:#099AFF;
+  }
+}
+.category-main {
+  .category-summary {
+    border-bottom:8px solid #F0F0F0;
+    .figure {
+      position:relative;
+      width:100%;
+      padding-bottom:44%;
+      overflow: hidden;
+      img {
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:100%;
+				@include transform(translate(-50%, -50%));
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+    .desc {
+      padding:20px;
+      dt {
+        padding-bottom:8px;
+        font-size:18px;
+        font-weight: 900;
+      }
+      dd {
+        font-size:15px;
+        line-height:1.5;
+      }
     }
   }
 }
