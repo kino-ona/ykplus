@@ -26,7 +26,7 @@
 			em {
 				font-size: inherit;
 				line-height: inherit;
-				font-weight: 900;
+				font-weight: 700;
 			}
 		}
 	}
@@ -120,7 +120,7 @@
 			position: relative;
 			font-size: 1.125rem;
 			line-height: 1.5rem;
-			font-weight: 900;
+			font-weight: 700;
 			letter-spacing: -0.02em;
 			margin-bottom: 8px;
 		}
@@ -263,7 +263,7 @@
 		}
 		dt {
 			font-size: 0.938rem;
-			font-weight: 900;
+			font-weight: 700;
 			margin-bottom: 12px;
 			position: relative;
 			padding-left: 12px;
@@ -421,7 +421,7 @@
 					position: relative;
 					margin-left: 75px;
 					font-size: 0.938rem;
-					font-weight: 900;
+					font-weight: 700;
 					margin-bottom: 17px;
 					&:last-of-type {
 						margin-bottom: 0;
@@ -484,7 +484,7 @@
 				display: inline-block;
 				width:72px;
 				font-size: 0.938rem;
-				font-weight: 900;
+				font-weight: 700;
 				vertical-align: baseline;
 			}
 			.discount {
@@ -497,7 +497,7 @@
 				em {
 					color: inherit;
 					font-size:inherit;
-					font-weight: 900;
+					font-weight: 700;
 					letter-spacing: inherit;
 					vertical-align: baseline;
 				}
@@ -552,7 +552,7 @@
 				em {
 					display: block;
 					font-size: 0.938rem;
-					font-weight: 900;
+					font-weight: 700;
 					margin-bottom: 6px;
 				}
 				p {
@@ -578,7 +578,7 @@
 				margin-bottom: 24px;
 				.title {
 					font-size: 0.938rem;
-					font-weight: 900;
+					font-weight: 700;
 					letter-spacing: -0.02em;
 					margin-bottom: 12px;
 				}
@@ -640,8 +640,8 @@
 			p {
 				text-align: left;
 				font-size: 0.938rem;
-				color: #1E3B13;
-				font-weight: 900;
+				color: #000;
+				font-weight: 700;
 				opacity: .9;
 				letter-spacing: 0;
 				span {
@@ -734,8 +734,10 @@
 					}
 				}
 				.userid {
+					max-width: 80px;
 					font-weight: 500;
 					line-height: inherit;
+					@include ellipse(1);
 				}
 				.date {
 					color: #999;
@@ -792,13 +794,13 @@
 						border: none;
 						&._clicked {
 							color: #009AFF;
-							font-weight: 900;
+							font-weight: 700;
 						}
 						span {
 							color: inherit;
-							font-size: 0.875rem;
+							font-size: 0.75rem;
 							line-height: inherit;
-							font-weight: 900;
+							font-weight: 700;
 							vertical-align: inherit;
 						}
 					}
@@ -832,7 +834,7 @@
 	}
 	.banner._de {
 		.txt {
-			font-weight: 900;
+			font-weight: 700;
 			padding-left: 10px;
 			padding-right: 10px;
 		}
@@ -916,6 +918,12 @@
 }
 
 #coupon_popup-fn {
+	.heading {
+		font-size: 0.938rem;
+	}
+	.inner {
+		padding-top: 24px;
+	}
 	.tit_wrap {
 		margin-bottom: 16px;
 		h3 {
