@@ -655,7 +655,7 @@ a.btn {
 		vertical-align: middle;
 		cursor: pointer;
 		&[tabindex="0"] {
-			font-weight: 900;
+			font-weight: 800;
 		}
 	}
 	.tab_contents {
@@ -787,7 +787,7 @@ a.btn {
 		.headtxt {
 			padding-right:30px;
 			font-size:18px;
-			font-weight: 900;
+			font-weight: 800;
 			i {
 				display: inline-block;
 				width: 8px;
@@ -1194,7 +1194,6 @@ a.btn {
 		span {
 			display: block;
 			font-size: 16px;
-			font-weight: 700;
 			line-height: 1.6;
 			color: #000;
 			text-transform: uppercase;
@@ -1204,6 +1203,7 @@ a.btn {
 		}
 		&.active {
 			span {
+				font-weight: 700;
 				&:after {
 					content: '';
 					margin-top: 4px;

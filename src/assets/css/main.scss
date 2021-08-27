@@ -37,7 +37,7 @@ html {
   em {
     font-size: inherit;
     line-height: inherit;
-    font-weight: 900;
+    font-weight: 800;
   }
 }
 .search_wrap {
@@ -187,7 +187,7 @@ html {
       color: #fff;
       font-size: 1.5rem;
       line-height: 1.5;
-      font-weight: 900;
+      font-weight: 800;
       letter-spacing: -0.03em;
     }
     > div {
@@ -268,7 +268,7 @@ html {
             width: 5px;
             height: 5px;
             font-size: 0.313rem;
-            font-weight: 900;
+            font-weight: 800;
             vertical-align: super;
           }
         }
@@ -297,7 +297,7 @@ html {
       color: #fff;
       font-size: 1.375rem;
       line-height: 1.875rem;
-      font-weight: 900;
+      font-weight: 800;
       &::before {
         content: '#';
         margin-right: 5px;
@@ -349,7 +349,7 @@ html {
       .tit {
         font-size: 0.938rem;
         line-height: 1.625rem;
-        font-weight: 900;
+        font-weight: 800;
         letter-spacing: -0.02em;
         @include ellipse(1);
         margin-bottom: 5px;
@@ -724,7 +724,7 @@ html {
         font-size:15px;
         span {
           font-size:15px;
-          font-weight: 900;
+          font-weight: 800;
           color:#009AFF;
         }
       }
@@ -820,7 +820,7 @@ html {
       dt {
         padding-bottom:8px;
         font-size:18px;
-        font-weight: 900;
+        font-weight: 800;
       }
       dd {
         font-size:15px;
