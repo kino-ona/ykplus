@@ -624,8 +624,8 @@ body {
 	left:0;
 	right:0;
 	bottom:0;
-	padding: 0 0 calc(constant(safe-area-inset-bottom));
-	padding: 0 0 calc(env(safe-area-inset-bottom));
+	// padding: 0 0 0 calc(constant(safe-area-inset-bottom));
+	// padding: 0 0 0 calc(env(safe-area-inset-bottom));
 	.tabs {
     display: flex;
     flex-direction: row;
@@ -686,7 +686,7 @@ body {
 		}
 		.top {
 			width: 113%;
-			height: 51%;
+			height:50%;
 			border-bottom-left-radius: 115px;
 			border-bottom-right-radius: 115px;
 			background-color: transparent;

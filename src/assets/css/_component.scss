@@ -34,7 +34,7 @@ a.btn {
 	&.small {
 		height:auto;
 		height:28px;
-		padding-top:7px;
+		padding-top:6px;
 		padding-bottom:6px;
 		font-size:13px;
 	}
@@ -95,9 +95,6 @@ a.btn {
 			margin-left:0;
 			margin-right:5px;
 		}
-	}
-	[class^='ic-'] {
-		margin-top:-2px;
 	}
 	i.down {
 		@include iconAngle($direction: 'down', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
@@ -909,26 +906,30 @@ a.btn {
 .price {
 	font-size:0.938rem;
 	font-weight: 700;
+	vertical-align: middle;
 	.unit {
 		margin-left:2px;
 		font-size:15px;
 		color:inherit;
-		vertical-align: baseline;
+		vertical-align: middle;
 	}		
 	.origin {
 		font-family: 'roboto';
 		font-weight: 700;
+		vertical-align: middle;
 	}
 	.sale {
 		font-family: 'roboto';
 		font-size:13px;
 		text-decoration: line-through;
 		color:#999999;
+		vertical-align: middle;
 	}
 	.discount {
 		font-family: 'roboto';
 		font-weight: 700;
 		color:#FF2B4C;
+		vertical-align: middle;
 		span {
 			color:#000;
 		}
