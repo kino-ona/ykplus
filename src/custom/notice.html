@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"공지사항",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+    "headtype": {
+			"layout":"subtype2"
+		},
+    "subtitle":"고객센터"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="custom_wrap">
+			<div class="cust-main">
+				<div class="row">
+					<p class="title">고객센터</p>
+					<h3 class="tell">1899-7000</h3>
+					<div class="working_time">
+						<p>평일 09:00~18:00 (점심 12:00~13:00)</p>
+						<p>주말/공휴일 휴무</p>
+					</div>
+				</div>
+			</div>
+
+			<section class="section sec_notice">
+				<div class="tab_wrap" id="CustMenu">
+					<ul class="tablist" role="tablist">
+						<li><a href="#" class="tab">FAQ</a></li>
+						<li><a href="#" class="tab">1:1 문의</a></li>
+						<li><a href="#" class="tab active">공지사항</a></li>
+					</ul>
+					<div class="tab_contents">
+						<div class="tab_panel" role="tabpanel">
+							<div class="panel_inner">
+								<div class="row">
+									
+									<div class="search_wrap">
+										<div class="row">
+											<div class="frm_field">
+												<select name="noticeSelect" id="noticeSelect">
+													<option value="제목">제목</option>
+													<option value="작성자">작성자</option>
+												</select>
+											</div>
+											
+											<input id="noticeSearch" type="text" placeholder="">
+											<label for="noticeSearch"><span class="a11y">검색하기</span></label>
+											<button class="btn blind" tabindex="0"><i class="ic-20 ic_search"></i></button>
+										</div>
+									</div>
+
+									<ul class="notice_board">
+										<li>
+											<div class="headdata"><span class="label noti">공지</span><span class="date">2021.08.27</span></div>
+											<p class="tit">오늘플러스 서비스 약관 개정 안내<span class="label new">new</span></p>
+											<span class="btn_all"><span class="a11y">전문보기</span><i> </i></span>
+										</li>
+										<li>
+											<div class="headdata"><span class="date">2021.07.25</span></div>
+											<p class="tit">현금영수증 신청은 어떻게 하나요?</p>
+											<span class="btn_all"><span class="a11y">전문보기</span><i> </i></span>
+										</li>
+										<li>
+											<div class="headdata"><span class="date">2021.07.25</span></div>
+											<p class="tit">현금영수증 신청은 어떻게 현금영수증 신청은 어떻게 하나요? 현금영수증 신청은 어떻게 하나요? 현금영수증 신청은 어떻게 하나요?</p>
+											<span class="btn_all"><span class="a11y">전문보기</span><i> </i></span>
+										</li>
+										<li>
+											<div class="headdata"><span class="date">2021.07.25</span></div>
+											<p class="tit">현금영수증 신청은 어떻게 하나요?</p>
+											<span class="btn_all"><span class="a11y">전문보기</span><i> </i></span>
+										</li>
+										<li>
+											<div class="headdata"><span class="date">2021.07.25</span></div>
+											<p class="tit">현금영수증 신청은 어떻게 하나요?</p>
+											<span class="btn_all"><span class="a11y">전문보기</span><i> </i></span>
+										</li>
+										<li>
+											<div class="headdata"><span class="date">2021.07.25</span></div>
+											<p class="tit">현금영수증 신청은 어떻게 하나요?</p>
+											<span class="btn_all"><span class="a11y">전문보기</span><i> </i></span>
+										</li>
+									</ul>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+    </div>
+  </div>      
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
