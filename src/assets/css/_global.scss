@@ -624,6 +624,8 @@ body {
 	left:0;
 	right:0;
 	bottom:0;
+	// margin-top: env(safe-area-inset-top);
+  // margin-bottom: env(safe-area-inset-bottom);
 	// padding: 0 0 0 calc(constant(safe-area-inset-bottom));
 	// padding: 0 0 0 calc(env(safe-area-inset-bottom));
 	.tabs {
