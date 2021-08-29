@@ -165,6 +165,17 @@ a.btn {
 		right:20px;
 		@include iconX($size:14px, $thick: 1px, $color: #666, $padding: 2px, $display: inline-block, $position: absolute); 
 	}
+	&_del-row {
+		display: inline-block;
+		width:25px;
+		height:25px;
+		background: {
+			image: url(../images/common/btn_del-row.png);
+			repeat: no-repeat;
+			position:center center;
+			size:16px;
+		}
+	}
 }
 
 .fixed_bottom {

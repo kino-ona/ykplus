@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"검색",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/order.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+
+	<!-- contents body -->
+	<div class="contents_body contents_top">
+    <div class="search_head">
+      <div class="back">
+        <a href="#" onclick="history.back(-1);"><i></i><span class="a11y">이전페이지</span></a>
+      </div>
+      <div class="frm">
+        <input type="text" placeholder="검색어를 입력해주세요.">
+        <a href="#" onclick="alert('삭제');" class="btn_del-row"><span class="a11y">지우기</span></a>
+        <a href="#" onclick="alert('검색');" class="btn-search"><i class="ic-20 ic_search"></i><span class="a11y">검색</span></a>
+      </div>
+    </div>
+
+    <div class="search_wrap">
+      <div class="sch_cont">
+        <p class="head">최근검색어</p>
+        <ul class="recent_list">
+          <li>
+            <p class="txt"><a href="#">디펜드</a></p>
+            <p class="date">21.05.14</p>
+            <a href="#" class="btn_del-row"><span class="a11y">삭제</span></a>
+          </li>
+          <li>
+            <p class="txt"><a href="#">디펜드디펜드디펜드디펜드디펜드</a></p>
+            <p class="date">21.05.14</p>
+            <a href="#" class="btn_del-row"><span class="a11y">삭제</span></a>
+          </li>
+          <li>
+            <p class="txt"><a href="#">디펜드</a></p>
+            <p class="date">21.05.14</p>
+            <a href="#" class="btn_del-row"><span class="a11y">삭제</span></a>
+          </li>
+        </ul>
+      </div>
+      <!--// 최근검색어 -->
+
+      <div class="sch_cont">
+        <p class="head">추천태그</p>
+        <ul class="chip_list">
+          <li><a href="#">#건강</a></li>
+          <li><a href="#">#요실금</a></li>
+          <li><a href="#">#디펜드스타일</a></li>
+          <li><a href="#">#안심팬티</a></li>
+        </ul>
+      </div>
+      <!--// 추천태그 -->
+
+      <div class="sch_cont">
+        <p class="head">카테고리</p>
+        <ul class="chip_list">
+          <li><a href="#">디펜드</a></li>
+          <li><a href="#">더 편안한 오늘</a></li>
+          <li><a href="#">더 건강한 오늘</a></li>
+          <li><a href="#">더 깨끗한 오늘</a></li>
+          <li><a href="#">더 아름다운 오늘</a></li>
+          <li><a href="#">더 편리한 오늘</a></li>
+          <li><a href="#">간병케어</a></li>
+        </ul>
+      </div>
+      <!--// 추천태그 -->
+
+      <div class="sch_cont">
+        <p class="head">브랜드 찾기</p>
+        <ul class="brand_list">
+          <li><a href="#"><img src="../assets/images/dummy/schbrand_bnr01.jpg" alt="디펜드"><span>디펜드</span></a></li>
+          <li><a href="#"><img src="../assets/images/dummy/schbrand_bnr02.jpg" alt="크리넥스"><span>크리넥스</span></a></li>
+          <li><a href="#"><img src="../assets/images/dummy/schbrand_bnr03.jpg" alt="좋은느낌"><span>좋은느낌</span></a></li>
+          <li><a href="#"><img src="../assets/images/dummy/schbrand_bnr01.jpg" alt="화이트"><span>화이트</span></a></li>
+          <li><a href="#"><img src="../assets/images/dummy/schbrand_bnr02.jpg" alt="스카트"><span>스카트</span></a></li>
+        </ul>
+      </div>
+      <!--// 브랜드 찾기 -->
+
+    </div>
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"show"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+</body>
+
+</html>
