@@ -34,34 +34,32 @@
 			</div>
 
 			<section class="section sec_qna">
-				<div class="tab_wrap" id="CustMenu">
+				<div class="tab_wrap manualfn" id="CustMenu">
 					<ul class="tablist" role="tablist">
-						<li><a href="#" class="tab">FAQ</a></li>
-						<li><a href="#" class="tab active">1:1 문의</a></li>
-						<li><a href="#" class="tab">공지사항</a></li>
+						<li><a href="faq.html" class="tab">FAQ</a></li>
+						<li><a href="qna.html" class="tab active">1:1 문의</a></li>
+						<li><a href="notice.html" class="tab">공지사항</a></li>
 					</ul>
 					<div class="tab_contents">
             <div class="tab_panel" role="tabpanel">
               <div class="panel_inner">
-                <div class="row">
-                  <div class="search_wrap">
-                    <div class="row">											
-                      <input id="noticeSearch" type="text" placeholder="궁금한 점을 검색해보세요.">
-                      <label for="noticeSearch"><span class="a11y">검색하기</span></label>
-                      <button class="btn" tabindex="0"><i class="ic-20 ic_search"></i></button>
-                    </div>
-                  </div>
-									<div class="tag_wrap">
-										<ul class="taglist">
-											<li class="tag"><a href="#"><span>전체</span></a></li>
-											<li class="tag"><a href="#"><span>배송문의</span></a></li>
-											<li class="tag"><a href="#"><span>반품/교환/환불</span></a></li>
-											<li class="tag"><a href="#"><span>정기배송</span></a></li>
-											<li class="tag active"><a href="#"><span>주문/결제</span></a></li>
-											<li class="tag"><a href="#"><span>회원서비스</span></a></li>
-											<li class="tag"><a href="#"><span>이벤트/혜택</span></a></li>
-										</ul>
+								<div class="search_wrap">
+									<div class="row">											
+										<input id="noticeSearch" type="text" placeholder="궁금한 점을 검색해보세요.">
+										<label for="noticeSearch"><span class="a11y">검색하기</span></label>
+										<button class="btn" tabindex="0"><i class="ic-20 ic_search"></i></button>
 									</div>
+								</div>
+								<div class="tag_wrap">
+									<ul class="taglist">
+										<li class="tag"><a href="#"><span>전체</span></a></li>
+										<li class="tag"><a href="#"><span>배송문의</span></a></li>
+										<li class="tag"><a href="#"><span>반품/교환/환불</span></a></li>
+										<li class="tag"><a href="#"><span>정기배송</span></a></li>
+										<li class="tag active"><a href="#"><span>주문/결제</span></a></li>
+										<li class="tag"><a href="#"><span>회원서비스</span></a></li>
+										<li class="tag"><a href="#"><span>이벤트/혜택</span></a></li>
+									</ul>
 								</div>
 
                 <div class="ui-accordion">
@@ -122,7 +120,7 @@
 	@@include('../inc/footer.inc',{
 		"webroot":"..",
 		"footer": {
-			"visibles":"hide"
+			"visibles":"show"
 		},
 		"appbar": {
 			"visibles":"hide"
