@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"공지사항",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+    "headtype": {
+			"layout":"subtype2"
+		},
+    "subtitle":"고객센터"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="custom_wrap">
+			<div class="title_wrap">
+				<div class="row">
+					<p class="title">[공지사항] 택배없는 날, 임시 공휴일 배송안내 (8/14~8/16)</p>
+					<p class="date">2021.07.25</p>
+				</div>
+			</div>
+
+			<section class="section sec_noticeboard">
+				<div class="para">
+					<div class="row">
+						<p>
+							안녕하세요, <br>
+							맘큐 배송을 담당하는 유한 배송입니다.<br>
+							<br>
+							택배없는 날, 임시 공휴일 배송안내 (8/14~8/16)
+							확인하시고 착오 없이 주문하시길 바랍니다.<br>
+							<br>
+							감사합니다.
+						</p>
+					</div>
+				</div>
+				<div class="navi">
+					<div class="row">
+						<ol>
+							<li><a href="#">
+								<span>이전글</span>
+								<p class="tit">[공지] 7월 여름 프로모션 당첨자 발표 지연 안내</p>
+							</a></li>
+							<li><a href="#">
+								<span>이전글</span>
+								<p class="tit">[공지] 7월 여름 프로모션 당첨자 발표 프로모션 7월 여름 프로모션 당첨자 발표 지연 안내</p>
+							</a></li>
+						</ol>
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<div class="row">
+						<button class="btn primary">목록보기</button>
+					</div>
+				</div>
+			</section>
+    </div>
+  </div>      
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>

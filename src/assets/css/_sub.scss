@@ -775,11 +775,13 @@
 				}
 				.userid {
 					max-width: 80px;
+					font-family: "Roboto";
 					font-weight: 500;
 					line-height: inherit;
 					@include ellipse(1);
 				}
 				.date {
+					font-family: "Roboto";
 					color: #999;
 					font-weight: 400;
 					line-height: inherit;
@@ -1376,6 +1378,12 @@
 			right: 0;
 			top: 50%;
 			transform: translateY(-50%);
+			i {
+				vertical-align: middle;
+				&.down {
+					@include iconAngle($direction: 'down', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
+				}
+			}
 		}
 		&.primary {
 			border-color: #D8DBDD;
@@ -1389,7 +1397,7 @@
 			padding-right: 0;
 		}
 		input {
-			padding-right:50px;
+			padding-right: 45px;
 			background-color: #F5F7F8;
 			border-color:#F5F7F8;
 			border-radius: 23px;
@@ -1399,7 +1407,7 @@
 		}
 		.btn {
 			position:absolute;
-			right:30px;
+			right:20px;
 			border:0;
 			width:30px;
 			height:30px;
@@ -1433,6 +1441,9 @@
 			background-size: 12px;
 			background-position: right 2px center;
 		}
+		.blind {
+			display: none;
+		}
 	}
 	.cust-main {
 		margin-top: 24px;
@@ -1457,7 +1468,25 @@
 				letter-spacing: -0.002em;
 			}
 		}
-	}	
+	}
+	.title_wrap {
+		margin-top: 20px;
+		padding-bottom: 12px;
+		border-bottom: 1px solid #D8DBDD;
+		.title {
+			font-size: 1.125rem;
+			font-weight: 700;
+			line-height: 1.75rem;
+		}
+		.date {
+			margin-top: 6px;
+			font-family: "Roboto";
+			color: #999;
+			font-size: 0.813rem;
+			line-height: 20px;
+			vertical-align: middle;
+		}
+	}
 	.tablist {
 		padding: 0;
 		li {
@@ -1533,6 +1562,7 @@
 		.search_wrap {
 			input {
 				padding-left: 80px;
+				padding-right: 20px;
 			}
 		}
 		.notice_board {
@@ -1572,6 +1602,7 @@
 				height: 20px;
 				margin-bottom: 7px;
 				.date {
+					font-family: "Roboto";
 					color: #999;
 					font-size: 0.813rem;
 					line-height: 20px;
@@ -1579,31 +1610,33 @@
 				}
 			}
 			.tit {
-				line-height: 1.25rem;
+				padding-right: 5px;
+				font-size: 0.938rem;
+				line-height: 1.5rem;
 				font-weight: 700;
 				@include ellipse(2);
 			}
 		}
 	}
-	.sec_qna {
+	.sec_qna , .sec_faq {
 		.ui-accordion {
 			.title {
 				font-size: 0.938rem;
 				font-weight: 700;
 				padding-left: 20px;
 				line-height: 1.5rem;
-				margin-bottom: 20px;
 			}
 			.target {
 				padding: 0 20px;
 				.target_inner {
 					padding: 20px 0;
-					border-bottom: 1px solid rgba(216, 219, 221, 1);
-					transition: border-color .4s, border-width .4s;
-					p {
+					border-bottom-width: 1px;
+					border-bottom-style: solid;
+					border-bottom-color: rgb(216, 219, 221, 1);
+					transition: border-color 2s, border-width 2s;
+					> div {
 						position: relative;
 						margin-left: 35px;
-						line-height: 1.5rem;
 						&::before {
 							content: 'Q';
 							width: 25px;
@@ -1621,13 +1654,28 @@
 							font-weight: 700;
 							text-align: center;
 						}
+						span {
+							margin-top: 8px;
+							display: inline-block;
+							color: #666;
+							font-size: 0.813rem;
+							line-height: 1;
+						}
+					}
+					.tit {
+						padding-right: 18px;
+						font-size: 0.938rem;
+						line-height: 1.5rem;
+						font-weight: 700;
 					}
 				}
 			}
 			.panel {
-				border-top: 1px solid rgba(216, 219, 221, 1);
 				padding-left: 20px;
 				padding-right: 20px;
+				border-top-width: 1px;
+				border-top-style: solid;
+				border-top-color: rgba(216, 219, 221, 1);
 				p {
 					position: relative;
 					margin-left: 35px;
@@ -1652,12 +1700,70 @@
 			}
 			.item {
 				border: none;
-				border-color: transparent;
+				border-bottom: none;
 				&[data-status="expanded"] {
 					.target_inner {
-						border-bottom: none;
+						border-bottom-width: 0px;
+						border-bottom-style: solid;
+						border-bottom-color: transparent;
 					}
 				}
+			}
+			.btn_all {
+				top: 5px;
+				i.down {
+					&::before {
+						margin-top: -4px;
+					}
+				}
+			}
+		}
+	}
+	.sec_noticeboard {
+		.para {
+			min-height: 600px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #D8DBDD;
+			p {
+				color: #000;
+				font-size: 0.938rem;
+				line-height: 1.5rem;
+			}
+		}
+		.navi {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #D8DBDD;
+			ol {
+				li {
+					position: relative;
+					&:not(:last-of-type) {
+						margin-bottom: 15px;
+					}
+					a {
+						display: inline-block;
+						width: 100%;
+					}
+				}
+				span {
+					position: absolute;
+					left: 0;
+					color: #999;
+					font-size: 0.813rem;
+					line-height: 1.5rem;
+				}
+				.tit {
+					padding-left: 55px;
+					font-size: 0.813rem;
+					line-height: 1.5rem;
+				}
+			}
+		}
+		.btn_wrap {
+			margin-top: 24px;
+			.btn {
+				width: 100%;
+				border-color: #AAA;
 			}
 		}
 	}
