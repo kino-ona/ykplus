@@ -17,6 +17,7 @@
   <title>오늘플러스 | @@pagetitle</title>
   <link rel="shortcut icon" href="@@webroot/assets/images/common/favicon.ico" type="image/x-icon" />
   <script type="text/javascript" src="@@webroot/assets/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="@@webroot/assets/js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="@@webroot/assets/js/ui-plugin.js"></script>
   <link rel="stylesheet" href="@@webroot/assets/css/ui.css"/>
   

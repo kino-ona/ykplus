@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"검색",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+
+	<!-- contents body -->
+	<div class="contents_body contents_top">
+    <div class="search_head">
+      <div class="back">
+        <a href="#" onclick="history.back(-1);"><i></i><span class="a11y">이전페이지</span></a>
+      </div>
+      <div class="frm">
+        <input id="searchTag" type="text" placeholder="검색어를 입력해주세요.">
+        <a href="#" onclick="frmreset(this);" class="btn_del-row"><span class="a11y">지우기</span></a>
+        <a href="#" onclick="alert('검색');" class="btn-search"><i class="ic-20 ic_search"></i><span class="a11y">검색</span></a>
+      </div>
+    </div>
+
+    <div class="search_wrap">
+      <div class="sch_cont">
+        
+
+    </div>
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"show"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+
+  <script>
+    $( function() {
+      var availableTags = [
+        "디펜드",
+        "디펜드 스타일 언더웨어 라이트 핏",
+        "디펜드 맘스 안심 팬티",
+        "디펜드 스타일 언더웨어",
+      ];
+      $( "#searchTag" ).autocomplete({
+        source: availableTags
+      });
+    } );
+
+    function frmreset(set) {
+      $(set).siblings('input').val(' ').focus();
+    }
+  </script>
+</body>
+
+</html>
