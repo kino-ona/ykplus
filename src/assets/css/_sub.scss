@@ -1462,12 +1462,12 @@
 			z-index: 1;
 			top: 0;
 			left: 20px;
-			min-width: 50px;
+			min-width: 60px;
 			width: auto;
 			padding: 0;
 			background-color: transparent;
 			font-size: 0.938rem;
-			padding-right: 6px;
+			padding-right: 15px;
 			border: none;
 			background-size: 12px;
 			background-position: right 2px center;
@@ -1596,7 +1596,7 @@
 				padding-right: 20px;
 			}
 		}
-		.notice_board {
+		.noticelist {
 			margin-top: 4px;
 			li {
 				width: 100%;
@@ -1615,6 +1615,10 @@
 						background-color: #009AFF;
 					}
 					&.new {
+						position: absolute;
+						right: 20px;
+						bottom: 5px;
+						border-radius: initial;
 						color: #FF2B4C;
 						font-family: "Roboto";
 						font-weight: 700;
@@ -1622,6 +1626,7 @@
 						vertical-align: text-bottom;
 						text-transform: uppercase;
 						margin-right: 0;
+						background-color: #fff;
 						transform: translateY(-50%);
 					}
 				}
