@@ -203,6 +203,12 @@ input,button,select {vertical-align:middle;}
 		display: block;
 	}
 }
+sup {
+	display: inline-block;
+	margin-top:-2px;
+	font-size:10px;
+	font-weight: 700;
+}
 button {
 	text-align: center;
 	cursor: pointer;

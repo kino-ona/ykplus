@@ -24,7 +24,94 @@
 
     <div class="search_wrap">
       <div class="sch_cont">
-        
+        <p class="head">오늘<sup>+</sup> 마켓 <span class="cnt">999</span></p>
+        <div class="product-swipe algorithm_sec">
+          <div id="Recmmd-Swipe" class="row swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><a href="#">
+                <p class="img"><img src="../assets/images/dummy/dummy04.png" alt="하기스 네이처메이드"></p>
+                <p class="brand_name">디펜드</p>
+                <p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+                <div class="price">
+                  <div>
+                    <span class="discount"><em>34</em>%</span>
+                    <span class="origin">34,800<span>원</span> </span>
+                  </div>
+                  <span class="sale">20,000 </span>
+                </div>       
+              </a></div>
+              <div class="swiper-slide"><a href="#">
+                <p class="img"><img src="../assets/images/dummy/dummy05.png" alt="하기스 네이처메이드"></p>
+                <p class="brand_name">디펜드</p>
+                <p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+                <div class="price">
+                  <div>
+                    <span class="discount"><em>34</em>%</span>
+                    <span class="origin">34,800<span>원</span> </span>
+                  </div>
+                  <span class="sale">20,000 </span>
+                </div>
+              </a></div>
+              <div class="swiper-slide"><a href="#">
+                <p class="img"><img src="../assets/images/dummy/dummy06.png" alt="하기스 네이처메이드"></p>
+                <p class="brand_name">디펜드</p>
+                <p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
+                <div class="price">
+                  <div>
+                    <span class="discount"><em>34</em>%</span>
+                    <span class="origin">34,800<span>원</span> </span>
+                  </div>
+                  <span class="sale">20,000 </span>
+                </div>
+              </a></div>
+            </div>
+          </div>
+        </div>
+        <div class="btn_wrap">
+          <a href="#" class="btn primary full">오늘<sup>+</sup> 마켓 더보기</a>
+        </div>
+      </div>
+      <!--// 오늘+마켓 검색결과 -->
+
+      <div class="sch_cont">
+        <p class="head">오늘<sup>+</sup> 이벤트 <span class="cnt">999</span></p>
+
+
+        <div class="btn_wrap">
+          <a href="#" class="btn primary full">오늘<sup>+</sup> 이벤트 더보기</a>
+        </div>
+      </div>
+      <!--// 오늘+이벤트 검색결과 -->
+
+      <div class="sch_cont">
+        <p class="head">오늘<sup>+</sup> 톡 <span class="cnt">999</span></p>
+
+
+        <div class="btn_wrap">
+          <a href="#" class="btn primary full">오늘<sup>+</sup> 톡 더보기</a>
+        </div>
+      </div>
+      <!--// 오늘+톡 검색결과 -->
+
+      <div class="sch_cont">
+        <p class="head">오늘<sup>+</sup> 정보 <span class="cnt">999</span></p>
+
+
+        <div class="btn_wrap">
+          <a href="#" class="btn primary full">오늘<sup>+</sup> 정보 더보기</a>
+        </div>
+      </div>
+      <!--// 오늘+정보 검색결과 -->
+
+      <div class="sch_cont">
+        <p class="head">오늘<sup>+</sup> 브랜드 <span class="cnt">999</span></p>
+
+
+        <div class="btn_wrap">
+          <a href="#" class="btn primary full">오늘<sup>+</sup> 브랜드 더보기</a>
+        </div>
+      </div>
+      <!--// 오늘+브랜드 검색결과 -->
 
     </div>
 
@@ -59,6 +146,12 @@
     function frmreset(set) {
       $(set).siblings('input').val(' ').focus();
     }
+
+		var swiper = new Swiper('#Recmmd-Swipe', {
+			slidesPerView: 2.25,
+			speed: 400,
+			spaceBetween: 10,
+		});
   </script>
 </body>
 
