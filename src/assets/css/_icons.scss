@@ -102,6 +102,15 @@
 	&.ic_blikes_clicked {
 		background-image: url(../images/icons/ic_board-likes_clicked.png);
 	}
+	&.ic_likes-gray {
+		background-image: url(../images/icons/ic_data-likes.png);
+		background-size:15px;
+	}
+	&.ic_reply-gray {
+		background-image: url(../images/icons/ic_data-replies.png);
+		background-size:15px;
+	}
+
 	
   /** App bar ***********/
   &.ic_app-home {
