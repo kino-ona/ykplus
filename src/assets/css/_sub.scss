@@ -2095,11 +2095,21 @@
 			}
 			.figure {
 				float:left;
+				position: relative;
+				overflow: hidden;
 				width:calc(41% - 20px);
-				// padding-bottom:34.75%;
+				min-width: 78px;
+				padding-bottom: 25.39%;
 				margin-right:20px;
 				border-radius: 20px;
 				background-color: #F5F7F8;
+				img {
+					max-width: 70%;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
 			}
 		}
 		.item_conts {
@@ -2113,10 +2123,6 @@
 				letter-spacing: -0.02em;
 				@include ellipse(2);        
 			}
-		}
-		.figure {
-			max-width: 78px;
-			margin-right: 20px;
 		}
 	}
 	.algorithm_sec {		
