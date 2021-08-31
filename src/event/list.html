@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"submain"
+		},
+		"subtitle":""
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <div class="main_body">
+      <div class="tab-navigation">
+        <div class="tab-row">
+          <p class="item active"><button role="tab" aria-label="디펜드" aria-selected="true"><span>디펜드</span></button></p>
+          <p class="item"><button role="tab" aria-label="편안한 오늘" aria-selected="false"><span>편안한 오늘</span></button></p>
+          <p class="item"><button role="tab" aria-label="건강한 오늘" aria-selected="false"><span>건강한 오늘</span></button></p>
+          <p class="item"><button role="tab" aria-label="깨끗한 오늘" aria-selected="false"><span>깨끗한 오늘</span></button></p>
+          <p class="item"><button role="tab" aria-label="편리한 오늘" aria-selected="false"><span>편리한 오늘</span></button></p>
+          <p class="item"><button role="tab" aria-label="간병케어" aria-selected="false"><span>간병케어</span></button></p>
+        </div>
+      </div>
+      <div class="event_wrap">
+        <div id="subTopswipe" class="subtop_swipe swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">
+                <p class="figure" style="background-image:url(../assets/images/dummy/dummy_evntkeybanner.png)"></p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <p class="figure" style="background-image:url(../assets/images/dummy/dummy_evntkeybanner.png)"></p>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <section class="section borad_wrap">
+          <div class="list_sort">
+            <p class="total">총 <span>999</span> 개 이벤트</p>
+            <div class="sort">
+              <select>
+                <option>인기순</option>
+                <option>신상품순</option>
+                <option>높은 가격순</option>
+                <option>낮은 가격순</option>
+                <option>가나다순</option>
+              </select>
+            </div>
+          </div>
+          <ul class="product_list">            
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/dummy_eventbanner01.png" alt="alt"></a>
+            </li>
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/dummy_eventbanner02.png" alt="alt"></a>
+            </li>
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/dummy_eventbanner03.png" alt="alt"></a>
+            </li>
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/dummy_eventbanner04.png" alt="alt"></a>
+            </li>
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/dummy_eventbanner01.png" alt="alt"></a>
+            </li>
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/dummy_eventbanner02.png" alt="alt"></a>
+            </li>
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/dummy_eventbanner03.png" alt="alt"></a>
+            </li>
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/dummy_eventbanner04.png" alt="alt"></a>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+
+    </div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"show"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+	<script>
+		var swiper = new Swiper('#subTopswipe', {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			paginationClickable: true,
+			keyboard: true,
+			speed: 400,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			},
+		});
+	</script>
+</body>
+</html>
