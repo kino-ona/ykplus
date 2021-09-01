@@ -53,7 +53,7 @@ big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, s
 dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, 
 article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, 
 ruby, section, summary,time, mark, audio, video {
-	margin: 0;padding: 0; vertical-align: top; letter-spacing: 0; font-size: 16px;word-break:keep-all;font-weight: 400;
+	margin: 0;padding: 0; vertical-align: top; letter-spacing: 0; font-size: 15px;word-break:keep-all;font-weight: 400;
 }
 fieldset,img, textarea {border: 0;outline: 0;}
 /* HTML5 display-role reset for older browsers */
@@ -84,7 +84,7 @@ input[type=text], input[type=password], input[type=number], input[type=tel], inp
 	border-radius: 8px;
 	outline: none;
 	color:#000;
-	font-size: 15px;
+	
 	-webkit-appearance: none;
 	&:not([readonly]) {
 		&:focus {
@@ -110,7 +110,7 @@ textarea {
 	outline: none;
 	resize: none;
 	-webkit-appearance: none;
-	font-size: 15px;
+	
 	background-color:#fff;
 	border: 1px solid #D8DBDD;
 	border-radius:8px;
@@ -124,17 +124,17 @@ textarea {
 		color:#666;
 	}
 	::-webkit-input-placeholder{
-		font-size: 15px;
+		
 		font-weight: 300;
 		color:#999;
 	}
 	::-moz-placeholder{
-		font-size: 15px;
+		
 		font-weight: 300;
 		color:#999;
 	}
 	::-ms-placeholder {
-		font-size: 15px;
+		
 		font-weight: 300;
 		color:#999;
 	}
@@ -157,7 +157,8 @@ select{
 	border: 1px solid #D8DBDD;
 	border-radius: 8px;
 	outline: none;
-	font-size: 15px;
+	padding-right: 25px!important;
+	
 	option {
 		padding: 5px 10px;
 		background-color:#F6F8FA;
@@ -575,7 +576,6 @@ body {
 		margin-top:28px;
 		> p {
 			padding-bottom:8px;
-			font-size:0.938rem;
 			font-weight: 700;
 			color:#666666;
 		}
@@ -588,7 +588,6 @@ body {
 			margin-top:15px;
 			margin-right:5px;
 			padding-right:10px;
-			font-size:0.938rem;
 			color:#666666;
 			strong {
 				font-weight: 700;
@@ -743,7 +742,6 @@ body {
 		top:50%;
 		@include transform(translate(-50%, -50%));
 		color:#666666;
-		font-size:0.938rem;
 		line-height:1.5;
 	}
 }
