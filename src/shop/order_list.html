@@ -13,7 +13,7 @@
 	@@include('../inc/header.inc',{ 
 		"webroot":".",
 		"headtype": {
-			"layout":"subtype2"
+			"layout":"orderhead"
 		},
 		"subtitle":"주문내역"
 	})
@@ -32,7 +32,7 @@
         <!-- item -->
         <div class="item">
           <div class="order_state">
-            <span>배송준비중</span> <button class="btn small" type="button">배송조회</button>
+            <span class="ing">배송준비중</span> <button class="btn small" type="button">배송조회</button>
           </div>
           <div class="order_summary">
             <p class="name">크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P × 50 크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P × 50 + 대형 1P × 50</p>
@@ -42,7 +42,7 @@
               <dd>20210719114606-24200233263</dd>
             </dl>
             <dl class="horizon">
-              <dt>결제정보</dt>
+              <dt>주문일자</dt>
               <dd>2021.05.14 / 14:41:32</dd>
             </dl>
             <dl class="horizon">
@@ -73,7 +73,7 @@
               <dd>20210719114606-24200233263</dd>
             </dl>
             <dl class="horizon">
-              <dt>결제정보</dt>
+              <dt>주문일자</dt>
               <dd>2021.05.14 / 14:41:32</dd>
             </dl>
             <dl class="horizon">
@@ -95,7 +95,7 @@
 
         <div class="item">
           <div class="order_state">
-            배송중 <button class="btn small" type="button">배송조회</button>
+            <span class="ing">배송중</span> <button class="btn small" type="button">배송조회</button>
           </div>
           <div class="order_summary">
           </div>
@@ -103,7 +103,7 @@
 
         <div class="item">
           <div class="order_state">
-            반품완료
+            <span class="cancel">반품완료</span>
           </div>
           <div class="order_summary">
           </div>
@@ -119,7 +119,7 @@
 
         <div class="item">
           <div class="order_state">
-            입금 후 취소-구매자
+            <span class="cancel">입금 후 취소-구매자</span>
           </div>
           <div class="order_summary">
           </div>
@@ -127,7 +127,7 @@
 
         <div class="item">
           <div class="order_state">
-            입금 전 취소-구매자
+            <span class="cancel">입금 전 취소-구매자</span>
           </div>
           <div class="order_summary">
           </div>
@@ -135,8 +135,8 @@
 
       </div>
       <!--// myorder_list -->
-
     </div>
+    <!--// order_wrap -->
 
     <!-- 작성 가능한 리뷰가 없는 경우 팝업 -->
 		<div class="overlay-popup alert-layer" role="dialog" id="alert-layer01" aria-labelledby="alert01-opener" aria-modal="true">
@@ -165,7 +165,6 @@
       <div class="overlay-dimmed"></div>
     </div>
     <!--// 리뷰 작성 가능여부 확인 팝업 -->
-
 
   </div>
 	<!--// contents body -->

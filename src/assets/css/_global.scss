@@ -146,18 +146,17 @@ select{
 	width:100%;
 	margin:0;
 	height: 44px;
-	padding: 12px 15px;
+	padding: 12px 25px 12px 15px;
 	background-color:#fff;
 	background: {
 		image: url(../images/common/select_down.png);
 		repeat:no-repeat;
 		size: 16px;
-		position: right 5px center;
+		position: right 10px center;
 	}
 	border: 1px solid #D8DBDD;
-	border-radius: 8px;
+	border-radius: 6px;
 	outline: none;
-	padding-right: 25px!important;
 	
 	option {
 		padding: 5px 10px;
@@ -424,11 +423,11 @@ body {
 .contents_body {
 	width:100%;
 	min-height:100%;
-	padding-top:72px;
+	padding-top:64px;
 	background-color:#fff;
 }
 .contents_top {
-	margin-top:-72px;
+	margin-top:-64px;
 }
 
 /** Layout > Header ***********/
@@ -438,7 +437,7 @@ body {
 	right:0;
 	top:0;
 	width:100%;
-	height:72px;
+	height:64px;
 	z-index: 10;
 	@include transition(.5s, ease-in-out);
 	padding: 0 0 calc(constant(safe-area-inset-top) + 5px);
@@ -447,7 +446,7 @@ body {
 		background-color: rgba(255,255,255, .95);
 	}
 	&.hide {
-		top:-72px;
+		top:-64px;
 	}
 	.row {
 		height:100%;

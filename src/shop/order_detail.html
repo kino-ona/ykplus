@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"주문상세정보",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/order.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"주문상세정보"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="order_wrap order-detail">
+      <div class="order_detail-head">
+        <dl>
+          <dt>2021.08.01</dt>
+          <dd>
+            <span>주문번호</span>20210719114606-24200233263
+          </dd>
+        </dl>
+      </div>
+
+			<div class="order_info">
+        <p class="title">주문정보</p>
+        <div class="content_detail">
+          <dl class="horizon">
+						<dt>주문자</dt>
+						<dd>홍길동</dd>
+					</dl>
+          <dl class="horizon">
+						<dt>입금현황</dt>
+						<dd>입금완료</dd>
+					</dl>
+          <dl class="horizon">
+						<dt>주문메모</dt>
+						<dd>부재시 문앞에 놔주세요.</dd>
+					</dl>
+        </div>
+      </div>
+      <!--// 주문정보 -->
+
+      <div class="order_info">
+        <p class="title">주문상품</p>
+        <div class="content_detail">
+          <div class="order_list">
+						<!-- item -->
+						<div class="item">
+							<div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+							<div class="details">
+                <p class="status">배송완료</p>
+								<p class="name">
+									<a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+								</p>
+								<div class="info">
+									<p class="cnt">수량 100개</p>
+									<p class="price">999,000<span class="unit">원</span></p>
+								</div>
+							</div>
+              <div class="btn_wrap">
+                <a href="#" class="btn func-btn">전체 상품 취소</a>
+                <a href="#" class="btn func-btn">반품요청</a>
+              </div>
+            </div>
+						<!--// item -->
+            <div class="item">
+							<div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+							<div class="details">
+                <p class="status">배송중</p>
+								<p class="name">
+									<a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+								</p>
+								<div class="info">
+									<p class="cnt">수량 100개</p>
+									<p class="price">999,000<span class="unit">원</span></p>
+								</div>
+							</div>
+              <div class="btn_wrap">
+                <a href="#" class="btn func-btn">전체 상품 취소</a>
+                <a href="#" class="btn func-btn">반품요청</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 주문상품 -->
+
+      <div class="order_info">
+        <p class="title">배송지 정보</p>
+        <div class="content_detail">
+        </div>
+      </div>
+      <!--// 배송지 정보 -->
+
+      <div class="order_info">
+        <p class="title">결제정보</p>
+        <div class="content_detail">
+        </div>
+      </div>
+      <!--// 결제정보 -->
+
+      <div>
+
+      </div>
+      <!--// 총 결제금액 -->
+
+    </div>
+    <!--// order_wrap  -->
+
+  </div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"show"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>

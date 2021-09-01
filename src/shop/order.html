@@ -13,7 +13,7 @@
 	@@include('../inc/header.inc',{ 
 		"webroot":".",
 		"headtype": {
-			"layout":"subtype2"
+			"layout":"orderhead"
 		},
 		"subtitle":"주문서 작성"
 	})
@@ -30,7 +30,7 @@
 
 				<div id="orderer_modify" class="content_toggle orderer_info" style="display: block;">
 					<dl class="horizon">
-						<dt>주문하신분</dt>
+						<dt>주문자명</dt>
 						<dd>이정선 <button class="btn small">변경</button></dd>
 					</dl>
 					<dl class="horizon">
@@ -70,7 +70,7 @@
 					</dl>
 				</div>
 			</div>
-			<!--// 주문자 정보   -->
+			<!--// 주문자 정보  -->
 
 			<div class="order_info">
 				<p class="title">배송지 정보 
@@ -82,11 +82,12 @@
 						<p class="chkwrap"><input type="checkbox" id="check00"><label for="check00">주문자와 동일</label></p>
 						<button class="btn small">변경</button>
 					</div>
+					<!-- 210901 마크업 변경 -->
 					<dl class="vertical">
-						<dt>홍길동</dt>
-						<dd>010-0000-0000</dd>
+						<dt>홍길동 <span class="tel">010-0000-0000</span></dt>
 						<dd>서울시 송파구 올림픽로 300 롯데월드타워 29층 (우)05551</dd>
 					</dl>
+					<!--// 210901 마크업 변경 -->
 
 					<div class="shipping_type">
 						<p class="radiowrap"><input type="radio" name="s_type" id="ship01"><label for="ship01">기본 배송지</label></p>
@@ -104,7 +105,7 @@
 							</select>
 						</p>
 						<div class="txtarea">
-							<textarea id="shipping_message"></textarea>
+							<textarea id="shipping_message" placeholder="주문시 필요한 사항을 입력해주세요."></textarea>
 							<p class="txcnt"><span>0</span> / 2000</p>
 						</div>
 					</div>
@@ -127,10 +128,12 @@
 								<p class="name">
 									<a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
 								</p>
+								<!-- 210901 마크업 변경 -->
 								<div class="info">
+									<p class="cnt">수량 100개</p>
 									<p class="price">999,000<span class="unit">원</span></p>
-									<p class="cnt">100개</p>
 								</div>
+								<!--// 210901 마크업 변경 -->
 							</div>
 
 							<div class="price_data">
@@ -196,7 +199,7 @@
 							<dd>무료</dd>
 						</dl>
 						<dl class="sum">
-							<dt>총 결제 예상 금액</dt>
+							<dt>최종 결제금액</dt>
 							<dd><p class="price">999,000<span class="unit">원</span></p></dd>
 						</dl>
 					</div>
@@ -274,7 +277,7 @@
 					<div class="payment_method-cont">
 						<div class="bank-account">
 							<dl>
-								<dt>은행</dt>
+								<dt>입금은행</dt>
 								<dd>
 									<select>
 										<option>은행을 선택해주세요</option>
@@ -433,18 +436,18 @@
 					<p class="chkwrap"> 
 						<input type="checkbox" id="payagree"><label for="payagree">위 구매조건 확인 및 결제 진행 동의</label>
 					</p>
-					<p class="info">(가상계좌 결제시, 환불계좌 정보 및 현금영수증 증빙 정보 제공동의 포함)</p>
+					<p class="info">가상계좌 결제시, 환불계좌 정보 및 현금영수증 증빙 정보 제공동의 포함</p>
 				</div>
 			</div>
 			<!--// 주문동의  -->
 
 			<div class="sum_price">
 				<dl>
-					<dt>총 결제 예상 금액</dt>
+					<dt>총 주문금액 합계</dt>
 					<dd><p class="price">999,000<span class="unit">원</span></p></dd>
 				</dl>
 			</div>
-			<!--// 총 결제 예상 금액 -->
+			<!--// 총 주문금액 합계 -->
 
 			<div class="fixed_bottom"> 
 				<div class="fixed_btn"><a href="#" class="btn blue-btn">결제하기</a></div>

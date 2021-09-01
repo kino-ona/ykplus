@@ -16,7 +16,11 @@
 			display: inline-block;
 		}
 		.img {
-			margin-bottom: 20px;
+			position:relative;
+			padding:15px;
+			background-color: #F5F7F8;
+			border-radius: 20px;
+			margin-bottom: 15px;
 		}
 	}
 	.tit_wrap {
@@ -31,7 +35,6 @@
 		}
 	}
 	.prd_name {
-		
 		line-height: 1.25rem;
 		font-weight: 700;
 		text-overflow: ellipsis;
@@ -50,9 +53,8 @@
 		}
 		.discount {
 			color: #FF2B4C;
-			font-size: 0.813rem;
+			font-size: 15px;
 			margin-left: 1px;
-			padding-bottom: 2px;
 			font-family: 'Roboto';
 			letter-spacing: -0.02em;
 			em {
@@ -70,15 +72,14 @@
 			margin-left: 8px;
 			font-family: 'Roboto';
 			letter-spacing: -0.02em;
-			font-size: 1.125rem;
+			font-size: 18px;
 			font-weight: 700;
 			padding-right: 2px;
 			padding-bottom: 1px;
 			span {
 				position: absolute;
 				left: 100%;
-				bottom: 4px;
-				font-size: 0.813rem;
+				bottom: 2px;
 				font-weight: 700;
 				letter-spacing: inherit;
 			}
@@ -90,7 +91,6 @@
 		}
 	}
 	.btn_all {
-		
 		line-height: 1.5rem;
 		font-weight: 700;
 		i {

@@ -89,3 +89,16 @@
 		</div>
 	</header>
 }
+@@if (headtype.layout==='orderhead') {
+	<header class="header sub-head">
+		<div class="row">
+			<div class="back">
+				<a href="#" onclick="history.back(-1);"><i></i><span class="a11y">이전페이지</span></a>
+			</div>
+			<h1 class="page_title">@@subtitle</h1>
+			<div class="util">
+				<a href="#" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+			</div>
+		</div>
+	</header>
+}

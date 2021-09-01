@@ -13,7 +13,7 @@
 	@@include('../inc/header.inc',{ 
 		"webroot":".",
 		"headtype": {
-			"layout":"subtype2"
+			"layout":"orderhead"
 		},
 		"subtitle":"주문완료"
 	})
@@ -29,13 +29,20 @@
 			<div class="order_info">
 				<p class="title">배송지 정보</p>
 				<div class="content_detail">
-					<dl class="vertical">
-						<dt>홍길동</dt>
-						<dd>
-							<p>010-1234-1234</p>
-							<p>서울 강남구 봉은사로 43길 6-8 (논현동, 5층)</p>
-						</dd>
+					<!-- 210901 마크업 변경 -->
+					<dl class="horizon">
+						<dt>수령자명</dt>
+						<dd>홍길동</dd>
 					</dl>
+					<dl class="horizon">
+						<dt>연락처</dt>
+						<dd>010-1234-1234</dd>
+					</dl>
+					<dl class="horizon">
+						<dt>배송지</dt>
+						<dd><p>[06123]</p>서울 강남구 봉은사로 43길 6-8 (논현동, 5층)</dd>
+					</dl>
+					<!--// 210901 마크업 변경 -->
 				</div>
 			</div>
 			<!--// 배송지 정보 -->
@@ -72,14 +79,17 @@
 								<p class="name">
 									<a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
 								</p>
+								<!-- 210901 마크업 변경 -->
 								<div class="info">
-									<p class="price">999,000<span class="unit">원</span></p>
-									<p class="cnt">100개</p>
+									<p class="cnt">수량 100개</p>
 								</div>
+								<!--// 210901 마크업 변경 -->
 							</div>
+							<!-- 210901 클래스 변경 -->
 							<div class="btn_wrap">
-								<a href="#" class="btn primary full">주문내역 보기</a>
+								<a href="#" class="btn func-btn full">주문내역 보기</a>
 							</div>
+							<!--// 210901 클래스 변경 -->
 						</div>
 						<!--// item -->
 					</div>
@@ -147,7 +157,7 @@
 			"visibles":"show"
 		},
 		"appbar": {
-			"visibles":"hide"
+			"visibles":"show"
 		}
 	})
 	<!-- //footer -->
