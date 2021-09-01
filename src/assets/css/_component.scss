@@ -1054,9 +1054,11 @@ a.btn {
 	}
 	.info {
 		margin-top:15px;
+		display: inline-block;
 		height:95px;
 	}
 	.name {
+		display: inline-block;
 		font-size: 15px;
 		font-weight: 700;
 		line-height: 1.4;
@@ -1065,6 +1067,7 @@ a.btn {
 	}
 	.price {
 		margin-top: 12px;
+		white-space: nowrap;
 		.origin {
 			font-size: 1.125rem;
 		}

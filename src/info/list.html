@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"submain"
+		},
+		"subtitle":""
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <div class="main_body">
+      <div class="tab-navigation">
+        <div class="tab-row">
+          <p class="item"><button role="tab" aria-label="최신" aria-selected="false"><span>최신</span></button></p>
+          <p class="item active"><button role="tab" aria-label="건강운동" aria-selected="true"><span>건강운동</span></button></p>
+          <p class="item"><button role="tab" aria-label="커리어" aria-selected="false"><span>커리어</span></button></p>
+          <p class="item"><button role="tab" aria-label="자산관리" aria-selected="false"><span>자산관리</span></button></p>
+          <p class="item"><button role="tab" aria-label="여행문화" aria-selected="false"><span>여행문화</span></button></p>
+          <p class="item"><button role="tab" aria-label="라이프스타일" aria-selected="false"><span>라이프스타일</span></button></p>
+        </div>
+      </div>
+
+      <div class="info_wrap">
+        <div class="subtop_kv">
+          <p class="figure" style="background-image:url(../assets/images/dummy/dummy_infokeybanner.png)"></p>
+          <span class="pagi_phrase">건강운동</span>
+        </div>
+        <section class="section borad_wrap">
+          <div class="list_sort">
+            <p class="total"><span>17</span> 개 정보</p>
+            <div class="sort">
+              <select>
+                <option>인기순</option>
+                <option>신상품순</option>
+                <option>높은 가격순</option>
+                <option>낮은 가격순</option>
+                <option>가나다순</option>
+              </select>
+            </div>
+          </div>
+          <ul class="product_list">            
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/info_banner_thumn01.png" alt="alt"></a>
+              <p class="tit">계속되는 열대야 속 숙면하는 방법</p>
+              <div class="btn_wrap">
+                <button class="btn"><i class="ic-16 ic_likes-gray"></i> 좋아요 <span>20</span></button>
+                <button class="btn"><i class="ic-16 ic_reply-gray"></i> 댓글달기</button>
+              </div>
+            </li>
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/info_banner_thumn02.png" alt="alt"></a>
+              <p class="tit">대상·증상·상황별 디펜드 제품 추천 & 디펜드 샘플신청하는 꿀팁을 알아보아요!</p>
+              <div class="btn_wrap">
+                <button class="btn"><i class="ic-16 ic_likes-gray"></i> 좋아요 <span>102</span></button>
+                <button class="btn"><i class="ic-16 ic_reply-gray"></i> 댓글 <span>9</span></button>
+              </div>
+            </li>
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/info_banner_thumn03.png" alt="alt"></a>
+              <p class="tit">요실금의 대처법과 신체 케어 [가족&케어기버 편]</p>
+              <div class="btn_wrap">
+                <button class="btn"><i class="ic-16 ic_likes-gray"></i> 좋아요 <span>102</span></button>
+                <button class="btn"><i class="ic-16 ic_reply-gray"></i> 댓글 <span>9</span></button>
+              </div>
+            </li>
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/info_banner_thumn02.png" alt="alt"></a>
+              <p class="tit">대상·증상·상황별 디펜드 제품 추천 & 디펜드 샘플신청하는 꿀팁을 알아보아요!</p>
+              <div class="btn_wrap">
+                <button class="btn"><i class="ic-16 ic_likes-gray"></i> 좋아요 <span>102</span></button>
+                <button class="btn"><i class="ic-16 ic_reply-gray"></i> 댓글 <span>9</span></button>
+              </div>
+            </li>
+            <li class="item banner">
+              <a href="#"><img src="../assets/images/dummy/info_banner_thumn01.png" alt="alt"></a>
+              <p class="tit">요실금의 대처법과 신체 케어 [가족&케어기버 편]</p>
+              <div class="btn_wrap">
+                <button class="btn"><i class="ic-16 ic_likes-gray"></i> 좋아요 <span>102</span></button>
+                <button class="btn"><i class="ic-16 ic_reply-gray"></i> 댓글 <span>9</span></button>
+              </div>
+            </li>
+            </li>
+          </ul>
+          <div class="btn_wrap">
+            <button class="btn primary">더 보기 <i class="down"></i></button>
+          </div>
+        </section>
+      </div>
+
+      <div class="banner _full">
+        <a href="#"><div class="row">
+          <p class="img"><img src="../assets/images/dummy/banner06.png"><span class="a11y">궁금하신 오늘의 정보가 있으신가요? 오늘플러스가 알려드립니다!</span></p>
+        </div></a>
+      </div>
+    </div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"show"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
