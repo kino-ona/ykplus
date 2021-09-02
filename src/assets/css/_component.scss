@@ -1343,3 +1343,88 @@ a.btn {
 		font-size: 15px;
 	}
 }
+
+/** (Window)Popup 
+****************************************/
+.popup_body{
+	padding-top:64px;
+	.popup_contents {
+		border-top:1px solid #E5E5E5;
+	}
+	.btn_wrap {
+		padding-left:20px;
+		padding-right:20px;
+		margin:20px 0;
+	}
+}
+.shipping-address {
+	padding-bottom:40px;
+	.btn_addplace {
+		color:#009AFF;
+		font-weight: 700;
+	}
+	.address-list {
+		li {
+			position:relative;
+			padding:20px;
+			border-bottom:1px solid#E5E5E5;
+		}
+		dt {
+			margin-bottom:10px;
+			font-weight: 700;
+		}
+		dd {
+			font-size: 13px;
+			line-height:1.4;
+			p {
+				font-size:inherit;
+			}
+		}
+		.basic {
+			display: inline-block;
+			margin-left:7px;
+			padding:3px 7px;
+			border:1px solid #009AFF;
+			border-radius: 10px;
+			font-size:10px;
+			color:#009AFF;
+			vertical-align: middle;
+		}
+	}
+	.address-add {
+		padding:20px 20px 70px;
+		.title {
+			margin-bottom:20px;
+			font-weight: 700;
+		}
+	}
+	.vertical {
+		margin-bottom:20px;
+		dt {
+			margin-bottom:8px;
+			font-size:13px;
+			color:#666666;
+		}
+		dd {
+			position:relative;
+			input[type=text] {
+				&:read-only {
+					background-color: #fff;
+				}
+			}
+			p {
+				margin-top: 8px;
+			}
+		}
+		.btn-zipcode {
+			position:absolute;
+			right:7px;
+			top:8px;
+			background-color: #EDEDED;
+			border:0;
+		}
+	}
+	.shipping_message {
+		padding:0;
+	}
+}

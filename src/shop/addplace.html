@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"배송지 주소록",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/order.css"/>
+</head>
+<body>
+	<div class="popup_body shipping-address">
+		<!-- header  -->
+		<header class="header sub-head">
+			<div class="row">
+				<div class="back">
+					<a href="javascript:window.close();"><i></i><span class="a11y">이전페이지</span></a>
+				</div>
+				<h1 class="page_title">주소록</h1>
+				<div class="util">
+					<a href="#" class="btn_addplace">추가</a>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- popup contents-->
+		<div class="popup_contents">
+			<!-- 배송지 목록 -->
+			<ul class="address-list">
+				<li>
+					<div class="radiowrap">
+						<input type="radio" name="radio_address" id="addr01">
+						<label for="addr01">
+							<dl>
+								<dt>김유한(집)<span class="basic">기본배송지</span></dt>	
+								<dd>
+									<p>서울 강남구 봉은사로 43길 6-8 (논현동, 5층)</p>
+									<p>010-8550-5678 / 02-8841-0655</p>
+								</dd>
+							</dl>
+						</label>
+					</div>
+				</li>
+				<li>
+					<div class="radiowrap">
+						<input type="radio" name="radio_address" id="addr02">
+						<label for="addr02">
+							<dl>
+								<dt>김유한(회사)</dt>	
+								<dd>
+									<p>서울 강남구 봉은사로 43길 6-8 (논현동, 5층)</p>
+									<p>010-8550-5678 / 02-8841-0655</p>
+								</dd>
+							</dl>
+						</label>
+					</div>
+				</li>
+			</ul>
+			<div class="btn_wrap">
+				<button onclick="location.href='addplace_new.html'" class="btn full">배송지 추가</button>
+			</div>
+			<!--// 배송지 목록 -->
+		</div>
+		<!--// popup contents -->
+	</div>
+</body>

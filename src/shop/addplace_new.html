@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"배송지 주소록",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/order.css"/>
+</head>
+<body>
+	<div class="popup_body shipping-address">
+		<!-- header  -->
+		<header class="header sub-head">
+			<div class="row">
+				<div class="back">
+					<a href="javascript:history.back(-1);"><i></i><span class="a11y">이전페이지</span></a>
+				</div>
+				<h1 class="page_title">주소록</h1>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- popup contents-->
+		<div class="popup_contents">
+
+			<!-- 배송지 추가 -->
+			<div class="address-add">
+				<p class="title">배송지 추가</p>
+				<dl class="vertical">
+					<dt>배송지명</dt>
+					<dd>
+						<input type="text" placeholder="배송지명을 입력해주세요. 예)직장, 집"> 
+					</dd>
+				</dl>
+				<dl class="vertical">
+					<dt>받는사람</dt>
+					<dd>
+						<input type="text" value="" placeholder="받는사람을 입력해주세요."> 
+					</dd>
+				</dl>
+				<dl class="vertical">
+					<dt>주소</dt>
+					<dd>
+						<input type="text" placeholder="우편번호 검색해주세요." readonly> 
+						<a href="" class="btn small btn-zipcode">우편번호</a>
+					</dd>
+					<dd>
+						<p><input type="text" name="address1" value="" readonly="readonly"></p>
+						<p><input type="text" name="address2" value=""></p>
+					</dd>
+				</dl>
+				<dl class="vertical">
+					<dt>연락처</dt>
+					<dd class="frm_mix">
+						<select>
+							<option>02</option>
+						</select>
+						<span><em class="a11y">-</em></span>
+						<input type="text" value="1234">
+						<span><em class="a11y">-</em></span>
+						<input type="text" value="5678">
+					</dd>
+				</dl>
+				<dl class="vertical">
+					<dt>핸드폰</dt>
+					<dd class="frm_mix">
+						<select>
+							<option>010</option>
+						</select>
+						<span><em class="a11y">-</em></span>
+						<input type="text" value="1234">
+						<span><em class="a11y">-</em></span>
+						<input type="text" value="5678">
+					</dd>
+				</dl>
+				<dl class="vertical shipping_message">
+					<dt>주문메세지</dt>
+					<dd>
+						<div class="txtarea">
+							<textarea id="shipping_message" placeholder="주문시 필요한 사항을 입력해주세요."></textarea>
+							<p class="txcnt"><span>0</span> / 100</p>
+						</div>
+					</dd>
+				</dl>
+				<p class="chkwrap"> 
+					<input type="checkbox" id="is_standard"><label for="is_standard">기본 배송지로 하기</label>
+				</p>
+
+				<div class="fixed_bottom"> 
+					<div class="fixed_btn"><a href="#" class="btn blue-btn">저장</a></div>
+				</div>
+			</div>
+			<!--// 배송지 추가 -->
+
+		</div>
+		<!--// popup contents -->
+	</div>
+	<script>
+		$(document).ready(function() {
+			$('#shipping_message').on('keyup', function() {
+				$('.txtarea .txcnt').html("<span>"+$(this).val().length+"</span> / 100");
+	
+				if($(this).val().length > 100) {
+					$(this).val($(this).val().substring(0, 100));
+					$('.txtarea .txcnt').html("<span>100</span> / 100");
+				}
+			});
+		})
+	</script>
+</body>
