@@ -50,7 +50,7 @@
 						</div>
 						<div class="edit">
 							<a href="#" onclick="openFixedBottom('#opt_popup')" class="btn func-btn">상품옵션변경</a>
-							<a href="#" class="btn func-btn">찜하기</a>
+							<a href="#" aria-haspopup="dialog" aria-controls="wishadd" id="wishadd-opener" class="btn func-btn">찜하기</a>
 						</div>
 					</div>
 					<!--// loop -->
@@ -67,7 +67,7 @@
 						</div>
 						<div class="edit">
 							<a href="#" onclick="openFixedBottom('#opt_popup')" class="btn func-btn">상품옵션변경</a>
-							<a href="#" class="btn func-btn">찜하기</a>
+							<a href="#" aria-haspopup="dialog" aria-controls="wishadd" id="wishadd-opener" class="btn func-btn">찜하기</a>
 						</div>
 					</div>
 					<div class="total_count">
@@ -110,7 +110,7 @@
 						</div>
 						<div class="edit">
 							<a href="#" onclick="openFixedBottom('#opt_popup')" class="btn func-btn">상품옵션변경</a>
-							<a href="#" class="btn func-btn">찜하기</a>
+							<a href="#" aria-haspopup="dialog" aria-controls="wishadd" id="wishadd-opener" class="btn func-btn">찜하기</a>
 						</div>
 					</div>
 					<!--// loop -->
@@ -165,7 +165,6 @@
 			<div class="fixed_bottom"> 
 				<div class="fixed_btn"><a href="#" class="btn blue-btn">주문하기</a></div>
 			</div>
-
 		</div>
 		<!--// cart_wrap -->
 
@@ -176,6 +175,7 @@
 	<div class="fixed_bottom-pop option_layer" role="dialog" id="opt_popup" aria-labelledby="opt_opener" aria-modal="true">
 		<div class="inner_wrap">
 			<div class="opt-wrap">
+				<button onclick="closeFixedBottom('#opt_popup');" class="btn_close"><i></i><span class="a11y">닫기</span></button>
 				<div class="opt-item">
 					<p class="name">스타일 언더웨어 라이프 여성 중대형 9매(EA)스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
 					<p class="detail">50개, 핑크, 대형</p>
@@ -203,6 +203,24 @@
 		</div>
 	</div>
 	<!--// 수량(옵션) 선택/변경 -->
+	<!-- 찜하기 후 팝업 -->
+	<div class="overlay-popup alert-layer" role="dialog" id="wishadd" aria-labelledby="wishadd-opener" aria-modal="true">
+		<div class="contents">
+			<div class="inner">
+				<p>찜한 상품이 저장되었습니다.</p>
+				<p class="desc">마이페이지에서 확인하실 수 있습니다.</p>
+				<!--
+				<p>이미 저장되어 있습니다.</p>
+				<p class="desc">마이페이지에서 확인하실 수 있습니다.</p>
+				//-->
+			</div>
+			<div class="btn_wrap">
+				<a href="#" onclick="closeLayer('#wishadd');return false;" class="btn primary">확인</a>
+			</div>
+		</div>
+		<div class="overlay-dimmed"></div>
+	</div>
+	<!--// 찜하기 후 팝업 -->
 
 	<!-- footer -->
 	@@include('../inc/footer.inc',{

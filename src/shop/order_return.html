@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"반품신청",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/order.css"/>
+</head>
+<body>
+	<div class="popup_body order-return">
+		<!-- header  -->
+		<header class="header sub-head">
+			<div class="row">
+				<h1 class="page_title">반품신청</h1>
+				<div class="util">
+          <button onclick="window.close();" class="btn_close"><i></i><span class="a11y">닫기</span></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+    <!-- popup contents-->
+		<div class="popup_contents">
+      <div class="order_info">
+				<p class="title">반품 접수대상</p>
+        <div class="content_detail">
+          <dl class="horizon">
+            <dt>배송번호</dt>
+            <dd>S-21012456851146546-00</dd>
+          </dl>
+          <dl class="horizon">
+            <dt>주문번호</dt>
+            <dd>20210719114606-24200233263</dd>
+          </dl>
+        </div>
+        <!--// 배송, 주문번호 -->
+
+        <div class="content_detail">
+          <div class="order_list">
+            <div class="item">
+              <div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+              <div class="details">
+                <p class="name">
+                  <a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+                </p>
+                <div class="info">
+                  <p class="cnt">수량 100개</p>
+                  <p class="price">999,000<span class="unit">원</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// 주문상품 -->
+
+        <div class="content_detail">
+					<div class="price_data">
+            <dl>
+							<dt>배송료</dt>
+							<dd><p class="price">0<span class="unit">원</span></p></dd>
+						</dl>
+            <dl>
+							<dt>예치금</dt>
+							<dd><p class="price">0<span class="unit">원</span></p></dd>
+						</dl>
+            <dl>
+							<dt>적립금</dt>
+							<dd><p class="price">0<span class="unit">원</span></p></dd>
+						</dl>
+            <dl>
+							<dt>할인/추가금액</dt>
+							<dd><p class="price">0<span class="unit">원</span></p></dd>
+						</dl>
+            <div class="total">
+              <dl class="sum">
+                <dt>주문금액 합계</dt>
+                <dd><p class="price">21,900<span class="unit">원</span></p></dd>
+              </dl>
+              <dl>
+                <dt>처리상태</dt>
+                <dd>배송완료</dd>
+              </dl>
+            </div>
+          </div>
+          <ul class="help_list">
+            <li>고객님께서 선택하신 상품입니다. 취소 또는 반품할 상품이 맞는지 확인해주세요.</li>
+            <li>전체 취소 또는 전체 반품이 아닌 경우 카드 종류, 결제 방식에 따라 카드 부분 취소가 불가능할 소 있습니다.</li>
+            <li>배송비, 주문서 할인. 추가금액 등에 의해 환불 금액은 변경될 수 있습니다.</li>
+            <li>주문 결제시, 사용한 결제 수단에 따라 환불 방법과 환불 완료 소요 기한이 차이가 있을 수 있습니다. </li>
+          </ul>
+        </div>
+        <!--// 가격(결제)정보 -->
+      </div>
+      <!--// 반품 접수대상 -->
+
+      <div class="order_info">
+				<p class="title">반품사유</p>
+        <div class="content_detail">
+          <dl class="vertical">
+            <dt>반품사유</dt>
+            <dd>
+              <select>
+                <option>단순변심</option>
+                <option>배송구성문제</option>
+                <option>상품구성문제</option>
+              </select>
+
+              <select disabled>
+                <option>1단계를 선택해주세요.</option>
+                <option></option>
+                <option></option>
+              </select>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <!--// 반품사유 -->
+
+      <div class="order_info">
+				<p class="title">환불수단 선택</p>
+        <div class="content_detail">
+          <p class="radiowrap">
+            <input type="radio" name="" id="method01">
+						<label for="method01">카드</label>
+          </p>
+        </div>
+      </div>
+      <!--// 환불수단 선택 -->
+
+      <div class="order_info">
+				<p class="title">환불정보</p>
+        <div class="content_detail">
+          <div class="price_data">
+            <dl>
+							<dt>환불 예상금액</dt>
+							<dd><p class="price">0<span class="unit">원</span></p></dd>
+						</dl>
+            <dl>
+							<dt>환불 수단</dt>
+							<dd>카드</dd>
+						</dl>
+            <dl>
+							<dt>환불금액</dt>
+							<dd><p class="price">0<span class="unit">원</span></p></dd>
+						</dl>
+            <dl>
+							<dt>적립금</dt>
+							<dd><p class="price">0<span class="unit">원</span></p></dd>
+						</dl>
+            <dl>
+							<dt>예치금</dt>
+							<dd><p class="price">0<span class="unit">원</span></p></dd>
+						</dl>
+          </div>
+        </div>
+      </div>
+      <!--// 환불정보 -->
+
+      <div class="order_info">
+				<p class="title">반품방법 선택</p>
+        <div class="content_detail">
+          <p class="radiowrap">
+            <input type="radio" name="" id="radio00">
+						<label for="radio00">개별반품</label>
+          </p>
+          <dl class="vertical">
+            <dt>회수 송장번호</dt>
+            <dd>
+              <input type="text">
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <!--// 반품방법 선택 -->
+
+      <div class="fixed_bottom"> 
+        <div class="fixed_btn"><a href="#" class="btn blue-btn">반품 접수</a></div>
+      </div>
+    </div>
+    <!--// popup contents-->
+
+  </div>
+</body>
+</html>
+
+

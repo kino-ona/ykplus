@@ -33,10 +33,11 @@ a.btn {
 	&.small {
 		height:auto;
 		height:28px;
-		padding-top:6px;
+		padding-top:4px;
 		padding-bottom:6px;
 		font-size:13px;
 		border-color:#AAAAAA;
+		text-align: center;
 	}
 	&.full {
 		display: block !important;
@@ -1168,7 +1169,7 @@ a.btn {
 		position:relative;
 		width:100% !important;
 		padding-top:6px;
-		padding-left:10px;
+		padding-left:8px;
 		font-size:13px;
 		line-height:1.5;
 		color:#999999;
@@ -1348,13 +1349,14 @@ a.btn {
 ****************************************/
 .popup_body{
 	padding-top:64px;
-	.popup_contents {
-		border-top:1px solid #E5E5E5;
-	}
 	.btn_wrap {
 		padding-left:20px;
 		padding-right:20px;
 		margin:20px 0;
+	}
+	.header {
+		border-bottom:1px solid #E5E5E5;
+		background-color: rgba(255,255,255, .95);
 	}
 }
 .shipping-address {

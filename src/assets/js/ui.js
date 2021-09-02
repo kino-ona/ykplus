@@ -229,6 +229,7 @@ var openFixedBottom = function(target){
 	toggleBool($opener, 'aria-pressed');
 	if(fixedbtmH > 0) {
 		$target.addClass('show');
+		$target.css('display', 'block')
 		var delay = setTimeout(function () {
 			$target.find('.inner_wrap').css({
 				'bottom': fixedbtmH

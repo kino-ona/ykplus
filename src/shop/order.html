@@ -92,7 +92,7 @@
 					<div class="shipping_type">
 						<p class="radiowrap"><input type="radio" name="s_type" id="ship01"><label for="ship01">기본 배송지</label></p>
 						<p class="radiowrap"><input type="radio" name="s_type" id="ship02"><label for="ship02">최근 배송지</label></p>
-						<p class="radiowrap"><input type="radio" name="s_type" id="ship03"><label for="ship03">신규</label></p>
+						<p class="radiowrap"><input type="radio" name="s_type" id="ship03"><label for="ship03" onclick="openLayer('#addrSearch01')">신규</label></p>
 						<button onclick="window.open('addplace.html')" class="btn primary full">주소록</button>
 					</div>
 
@@ -141,7 +141,7 @@
 							</select>
 						</p>
 						<div class="txtarea">
-							<textarea id="delivery_message" placeholder="주문시 필요한 사항을 입력해주세요."></textarea>
+							<textarea id="shipping_message" placeholder="주문시 필요한 사항을 입력해주세요."></textarea>
 							<p class="txcnt"><span>0</span> / 2000</p>
 						</div>
 					</div>
@@ -566,6 +566,91 @@
 		</div>
 		<!--// 장바구니 쿠폰 팝업 -->
 
+		<!-- 210901 신규배송지 선택 > 배송지 검색 -->
+		<div class="overlay-popup addrSearch" role="dialog" id="addrSearch01" aria-labelledby="addrSearch-opener" aria-modal="true">
+			<div class="contents">
+				<div class="heading">
+					배송지 검색 <button class="btn_close"><i></i></button>
+				</div>
+				<div class="inner">
+					<div class="addr_type">
+						<p class="radiowrap"><input type="radio" name="addrtype" id="addr01" checked><label for="addr01">도로명 검색</label></p>
+						<p class="radiowrap"><input type="radio" name="addrtype" id="addr02"><label for="addr02">지번+도로명 검색</label></p>
+					</div>
+
+					<div class="msg_wrap">
+						<p><span>도로명(건물명)</span>을 2글자 이상 입력하세요.</p>
+						<span>예) 강남대로100길, 가산디지털1로</span>
+						<span>해외 주소의 경우 "해외"를 입력하세요.</span>
+						<span>(To ship to foreign country, please enter “oversea”)</span>
+					</div>
+					<!-- 
+					<div class="msg_wrap">
+						<p><span>도로명(건물명)</span>을 두 단어 이상 입력하세요.</p>
+						<span>예) 가산동 우림라이온스밸리, 압구정 로데오</span>
+						<span>해외 주소의 경우 "해외"를 입력하세요.</span>
+						<span>(To ship to foreign country, please enter "oversea")</span>
+					</div> 
+					//-->
+					
+					<div class="search_frm">
+						<dl class="vertical">
+							<dd>
+								<input type="text" value="">
+								<a href="#" class="btn small">검색</a>
+							</dd>
+						</dl>
+						<dl class="vertical">
+							<dt>주소 선택</dt>
+							<dd>
+								<select>
+									<option value="주소를 선택해주세요.">주소를 선택해주세요.</option>
+									<option value=""></option>
+								</select>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" onclick="closeLayer('#addrSearch01');openLayer('#addrSearch02')" class="btn primary">다음</a>
+				</div>
+			</div>
+			<div class="overlay-dimmed"></div>
+		</div>
+
+		<div class="overlay-popup addrSearch" role="dialog" id="addrSearch02" aria-labelledby="addrSearch-opener" aria-modal="true">
+			<div class="contents">
+				<div class="heading">
+					배송지 검색 <button class="btn_close"><i></i></button>
+				</div>
+				<div class="inner">
+					<div class="msg_wrap">
+						<p> 상세 주소를 입력해주세요.</p>
+					</div>
+					<div class="search_frm">
+						<dl class="vertical">
+							<dt>우편번호</dt>
+							<dd>
+								<input type="text" value="12345" readonly>
+							</dd>
+						</dl>
+						<dl class="vertical">
+							<dt>주소</dt>
+							<dd>
+								<p><input type="text" value="서울시 강남구 논현동 288-9" readonly></p>
+								<p><input type="text" value="" placeholder="상세 주소를 입력해주세요."></p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" onclick="closeLayer('#addrSearch02');" class="btn primary">확인</a>
+				</div>
+			</div>
+			<div class="overlay-dimmed"></div>
+		</div>
+		<!--// 210901 신규배송지 선택 > 배송지 검색 -->
+
 	</div>
 	<!--// contents body -->
 
@@ -582,7 +667,7 @@
 	<!-- //footer -->
 	<script>
 	$(document).ready(function() {
-		$('#delivery_message').on('keyup', function() {
+		$('#shipping_message').on('keyup', function() {
 			$('.txtarea .txcnt').html("<span>"+$(this).val().length+"</span> / 2,000");
 
 			if($(this).val().length > 2000) {
