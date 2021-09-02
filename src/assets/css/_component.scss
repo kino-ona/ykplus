@@ -32,8 +32,8 @@ a.btn {
 	}
 	&.small {
 		height:auto;
-		height:28px;
-		padding-top:4px;
+		// height:28px;
+		padding-top:6px;
 		padding-bottom:6px;
 		font-size:13px;
 		border-color:#AAAAAA;
@@ -311,7 +311,7 @@ a.btn {
 			height:36px;
 			background: {
 				image: url('../images/icons/btn_heart-check.png');
-				size:36px;
+				size:20px;
 				repeat: no-repeat;
 				position:center center;
 			}
@@ -1000,14 +1000,21 @@ a.btn {
 }
 
 .product_list {
+	margin-bottom:-4px;
 	&:after {
 		@extend %clearer;
 	}
+	.chkwrap.likechk {
+		position:absolute;
+		right:0;
+		top:0;
+	}
 	.item {
+		position:relative;
 		float:left;
-		width:calc(50% - 4px);
-		margin-left:8px;
-		margin-bottom:8px;
+		width:calc(50% - 2px);
+		margin-left:4px;
+		margin-bottom:4px;
 		background-color: #F5F7F8;
 		> a {
 			display: block;
@@ -1084,7 +1091,7 @@ a.btn {
 		@include ellipse(2);
 	}
 	.price {
-		margin-top: 12px;
+		margin-top: 10px;
 		white-space: nowrap;
 		.origin {
 			font-size: 1.125rem;
@@ -1269,11 +1276,7 @@ a.btn {
 	.borad_list {
 		.item {
 			padding:30px 0;
-			border-bottom:1px solid #D8DBDD;
-			&:last-of-type {
-				border-bottom:0;
-				padding-bottom:0;
-			}
+			border-bottom:1px solid #e5e5e5;
 			&:after {
 				@extend %clearer;
 			}
@@ -1313,20 +1316,20 @@ a.btn {
 		}
 		.title {
 			margin-bottom:10px;
-			font-size:15px;
 			font-weight: 700;
 			@include ellipse(1);
 		}
 		.desc {
-			font-size:15px;
 			line-height:1.4;
 			@include ellipse(2);
 		}
 		.more {
 			display: flex;
-			margin-top:8px;
+			margin-top:10px;
 			p {
 				margin-left:12px;
+				font-size:13px;
+				color:#999999;
 				&:first-child {
 					margin-left:0;
 				}

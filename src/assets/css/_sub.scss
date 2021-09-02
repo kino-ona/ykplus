@@ -596,6 +596,7 @@
 			}
 		}
 		.panel-detail {
+			text-align: center;
 			.review_sec {
 				border-top:8px solid #F5F7F8;
 			}
@@ -1263,6 +1264,7 @@
 		padding-right:80px;
 		border-radius: 23px;
 		background-color: #F5F7F8;
+		border:0;
 	}
 	.btn-search {
 		position:absolute;
@@ -1290,7 +1292,6 @@
 		padding-left:0;
 	}
 	.brand_name {
-		
 		font-weight: 700;
 	}
 	.prd_name {
@@ -1300,10 +1301,25 @@
 	}
 }
 .sch_cont {
-	padding: 23px 0 20px;
+	position:relative;
+	padding: 20px 0;
 	border-bottom: 8px solid #F5F7F8;
+	&:after {
+		content: '';
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		display: block;
+		width:100%;
+		height:1px;
+		background-color: #e5e5e5;
+	}
 	&:last-of-type {
 		border-bottom:0;
+		&:after {
+			display: none;
+		}
 	}
 	.head {
 		position: relative;
@@ -1322,7 +1338,7 @@
 			color: #666;
 		}
 		.cnt {
-			margin-left:10px;
+			margin-left:5px;
 			font-family: 'roboto';
 			font-weight: 700;
 			color:#009AFF;
@@ -1332,7 +1348,7 @@
 	.recent_list_wrapper {
     position: relative;
     width: 100%;
-    max-height: 60px;
+    max-height: 52px;
     overflow: hidden;		
 	}
 	.recent_list {
@@ -1372,7 +1388,7 @@
 			display: inline-block;
 			margin-right:5px;
 			padding: 9px 15px;
-			border-radius: 20px;
+			border-radius: 16px;
 			background-color: #EBF7FF;
 			margin-bottom:9px;
 		}
@@ -1390,70 +1406,127 @@
 				display: block;
 				text-align: center;
 				font-size: 13px;
-				// white-space: nowrap;
 				letter-spacing: -0.002em;
 			}
 			display: inline-block;
 			width: 100%;
-			max-width: calc(25% - 22px);
+			max-width: calc(25% - 16px);
 			&:not(:nth-of-type(4n)) {
-				margin-right: 25px;
+				margin-right: 17px;
 			}
 			.img {
 				padding: 10px;
 				background-color: #F5F7F8;
 				border-radius: 20px;
-				margin-bottom: 20px;
+				margin-bottom: 8px;
 			}
 			margin-bottom: 20px;
 		}
 	}
 	.btn_wrap {
-		margin-top:30px;
-		margin-bottom:20px;
+		padding-left:20px;
+		padding-right:20px;
+		margin-top:20px;
 		.btn {
 			font-weight: 400;
 		}
 	}
 	.board_wrap {
-		margin-left:-20px;
-		margin-right:-20px;
 		.borad_list {
 			.item {
 				padding-left:20px;
 				padding-right:20px;
 			}
 		}
+		&.event-wrap {
+			padding:15px 0 0;
+			margin-bottom:-5px;
+			.item {
+				border:0;
+				padding:5px 20px;
+				text-align: center;
+			}
+		}
 	}
 	.talk_wrap {
 		.talk_list {
+			padding:20px 0 0;
 			.item {
-				padding:20px 0 17px;
-				border-bottom:1px solid #D8DBDD;
+				&:last-of-type {
+					padding-bottom:0;
+					background:none;
+				}
+				margin:0 20px;
+				padding-bottom:24px;
+				background: {
+					image: url(../images/sub/dot_column.png);
+					repeat:repeat-y;
+					position: left 16px top 12px;
+					size:1px;
+				}
 			}
 			a {
 				display: block;
 				width:100%;
 				height:100%;
 			}
-			p {
-				
-				font-weight: 700;
-				line-height:1.4;
-				@include ellipse(2);
+			.headdata {
+				display: flex;
+				justify-content: start;
+				align-items: center;
+				margin-right: auto;
+				p {
+					margin-right: 6px;
+					font-family: "Roboto";
+					font-size:13px;
+					line-height: 1rem;
+					vertical-align: middle;
+					&:last-of-type {
+						&::before {
+							content: '·';
+							padding-right: 4px;
+							width: 1px;
+							height: inherit;
+							color: inherit;
+							font-size: inherit;
+							line-height: inherit;
+							vertical-align: inherit;
+						}
+					}
+				}
+				.userid {
+					max-width: 80px;
+					font-family: "Roboto";
+					font-weight: 500;
+					line-height: inherit;
+					@include ellipse(1);
+				}
+				.date {
+					font-family: "Roboto";
+					color: #999;
+					font-weight: 400;
+					line-height: inherit;
+					vertical-align: baseline;
+				}
+				.img {
+					width: 32px;
+					height: 32px;
+					border-radius: 50%;
+					overflow: hidden;
+				}
 			}
-			.point {
-				font-size:inherit;
-				font-weight: inherit;
-				color:#009AFF;
-				text-decoration: underline;
-			}
+		}
+		.info {
+			margin-top:16px;
+			padding-left:38px;
 		}
 		.more {
 			display: flex;
-			margin-top:30px;
+			margin-top:20px;
 			p {
 				margin-left:12px;
+				font-size:13px;
+				color:#999999;
 				&:first-child {
 					margin-left:0;
 				}
@@ -1471,39 +1544,46 @@
 	.info-wrap {
 		.item {
 			padding:12px 0;
-			border-bottom:0;
+		}
+		.info {
+			width:100%;
+			.desc {
+				font-weight: 700;
+			}
 		}
 	}
 	.brand_summary-list {
-		margin-top:10px;
-		.figure {
-			position:relative;
-			width:100%;
-			padding-bottom:43.75%;
-			border-radius: 8px;
-			overflow: hidden;
-			img {
-				position:absolute;
-				left:50%;
-				top:50%;
-				width:100%;
-				height:100%;
-				@include transform(translate(-50%, -50%));
-				-o-object-fit: cover;
-				object-fit: cover;
+		.item {
+			padding:20px;
+			border-bottom:1px solid #e5e5e5;
+			&:after {
+				@extend %clearer;
 			}
 		}
+		.figure {
+			float:left;
+			position:relative;
+			width:19%;
+			padding:10px;
+			border-radius: 20px;
+			background-color: #F5F7F8;
+			text-align: center;
+			overflow: hidden;
+		}
 		.info {
-			margin-top:17px;
+			float:left;
+			width:81%;
+			padding-left:12px;
+			margin-top:2px;
 		}
 		.name {
-			margin-bottom:15px;
-			
+			margin-bottom:8px;
 			font-weight: 700;
 		}
 		.desc {
-			
-			line-height:1.5;
+			font-size:13px;
+			line-height:1.4;
+			color:#666666;
 			@include ellipse(2);
 		}
 	}
@@ -2080,14 +2160,19 @@
 			position: absolute;
 			z-index: 1;
 			top: 0;
-			left: 20px;
+			left: 0;
 			min-width: 60px;
 			width: auto;
 			background-color: transparent;
-			
+			padding-left:20px;
 			border: none;
 			background-size: 12px;
 			background-position: right 2px center;
+		}
+	}
+	.product_list {
+		& + .btn_wrap {
+
 		}
 	}
 	.cust-main {
@@ -2229,8 +2314,8 @@
 		padding-top: 20px;
 		.search_wrap {
 			input {
-				padding-left: 80px;
-				padding-right: 20px;
+				padding-left: 90px;
+				padding-right: 50px;
 			}
 		}
 		.noticelist {
@@ -2280,7 +2365,7 @@
 			}
 			.headdata {
 				height: 20px;
-				margin-top: 10px;
+				margin-top: 9px;
 				.date {
 					font-family: "Roboto";
 					color: #999;
