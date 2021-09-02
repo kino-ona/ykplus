@@ -1332,24 +1332,26 @@
 	.recent_list_wrapper {
     position: relative;
     width: 100%;
-    max-height: 68px;
+    max-height: 60px;
     overflow: hidden;		
 	}
 	.recent_list {
 		display: flex;
-		padding: 20px 20px 0;
+		padding: 20px 20px 10px;
 		overflow-x: scroll;
 		-webkit-overflow-scrolling: touch;
 		li {
 			margin-right: 6px;
 			display: flex;
-			padding: 9px 15px;
+			padding: 6px 14px;
 			border: 1px solid #D8DBDD;
 			border-radius: 20px;
 			margin-bottom: 6px;
 			a {
 				display: inline-block;
 				font-size: 13px;
+				line-height: 1;
+				vertical-align: middle;
 				white-space: nowrap;
 				letter-spacing: -0.002em;
 			}
@@ -1384,6 +1386,13 @@
 	.cate_list {
 		padding: 20px 24px 0;
 		li {
+			a {
+				display: block;
+				text-align: center;
+				font-size: 13px;
+				// white-space: nowrap;
+				letter-spacing: -0.002em;
+			}
 			display: inline-block;
 			width: 100%;
 			max-width: calc(25% - 22px);
@@ -1396,10 +1405,6 @@
 				border-radius: 20px;
 				margin-bottom: 20px;
 			}
-			text-align: center;
-			font-size: 13px;
-			// white-space: nowrap;
-			letter-spacing: -0.002em;
 			margin-bottom: 20px;
 		}
 	}
@@ -2086,11 +2091,11 @@
 		}
 	}
 	.cust-main {
-		margin-top: 20px;
+		padding-top: 20px;
 		padding-bottom: 20px;
-		border-bottom: 8px solid #F5F7F8;
+		border-top: 1px solid #E5E5E5;
+		border-bottom: 1px solid #E5E5E5;
 		.title {
-			
 			letter-spacing: -0.002em;
 			margin-bottom: 10px;
 		}
@@ -2114,9 +2119,9 @@
 		padding-bottom: 20px;
 		border-bottom: 1px solid #E5E5E5;
 		.title {
-			font-size: 1.125rem;
+			font-size: 18px;
+			line-height: 28px;
 			font-weight: 700;
-			line-height: 1.75rem;
 		}
 		.date {
 			margin-top: 6px;
@@ -2142,12 +2147,22 @@
 		&.active {
 			color: #000;
 			font-weight: 900;
-			padding-bottom: 12px;
+			padding-bottom: 14px;
 			border-bottom: 3px solid #009AFF;
 		}
 	}
 	.tab_contents {
 		margin-top: 24px;
+	}
+	.tab_panel {
+		> .btn_wrap {
+			margin-top: 24px;
+			padding-left: 20px;
+			padding-right: 20px;			
+			.btn {
+				width: 100%;
+			}
+		}
 	}
 	.ui-accordion {
 		margin-top: 18px;
@@ -2209,7 +2224,9 @@
 		}
 	}
 	//****************************************/
-	.sec_notice {
+	.sec_notice {		
+		border-top: 8px solid #F5F7F8;
+		padding-top: 20px;
 		.search_wrap {
 			input {
 				padding-left: 80px;
@@ -2262,12 +2279,11 @@
 			}
 			.headdata {
 				height: 20px;
-				margin-bottom: 7px;
+				margin-top: 10px;
 				.date {
 					font-family: "Roboto";
 					color: #999;
 					font-size: 0.813rem;
-					line-height: 20px;
 					vertical-align: middle;
 				}
 			}
@@ -2281,8 +2297,6 @@
 				font-weight: 700;
 				.txt {
 					margin-right:5px;
-					
-					line-height: 1.5rem;
 					font-weight: 700;
 					@include ellipse(1);
 				}
@@ -2290,7 +2304,10 @@
 		}
 	}
 	.sec_qna , .sec_faq {
+		border-top: 8px solid #F5F7F8;
+		padding-top: 20px;
 		.ui-accordion {
+			margin-bottom: 0;
 			.target {
 				padding: 0 20px;
 				border-bottom-width: 1px;
@@ -2384,6 +2401,11 @@
 			}
 		}
 	}
+	.sec_qna {
+		.taglist {
+			margin-top: 0;
+		}
+	}
 	.sec_noticeboard {
 		.para {
 			min-height: 300px;
@@ -2414,13 +2436,13 @@
 					position: absolute;
 					left: 0;
 					color: #999;
-					font-size: 0.813rem;
-					line-height: 1.5rem;
+					font-size: 13px;
+					line-height: 20px;
 				}
 				.tit {
 					padding-left: 55px;
-					font-size: 0.813rem;
-					line-height: 1.5rem;
+					font-size: 13px;
+					line-height: 24px;
 					@include ellipse(2);
 				}
 			}
