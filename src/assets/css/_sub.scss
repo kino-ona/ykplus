@@ -2239,7 +2239,7 @@
 				width: 100%;
 				position: relative;
 				padding: 20px;
-				border-bottom: 1px solid #D8DBDD;
+				border-bottom: 1px solid #E5E5E5;
 				a {
 					display: block;
 					width:100%;
@@ -2252,6 +2252,7 @@
 					line-height: 1;
 					border-radius: 10px;
 					&.noti {
+						padding-top: 6px;
 						color: #fff;
 						vertical-align: middle;
 						background-color: #009AFF;
@@ -2274,7 +2275,7 @@
 					}
 				}
 				.btn_all {
-					right: 15px;
+					right: 30px;
 				}
 			}
 			.headdata {
