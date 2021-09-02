@@ -1407,11 +1407,6 @@ a.btn {
 		}
 		dd {
 			position:relative;
-			input[type=text] {
-				&:read-only {
-					background-color: #fff;
-				}
-			}
 			p {
 				margin-top: 8px;
 			}

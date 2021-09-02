@@ -83,7 +83,7 @@
 						<button class="btn small">변경</button>
 					</div>
 					<!-- 210901 마크업 변경 -->
-					<dl class="vertical">
+					<dl class="vertical myorder-info">
 						<dt>홍길동 <span class="tel">010-0000-0000</span></dt>
 						<dd>서울시 송파구 올림픽로 300 롯데월드타워 29층 (우)05551</dd>
 					</dl>
@@ -96,16 +96,52 @@
 						<button onclick="window.open('addplace.html')" class="btn primary full">주소록</button>
 					</div>
 
+					<!-- 210901 배송지 > 변경 버튼 클릭시 화면 -->
+					<div class="shipping_detail">
+						<dl class="vertical">
+							<dt>받는사람</dt>
+							<dd><input type="text" value="홍길동" placeholder="받는사람을 입력해주세요."></dd>
+						</dl>
+						<dl class="vertical">
+							<dt>핸드폰</dt>
+							<dd class="frm_mix">
+								<select>
+									<option>02</option>
+								</select>
+								<span><em class="a11y">-</em></span>
+								<input type="text" value="1234">
+								<span><em class="a11y">-</em></span>
+								<input type="text" value="5678">
+							</dd>
+						</dl>
+						<dl class="vertical">
+							<dt>주소</dt>
+							<dd>
+								<input type="text" placeholder="우편번호 검색해주세요." readonly> 
+								<a href="" class="btn small btn-zipcode">우편번호</a>
+							</dd>
+							<dd>
+								<p><input type="text" value="서울시 강남구" name="address1" value="" readonly></p>
+								<p><input type="text" value="신사동 우리집" name="address2" value=""></p>
+							</dd>
+						</dl>
+					</div>
+					<!--// 210901 배송지 > 변경 버튼 클릭시 화면 -->
+
 					<div class="shipping_message">
 						<p>배송메세지</p>
 						<p>
 							<select>
-								<option>배송 메세지를 선택해주세요.</option>
-								<option></option>
+								<option value="배송 메세지를 선택해 주세요">배송 메세지를 선택해주세요.</option>
+								<option value="부재 시 전화 또는 문자 주세요">부재 시 전화 또는 문자 주세요</option>
+								<option value="부재 시 경비실에 맡겨 주세요">부재 시 경비실에 맡겨 주세요</option>
+								<option value="부재 시 택배함에 놔주세요">부재 시 택배함에 놔주세요</option>
+								<option value="부재 시 집 앞에 놔주세요">부재 시 집 앞에 놔주세요</option>
+								<option value="msgSelf">직접 입력</option>
 							</select>
 						</p>
 						<div class="txtarea">
-							<textarea id="shipping_message" placeholder="주문시 필요한 사항을 입력해주세요."></textarea>
+							<textarea id="delivery_message" placeholder="주문시 필요한 사항을 입력해주세요."></textarea>
 							<p class="txcnt"><span>0</span> / 2000</p>
 						</div>
 					</div>
@@ -546,7 +582,7 @@
 	<!-- //footer -->
 	<script>
 	$(document).ready(function() {
-		$('#shipping_message').on('keyup', function() {
+		$('#delivery_message').on('keyup', function() {
 			$('.txtarea .txcnt').html("<span>"+$(this).val().length+"</span> / 2,000");
 
 			if($(this).val().length > 2000) {

@@ -64,6 +64,10 @@ body {-webkit-text-size-adjust:none;}
 ol, ul {list-style: none;}
 address,em {font-style: normal}
 h1,h2,h3,h4,h5,h6 {font-weight: 400;}
+strong {
+	font-size:inherit;
+	font-weight: 700;
+}
 div {word-break: keep-all;}
 table {
 	border-collapse: collapse;

@@ -8,7 +8,6 @@
 	.unit {
 		display: inline-block;
 		margin-top:-2px;
-		margin-left:2px;
 		font-weight: 700;
 	}		
 }
@@ -45,9 +44,6 @@
 	&:after {
 		@extend %clearer;
 	}
-	dt {
-		padding-top:2px;
-	}
 	dd {
 		line-height:1.4;
 		p {
@@ -56,6 +52,14 @@
 		span {
 			font-size:13px;
 			color:#666;
+		}
+	}
+}
+
+.vertical {
+	input[type=text], input[type=number] {
+		&:read-only {
+			background-color: #fff;
 		}
 	}
 }
@@ -158,7 +162,6 @@
 		max-width:calc(100% - 8.667rem);
 		width:100%;
 		margin-left:15px;
-		margin-bottom:16px;
 		padding-top:2px;
 		.name {
 			padding-right:30px;
@@ -187,6 +190,7 @@
 	.edit {
 		clear:both;
 		display: flex;
+		padding-top:20px;
 		margin-left:1.667rem;
 		.btn {
 			flex:1;
@@ -451,6 +455,14 @@
 				vertical-align: middle;
 				}
 			}
+			&.small {
+				width:auto;
+				height:28px;
+				border:1px solid #AAA;
+			}
+		}
+		.btn-receipt {
+			right:20px;
 		}
 		i {
 			@include iconAngle($direction: 'down', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
@@ -531,7 +543,8 @@
 		padding:20px 0;
 		dt {
 			padding-bottom:4px;
-			font-weight: 700;
+			font-size:13px;
+			color:#666666;
 			.tel {
 				display: inline-block;
 				padding-left:5px;
@@ -551,12 +564,20 @@
 			margin-bottom:5px;
 		}
 		dd {
+			position: relative;
 			line-height:1.4;
 			color:#666666;
-			p {
+			p {	
 				font-size:inherit;
 				color:inherit;
 			}
+		}
+		.btn-zipcode {
+			position:absolute;
+			right:7px;
+			top:8px;
+			background-color: #EDEDED;
+			border:0;
 		}
 	}
 	.shipping_info {
@@ -568,6 +589,13 @@
 			padding-left:20px;
 			padding-right:20px;
 			padding-bottom:0;
+		}
+		.myorder-info {
+			dt {
+				font-size:15px;
+				font-weight: 700;
+				color:#000000;
+			}
 		}
 	}
 	.shipping_type {
@@ -582,11 +610,21 @@
 		}
 	}
 }
+.shipping_detail {
+	.vertical {
+		dd {
+			p {
+				margin-top: 8px;
+			}
+		}
+	}
+}
 .shipping_message {
 	margin:20px 0 0;
 	padding:0 20px 20px;
 	> p {
 		padding-bottom:8px;
+		font-size:13px;
 		color:#666666;
 	}
 	.txtarea {
@@ -630,6 +668,7 @@
 	padding-top:20px;
 	dl {
 		display: flex;
+		align-items:center;
 		width:100%;
 		padding-left:20px;
 		padding-right:20px;
@@ -637,7 +676,6 @@
 	}
 	dt, dd {
 		flex:1;
-		
 		vertical-align: baseline;
 	}
 	dt {
@@ -651,9 +689,7 @@
 		line-height: normal;
 	}
 	.total {
-		margin-top:10px;
-		padding-top:20px;
-		padding-bottom:15px;
+		padding-bottom:20px;
 		background-color: #F5F7F8;
 	}
 	.sum {
@@ -732,7 +768,13 @@
 	.price_data {
 		clear:both;
 		margin:0 -20px 0;
-		border-top:1px solid #F0F0F0;
+		// border-top:1px solid #F0F0F0;
+		dl {
+			&:first-of-type {
+				padding-top:20px;
+				border-top:1px solid #F0F0F0;
+			}
+		}
 	}
 }
 .total_price {
@@ -1206,6 +1248,31 @@
 	.content_detail {
 		padding	:20px;
 		border-bottom:1px solid #E5E5E5;
+		.price_data {
+			padding-top:0;
+			dl {
+				padding:0;
+			}
+			.price, .discount {
+				font-size:15px;
+			}
+		}
+	}
+	.discount-desc {
+		margin-bottom:5px;
+		dt {
+			position:relative;
+			flex:1.5;
+			padding-left:12px;
+			padding-top:6px;
+			font-size:13px;
+			font-weight: 400;
+		}
+		.ic_tree {
+			position:absolute;
+			left:0;
+			top:5px;
+		}
 	}
 	.order_list {
 		margin-left:-20px;
@@ -1244,6 +1311,23 @@
 				margin-left:10px;
 				&:first-of-type {
 					margin-left:0;
+				}
+			}
+		}
+	}
+	.sum_price {
+		padding-bottom:0;
+		.vertical {
+			margin-top:10px;
+			dt {
+				align-items: start;
+			}
+			dd {
+				p {
+					padding-top:8px;
+					font-size:13px;
+					line-height:1.4;
+					color:#666666;
 				}
 			}
 		}

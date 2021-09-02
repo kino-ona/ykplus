@@ -167,3 +167,14 @@
 		vertical-align: middle;
 	}
 }
+.ic_tree {
+	display: inline-block;
+	width:14px;
+	height:14px;
+	background: {
+		image: url(../images/icons/icon_tree.png);
+		size:6px;
+		repeat: no-repeat;
+		position: left center;
+	}
+}
