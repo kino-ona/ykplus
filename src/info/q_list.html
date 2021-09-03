@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"오늘+, 질문합니다"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <div class="main_body">
+      <div class="note_sec">
+        <p class="note">채택되신 질문은 <b>포인트가 지급</b>됩니다.</p>
+        <span>월 1회 심사를 거쳐 월별 지급됩니다.</span>
+      </div>
+      <div class="info_wrap">
+        <div class="q_area_wrap">
+          <div class="borad_wrap">
+            <div class="list_sort">
+              <p class="total"><span>20</span>개 정보</p>
+              <div class="sort">
+                <select>
+                  <option>최신순</option>
+                  <option>신상품순</option>
+                  <option>높은 가격순</option>
+                  <option>낮은 가격순</option>
+                  <option>가나다순</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <ul class="q_list">
+            <li class="item">
+              <div class="user_info">
+                <div class="headdata">
+                  <p class="img"><img src="../assets/images/common/default_user.png"/><span class="a11y">사용자 프로필사진</span></p>
+                  <p class="userid">emdfpm84</p>
+                </div>
+                <p class="date">2일 전</p>
+              </div>
+              <div class="qpost">
+                <p class="title">노화방지에 좋은 음식 종류가 알고 싶어요! 여기 혹시 전문가 있으신가요?</p>
+                <div class="btn_wrap">
+                  <button class="btn _clicked"><i class="ic-16 ic_likes_clicked"></i> <span>102</span></button>
+                  <button class="btn"><i class="ic-16 ic_reply-gray"></i> 댓글달기 <span></span></button>
+                </div>
+              </div>
+            </li>
+            <li class="item">
+              <div class="user_info">
+                <div class="headdata">
+                  <p class="img"><img src="../assets/images/dummy/dummy_user03.png"/><span class="a11y">사용자 프로필사진</span></p>
+                  <p class="userid">emdfpm84</p>
+                </div>
+                <p class="date">2일 전</p>
+              </div>
+              <div class="qpost">
+                <p class="title">어제 저녁 운동을 했습니다. 동네 친구들도 만나도 즐거운 시간이었습니다. 노화방지에 좋은 음식 종류가 알고 싶어요!</p>
+                <div class="btn_wrap">
+                  <button class="btn _clicked"><i class="ic-16 ic_likes_clicked"></i> <span>102</span></button>
+                  <button class="btn"><i class="ic-16 ic_reply-gray"></i> 댓글 <span>9</span></button>
+                </div>
+              </div>
+            </li>
+            <li class="item">
+              <div class="user_info">
+                <div class="headdata">
+                  <p class="img"><img src="../assets/images/dummy/dummy_user02.png"/><span class="a11y">사용자 프로필사진</span></p>
+                  <p class="userid">emdfpm84</p>
+                </div>
+                <p class="date">2021.04.08</p>
+              </div>
+              <div class="qpost">
+                <p class="title">노화방지 피부관리 방법이 알고 싶어요! 타이틀은 최대 두줄까지 노출됩니다.</p>
+                <div class="btn_wrap">
+                  <button class="btn _clicked"><i class="ic-16 ic_likes_clicked"></i> <span>102</span></button>
+                  <button class="btn"><i class="ic-16 ic_reply-gray"></i> 댓글 <span>9</span></button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"show"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>

@@ -164,6 +164,20 @@
 		}
 	}
 }
+.borad_wrap {
+	.list_sort {
+		.total {
+			font-weight: 700;
+			span {
+				color: #009AFF;
+			}
+		}
+		select {
+			padding-right: 28px;
+			font-weight: 700;
+		}
+	}
+}
 .item_list {
 	.item {
 		width: 100%;
@@ -1643,10 +1657,11 @@
 		padding-bottom: 0;
   }
   .subtop_kv {
-    margin-bottom:30px;
+		margin-top: -21px;
+    margin-bottom: 20px;
 		position:relative;
     .figure {
-      padding-top:55.556%;
+      padding-top: 37.335%;
       background: {
         repeat: no-repeat;
         position:center center;
@@ -1664,13 +1679,12 @@
       background-color: rgba(0, 0, 0, .2);
 			span {
 				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
+				bottom: 30px;
+				left: 20px;
 				color: #fff;
-				font-size: 1.688rem;
+				font-size: 24px;
 				line-height: 1;
-				font-weight: 900;
+				font-weight: 800;
 			}
     }
 		.kv_inner {
@@ -1722,25 +1736,33 @@
 	.borad_wrap {
     padding-top:0;
     overflow: hidden;
-		padding-left: 20px;
-		padding-right: 20px;
 		margin-bottom: 20px;
 		.list_sort {
+			padding-left: 20px;
+			padding-right: 20px;
 			padding-bottom: 0;
-			.total {
-				span {
-					color: #009AFF;
-				}
+			select {
+				padding-right: 28px;
 			}
 		}
 		> .btn_wrap {
+			padding-left: 20px;
+			padding-right: 20px;
 			.btn {
 				width: 100%;
+				border-color: #AAA;
 			}
+		}
+		.product_list {
+			margin-top: 16px;
 		}
 	}
 	.item {
-		margin-bottom: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 12px;
+		border-bottom: 1px solid #F0F0F0;
+		margin-bottom: 20px;
 		&.banner {
 			> a {
 				padding: 0;
@@ -2115,6 +2137,143 @@
 					letter-spacing: -0.02em;
 				}
 			}
+		}
+	}
+	.q_area_wrap {
+		.borad_wrap {
+			margin-bottom: 0;
+			.list_sort {
+				padding-top: 20px;
+				padding-bottom: 16px;
+				border-bottom: 1px solid #F0F0F0;
+			}
+		}
+		.item {
+			border-bottom: 8px solid #F5F7F8;
+			padding: 0;
+			&:last-of-type {
+				border-bottom: none;
+			}
+		}
+		.user_info {
+			margin-top: 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.headdata {
+			display: flex;
+			justify-content: start;
+			align-items: center;
+			margin-right: auto;
+			p {
+				margin-right: 6px;
+				font-family: "Roboto";
+				font-size: 0.813rem;
+				line-height: 1rem;
+				vertical-align: middle;
+			}
+			.userid {
+				color: #999;
+				font-family: "Roboto";
+				font-size: 13px;
+				line-height: inherit;
+				@include ellipse(1);
+			}
+			.date {
+				font-family: "Roboto";
+				color: #999;
+				font-weight: 400;
+				line-height: inherit;
+				vertical-align: baseline;
+			}
+			.img {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+		}
+		.qpost {
+			.title {
+				
+				padding: 16px 20px 20px;
+				line-height: 24px;
+				font-weight: 700;
+				border-bottom: 1px solid #F0F0F0;
+				@include ellipse(2);
+			}
+			.btn_wrap {
+				margin-top: 12px;
+				padding-left: 20px;
+				padding-right: 20px;
+				position: relative;
+				padding-bottom: 12px;
+				border-bottom: 1px solid #F0F0F0;
+				.btn {
+					display: inline-block;
+					margin-right: 12px;
+					width: auto;
+					height: 16px;
+					padding: 0;
+					color: #999;
+					font-size: 13px;
+					line-height: 16px;
+					vertical-align: text-bottom;
+					background-color: transparent;
+					border: none;
+					i {
+						margin-left: 0;
+						margin-right: 2px;
+					}
+					&._clicked {
+						color: #009AFF;
+						font-weight: 700;
+					}
+					span {
+						font-family: "Roboto";
+						color: inherit;
+						font-size: inherit;
+						line-height: inherit;
+						font-weight: 700;
+						vertical-align: inherit;
+					}
+				}
+			}
+		}
+	}
+}
+.note_sec {
+	border-top: 1px solid #E5E5E5;
+	background-color: #F5F7F8;
+	padding: 20px;
+	.note {
+		line-height: 26px;
+		font-weight: 800;
+		b {
+			color: #009AFF;
+			font-size: inherit;
+			font-weight: inherit;
+			line-height: inherit;
+		}
+	}
+	span {
+		display: block;
+		position: relative;
+		padding-left: 10px;
+		color: #999;
+		font-size: 13px;
+		&::before {
+			content: '·';
+			position: absolute;
+			left: 0;
+			width: 1px;
+			height: inherit;
+			color: inherit;
+			font-family: "Roboto";
+			line-height: inherit;
 		}
 	}
 }
@@ -2692,20 +2851,6 @@
 		}
 	}
 	//****************************************/
-	.borad_wrap {
-		.list_sort {
-			.total {
-				font-weight: 700;
-				span {
-					color: #009AFF;
-				}
-			}
-			select {
-				padding-right: 28px;
-				font-weight: 700;
-			}
-		}
-	}
 	.item_list {
 		margin-top: 20px;
 		padding-bottom: 30px;
