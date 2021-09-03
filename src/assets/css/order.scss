@@ -847,7 +847,8 @@
 		label {
 			display: block;
 			height:44px;
-			padding:14px 0 12px;
+			// padding:14px 0 12px;
+			line-height:2.9;
 			margin-right:5px;
 			border:1px solid #E5E5E5;
 			border-radius: 25px;
@@ -855,14 +856,16 @@
 				repeat: no-repeat;
 				position: right 20px center;
 			}
+			text-align: center;
 			> span {
-				padding-left:20px;
-				font-size:13px;
+				font-size:15px;
 				color:#666666;
 			}
 			&.checked {
 				border:2px solid #009AFF;
 				> span {
+					// padding:12px 0 12px;
+					line-height:2.8;
 					font-weight: 700;
 					color:#000000;
 				}
@@ -875,30 +878,30 @@
 			opacity: 0;
 		}
 
-		label[data-pay-tab="npay"] {
-			background-image: url(../images/common/naver_pay.png);
-			background-size:40px;
-		}
-		label[data-pay-tab="samsungPay"] {
-			background-image: url(../images/common/samsung_pay.png);
-			background-size:52px;
-		}
-		label[data-pay-tab="kakaoPay"] {
-			background-image: url(../images/common/kakao_pay.png);
-			background-size:42px;
-		}
-		label[data-pay-tab="payco"] {
-			background-image: url(../images/common/payco_pay.png);
-			background-size:40px;
-		}
-		label[data-pay-tab="ssgPay"] {
-			background-image: url(../images/common/ssg_pay.png);
-			background-size:50px;
-		}
-		label[data-pay-tab="Lpay"] {
-			background-image: url(../images/common/l_pay.png);
-			background-size:55px;
-		}
+		// label[data-pay-tab="npay"] {
+		// 	background-image: url(../images/common/naver_pay.png);
+		// 	background-size:40px;
+		// }
+		// label[data-pay-tab="samsungPay"] {
+		// 	background-image: url(../images/common/samsung_pay.png);
+		// 	background-size:52px;
+		// }
+		// label[data-pay-tab="kakaoPay"] {
+		// 	background-image: url(../images/common/kakao_pay.png);
+		// 	background-size:42px;
+		// }
+		// label[data-pay-tab="payco"] {
+		// 	background-image: url(../images/common/payco_pay.png);
+		// 	background-size:40px;
+		// }
+		// label[data-pay-tab="ssgPay"] {
+		// 	background-image: url(../images/common/ssg_pay.png);
+		// 	background-size:50px;
+		// }
+		// label[data-pay-tab="Lpay"] {
+		// 	background-image: url(../images/common/l_pay.png);
+		// 	background-size:55px;
+		// }
 	}
 }
 
