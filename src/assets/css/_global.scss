@@ -493,6 +493,10 @@ body {
 				i {
 					@include iconAngle($direction: 'left', $width: 12px, $height: 24px, $thick: 2px, $color: #111, $display: inline-block);
 					vertical-align: middle;
+					&._w {
+						@include iconAngle($direction: 'left', $width: 12px, $height: 24px, $thick: 2px, $color: #fff, $display: inline-block);
+
+					}
 				}
 			}
 		}
