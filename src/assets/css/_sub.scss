@@ -433,7 +433,7 @@
 					width: 100%;
 					position: relative;
 					> a {
-						
+						font-size:13px;
 						i {
 							transform: translate(-0.25rem, -0.05rem);
 							width: 10px;
@@ -455,9 +455,9 @@
 					}
 				}
 				.prd_name {
-					padding-top: 8px;
+					padding-top: 15px;
 					max-width: 95%;
-					font-size: 1.25rem;
+					font-size: 20px;
 					line-height: 1.75rem;
 				}
 				.price {
@@ -471,34 +471,31 @@
 					}
 					.origin {
 						position: relative;
-						font-size: 1.875rem;
+						font-size: 30px;
 						font-weight: 700;
 						padding-right: 2px;
 						span {
-							position: absolute;
-							bottom: 6px;
-							left: 100%;
-							vertical-align: baseline;
-							
+							margin-left:2px;
+							vertical-align: middle;
+							font-size: 20px;
 							font-weight: 700;
 						}
 					}
 					.sale {
 						color: #999;
-						font-size: 1rem;
 						text-decoration: line-through;
-						margin-left: 22px;
+						margin-left: 8px;
 						padding-bottom: 4px;
+						vertical-align: bottom;	
 					}
 					.discount {
+						margin-right:6px;
+						font-size: 24px;
 						color: #FF2B4C;
-						
-						margin-left: 10px;
-						padding-bottom: 2px;
 						em {
 							color: inherit;
 							font-family: inherit;
-							font-size: 1.25rem;
+							font-size: 30px;
 							font-weight: 700;
 							letter-spacing: inherit;
 							vertical-align: baseline;
@@ -542,18 +539,18 @@
 			}
 		}
 		.info_list {
-			border-top: 1px solid #D8DBDD;
-			padding-top: 20px;
-			margin: 20px 0;
+			width:100%;
+			padding:24px 20px 24px;
+			border-bottom:1px solid #E5E5E5;
 			li {
-				
 				line-height: 1.25rem;
-				font-weight: 400!important;
+				font-weight: 700;
 			}
 			p {
 				font-size: inherit;
+				font-weight: 400;
 				line-height: inherit;
-				font-weight: 700;
+				color:#666666;
 			}
 			.annot {
 				margin-top: 10px;
@@ -574,7 +571,6 @@
 			.discount {
 				color: #FF2B4C;
 				font-family: 'Roboto';
-				
 				padding-bottom: 2px;
 				em {
 					color: inherit;
@@ -586,20 +582,31 @@
 			}
 		}
 		.coupon_list {
-			border-top: 1px solid #D8DBDD;
+			width:calc(100% - 32px);
+			margin:24px 16px 0;
 			padding-top: 16px;		
 			padding-bottom: 16px;		
+			background-color: #F6F6F6;
+			border-radius: 6px;
 			p {
+				position:relative;
 				display: inline-block;
-				width:72px;
-				
+				padding-right:17px;
 				font-weight: 700;
 				vertical-align: baseline;
+				&:before {
+					content: '';
+					position: absolute;
+					right:5px;
+					top:3px;
+					display: inline-block;
+					width:1px;
+					height:10px;
+					background-color: #D0D0D0;
+				}
 			}
 			.discount {
 				display: inline-block;
-				color: #FF2B4C;
-				
 				font-weight: 400;
 				vertical-align: baseline;
 				em {
@@ -616,6 +623,11 @@
 				right: 20px;
 				top: 50%;
 				transform: translateY(-50%);
+				border:0;
+				background-color: transparent;
+				font-size:15px;
+				color:#009AFF;
+				text-decoration: underline;
 			}
 		}
 	}
@@ -624,6 +636,9 @@
 		padding-bottom: 0;
 		margin-bottom: 0;
 		.tab_wrap {
+			.tablist {
+				padding:0;
+			}
 			.tab {
 				width:100%;
 				padding: 12px 6px;
@@ -635,8 +650,6 @@
 					display: inline-block;
 					color: inherit;
 					font-family: 'Roboto';
-					font-size: 0.813rem;
-					// padding-bottom: 0.156rem;
 					vertical-align: middle;
 				}
 			}
