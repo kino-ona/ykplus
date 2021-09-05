@@ -258,7 +258,7 @@ hr {
 	position: relative;
 	width: 100%;
 	margin: 0 auto 8px;
-	padding-top: 35px;
+	padding-top: 20px;
 	padding-bottom: 40px;
 	background-color: #fff;
 }
@@ -288,8 +288,12 @@ hr {
 	}
 	.num {
 		font-family: 'Roboto';
-		font-weight: 700;
 		vertical-align: middle;
+		color:#999;
+		em {
+			font-weight: 700;
+			color:#000;
+		}
 	}
 }
 .banner {
@@ -303,17 +307,47 @@ hr {
 		max-width: 100%;
 	}
 	&._de {
-		background-color: #DAEBE3;
 		.img {
 			width: 61px;
+		}
+	}
+	&.brand-bnr {
+		border-top:8px solid #F5F7F8;
+		border-bottom:8px solid #F5F7F8;
+		text-align: left;
+		&:before {
+			content: '';
+			display: block;
+			width:100%;
+			height:1px;
+			background-color: #e5e5e5;
+			margin-top:-8px;
+		}
+		&:after {
+			content: '';
+			display: block;
+			width:100%;
+			height:1px;
+			background-color: #e5e5e5;
+		}
+		.img {
+			width: 61px;
+			margin-right:12px;
+		}
+		.row {
+			padding-top: 30px;
+			justify-content: left;
+		}
+		.btn_all {
+			right:25px;
 		}
 	}
 	> a {
 		display: block;
 		width: 100%;
 		.row {
-			padding-top: 25px;
-			padding-bottom: 25px;
+			padding-top: 24px;
+			padding-bottom: 24px;
 			display: flex;
 			justify-content: space-between;
 		}
