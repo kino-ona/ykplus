@@ -121,7 +121,7 @@
 		width: 24px;
 		height: 24px;
 		color: #666;
-		font-family: "Roboto";
+		font-family: "roboto";
 		font-size: 13px;
 		line-height: 24px;
 		text-align: center;
@@ -336,7 +336,6 @@
 		dl {
 			.tit {
 				margin-top: 10px;
-				
 				margin-bottom: 8px;
 			}
 			._1d {
@@ -374,7 +373,6 @@
 			}
 		}
 		dt {
-			
 			font-weight: 700;
 			margin-bottom: 12px;
 			position: relative;
@@ -395,7 +393,7 @@
 			padding-left: 10px;
 			margin-bottom: 20px;
 			> * {
-				font-size: 0.813rem;
+				font-size: 13px;
 				line-height: 1.375rem;
 			}
 		}
@@ -541,7 +539,6 @@
 				li {
 					position: relative;
 					margin-left: 75px;
-					
 					font-weight: 700;
 					margin-bottom: 17px;
 					&:last-of-type {
@@ -867,7 +864,7 @@
 				margin-right: auto;
 				p {
 					margin-right: 6px;
-					font-family: "Roboto";
+					font-family: "roboto";
 					font-size: 0.813rem;
 					line-height: 1rem;
 					vertical-align: middle;
@@ -886,13 +883,13 @@
 				}
 				.userid {
 					max-width: 80px;
-					font-family: "Roboto";
+					font-family: "roboto";
 					font-weight: 500;
 					line-height: inherit;
 					@include ellipse(1);
 				}
 				.date {
-					font-family: "Roboto";
+					font-family: "roboto";
 					color: #999;
 					font-weight: 400;
 					line-height: inherit;
@@ -1103,7 +1100,6 @@
 			}
 		}
 	}
-
 }
 
 .coupon_popup {
@@ -1129,7 +1125,6 @@
 				padding: 16px 5px 16px;
 				border-bottom: 1px solid #D8DBDD;
 				> div {
-					
 					font-weight: 700;
 					vertical-align: baseline;
 				}
@@ -1177,7 +1172,7 @@
 				}
 			}
 			.discount {
-				font-family: "Roboto";
+				font-family: "roboto";
 				font-size: inherit;
 				line-height: inherit;
 				font-weight: 700;
@@ -1304,7 +1299,6 @@
 			float:left;
 			width:50%;
 			padding-top:6px;
-			
 			font-weight: 700;
 		}
 		.price {
@@ -1565,7 +1559,7 @@
 				margin-right: auto;
 				p {
 					margin-right: 6px;
-					font-family: "Roboto";
+					font-family: "roboto";
 					font-size:13px;
 					line-height: 1rem;
 					vertical-align: middle;
@@ -1584,13 +1578,13 @@
 				}
 				.userid {
 					max-width: 80px;
-					font-family: "Roboto";
+					font-family: "roboto";
 					font-weight: 500;
 					line-height: inherit;
 					@include ellipse(1);
 				}
 				.date {
-					font-family: "Roboto";
+					font-family: "roboto";
 					color: #999;
 					font-weight: 400;
 					line-height: inherit;
@@ -1924,8 +1918,6 @@
 						position: relative;
 						padding: 20px;
 						border-bottom: 1px solid #F0F0F0;
-						&:not(:last-of-type) {
-						}
 						a {
 							display: inline-block;
 							width: 100%;
@@ -1973,7 +1965,7 @@
 						font-weight: 700;
 					}
 					span {
-						font-family: "Roboto";
+						font-family: "roboto";
 						color: inherit;
 						font-size: 13px;
 						line-height: inherit;
@@ -2034,7 +2026,7 @@
 			margin-right: auto;
 			p {
 				margin-right: 6px;
-				font-family: "Roboto";
+				font-family: "roboto";
 				font-size: 0.813rem;
 				line-height: 1rem;
 				vertical-align: middle;
@@ -2053,13 +2045,13 @@
 			}
 			.userid {
 				max-width: 80px;
-				font-family: "Roboto";
+				font-family: "roboto";
 				font-weight: 500;
 				line-height: inherit;
 				@include ellipse(1);
 			}
 			.date {
-				font-family: "Roboto";
+				font-family: "roboto";
 				color: #999;
 				font-weight: 400;
 				line-height: inherit;
@@ -2111,7 +2103,7 @@
 						font-weight: 700;
 					}
 					span {
-						font-family: "Roboto";
+						font-family: "roboto";
 						color: inherit;
 						font-size: inherit;
 						line-height: inherit;
@@ -2210,20 +2202,20 @@
 			margin-right: auto;
 			p {
 				margin-right: 6px;
-				font-family: "Roboto";
+				font-family: "roboto";
 				font-size: 0.813rem;
 				line-height: 1rem;
 				vertical-align: middle;
 			}
 			.userid {
 				color: #999;
-				font-family: "Roboto";
+				font-family: "roboto";
 				font-size: 13px;
 				line-height: inherit;
 				@include ellipse(1);
 			}
 			.date {
-				font-family: "Roboto";
+				font-family: "roboto";
 				color: #999;
 				font-weight: 400;
 				line-height: inherit;
@@ -2238,7 +2230,6 @@
 		}
 		.qpost {
 			.title {
-				
 				padding: 16px 20px 20px;
 				line-height: 24px;
 				font-weight: 700;
@@ -2273,7 +2264,7 @@
 						font-weight: 700;
 					}
 					span {
-						font-family: "Roboto";
+						font-family: "roboto";
 						color: inherit;
 						font-size: inherit;
 						line-height: inherit;
@@ -2312,7 +2303,7 @@
 			width: 1px;
 			height: inherit;
 			color: inherit;
-			font-family: "Roboto";
+			font-family: "roboto";
 			line-height: inherit;
 		}
 	}
@@ -2426,7 +2417,7 @@
 			margin-bottom: 10px;
 		}
 		h3 {
-			font-family: "Roboto";
+			font-family: "roboto";
 			font-size: 1.5rem;
 			font-weight: 900;
 			margin-bottom: 8px;
@@ -2527,7 +2518,6 @@
 			}
 			span {
 				color: #111;
-				
 				font-weight: 400;
 				vertical-align: initial;
 			}
@@ -2579,14 +2569,13 @@
 						padding:0;
 						border-radius: initial;
 						color: #FF2B4C;
-						font-family: "Roboto";
+						font-family: "roboto";
 						font-weight: 700;
 						line-height:1.4;
 						vertical-align: text-bottom;
 						text-transform: uppercase;
 						margin-right: 0;
 						background-color: #fff;
-						// transform: translateY(-50%);
 						z-index: 10;
 						vertical-align: baseline;
 					}
@@ -2599,7 +2588,7 @@
 				height: 20px;
 				margin-top: 9px;
 				.date {
-					font-family: "Roboto";
+					font-family: "roboto";
 					color: #999;
 					font-size: 0.813rem;
 					vertical-align: middle;
@@ -2646,7 +2635,7 @@
 							left: -35px;
 							top: 0;
 							color: #000;
-							font-family: "Roboto";
+							font-family: "roboto";
 							line-height: 25px;
 							font-weight: 700;
 							text-align: center;
@@ -2672,7 +2661,6 @@
 				p {
 					position: relative;
 					margin-left: 35px;
-					
 					line-height: 1.5rem;
 					&::before {
 						content: 'A';
@@ -2685,7 +2673,7 @@
 						left: -35px;
 						top: 0;
 						color: #fff;
-						font-family: "Roboto";
+						font-family: "roboto";
 						line-height: 25px;
 						text-align: center;
 					}
@@ -3023,7 +3011,7 @@
 			margin-right: auto;
 			p {
 				margin-right: 6px;
-				font-family: "Roboto";
+				font-family: "roboto";
 				font-size: 0.813rem;
 				line-height: 1rem;
 				vertical-align: middle;
@@ -3042,13 +3030,13 @@
 			}
 			.userid {
 				max-width: 80px;
-				font-family: "Roboto";
+				font-family: "roboto";
 				font-weight: 500;
 				line-height: inherit;
 				@include ellipse(1);
 			}
 			.date {
-				font-family: "Roboto";
+				font-family: "roboto";
 				color: #999;
 				font-weight: 400;
 				line-height: inherit;
