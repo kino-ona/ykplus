@@ -9,7 +9,7 @@ html {
 .main_body {
   width:100%;
 	min-height:100%;
-	padding-top:72px;
+	padding-top:64px;
   margin-bottom: 40px;
   background-color: #fff;
   .btn {
@@ -30,9 +30,6 @@ html {
   margin-bottom: 10px;
   .row {
     justify-content: start;
-  }
-  p {    
-    ;
   }
   em {
     font-size: inherit;
@@ -347,7 +344,6 @@ html {
         margin-bottom: 10px;
       }
       .tit {
-        
         line-height: 1.625rem;
         font-weight: 800;
         letter-spacing: -0.02em;
@@ -355,7 +351,6 @@ html {
         margin-bottom: 5px;
       }
       .txt {
-        
         line-height: 1.5rem;
         font-weight: 400;
         letter-spacing: -0.02em;
@@ -490,7 +485,6 @@ html {
       p {
         width: calc(100% - 40px);
         margin-left: 5px;
-        
         line-height: 1.5rem;
         @include ellipse(1);
       }
@@ -547,7 +541,6 @@ html {
       padding-right: 20px;
     }
     .name {
-      
       line-height: 1.25rem;
       font-weight: 700;
       letter-spacing: -0.02em;
@@ -560,7 +553,6 @@ html {
       }
       .sale {
         display: inline-block;
-        
       }
       .discount {
         font-size: 1.25rem;
@@ -587,7 +579,6 @@ html {
       width: 100%;
       padding-right: 20px;
       .name {
-        
         line-height: 1.25rem;
         font-weight: 700;
         letter-spacing: -0.02em;
@@ -671,7 +662,6 @@ html {
     border-radius: 15px;
     border: 1px solid #fff;
     color: #fff;
-    ;
     line-height: 1;
     font-weight: 700;
     background-color: rgba(0, 0, 0, .4);
@@ -693,7 +683,6 @@ html {
     }
   }
   .btn_all {
-    
     line-height: 1.5rem;
     font-weight: 700;
     i {
@@ -726,9 +715,7 @@ html {
       background-color: #F5F7F8;
       text-align: center;
       p {
-        
         span {
-          
           font-weight: 800;
           color:#009AFF;
         }
@@ -828,7 +815,6 @@ html {
         font-weight: 800;
       }
       dd {
-        
         line-height:1.5;
       }
     }

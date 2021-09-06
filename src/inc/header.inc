@@ -14,6 +14,9 @@
 @@if (headtype.layout==='submain') {
 	<header class="header">
 		<div class="row">
+			<div class="back">
+				<a href="#" onclick="history.back(-1);"><i></i><span class="a11y">이전페이지</span></a>
+			</div>
 			<div class="dropdown_list">
 				<div class="dropdown_value" role="combobox" aria-expanded="false">
 					<p class="headtxt">오늘<i></i> 마켓</p>
