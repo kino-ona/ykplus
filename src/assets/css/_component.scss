@@ -1034,11 +1034,12 @@ a.btn {
 			padding-bottom: 83.34%;
 			overflow: hidden;
 			img {
-				max-width:70%;
+				max-width:90%;
 				position: absolute;
 				top:50%;
 				left:50%;
 				@include transform(translate(-50%, -50%));
+				padding:10px;
 			}
 		}
 		&.banner {
@@ -1069,6 +1070,7 @@ a.btn {
 					img {
 						top:45%;
 						max-width: 40%;
+						padding:0;
 					}
 				}
 			}
@@ -1117,7 +1119,7 @@ a.btn {
 		margin-top: 10px;
 		white-space: nowrap;
 		.origin {
-			font-size: 1.125rem;
+			font-size: 18px;
 		}
 		.sale {
 			display: block;
@@ -1133,7 +1135,7 @@ a.btn {
 			padding:20px;
 			margin:0;
 			background-color: #fff;
-			border-bottom:1px solid #D8DBDD;
+			border-bottom:1px solid #E5E5E5;
 			&:last-child {
 				border-bottom:0;
 			}
@@ -1147,9 +1149,6 @@ a.btn {
 				margin-right:20px;
 				border-radius: 20px;
 				background-color: #F5F7F8;
-				// img {
-				// 	padding:18px;
-				// }
 				.likechk {
 					position:absolute;
 					right:10px;
