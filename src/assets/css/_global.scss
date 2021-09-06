@@ -512,6 +512,9 @@ body {
 			color: #999;
 			font-size: 15px;
 			font-weight: 800;
+			&._available {
+				color: #009AFF;
+			}
 		}
 		.btn_close {
 			i {

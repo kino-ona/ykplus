@@ -16,7 +16,7 @@
 			</div>
 			<h1 class="page_title">글쓰기</h1>
 			<div class="util">
-				<a href="#" class="btn_write" alt="등록">등록<span class="a11y">등록</span></a>
+				<a href="#" class="btn_write _available" alt="등록">등록<span class="a11y">등록</span></a>
 			</div>
 		</div>
 	</header>
@@ -25,9 +25,17 @@
 	<!-- contents body -->
   <div class="contents_body">
     <div class="main_body">
-      <div class="info_wrap">
-        <div class="q_write_wrap">
+      <div class="talk_wrap">
+        <div class="tk_write_wrap">
           <div class="posthead">
+            <div class="select">
+              <select class="sel-write_topic" name="sel-write_topic" id="sel-write_topic">
+                <option value="주제를 선택해 주세요.">주제를 선택해 주세요.</option>
+                <option value="트렌드 따라잡기">트렌드 따라잡기</option>
+                <option value="트렌드 따라잡기">트렌드 따라잡기</option>
+                <option value="트렌드 따라잡기">트렌드 따라잡기</option>
+              </select>
+            </div>
             <p class="title">
               <!-- 에디터 영역 -->
               <input type="text" placeholder="제목을 입력해주세요">
@@ -48,6 +56,7 @@
                   동네 친구들도 만나도 즐거운 시간이었습니다. <br>
                   여러분들도 같이 하실래요?
                 </p>
+                <p class="img"><img src="../assets/images/dummy/dummy_img01.png"/></p>
                 <!--// 에디터 영역 -->
               </div>
             </div>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"submain"
+		},
+		"subtitle":"오늘+, 질문합니다"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body" style="padding-bottom: 110px;">
+    <div class="main_body">
+      <div class="tab-navigation">
+        <div class="tab-row">
+          <p class="item"><button role="tab" aria-label="최신" aria-selected="false"><span>최신</span></button></p>
+          <p class="item active"><button role="tab" aria-label="트렌드 따라잡기" aria-selected="true"><span>트렌드 따라잡기</span></button></p>
+          <p class="item"><button role="tab" aria-label="톡톡퀴즈" aria-selected="false"><span>톡톡퀴즈</span></button></p>
+          <p class="item"><button role="tab" aria-label="오늘의 학습" aria-selected="false"><span>오늘의 학습</span></button></p>
+          <p class="item"><button role="tab" aria-label="설문조사" aria-selected="false"><span>설문조사</span></button></p>
+        </div>
+      </div>
+
+      <div class="talk_wrap">
+        <div class="subtop_kv">
+          <p class="figure" style="background-image:url(../assets/images/dummy/dummy_talkkeybanner01.png)"></p>
+          <div class="pagi_phrase"><span>#트렌드 따라잡기</span>  <a href="#" class="pagi_phrase_btn">글쓰기</a></div>
+        </div>
+        <div class="tk_area_wrap">
+          <div class="note_sec">
+            <div class="note">타인을 배려하지 않은 <b>부적절한 게시글</b>은 오늘+플러스에 알려주세요.</div>
+          </div>
+          <div class="borad_wrap">
+            <div class="list_sort">
+              <p class="total"><span>20</span>개 정보</p>
+              <div class="sort">
+                <select>
+                  <option>최신순</option>
+                  <option>신상품순</option>
+                  <option>높은 가격순</option>
+                  <option>낮은 가격순</option>
+                  <option>가나다순</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <ul class="tk_list">
+            <li class="item">
+              <div class="user_info">
+                <div class="headdata">
+                  <p class="img"><img src="../assets/images/common/default_user.png"/><span class="a11y">사용자 프로필사진</span></p>
+                  <p class="userid">emdfpm84</p>
+                  <p class="date">2021.01.25</p>
+                </div>
+                <a href="#" class="btn_more"><span class="a11y">더보기</span></a>
+              </div>
+              <div class="post">
+                <p class="title"><span>노화방지에 좋은 음식 종류가 알고 싶어요! 여기 혹시 전문가 있으신가요?</span></p>
+                <div class="btn_wrap">
+                  <button class="btn _clicked"><i class="ic-16 ic_likes_clicked"></i> <span>102</span></button>
+                  <button class="btn"><i class="ic-16 ic_reply-gray"></i> 댓글달기 <span></span></button>
+                </div>
+              </div>
+            </li>
+            <li class="item">
+              <div class="user_info">
+                <div class="headdata">
+                  <p class="img"><img src="../assets/images/dummy/dummy_user03.png"/><span class="a11y">사용자 프로필사진</span></p>
+                  <p class="userid">emdfpm84</p>
+                  <p class="date">2021.01.25</p>
+                </div>
+                <a href="#" class="btn_more"><span class="a11y">더보기</span></a>
+              </div>
+              <div class="post">
+                <p class="title"><span>어제 저녁 운동을 했습니다. 동네 친구들도 만나도 즐거운 시간이었습니다. 노화방지에 좋은 음식 종류가 알고 좋은 음식 종류가 알고 싶어요! 어제 저녁 운동을 했습니다. 동네 친구들도 만나도 즐거운 시간이었습니다. 노화방지에 좋은 음식 종류가 알고 좋은 음식 종류가 알고 싶어요!</span></p>
+                <div class="btn_wrap">
+                  <button class="btn"><i class="ic-16 ic_likes-gray"></i> <span>102</span></button>
+                  <button class="btn"><i class="ic-16 ic_reply-gray"></i> 댓글 <span>9</span></button>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      
+    </div>
+	</div>
+	<!--// contents body -->
+
+  <div class="fixed_float">
+    <a href="#" class="fbtn"><i class="ic-20 ic_fbtn-tk"> </i> 글쓰기</a>
+  </div>
+
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
