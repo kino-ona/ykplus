@@ -446,6 +446,10 @@
 		.prdinfo {
 			padding-top: 27px;
 			.tit_wrap {
+				padding-bottom:0;
+				&:after {
+					display: none;
+				}
 				.cate {
 					width: 100%;
 					position: relative;
@@ -1085,6 +1089,13 @@
 				i {
 					margin: 0;
 				}
+			}
+		}
+	}
+	.panel-qna {
+		.panel_inner {
+			.row {
+				margin-top:20px;
 			}
 		}
 	}
