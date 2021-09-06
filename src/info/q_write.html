@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	<header class="header sub-head">
+		<div class="row">
+			<div class="back">
+				<a href="#" onclick="history.back(-1);"><i></i><span class="a11y">이전페이지</span></a>
+			</div>
+			<h1 class="page_title">글쓰기</h1>
+			<div class="util">
+				<a href="#" class="btn_write" alt="등록">등록<span class="a11y">등록</span></a>
+			</div>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <div class="main_body">
+      <div class="info_wrap">
+        <div class="q_write_wrap">
+          <div class="posthead">
+            <p class="title">
+              <!-- 에디터 영역 -->
+              <span>제목을 입력해주세요</span>
+              <!--// 에디터 영역 -->
+            </p>
+          </div>
+          <div class="post">
+            <div class="para">
+              <div class="row">
+                <div class="note_sec">
+                  <button class="btn_close"><i></i><span class="a11y">닫기</span></button>
+                  <div class="note"><b>글 작성 전에 읽어주세요.</b>타인을 배려하지 않은 부적절한 게시글은 작성자의 동의없이 삭제될 수 있습니다. </div>
+                </div>
+                <!-- 에디터 영역 -->
+                <p>내용을 입력해주세요.</p>
+                <!--// 에디터 영역 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+	</div>
+	<!--// contents body -->
+  
+  <div class="inp-btn_wrap01">
+    <button class="btn" onclick="openLayer('#allowcamera_popup')" ><i class="ic-20 ic_gallery"></i> <span>0</span><span>/</span><span>102</span></button>
+  </div>
+
+  <div class="overlay-popup alert-layer allowcamera_popup" role="dialog" id="allowcamera_popup" aria-labelledby="alert_opener" aria-modal="true">
+    <div class="contents">
+      <div class="inner">
+        <p>사진에 접근 권한 허용이 필요합니다.</p>
+      </div>
+      <div class="btn_wrap">
+        <a href="#" onclick="closeLayer('#allowcamera_popup')" class="btn gray-btn">취소</a>
+        <a href="#" onclick="closeLayer('#allowcamera_popup')" class="btn primary">허용하기</a>
+      </div>
+    </div>
+    <div class="overlay-dimmed"></div>
+  </div>
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
