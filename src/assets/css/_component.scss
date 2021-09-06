@@ -1066,10 +1066,14 @@ a.btn {
 		.item {
 			&._full {
 				width: 100%;
+				.name {
+					@include ellipse(1);
+				}
 				.figure {
-					padding-bottom: 55.81%;
+					padding-bottom: 45.9%;
 					img {
-						max-width: 155px;
+						top:45%;
+						max-width: 40%;
 					}
 				}
 			}
@@ -1081,6 +1085,23 @@ a.btn {
 			}
 			&:nth-of-type(2n-1) {
 				clear:none;
+			}
+			@media screen and (min-width: 768px) {
+				&._full {
+					.figure {
+						padding-bottom: 43.22%;
+					}
+				}
+				.figure {
+					padding-bottom: 83.0%;
+				}
+			}
+			@media screen and (min-width: 1024px) {
+				&._full {
+					.figure {
+						padding-bottom: 42.9%;
+					}
+				}
 			}
 		}
 	}
@@ -1473,6 +1494,25 @@ a.btn {
 		a {
 			font-size: 14px;
 			font-weight: 700;
+		}
+	}
+}
+
+.swiper-pagination {
+	&.bullet-type {
+		bottom:0;
+		.swiper-pagination-bullet {
+			width:4px;
+			height:4px;
+			background-color: #D8DBDD;
+			opacity: 1;
+      @include transition(.3s, ease-in);
+		}
+		.swiper-pagination-bullet-active {
+			padding-left: 5%;
+			padding-right: 5%;
+			border-radius: 10px;
+			background-color: #000;
 		}
 	}
 }

@@ -243,6 +243,9 @@ var closeFixedBottom = function(target){
 		  $opener = $('#' + $target.attr('aria-labelledby'));
 	
 	$target.removeClass('show');
+	$target.css({
+		'display': 'none'
+	})
 	var delay = setTimeout(function () {
 		$target.find('.inner_wrap').css({
 			'bottom': '-100%'
@@ -252,11 +255,9 @@ var closeFixedBottom = function(target){
 	toggleBool($opener, 'aria-pressed');
 	currentPosition = -(parseInt($('.contents_body').css('top')));	
 
-	if($('[role="dialog"]:visible').length < 1) {
-		$('body').removeClass('noscroll').find('.contents_body').css({'position':'relative','top':0});
-		$(window).scrollTop( currentPosition );
-		isOpen = false;
-	}
+	$('body').removeClass('noscroll').find('.contents_body').css({'position':'relative','top':0});
+	$(window).scrollTop( currentPosition );
+	isOpen = false;
 }
 
 /** toggle contents
