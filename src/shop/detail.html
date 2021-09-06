@@ -66,8 +66,19 @@
 							<p>적립혜택</p>구매포인트 100원 (1%)
 						</li>
 						<li>
-							<p>배송정보</p>(조건) 1~3일 내 배송 <i class="btn_tooltip">?</i>
+							<p>배송정보</p>(조건) 1~3일 내 배송 <i aria-haspopup="dialog" aria-controls="delivery_popup" id="delivery_opener" aria-pressed="false" class="btn_tooltip">?</i> <!-- 210904 //-->
 							<span class="annot">* 단 최근 택배물량 증가로 인하여 택배사에서 배송이 다소 지연될 수 있습니다.</span>
+							<!-- 210904 배송비 안내 팝업 -->
+							<div class="overlay-popup" role="dialog" id="delivery_popup" aria-labelledby="delivery_opener" aria-modal="true">
+								<div class="contents tooltip">
+									<button class="btn_close"><i></i></button>
+									<div class="inner">
+										<p>주문금액기 3만원 미만시<br>배송비 2,500원이 청구됩니다.</p>
+									</div>
+								</div>
+								<div class="overlay-dimmed"></div>
+							</div>
+							<!--// 210904 배송비 안내 팝업 -->
 						</li>
 					</ul>
 				</div>
@@ -82,7 +93,7 @@
 						<li><button class="tab">리뷰<span class="cnt">1250</span></button></li>
 						<li><button class="tab">문의</button></li>
 					</ul>
-					<!-- 210904 제품상세 탭 영역 -->
+					<!-- 210904 제품상세 탭 영역 전체 확인 -->
 					<div class="tab_contents">
 
 						<!--상세정보  -->
@@ -105,6 +116,14 @@
 								<div class="banner _default">
 									<p>생생한 리뷰를 남기고, 포인트를 받으세요!<span>포토리뷰 100원, 일반리뷰 50원을 적립해드립니다.</span></p>
 								</div>
+								<!-- 210904 버튼 추가 -->
+								<div class="row">
+									<div class="btn_wrap">
+										<a href="#" class="btn full">리뷰 작성하기</a>
+									</div>
+								</div>
+								<!--// 210904 버튼 추가 -->
+
 								<div class="prdscore">
 									<div class="prdscore_info">
 										<div class="star_wrap">
@@ -113,7 +132,7 @@
 											<span class="star on"></span>
 											<span class="star on"></span>
 											<span class="star off"></span>
-											<span class="num">4.5/5</span>
+											<span class="num"><em>4.5</em> / 5</span> <!-- 210904 //-->
 										</div>
 									</div>
 									<p>구매자들의 <span>93.5%</span>가 이 상품을 좋아합니다.</p>
@@ -124,23 +143,31 @@
 											<div class="headdata">
 												<p class="img"><img src="../assets/images/common/default_user.png"/><span class="a11y">사용자 프로필사진</span></p>
 												<p class="userid">emdfpm84</p>
-												<p class="date">2021.04.08</p>
+												<p class="date">2일전</p>
 											</div>
 											<div class="star_wrap">
-												<span class="num">3.5</span>
+												<span class="num"><em>3.5</em></span> <!-- 210904 //-->
 												<span class="star on"></span>
 												<span class="star on"></span>
 												<span class="star on"></span>
 												<span class="star half"></span>
 												<span class="star off"></span>
 											</div>
+											<!-- 210904 -->
+											<a href="#" class="btn_more click-util"><span class="a11y">더보기</span></a>
+											<div class="util-pop revw-more">
+												<ul>
+													<li><a href="#">수정하기</a></li>
+													<li><a href="#">신고하기</a></li>
+												</ul>
+											</div>
+											<!--// 210904 -->
 										</div>
 										<div class="review">
 											<p class="message">생각처럼 만족스러웠습니다.</p>
 											<div class="btn_wrap">
-												<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked"></i> 좋아요 <span>20</span></button>
+												<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked"></i> <span>20</span></button>
 												<button class="btn"><i class="ic-16 ic_breplies"></i> 답글쓰기 <span></span></button>
-												<a href="#" class="btn_more"><span class="a11y">더보기</span></a>
 											</div>
 										</div>
 									</div>
@@ -149,16 +176,25 @@
 											<div class="headdata">
 												<p class="img"><img src="../assets/images/dummy/dummy_user02.png"/><span class="a11y">사용자 프로필사진</span></p>
 												<p class="userid">emdfpm84</p>
-												<p class="date">2021.04.08</p>
+												<p class="date">2일전</p>
 											</div>
 											<div class="star_wrap">
-												<span class="num">3.5</span>
+												<span class="num"><em>3.5</em></span> <!-- 210904 //-->
 												<span class="star on"></span>
 												<span class="star on"></span>
 												<span class="star on"></span>
 												<span class="star half"></span>
 												<span class="star off"></span>
 											</div>
+											<!-- 210904 -->
+											<a href="#" class="btn_more click-util"><span class="a11y">더보기</span></a>
+											<div class="util-pop revw-more">
+												<ul>
+													<li><a href="#">수정하기</a></li>
+													<li><a href="#">신고하기</a></li>
+												</ul>
+											</div>
+											<!--// 210904 -->
 										</div>
 										<div class="review">
 											<div id="reviewSwp01" class="swiper-container">
@@ -179,9 +215,8 @@
 											</div>
 											<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
 											<div class="btn_wrap">
-												<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked"></i> 좋아요 <span>20</span></button>
+												<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked"></i> <span>20</span></button>
 												<button class="btn"><i class="ic-16 ic_breplies"></i> 답글 <span>2</span></button>
-												<a href="#" class="btn_more"><span class="a11y">더보기</span></a>
 											</div>
 										</div>
 									</div>
@@ -193,7 +228,7 @@
 								</div>
 							</section>
 
-							<div class="banner _full _de">
+							<div class="banner _full brand-bnr"> <!-- 210904 //-->
 								<a href="#"><div class="row">
 									<p class="img"><img src="../assets/images/common/logo_depend.png"><span class="a11y">디펜드</span></p>
 									<p class="txt">디펜드 브랜드 상품 전체보기</p>
@@ -427,23 +462,31 @@
 												<div class="headdata">
 													<p class="img"><img src="../assets/images/common/default_user.png"/><span class="a11y">사용자 프로필사진</span></p>
 													<p class="userid">emdfpm84</p>
-													<p class="date">2021.04.08</p>
+													<p class="date">2일전</p>
 												</div>
 												<div class="star_wrap">
-													<span class="num">3.5</span>
+													<span class="num"><em>3.5</em></span>
 													<span class="star on"></span>
 													<span class="star on"></span>
 													<span class="star on"></span>
 													<span class="star half"></span>
 													<span class="star off"></span>
 												</div>
+												<!-- 210904 -->
+												<a href="#" class="btn_more click-util"><span class="a11y">더보기</span></a>
+												<div class="util-pop revw-more">
+													<ul>
+														<li><a href="#">수정하기</a></li>
+														<li><a href="#">신고하기</a></li>
+													</ul>
+												</div>
+												<!--// 210904 -->
 											</div>
 											<div class="review">
 												<p class="message">생각처럼 만족스러웠습니다.</p>
 												<div class="btn_wrap">
-													<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked"></i> 좋아요 <span>20</span></button>
+													<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked"></i> <span>20</span></button>
 													<button class="btn"><i class="ic-16 ic_breplies"></i> 답글쓰기 <span></span></button>
-													<a href="#" class="btn_more"><span class="a11y">더보기</span></a>
 												</div>
 											</div>
 										</div>
@@ -452,23 +495,31 @@
 												<div class="headdata">
 													<p class="img"><img src="../assets/images/dummy/dummy_user03.png"/><span class="a11y">사용자 프로필사진</span></p>
 													<p class="userid">emdfpm84</p>
-													<p class="date">2021.04.08</p>
+													<p class="date">2일전</p>
 												</div>
 												<div class="star_wrap">
-													<span class="num">3.5</span>
+													<span class="num"><em>5</em></span>
 													<span class="star on"></span>
 													<span class="star on"></span>
 													<span class="star on"></span>
 													<span class="star half"></span>
 													<span class="star off"></span>
 												</div>
+												<!-- 210904 -->
+												<a href="#" class="btn_more click-util"><span class="a11y">더보기</span></a>
+												<div class="util-pop revw-more">
+													<ul>
+														<li><a href="#">수정하기</a></li>
+														<li><a href="#">신고하기</a></li>
+													</ul>
+												</div>
+												<!--// 210904 -->
 											</div>
 											<div class="review">
 												<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
 												<div class="btn_wrap">
-													<button class="btn"><i class="ic-16 ic_blikes"></i> 좋아요 <span>20</span></button>
+													<button class="btn _clicked"><i class="ic-16 ic_blikes"></i> <span>20</span></button>
 													<button class="btn"><i class="ic-16 ic_breplies"></i> 답글 <span>2</span></button>
-													<a href="#" class="btn_more"><span class="a11y">더보기</span></a>
 												</div>
 											</div>
 										</div>
@@ -477,16 +528,25 @@
 												<div class="headdata">
 													<p class="img"><img src="../assets/images/dummy/dummy_user01.png"/><span class="a11y">사용자 프로필사진</span></p>
 													<p class="userid">emdfpm84</p>
-													<p class="date">2021.04.08</p>
+													<p class="date">2일전</p>
 												</div>
 												<div class="star_wrap">
-													<span class="num">3.5</span>
+													<span class="num"><em>5</em></span>
 													<span class="star on"></span>
 													<span class="star on"></span>
 													<span class="star on"></span>
 													<span class="star half"></span>
 													<span class="star off"></span>
 												</div>
+												<!-- 210904 -->
+												<a href="#" class="btn_more click-util"><span class="a11y">더보기</span></a>
+												<div class="util-pop revw-more">
+													<ul>
+														<li><a href="#">수정하기</a></li>
+														<li><a href="#">신고하기</a></li>
+													</ul>
+												</div>
+												<!--// 210904 -->
 											</div>
 											<div class="review">
 												<div class="videoplay_area">
@@ -494,9 +554,8 @@
 												</div>
 												<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
 												<div class="btn_wrap">
-													<button class="btn"><i class="ic-16 ic_blikes"></i> 좋아요 <span>20</span></button>
+													<button class="btn"><i class="ic-16 ic_blikes"></i> <span>20</span></button>
 													<button class="btn"><i class="ic-16 ic_breplies"></i> 답글쓰기 <span></span></button>
-													<a href="#" class="btn_more"><span class="a11y">더보기</span></a>
 												</div>
 											</div>
 										</div>
@@ -505,16 +564,25 @@
 												<div class="headdata">
 													<p class="img"><img src="../assets/images/dummy/dummy_user02.png"/><span class="a11y">사용자 프로필사진</span></p>
 													<p class="userid">emdfpm84</p>
-													<p class="date">2021.04.08</p>
+													<p class="date">2일전</p>
 												</div>
 												<div class="star_wrap">
-													<span class="num">3.5</span>
+													<span class="num"><em>5</em></span>
 													<span class="star on"></span>
 													<span class="star on"></span>
 													<span class="star on"></span>
 													<span class="star half"></span>
 													<span class="star off"></span>
 												</div>
+												<!-- 210904 -->
+												<a href="#" class="btn_more click-util"><span class="a11y">더보기</span></a>
+												<div class="util-pop revw-more">
+													<ul>
+														<li><a href="#">수정하기</a></li>
+														<li><a href="#">신고하기</a></li>
+													</ul>
+												</div>
+												<!--// 210904 -->
 											</div>
 											<div class="review">
 												<div id="reviewSwp02" class="swiper-container">
@@ -535,9 +603,8 @@
 												</div>
 												<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
 												<div class="btn_wrap">
-													<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked"></i> 좋아요 <span>20</span></button>
+													<button class="btn _clicked"><i class="ic-16 ic_blikes_clicked"></i> <span>20</span></button>
 													<button class="btn"><i class="ic-16 ic_breplies"></i> 답글 <span>2</span></button>
-													<a href="#" class="btn_more"><span class="a11y">더보기</span></a>
 												</div>
 											</div>
 										</div>

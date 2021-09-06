@@ -35,7 +35,7 @@
 		}
 	}
 	.prd_name {
-		line-height: 1.25rem;
+		line-height:1.4;
 		font-weight: 700;
 		text-overflow: ellipsis;
 		display: -webkit-box;
@@ -202,19 +202,39 @@
 .shop_wrap {
 	background-color: #F5F7F8;
 	//** Shop Common
+	.section {
+		margin-bottom:0;
+	}
 	.row {
     display: block;
+		overflow: hidden;
 	}
 	.tit_wrap {
 		position: relative;
+		padding-bottom:17px;
 		text-align: left;
+		&:after {
+			content: '';
+			display: block;
+			position:absolute;
+			bottom:0;
+			left:-20px;
+			width:calc(100% + 40px);
+			height:1px;
+			background-color: #e5e5e5;
+		}
 		h3, h4 {
 			position: relative;
-			font-size: 1.125rem;
 			line-height: 1.5rem;
 			font-weight: 700;
 			letter-spacing: -0.02em;
-			margin-bottom: 8px;
+		}
+		.btn_all {
+			top:30%;
+			color:#009AFF;
+			i:before {
+				border-color:#009AFF;
+			}
 		}
 	}
 	.cnt {
@@ -301,7 +321,7 @@
 			width: 35%;
 			padding: 16px 12px;
 			font-size: 0.813rem;
-			line-height: 1.25rem;
+			line-height:1.4;
 			letter-spacing: -0.04em;
 			&:first-of-type {
 				background-color: #F5F7F8;
@@ -543,7 +563,7 @@
 			padding:24px 20px 24px;
 			border-bottom:1px solid #E5E5E5;
 			li {
-				line-height: 1.25rem;
+				line-height:1.4;
 				font-weight: 700;
 			}
 			p {
@@ -632,7 +652,7 @@
 		}
 	}
 	.prddetail_sec {
-		padding-top: 15px;
+		padding-top: 0;
 		padding-bottom: 0;
 		margin-bottom: 0;
 		.tab_wrap {
@@ -641,13 +661,9 @@
 			}
 			.tab {
 				width:100%;
-				padding: 12px 6px;
-				&[tabindex="0"] {
-					color: #009AFF;
-					border-bottom: 3px solid #009AFF;
-				}
 				.cnt {
 					display: inline-block;
+					margin-top:-2px;
 					color: inherit;
 					font-family: 'Roboto';
 					vertical-align: middle;
@@ -679,7 +695,6 @@
 				margin-bottom: 20px;
 				em {
 					display: block;
-					
 					font-weight: 700;
 					margin-bottom: 6px;
 				}
@@ -705,13 +720,11 @@
 			.cta_wrap {
 				margin-bottom: 24px;
 				.title {
-					
 					font-weight: 700;
 					letter-spacing: -0.02em;
 					margin-bottom: 12px;
 				}
 				.desc {
-					
 					line-height: 1.5rem;
 					color: #666;
 					letter-spacing: -0.02em;
@@ -728,7 +741,7 @@
 			}
 		}
 		.btn_wrap {
-			padding: 28px 0;
+			padding: 20px 0;
 			text-align: center;
 			.btn {
 				display: block;
@@ -741,20 +754,16 @@
 	.review_sec {
 		margin-bottom:0;
 		padding-bottom: 0;
-		.row {
-			margin-top: 5px;
-		}
 		.cnt {
 			color: #009AFF;
-			font-size: 1.125rem;
 		}
 		.banner {
-			margin-top: 12px;
 			position: relative;
+			padding: 30px 28px;
+			margin-top: 30px;
+			margin-bottom: 20px;
 			background-color: #F0F8DC;
 			border-radius: 20px;
-			padding: 27px 28px;
-			margin-bottom: 20px;
 			&::before {
 				content: '';
 				display: inline-block;
@@ -772,17 +781,14 @@
 			}
 			p {
 				text-align: left;
-				
 				color: #000;
 				font-weight: 700;
-				opacity: .9;
 				letter-spacing: 0;
 				span {
 					margin-top: 8px;
 					display: block;
 					color: #666;
-					font-size: 0.813rem;
-					opacity: 1;
+					font-size: 13px;
 				}
 			}
 		}
@@ -802,7 +808,6 @@
 						}
 					}
 					.num {
-						font-size: 1rem;
 						line-height: 18px;
 						margin-left: 12px;
 					}
@@ -842,11 +847,12 @@
 		}
 		.review_wrap {
 			display: block;
+			text-align: left;
 			.item {
 				padding: 20px 20px 20px;
-				border-top: 1px solid #F2F2F2;
-				&:first-of-type {
-					border: none;
+				border-bottom: 1px solid #F0F0F0;
+				& + .row {
+					margin-top:20px;
 				}
 			}
 			.user_info {
@@ -899,82 +905,94 @@
 					overflow: hidden;
 				}
 			}
+			.btn_more {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				margin-left:15px;
+				background: {
+					image: url(../images/icons/item_btn-more.png);
+					size: 20px;
+					repeat: no-repeat;
+					position: center center;
+				}
+			}
 			.star_wrap {
 				display: flex;
 				justify-content: start;
 				align-items: center;
 				.num {
-					font-size: 0.875rem;
 					line-height: 1rem;
 					margin-right: 6px;
 				}
 			}
-			.review {
-				.swiper-container {
-					padding-top: 16px;
-					.img {
-						border-radius: 10px;
-						overflow: hidden;
-					}
-				}
-				.message {
-					padding-top: 16px;
-					line-height: 1.5rem;
-				}
-				.btn_wrap {
-					margin-top: 20px;
-					position: relative;
-					width: 100%;
-					padding: 0;
-					text-align: left;
-					.btn {
-						display: inline-block;
-						width: auto;
-						height: 16px;
-						padding: 0;
-						margin-right: 10px;
-						font-size: 0.75rem;
-						line-height: 16px;
-						vertical-align: middle;
-						background-color: transparent;
-						border: none;
-						i {
-							margin-left: 0;
-							margin-right: 5px;
-						}
-						&._clicked {
-							color: #009AFF;
-							font-weight: 700;
-						}
-						span {
-							color: inherit;
-							font-size: 0.75rem;
-							line-height: inherit;
-							font-weight: 700;
-							vertical-align: inherit;
-						}
-					}
-					.btn_more {
-						float: right;
-						width: 20px;
-						height: 20px;
-						background: {
-							image: url(../images/icons/item_btn-more.png);
-							size: 20px;
-							repeat: no-repeat;
-							position: center center;
-						}
-					}
+		}
+		.review {
+			.swiper-container {
+				margin-right:-20px;
+				padding-top: 16px;
+				.img {
+					border-radius: 10px;
+					overflow: hidden;
 				}
 			}
-			.videoplay_area {
-				margin-top: 16px;
-				border-radius: 10px;
-				overflow: hidden;
+			.message {
+				padding-top: 16px;
+				line-height: 1.5rem;
+			}
+			.btn_wrap {
+				margin-top: 20px;
+				position: relative;
+				width: 100%;
+				padding: 0;
+				text-align: left;
+				.btn {
+					display: inline-block;
+					width: auto;
+					height: 16px;
+					padding: 0;
+					margin-right: 10px;
+					font-size: 12px;
+					line-height: 16px;
+					vertical-align: middle;
+					background-color: transparent;
+					border: none;
+					color:#999999;
+					i {
+						margin-left: 0;
+						margin-right: 5px;
+						background-image: url(../images/icons/ic_data-replies.png);
+						background-size:100%;
+					}
+					.ic_blikes {
+						background-image: url(../images/icons/ic_data-likes.png);
+						background-size:100%;
+					}
+					&._clicked {
+						color: #009AFF;
+						font-weight: 700;
+						i {
+							background-image: url(../images/icons/ic_data-likes_clicked.png);
+							background-size:100%;
+						}
+					}
+					span {
+						color: inherit;
+						font-family: 'roboto';
+						font-size: 13px;
+						line-height: inherit;
+						vertical-align: inherit;
+					}
+				}
 			}
 		}
+		.videoplay_area {
+			margin-top: 16px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
 		.btn_wrap {
-			padding-top: 5px;
+			padding-top: 0;
 			text-align: center;
 			.btn {
 				display: block;
@@ -991,7 +1009,6 @@
 		.btn_all {
 			position: static;
 			transform: translateY(0);
-			
 			line-height: 1.5rem;
 			font-weight: 700;
 			i {
@@ -1008,20 +1025,34 @@
 		}
 	}
 	.custinfo_sec {
+		padding-bottom:26px;
 		border-bottom:8px solid #F5F7F8;
+		text-align: left;
 		dl {
-			padding-top: 10px;
+			padding-top: 20px;
 		}
 		dt {
-			
-			line-height: 1.25rem;
+			position:relative;
+			padding-left:9px;
+			line-height:1.4;
 			font-weight: 700;
 			margin-bottom: 10px;
+			&:before {
+				content: '';
+				position:absolute;
+				left:0;
+				top:6px;
+				display: inline-block;
+				width:3px;
+				height:3px;
+				background-color: #000;
+				border-radius: 50%;
+			}
 		}
 		dd {
+			padding-left:8px;
 			color: #666;
-			
-			line-height: 1.25rem;
+			line-height:1.4;
 			&:not(:last-of-type) {
 				margin-bottom: 18px;
 			}
@@ -1031,7 +1062,7 @@
 				line-height: inherit;
 				em {
 					font-family: 'Roboto';
-					font-size: 1.5rem;
+					font-size: 24px;
 					line-height: 1.6;
 					font-weight: 700;
 					letter-spacing: -0.02em;
@@ -1077,9 +1108,6 @@
 
 .coupon_popup {
 	.contents {
-		.heading {
-			
-		}
 		.inner {
 			padding-top: 24px;
 		}
@@ -1087,10 +1115,9 @@
 			margin-bottom: 16px;
 			h3 {
 				font-weight: 800;
-				margin-bottom: 24px;
+				margin-bottom: 20px;
 			}
 			.tit {
-				
 				font-weight: 700;
 			}
 		}
@@ -1116,7 +1143,7 @@
 					padding-left: 10px;
 					> p {
 						text-align: left;
-						line-height: 1.25rem;
+						line-height:1.4;
 						&:first-of-type {
 							
 							margin-bottom: 2px;
@@ -2145,7 +2172,7 @@
 				.title {
 					margin-top: 12px;
 					
-					line-height: 1.25rem;
+					line-height:1.4;
 					font-weight: 700;
 					letter-spacing: -0.02em;
 				}
@@ -2389,11 +2416,6 @@
 			background-position: right 2px center;
 		}
 	}
-	.product_list {
-		& + .btn_wrap {
-
-		}
-	}
 	.cust-main {
 		padding-top: 20px;
 		padding-bottom: 20px;
@@ -2437,9 +2459,6 @@
 	}
 	.tablist {
 		padding: 0;
-		li {
-			height: 34px;
-		}
 	}
 	.tab {
 		display: inline-block;
@@ -2448,12 +2467,6 @@
 		padding-right: 16px;
 		color: #999;
 		vertical-align: bottom;
-		&.active {
-			color: #000;
-			font-weight: 900;
-			padding-bottom: 14px;
-			border-bottom: 3px solid #009AFF;
-		}
 	}
 	.tab_contents {
 		margin-top: 24px;
@@ -2568,7 +2581,7 @@
 						color: #FF2B4C;
 						font-family: "Roboto";
 						font-weight: 700;
-						line-height: 1.25rem;
+						line-height:1.4;
 						vertical-align: text-bottom;
 						text-transform: uppercase;
 						margin-right: 0;
@@ -2597,7 +2610,6 @@
 				display: inline-flex;
   			max-width: 87%;
 				max-height:48px;
-				
 				line-height: 1.5rem;
 				font-weight: 700;
 				.txt {
@@ -2610,7 +2622,7 @@
 	}
 	.sec_qna , .sec_faq {
 		border-top: 8px solid #F5F7F8;
-		padding-top: 20px;
+		padding-top: 0;
 		.ui-accordion {
 			margin-bottom: 0;
 			.target {
@@ -2635,7 +2647,6 @@
 							top: 0;
 							color: #000;
 							font-family: "Roboto";
-							
 							line-height: 25px;
 							font-weight: 700;
 							text-align: center;
@@ -2650,7 +2661,6 @@
 					}
 					.tit {
 						padding-right: 18px;
-						
 						line-height: 1.5rem;
 						font-weight: 700;
 					}
@@ -2677,7 +2687,6 @@
 						color: #fff;
 						font-family: "Roboto";
 						line-height: 25px;
-						
 						text-align: center;
 					}
 				}
@@ -2715,7 +2724,6 @@
 			border-bottom: 1px solid #D8DBDD;
 			p {
 				color: #000;
-				
 				line-height: 1.5rem;
 			}
 		}
@@ -3059,7 +3067,6 @@
 			justify-content: start;
 			align-items: center;
 			.num {
-				font-size: 0.875rem;
 				line-height: 1rem;
 				margin-right: 6px;
 			}

@@ -340,3 +340,33 @@ var dropdownControl = function () {
 		return false;
 	});
 }
+
+
+/** click util popup
+****************************************/
+$(document).ready(function() {
+	if( $('.click-util').length > 0 ) { clickUtilControl(); }
+});
+var clickUtilControl = function () {
+	$('.click-util').unbind('click').bind('click',function(e){
+		target = $(e.target);
+		var p = $(target).position();
+		var divWidth = $(this).siblings('.util-pop').width();
+		var divTop 	= p.top + 25; //상단 좌표 
+		var divLeft = p.left - divWidth ; //좌측 좌표 
+
+		if($(this).hasClass('active')) {
+			$(this).removeClass('active')
+			$(this).siblings('.util-pop').hide();
+		} else {
+			$(this).addClass('active')
+			$(this).siblings('.util-pop').css({ 
+				"z-index":'100',
+				"top": divTop ,
+				"left": divLeft
+			}).show();
+		}
+	
+		return false;
+	});
+}
