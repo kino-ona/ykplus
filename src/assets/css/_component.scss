@@ -984,6 +984,7 @@ a.btn {
 .borad_wrap {
   .list_sort {
 		display: flex;
+		padding-top:20px;
 		padding-bottom:16px;
 		.total {
 			flex:1;
@@ -1003,6 +1004,7 @@ a.btn {
 				height:auto;
 				padding:0;
 				border:0;
+				background-position: right center;
 			}
 		}
 	}
@@ -1010,6 +1012,7 @@ a.btn {
 
 .product_list {
 	margin-bottom:-4px;
+	overflow: hidden;
 	&:after {
 		@extend %clearer;
 	}
@@ -1021,7 +1024,7 @@ a.btn {
 	.item {
 		position:relative;
 		float:left;
-		width:calc(50% - 2px);
+		width:calc(50% - 4px);
 		margin-left:4px;
 		margin-bottom:4px;
 		background-color: #F5F7F8;
@@ -1031,16 +1034,11 @@ a.btn {
 			height:100%;
 			padding:20px 25px;
 		}
-		&:nth-of-type(2n-1) {
-			margin-left:0;
-			clear:left;
-		}
 		.figure {
 			position: relative;
 			padding-bottom: 83.34%;
 			overflow: hidden;
 			img {
-				// max-width: 110px;
 				max-width:70%;
 				position: absolute;
 				top:50%;
@@ -1078,7 +1076,7 @@ a.btn {
 			&:not(._full) {
 				margin-left:0;
 				&:nth-of-type(2n-1) {
-					margin-left: 8px;
+					margin-left: 4px;
 				}
 			}
 			&:nth-of-type(2n-1) {
@@ -1226,13 +1224,13 @@ a.btn {
 	max-height: 34px;
 	margin-top:8px;
 	border-bottom:1px solid #D8DBDD;
-	overflow: hidden;
+	overflow: auto;
+	overflow-y: hidden;
 	.tab-row {
 		display: flex;
 		padding-bottom: 20px;
 		padding-left: 0;
 		overflow-x: scroll;
-		border-bottom:1px solid red;
 		-webkit-overflow-scrolling: touch;
 	}
 	p {
@@ -1261,7 +1259,7 @@ a.btn {
 		&.active {
 			span {
 				color: #000;
-				font-weight: 900;
+				font-weight: 700;
 				&:after {
 					content: '';
 					margin-top: 4px;

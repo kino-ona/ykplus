@@ -12,6 +12,13 @@ html {
 	padding-top:64px;
   margin-bottom: 40px;
   background-color: #fff;
+  .tab-navigation {
+    margin-bottom:0;
+    padding-top:0;
+    .tab-row{
+      padding-bottom:10px;
+    }
+  }
   .btn {
     &.primary {
       border-color: #AAAAAA;
@@ -231,6 +238,7 @@ html {
   }
 }
 .shopmain_sec {
+  padding-bottom:40px;
   .maininfo {
     margin-top: 10px;
     .row {
@@ -275,6 +283,20 @@ html {
 }
 
 .sec_talk {
+  .tab-navigation {
+    margin-right:-20px;
+    border-bottom:0;
+    p {
+      margin-left:0;
+      margin-right:17px;
+      &.active {
+        span::after {
+          margin-top:4px;
+          height:2px;
+        }
+      }
+    }
+  }
   .banner {
     border-radius: 20px;
     overflow: hidden;
@@ -428,6 +450,15 @@ html {
         background-image: url(../images/icons/ic_list-num_03.png);
       }
     }
+    &._full {
+      background-color: #EAF2F8;
+      .price {
+        .sale {
+          display: inline-block;
+          margin-right:5px;
+        }
+      }
+    }
   }
   .product_list {
     .figure {
@@ -438,7 +469,6 @@ html {
       height: auto;
     }
     .name {
-      
       font-weight: 700;
       line-height: 1.4;
       letter-spacing: -0.02em;
@@ -446,11 +476,11 @@ html {
     }
     .price {
       margin-top: 5px;
-      .origin {
-        font-size: 1.125rem;
+      .discount {
+        font-size:18px;
       }
-      .sale {
-        display: inline-block;
+      .origin {
+        font-size: 18px;
       }
     }
   }
@@ -707,23 +737,24 @@ html {
     overflow: hidden;
   }
   .top_banner {
-    padding:16px 20px;
     .banner {
       width:100%;
       padding:17px 10px;
-      border-radius:30px;
-      background-color: #F5F7F8;
+      background-color: #F0FAFF;
       text-align: center;
       p {
+        font-weight: 700;
         span {
-          font-weight: 800;
+          font-weight: 700;
           color:#009AFF;
         }
       }
     }
   }
   .subtop_swipe {
-    margin-bottom:30px;
+    margin:20px 20px 0 20px;
+    border-radius: 10px;
+    overflow: hidden;
     .figure {
       position:relative;
       padding-top:55.556%;
@@ -762,13 +793,9 @@ html {
     margin-right:-24px;
     .item {
       position:relative;
-      width:50%;
-      margin-left:0;
-      border-left:4px solid #fff;
-      border-right:4px solid #fff;
-      &:nth-of-type(2n-1) {
-        clear:none;
-      }
+      // &:nth-of-type(2n-1) {
+      //   clear:none;
+      // }
     }
     .chkwrap.likechk {
       position:absolute;
