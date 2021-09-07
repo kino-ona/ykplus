@@ -87,8 +87,7 @@ input[type=text], input[type=password], input[type=number], input[type=tel], inp
 	border: 1px solid #D8DBDD;
 	border-radius: 8px;
 	outline: none;
-	color:#000;
-	
+	color:#000;	
 	-webkit-appearance: none;
 	&:not([readonly]) {
 		&:focus {

@@ -337,14 +337,14 @@
 				margin-top: 10px;
 				margin-bottom: 8px;
 			}
-			._1d {
+			.dd_depth01 {
 				padding-left: 10px;
 				&::before {
 					content: '-';
 					left: 0;
 				}
 			}
-			._2d {
+			.dd_depth02 {
 				margin-top: 8px;
 				padding-left: 20px;
 				li {
@@ -358,7 +358,7 @@
 					}
 				}
 			}
-			._1d, ._2d li {
+			.dd_depth01, .dd_depth02 li {
 				position: relative;
 				&::before {
 					position: absolute;
@@ -849,7 +849,7 @@
 			display: block;
 			text-align: left;
 			.item {
-				padding: 20px 20px 20px;
+				padding: 20px;
 				border-bottom: 1px solid #F0F0F0;
 				& + .row {
 					margin-top:20px;
@@ -1659,24 +1659,7 @@
 			padding-left:38px;
 		}
 		.more {
-			display: flex;
 			margin-top:20px;
-			p {
-				margin-left:12px;
-				font-size:13px;
-				color:#999999;
-				&:first-child {
-					margin-left:0;
-				}
-			}
-			i {
-				background-position:center top;
-			}
-			.cnt {
-				margin-left:4px;
-				font-size:13px;
-				color:#999999;
-			}
 		}
 	}
 	.info-wrap {
@@ -1738,7 +1721,7 @@
 	padding: 20px;
 	.note {
 		line-height: 26px;
-		font-weight: 800;
+		font-weight: 700;
 		b {
 			color: #009AFF;
 			font-size: inherit;
@@ -1789,6 +1772,9 @@
 		color: #000;
 		font-size: 15px;
 		font-weight: 700;
+		&:focus {
+			background-color: transparent!important;
+		}
 		&::placeholder {
 			color: #999;
 			font-size: 15px;
@@ -1817,7 +1803,7 @@
 			right:20px;
 			top:20px;
 			i {
-				@include iconX($size: 15px, $thick: 1.5px, $color: #000, $padding: 0, $display: inline-block, $position: relative)
+				@include iconX($size: 15px, $thick: 1px, $color: #000, $padding: 0, $display: inline-block, $position: relative)
 			}
 		}
 	}
@@ -1881,6 +1867,7 @@
 		}
 	}
 }
+
 .talk_wrap, .info_wrap {
 	.row {
 		display: block;
@@ -1890,7 +1877,6 @@
   }
   .subtop_kv {
 		margin-top: -21px;
-    margin-bottom: 20px;
 		position:relative;
     .figure {
       padding-top: 37.335%;
@@ -1988,16 +1974,13 @@
 				padding-right: 28px;
 			}
 		}
-		> .btn_wrap {
-			padding-left: 20px;
-			padding-right: 20px;
-			.btn {
-				width: 100%;
-				border-color: #AAA;
-			}
-		}
 		.product_list {
 			margin-top: 16px;
+		}
+		.see_more {
+			border: none;
+			margin-top: -15px;
+			padding-bottom: 0;
 		}
 	}
 	.item {
@@ -2032,7 +2015,7 @@
 				height: 16px;
 				padding: 0;
 				color: #999;
-				font-size: 0.75rem;
+				font-size: 12px;
 				line-height: 16px;
 				vertical-align: middle;
 				background-color: transparent;
@@ -2050,7 +2033,28 @@
 			}
 		}
 	}
-	& + .banner {
+	.btn_fnc {
+		float: right;
+		width: 20px;
+		height: 20px;
+		background: {
+			image: url(../images/icons/item_btn-more.png);
+			size: 20px;
+			repeat: no-repeat;
+			position: center center;
+		}
+	}
+	.see_more {
+		border-top: 1px solid #F0F0F0;
+		border-bottom: 1px solid #F0F0F0;
+		padding: 20px;
+		.btn {
+			width: 100%;
+			border-color: #AAA;
+		}
+	}
+	.banner._full {
+		text-align: center;
 		margin-bottom: 40px;
 		.row {
 			padding-top: 0;
@@ -2058,7 +2062,6 @@
 		}
 	}
 	.replyarea_wrap {
-		margin-top: 24px;
 		border-top: 8px solid #F5F7F8;
 		.list_sort {
 			padding-top: 19px;
@@ -2072,26 +2075,31 @@
 		}
 		.item {
 			border-top: 1px solid #F0F0F0;
-			padding: 20px 20px 20px;
+			padding: 20px;
 			&:first-of-type {
 				border: none;
+			}
+			&._depth01 {
+				margin-top: 18px;
+				border-left: 2px solid #E5E5E5;
+				border-bottom: none;
+				padding: 0 0 0 18px;
+				.reply {
+					margin-bottom: 20px;
+				}
+				.headdata .img {
+					width: 20px;
+					height: 20px;
+				}
+				> div:last-of-type {
+					margin-bottom: 0;
+				}
 			}
 		}
 		.user_info {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-		}
-		.btn_more {
-			float: right;
-			width: 20px;
-			height: 20px;
-			background: {
-				image: url(../images/icons/item_btn-more.png);
-				size: 20px;
-				repeat: no-repeat;
-				position: center center;
-			}
 		}
 		.headdata {
 			display: flex;
@@ -2150,49 +2158,33 @@
 				padding-top: 16px;
 				line-height: 1.5rem;
 			}
-			.btn_wrap {
-				margin-top: 20px;
-				position: relative;
-				width: 100%;
-				padding: 0;
-				text-align: left;
-				.btn {
-					display: inline-block;
-					margin-right: 12px;
-					width: auto;
-					height: 16px;
-					padding: 0;
-					color: #999;
-					font-size: 13px;
-					line-height: 16px;
-					vertical-align: text-bottom;
-					background-color: transparent;
-					border: none;
-					i {
-						margin-left: 0;
-						margin-right: 2px;
-					}
-					&._clicked {
-						color: #009AFF;
-						font-weight: 700;
-					}
-					span {
-						font-family: "roboto";
-						color: inherit;
-						font-size: inherit;
-						line-height: inherit;
-						vertical-align: inherit;
-					}
-				}
+		}
+	}
+}
+.tk_area_wrap, .q_area_wrap {
+	& + .replyarea_wrap {
+		margin-top: 0;
+		.empty_data {
+			margin: 40px 0;
+			> p {
+				font-size: 13px;
+			}
+			.mark {
+				background-image: url(../images/common/nodata_img.png);
 			}
 		}
-		> .btn_wrap {
-			border-top: 1px solid #F0F0F0;
-			padding: 20px; 
-			border-bottom: 1px solid #F0F0F0;
-			.btn {
-				width: 100%;
-				border-color: #AAA;
+		.borad_wrap {
+			margin-bottom: 0;
+		}
+		.list_sort {
+			padding-bottom: 20px;
+			margin-bottom: 0;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		.item {
+			margin-bottom: 0;
+			&:not(:first-of-type) {
+				border-top: none;
 			}
 		}
 	}
@@ -2213,6 +2205,13 @@
 
 /** Talk **/
 .talk_wrap {
+  .subtop_kv {
+    margin-bottom: 20px;
+	}
+	.more {
+		padding: 12px 20px;
+		border-bottom: 1px solid #E5E5E5;
+	}
 	.tk_area_wrap {
 		.borad_wrap {
 			margin-bottom: 0;
@@ -2249,7 +2248,7 @@
 			vertical-align: baseline;
 			white-space: nowrap;
 		}
-		.btn_more {
+		.btn_fnc {
 			float: right;
 			width: 20px;
 			height: 20px;
@@ -2328,81 +2327,9 @@
 					}
 				}
 			}
-			.btn_wrap {
-				margin-top: 12px;
-				padding-left: 20px;
-				padding-right: 20px;
-				position: relative;
-				padding-bottom: 12px;
-				border-bottom: 1px solid #F0F0F0;
-				.btn {
-					display: inline-block;
-					margin-right: 12px;
-					width: auto;
-					height: 16px;
-					padding: 0;
-					color: #999;
-					font-size: 13px;
-					line-height: 16px;
-					vertical-align: text-bottom;
-					background-color: transparent;
-					border: none;
-					i {
-						margin-left: 0;
-						margin-right: 2px;
-					}
-					&._clicked {
-						color: #009AFF;
-						font-weight: 700;
-					}
-					span {
-						font-family: "roboto";
-						color: inherit;
-						font-size: 12px;
-						line-height: inherit;
-						vertical-align: inherit;
-					}
-				}
-			}
 		}
 		& + .replyarea_wrap {
-			margin-top: 0;
-			.empty_data {
-				margin: 40px 0;
-				> p {
-					font-size: 13px;
-				}
-				.mark {
-					background-image: url(../images/common/nodata_img.png);
-				}
-			}
-			.borad_wrap {
-				margin-bottom: 0;
-			}
-			.list_sort {
-				padding-bottom: 20px;
-				margin-bottom: 0;
-				border-bottom: 1px solid #E5E5E5;
-			}
 			.item {
-				margin-bottom: 0;
-				&:not(:first-of-type) {
-					border-top: none;
-				}
-				&_1d {
-					border-left: 2px solid #E5E5E5;
-					border-bottom: none;
-					padding-top: 0;
-					padding-left: 20px;
-					margin-top: 18px;
-					> div:not(:last-of-type) {
-						margin-bottom: 20px;
-					}
-					.headdata .img {
-						width: 20px;
-						height: 20px;
-					}
-				}
 				.headdata {
 					.label {
 						padding: 2px 7px;
@@ -2424,6 +2351,10 @@
 					}
 				}
 			}
+			.more {
+				padding: 20px 0 0;
+				border-bottom: none;
+			}
 		}	
 	}
 }
@@ -2438,6 +2369,16 @@
 
 /** Information **/
 .info_wrap {
+	.product_list {
+		.item.banner {
+			.more {
+				padding-top: 16px;
+			}
+		}
+	}
+	.more {
+		padding: 12px 0 0;
+	}
 	.info_conts {
 		.section {
 			padding-top: 0;
@@ -2501,13 +2442,16 @@
 					line-height: 1.8;
 				}
 			}
+			.more {
+				padding: 12px 20px;
+			}
 			.navi {
-				border-top: 1px solid #F0F0F0;
+				border-top: 8px solid #F5F7F8;
 				ol {
 					li {
 						position: relative;
 						padding: 20px;
-						border-bottom: 1px solid #F0F0F0;
+						border-bottom: 1px solid #E5E5E5;
 						a {
 							display: inline-block;
 							width: 100%;
@@ -2530,10 +2474,9 @@
 			}
 			.btn_wrap {
 				position: relative;
-				width: 100%;
 				padding: 16px 20px;
 				text-align: left;
-				border-bottom: 8px solid #F5F7F8;
+				border-bottom: 1px solid #E5E5E5;
 				.btn {
 					display: inline-block;
 					margin-right: 12px;
@@ -2541,7 +2484,7 @@
 					height: 16px;
 					padding: 0;
 					color: #999;
-					font-size: 0.75rem;
+					font-size: 12px;
 					line-height: 16px;
 					vertical-align: middle;
 					background-color: transparent;
@@ -2567,9 +2510,20 @@
 		}
 		> .btn_wrap {
 			margin-top: 24px;
+			padding-bottom: 24px;
+			border-bottom: 1px solid #E5E5E5;
 			.btn {
 				width: 100%;
 				border-color: #AAA;
+			}
+		}
+		& + .replyarea_wrap {
+			.item {
+				border-bottom: none;
+				margin-bottom: 0;
+			}
+			.more {
+				padding-top: 20px;
 			}
 		}
 	}
@@ -2713,32 +2667,14 @@
 				}
 			}
 		}
-		& + .replyarea_wrap {
-			margin-top: 0;
-			.borad_wrap {
-				margin-bottom: 0;
-			}
-			.list_sort {
-				padding-bottom: 20px;
-				margin-bottom: 0;
-				border-bottom: 1px solid #E5E5E5;
-			}
-			.item {
-				margin-bottom: 0;
-				&:not(:first-of-type) {
-					border-top: none;
-				}
-			}
-			.empty_data {
-				margin: 40px 0;
-				> p {
-					font-size: 13px;
-				}
-				.mark {
-					background-image: url(../images/common/nodata_img.png);
-				}
-			}
+		.more {
+			padding: 12px 20px;
 		}
+		& + .replyarea_wrap {
+			.more {
+				padding: 20px 0 0;
+			}
+		}	
 	}
 }
 .recomm_sec {
@@ -2792,10 +2728,17 @@
 	}
 }
 
-.inp-btn_wrap01 {
+[class^='inp-btn_wrap'] {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
 	border-top: 1px solid #E5E5E5;
-	padding: 12px 20px;
-	position: relative;
+	background-color: #fff;
+	z-index: 11;
+}
+.inp-btn_wrap01 {
+	padding: 16px 20px 20px;
 	.btn {
 		display: inline-block;
 		margin-right: 12px;
@@ -2819,7 +2762,6 @@
 	}	
 }
 .inp-btn_wrap02 {
-	border-top: 1px solid #E5E5E5;
 	padding: 12px 0 12px 20px;
 	.row {
 		padding-left: 0;
@@ -3393,7 +3335,6 @@
 	.event_conts {
 		.eventbanner_sec {
 			position: relative;
-			text-align: center;
 			> a {
 				max-width: 60%;
 				width: 100%;
@@ -3405,6 +3346,12 @@
 				transform: translateX(-50%);
 			}
 		}
+		.figure {
+			text-align: center;
+		}
+	}
+	.more {
+		padding: 20px 0 0;
 	}
 	//****************************************/
 	.item_list {
@@ -3530,7 +3477,7 @@
 					vertical-align: middle;
 				}
 			}
-			.btn_more {
+			.btn_fnc {
 				float: right;
 				width: 20px;
 				height: 20px;
