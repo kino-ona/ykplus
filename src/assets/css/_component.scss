@@ -1185,6 +1185,16 @@ a.btn {
 		}
 	}
 }
+.list_sort {
+	.total {
+		span {
+			font-family: 'roboto';
+			font-weight:700;
+			vertical-align: baseline;
+			color: #009AFF;
+		}
+	}
+}
 .borad_wrap {
 	.list_sort {
 		display: flex;
@@ -1195,9 +1205,6 @@ a.btn {
 			font-size:15px;
 			span {
 				font-size:inherit;
-				font-family: 'roboto';
-				font-weight:700;
-				vertical-align: baseline;
 			}
 		}
 		.sort {
