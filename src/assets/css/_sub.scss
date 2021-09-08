@@ -2441,51 +2441,14 @@
 		}
 	}
 }
-/*
-@mixin galleryArea($figure) {
-	@if ($figure < 2) {
-		flex: 1;
-	} @if ($figure = 2n) {
-		width: calc(50% - 2px);
-		&:nth-of-type(2n) {
-			margin-left: 4px;
-		}
-	} @if ($figure > 4) {
-		&:first-of-type {
-			width: 100%;
-			margin-bottom: 4px;
-		}
-		&:nth-of-type(2n) {
-			width: calc(50% - 2px);
-		}
-		&:nth-of-type(4) {
-			margin-left: 4px;
-			position: relative;
-			&::before {
-				// content: '+' + $figure + '장';
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0, 0, 0, .3);
-				color: #fff;
-				font-size: 20px;
-				font-weight: 700;
-			}
-		}
-		&:nth-of-type(n > 4) {
-			display: none;
-		}
-	}
-}
+
 .post {
 	.gallery_area {
 		margin-top: 20px;
 		width: 100%;
 		.figure {
 			float: left;
+			@include galleryArea(4);
 			img {
 				width: 100%;
 			}
@@ -2493,9 +2456,12 @@
 				@extend %clearer;
 			}
 		}
+		&::after {
+			@extend %clearer;
+		}
 	}
 }
-*/
+
 .tab-navigation {
 	& + .talk_wrap {
 		.note_sec {
