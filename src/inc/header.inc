@@ -5,7 +5,7 @@
 
 			<div class="util">
 				<a href="#" class="ic-25 ic_notice" alt="알림"><span class="cnt">10</span><span class="a11y">알림</span></a>
-				<a href="#" id="utilmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
@@ -34,7 +34,7 @@
 
 			<div class="util">
 				<a href="#" class="ic-25 ic_cart" alt="장바구니"><span class="cnt">99</span><span class="a11y">장바구니</span></a>
-				<a href="#" id="utilmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
@@ -46,7 +46,7 @@
 			</div>
 			<div class="util">
 				<a href="#" class="ic-25 ic_cart" alt="장바구니"><span class="cnt">99</span><span class="a11y">장바구니</span></a>
-				<a href="#" id="utilmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
@@ -59,7 +59,7 @@
 			<h1 class="page_title">@@subtitle</h1>
 			<div class="util">
 				<a href="#" class="ic-25 ic_cart" alt="장바구니"><span class="cnt">99</span><span class="a11y">장바구니</span></a>
-				<a href="#" id="utilmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
@@ -81,7 +81,7 @@
 			<h1 class="page_title">@@subtitle</h1>
 			<div class="util">
 				<a href="#" class="ic-25 ic_share" alt="공유하기"><span class="a11y">공유하기</span></a>
-				<a href="#" id="utilmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
@@ -92,7 +92,7 @@
 				<a href="#" onclick="history.back(-1);"><i class="_w"></i><span class="a11y">이전페이지</span></a>
 			</div>
 			<div class="util">
-				<a href="#" id="utilmenu" class="ic-25 ic_menu_w" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenu" class="ic-25 ic_menu_w" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
@@ -104,11 +104,11 @@
 			</div>
 			<h1 class="page_title">@@subtitle</h1>
 			<div class="util">
-				<a href="#" id="utilmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
-		<div class="util-menu">
+		<div class="gnb-menu">
 			<!-- <div class="util-menu_close">
 				
 			</div> -->

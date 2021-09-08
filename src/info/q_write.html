@@ -53,14 +53,15 @@
         </div>
       </div>
     </div>
+  
+    <div class="inp-btn_wrap01">
+      <button class="btn" onclick="openLayer('#allowcamera_popup')" ><i class="ic-20 ic_gallery"></i> <span>0</span><span>/</span><span>102</span></button>
+    </div>
     
 	</div>
 	<!--// contents body -->
-  
-  <div class="inp-btn_wrap01">
-    <button class="btn" onclick="openLayer('#allowcamera_popup')" ><i class="ic-20 ic_gallery"></i> <span>0</span><span>/</span><span>102</span></button>
-  </div>
 
+  <!-- 사진 접근권한이 없는 경우 알림 팝업 -->
   <div class="overlay-popup alert-layer allowcamera_popup" role="dialog" id="allowcamera_popup" aria-labelledby="alert_opener" aria-modal="true">
     <div class="contents">
       <div class="inner">
@@ -73,6 +74,7 @@
     </div>
     <div class="overlay-dimmed"></div>
   </div>
+  <!--// 사진 접근권한이 없는 경우 알림 팝업 -->
 
 	<!-- footer -->
 	@@include('../inc/footer.inc',{

@@ -138,21 +138,22 @@
         </div>
       </div>
     </div>
+
+    <div class="inp-btn_wrap02">
+      <div class="search_wrap">
+        <div class="row">
+          <button class="btn" onclick="openLayer('#allowcamera_popup')" ><i class="ic-20 ic_gallery"></i></button>	
+          <input id="noticeSearch" type="text" placeholder="따뜻한 댓글을 남겨주세요!">
+          <label for="noticeSearch"><span class="a11y">댓글 작성하기</span></label>
+          <button class="btn" tabindex="0"><i class="btn_act"></i></button>
+        </div>
+      </div>
+    </div>
       
 	</div>
 	<!--// contents body -->
 
-  <div class="inp-btn_wrap02">
-    <div class="search_wrap">
-      <div class="row">
-        <button class="btn" onclick="openLayer('#allowcamera_popup')" ><i class="ic-20 ic_gallery"></i></button>	
-        <input id="noticeSearch" type="text" placeholder="따뜻한 댓글을 남겨주세요!">
-        <label for="noticeSearch"><span class="a11y">댓글 작성하기</span></label>
-        <button class="btn" tabindex="0"><i class="btn_act"></i></button>
-      </div>
-    </div>
-  </div>
-
+  <!-- 사진 접근권한이 없는 경우 알림 팝업 -->
   <div class="overlay-popup alert-layer allowcamera_popup" role="dialog" id="allowcamera_popup" aria-labelledby="alert_opener" aria-modal="true">
     <div class="contents">
       <div class="inner">
@@ -165,6 +166,7 @@
     </div>
     <div class="overlay-dimmed"></div>
   </div>
+  <!--// 사진 접근권한이 없는 경우 알림 팝업 -->
   
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
