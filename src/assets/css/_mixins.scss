@@ -274,44 +274,70 @@ $sqrt_2: 1.41421356237;
 	}
 }
 
-
-
+//img display in post - gallery area 
 @mixin galleryArea($length) {
-	@if ($length < 2) {
-		flex:1;
-	} 
-	@if ($length = 2n) {
-		width: calc(50% - 2px);
-		&:nth-of-type(2n) {
-			margin-left: 4px;
+	@if ($length == 1) {
+		flex: 1;
+		.imgbg {
+			padding-bottom: 50%;
 		}
-	} @if ($length >= 4) {
-	// 	&:first-of-type {
-	// 		width: 100%;
-	// 		margin-bottom: 4px;
-	// 	}
-	// 	&:nth-of-type(2n) {
-	// 		width: calc(50% - 2px);
-	// 	}
-		&:nth-of-type(4) {
-			margin-left: 4px;
+	} 
+	@if ($length == 2) {
+		width: calc(50% - 2px);
+		&:nth-of-type(2) {
+			margin: 0 0 0 4px;
+		}
+	} @if ($length >= 3) {
+		&:first-of-type {
+			width: 100%;
+			height: 50%;
+			overflow: hidden;
+			margin: 0 0 4px 0;
+			.imgbg {
+				padding-bottom: 50%;
+			}
+		}
+		&:not(:first-of-type) {
+			width: calc(50% - 2px);
+		}
+		&:nth-of-type(3) {
+			margin: 0 0 0 4px;
 			position: relative;
 			&::before {
-				content: '+' + $length + '장';
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0, 0, 0, .3);
+				content: '+' + ($length - 2) + '장';
 				color: #fff;
 				font-size: 20px;
 				font-weight: 700;
+				text-align: center;
+				width: 100%;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 2;
+			}
+			.imgbg {
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background-color: rgba(0, 0, 0, .6);
+					border-radius: 15px;
+					z-index: 1;
+				}
 			}
 		}
-	// 	&:nth-of-type(n > 4) {
-	// 		display: none;
-	// 	}
+		&:nth-of-type(n + 4) {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			border: 0;
+		}
 	}
 }
