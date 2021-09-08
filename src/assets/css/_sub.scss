@@ -193,6 +193,27 @@
 		}
 	}
 }
+.ui-accordion {
+	margin: 0;
+	border-top: none;
+	.item {
+		background: none;
+		.btn_all {
+			top: 5px;
+			i.down {
+				&::before {
+					margin-top: -4px;
+				}
+			}
+		}
+	}
+	.target {
+		background: none;
+		&:focus {
+			background: none;
+		}
+	}
+}
 .blind {
 	display: none!important;
 }
@@ -2163,6 +2184,54 @@
 				line-height: 1.5rem;
 			}
 		}
+		.ui-accordion {
+			.target {
+				padding: 0;
+			}
+			.panel {
+				padding: 0;
+			}
+			.more {
+				width: 100%;
+				position: relative;
+			}
+			.item {
+				.btn_all {
+					position: absolute;
+					right: 15px;
+					bottom: 0;
+					top: auto;
+					span {
+						color: #999;
+						font-size: 13px;
+					}
+					i::before {
+						margin-left: 6px;
+						border-color: #999;
+						transform: translate(-50%, -100%) rotate(-45deg);
+					}
+					> span:not([data-status="expanded"]) {
+						display: inline-block;
+					}
+					> span[data-status="expanded"] {
+						display: none;
+					}
+				}
+				&[data-status="expanded"] {
+					.btn_all {
+						i::before {
+							transform: translate(-50%, -50%) rotate(135deg);
+						}
+						> span:not([data-status="expanded"]) {
+							display: none;
+						}
+						> span[data-status="expanded"] {
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 .tk_area_wrap, .q_area_wrap {
@@ -2465,6 +2534,7 @@
 				> .img {
 					flex: 1;
 					img {
+						border-radius: 50%;
 						width: 100%;
 					}
 				}
@@ -2513,6 +2583,7 @@
 			}
 			.more {
 				padding: 12px 20px;
+				border-bottom: 1px solid #E5E5E5;
 			}
 			.navi {
 				border-top: 8px solid #F5F7F8;
@@ -3040,12 +3111,8 @@
 			padding-bottom: 16px;
 			border-bottom: 1px solid #E5E5E5;
 		}
-		.item {
-			background-color: transparent;
-		}
 		.target {
 			padding: 20px 0;
-			background-color: transparent;
 		}
 		.panel {
 			padding: 20px 0;
@@ -3241,19 +3308,21 @@
 			.item {
 				border: none;
 				border-bottom: none;
+				.btn_all {
+					i::before {
+						transform: translate(-50%, -50%) rotate(-45deg);
+					}
+				}
 				&[data-status="expanded"] {
 					.target_inner {
 						border-bottom-width: 0px;
 						border-bottom-style: solid;
 						border-bottom-color: transparent;
 					}
-				}
-			}
-			.btn_all {
-				top: 5px;
-				i.down {
-					&::before {
-						margin-top: -4px;
+					.btn_all {
+						i::before {
+							transform: translate(-50%, -50%) rotate(135deg);
+						}
 					}
 				}
 			}
