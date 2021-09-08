@@ -1579,6 +1579,7 @@
 		}
 	}
 	.talk_wrap {
+		padding-bottom:0;
 		.talk_list {
 			padding:20px 0 0;
 			.item {
@@ -1654,6 +1655,8 @@
 		}
 		.more {
 			margin-top:20px;
+			padding:0;
+			border-bottom:0;
 		}
 	}
 	.info-wrap {
