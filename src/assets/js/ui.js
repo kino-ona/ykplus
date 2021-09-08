@@ -409,21 +409,8 @@ var clickUtilControl = function () {
 	});
 }
 
-/** img modal in gallery area
-****************************************/
-var lightbox = $('#lightbox-overlay'),
-lightboximg = lightbox.find('.lightbox-img');
-
-$('.gallery_area').find('.figure').each(function(){
-	$(this).on('click', function(e){
-		e.preventDefault();
-		lightbox.addClass('visible');
-		var modalsrc = $(this).find('.imgbg').attr('data-imgsrc');
-		lightboximg.attr('src', modalsrc);
-		$('body').addClass('noscroll');
-	});
-})
-lightbox.on('click', function(e){
-	$(this).removeClass('visible');	
+var lightboxClose = function () {
+	$('#lightbox-overlay').removeClass('visible');	
 	$('body').removeClass('noscroll');
-});
+	$('#postgallerySwp').find('.swiper-wrapper').empty();	
+}

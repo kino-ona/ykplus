@@ -278,9 +278,7 @@ $sqrt_2: 1.41421356237;
 @mixin galleryArea($length) {
 	@if ($length == 1) {
 		flex: 1;
-		.imgbg {
-			padding-bottom: 50%;
-		}
+		width: 100%;
 	} 
 	@if ($length == 2) {
 		width: calc(50% - 2px);
@@ -300,21 +298,25 @@ $sqrt_2: 1.41421356237;
 		&:not(:first-of-type) {
 			width: calc(50% - 2px);
 		}
+		&:nth-of-type(2) {
+			margin: 0 0 4px 0;
+		}
 		&:nth-of-type(3) {
 			margin: 0 0 0 4px;
 			position: relative;
-			&::before {
-				content: '+' + ($length - 2) + '장';
-				color: #fff;
-				font-size: 20px;
-				font-weight: 700;
-				text-align: center;
-				width: 100%;
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-				z-index: 2;
-			}
+			// &::before {
+			// 	content: '+' + ($length - 2) + '장';
+			// 	content: '';
+			// 	color: #fff;
+			// 	font-size: 20px;
+			// 	font-weight: 700;
+			// 	text-align: center;
+			// 	width: 100%;
+			// 	position: absolute;
+			// 	top: 50%;
+			// 	transform: translateY(-50%);
+			// 	z-index: 2;
+			// }
 			.imgbg {
 				&::before {
 					content: '';
@@ -324,21 +326,14 @@ $sqrt_2: 1.41421356237;
 					left: 0;
 					right: 0;
 					background-color: rgba(0, 0, 0, .6);
-					border-radius: 15px;
+					border-radius: 6px;
 					z-index: 1;
+					overflow: hidden;
 				}
 			}
 		}
 		&:nth-of-type(n + 4) {
 			display: none;
-			// position: absolute;
-			// width: 1px;
-			// height: 1px;
-			// padding: 0;
-			// margin: -1px;
-			// overflow: hidden;
-			// clip: rect(0, 0, 0, 0);
-			// border: 0;
 		}
 	}
 }
