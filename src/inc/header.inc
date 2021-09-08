@@ -1,4 +1,3 @@
-
 @@if (headtype.layout==='default') {
 	<header class="header">
 		<div class="row">
@@ -6,10 +5,9 @@
 
 			<div class="util">
 				<a href="#" class="ic-25 ic_notice" alt="알림"><span class="cnt">10</span><span class="a11y">알림</span></a>
-				<a href="#" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="utilmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
-	</header>
 }
 @@if (headtype.layout==='submain') {
 	<header class="header">
@@ -36,10 +34,9 @@
 
 			<div class="util">
 				<a href="#" class="ic-25 ic_cart" alt="장바구니"><span class="cnt">99</span><span class="a11y">장바구니</span></a>
-				<a href="#" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="utilmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
-	</header>
 }
 @@if (headtype.layout==='subtype1') {
 	<header class="header sub-head">
@@ -49,10 +46,9 @@
 			</div>
 			<div class="util">
 				<a href="#" class="ic-25 ic_cart" alt="장바구니"><span class="cnt">99</span><span class="a11y">장바구니</span></a>
-				<a href="#" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="utilmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
-	</header>
 }
 @@if (headtype.layout==='subtype2') {
 	<header class="header sub-head">
@@ -63,10 +59,9 @@
 			<h1 class="page_title">@@subtitle</h1>
 			<div class="util">
 				<a href="#" class="ic-25 ic_cart" alt="장바구니"><span class="cnt">99</span><span class="a11y">장바구니</span></a>
-				<a href="#" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="utilmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
-	</header>
 }
 @@if (headtype.layout==='subtype3') {
 	<header class="header sub-head">
@@ -76,7 +71,6 @@
 				<a href="#" class="page_close"><span class="a11y">닫기</span></a>
 			</div>
 		</div>
-	</header>
 }
 @@if (headtype.layout==='subtype4') {
 	<header class="header sub-head">
@@ -87,10 +81,9 @@
 			<h1 class="page_title">@@subtitle</h1>
 			<div class="util">
 				<a href="#" class="ic-25 ic_share" alt="공유하기"><span class="a11y">공유하기</span></a>
-				<a href="#" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="utilmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
-	</header>
 }
 @@if (headtype.layout==='posthead') {
 	<header class="header sub-head">
@@ -99,10 +92,9 @@
 				<a href="#" onclick="history.back(-1);"><i class="_w"></i><span class="a11y">이전페이지</span></a>
 			</div>
 			<div class="util">
-				<a href="#" class="ic-25 ic_menu_w" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="utilmenu" class="ic-25 ic_menu_w" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
-	</header>
 }
 @@if (headtype.layout==='orderhead') {
 	<header class="header sub-head">
@@ -112,8 +104,100 @@
 			</div>
 			<h1 class="page_title">@@subtitle</h1>
 			<div class="util">
-				<a href="#" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="utilmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
-	</header>
 }
+		<div class="util-menu">
+			<!-- <div class="util-menu_close">
+				
+			</div> -->
+			<section>
+				<div class="sec_heading">
+					<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>마켓</h2>
+					<a href="#" class="btn_all">전체보기 <i> </i></a>
+				</div>
+				<ul class="cate_list">
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd01.png" alt="디펜드"/></p>디펜드</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd02.png" alt="편안한 오늘"/></p>편안한 오늘</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd03.png" alt="건강한 오늘"/></p>건강한 오늘</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd04.png" alt="깨끗한 오늘"/></p>깨끗한 오늘</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd05.png" alt="아름다운 오늘"/></p>아름다운 오늘</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd06.png" alt="편리한 오늘"/></p>편리한 오늘</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd07.png" alt="간병케어"/></p>간병케어</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd08.png" alt="오늘의 도전"/></p>오늘의 도전</a></li>
+				</ul>
+			</section>
+			<section>
+				<div class="sec_heading">
+					<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>톡</h2>
+					<a href="#" class="btn_all">전체보기 <i> </i></a>
+				</div>
+				<div id="utilSwp_talk" class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy_img01.png"/></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy_img02.png"/></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy_img01.png"/></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy_img02.png"/></p>
+						</a></div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="sec_heading">
+					<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>카테고리</h2>
+				</div>
+			</section>
+			<section>
+				<div class="sec_heading">
+					<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>정보</h2>
+					<a href="#" class="btn_all">전체보기 <i> </i></a>
+				</div>
+				<div id="utilSwp_info" class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy_img01.png"/></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy_img02.png"/></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy_img01.png"/></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="img"><img src="../assets/images/dummy/dummy_img02.png"/></p>
+						</a></div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="sec_heading">
+					<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>브랜드</h2>
+					<a href="#" class="btn_all">전체보기 <i> </i></a>
+				</div>
+				<ul class="cate_list">
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd01.png" alt="디펜드"/></p>디펜드</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd09.png" alt="크리넥스"/></p>크리넥스</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd10.png" alt="좋은느낌"/></p>좋은느낌</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd11.png" alt="화이트"/></p>화이트</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd12.png" alt="라네이처"/></p>라네이처</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd13.png" alt="스카트"/></p>스카트</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd14.png" alt="크리넥스 마이비데"/></p>크리넥스 마이비데</a></li>
+					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd15.png" alt="티엔"/></p>티엔</a></li>
+				</ul>
+			</section>
+			<section>
+				<div class="sec_heading">
+					<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>이벤트</h2>
+					<a href="#" class="btn_all">전체보기 <i> </i></a>
+				</div>
+			</section>
+		</div>		
+	</header>

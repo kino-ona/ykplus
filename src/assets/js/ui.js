@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	headFixed();
+	headUtilMenu();
 
 	if($('[role="dialog"]').length > 0) popupLayer();
 	if($('.toggle_trigger').length > 0) toggleContent();
@@ -26,6 +27,9 @@ var popupLayer = function() {
 		e.preventDefault();
 	});
 }
+
+/** Header Set
+****************************************/
 
 function headFixed(){
 	var $header = $(".header"),
@@ -66,6 +70,39 @@ function headFixed(){
 		}
 	});
 }
+
+function headUtilMenu(){
+	$("#utilmenu").click(function(e) {
+		e.preventDefault();
+		$(".header").addClass('on');
+	});
+	$("#utilmenu .util-menu_close").click(function(e) {
+		e.preventDefault();
+		$(".header").removeClass('on');
+	});
+	$.fn.scrollreset = function(callback) {
+		var that = this, $this = $(that);
+		$this.scroll(function(ev) {
+			clearTimeout($this.data('scrollTimeout'));
+			$this.data('scrollTimeout', setTimeout(callback.bind(that), 250, ev));
+		});
+	};
+	$(window).scrollreset(function(ev){
+		if ($('.header').hasClass('on')) {
+			$('.header').removeClass('hide').removeClass('show');
+		}
+	});
+}
+
+// 화면 확인용 > 헤더 내 스와이프 함수 호출 필요시 참고
+$('#utilmenu').click(function(){
+	defaultSwipe('utilSwp_talk', '2.45', 10);
+	defaultSwipe('utilSwp_info', '2.45', 10);
+});
+
+
+/** Overlay popup Set
+****************************************/
 
 /** Accordion 
 ****************************************/

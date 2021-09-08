@@ -1556,30 +1556,6 @@
 			letter-spacing: -0.002em;
 		}
 	}
-	.cate_list {
-		padding: 20px 24px 0;
-		li {
-			a {
-				display: block;
-				text-align: center;
-				font-size: 13px;
-				letter-spacing: -0.002em;
-			}
-			display: inline-block;
-			width: 100%;
-			max-width: calc(25% - 16px);
-			&:not(:nth-of-type(4n)) {
-				margin-right: 17px;
-			}
-			.img {
-				padding: 10px;
-				background-color: #F5F7F8;
-				border-radius: 20px;
-				margin-bottom: 8px;
-			}
-			margin-bottom: 20px;
-		}
-	}
 	.btn_wrap {
 		padding-left:20px;
 		padding-right:20px;
