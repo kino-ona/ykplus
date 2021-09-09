@@ -1468,3 +1468,85 @@
 		}
 	}
 }
+.order-review_message {
+	width: 100%;
+	padding: 40px 20px;
+	font-size: 15px;
+	font-weight: 700;
+	text-align: center;
+	border-bottom: 1px solid #E5E5E5;
+	i {
+		display: block;
+		width: 41.25%;
+		padding-bottom: 32.5%;
+		margin: 0 auto 12px;
+		background: {
+			image: url('../images/dummy/product_thumn06.png');
+			repeat: no-repeat;
+			position: center center;
+			size: 100%;
+		}
+	}
+}
+.afterorder-scoring {
+	border-top: 8px solid #F5F7F8;
+	padding-top: 30px;
+	.title {
+		text-align: center;
+		font-size: 15px;
+		font-weight: 800;
+	}
+	.content_detail {
+		padding: 12px 20px 30px;
+		border-bottom: 1px solid #EEE;
+	}
+}
+.orderscore_info {
+	padding: 2px 0;
+	.star_wrap {
+		text-align: center;
+		span.star {
+			width: 35px;
+			height: 35px;
+		}
+	}
+}
+.afterorder-review {
+	padding-top: 18px;
+	.title {
+		text-align: center;
+		font-size: 15px;
+		font-weight: 800;
+	}
+	.content_detail {
+		padding: 12px 20px 18px;
+	}
+}
+.review_message {
+	margin-bottom: 20px;
+	.txtarea {
+		position:relative;
+		border:1px solid #D8DBDD;
+		padding-bottom:30px;
+		border-radius: 8px;
+		background-color: #fff;
+		textarea {
+			min-height: 150px;
+			height: 150px;
+			border:0;
+			resize: none;
+			&:not([readonly]):focus {
+				background-color: #fff;
+			}
+			line-height: 1.6;
+		}
+		.txcnt {
+			position:absolute;
+			bottom:12px;
+			right:16px;
+			span {
+				color:#009AFF;
+			}
+		}
+	}
+}
