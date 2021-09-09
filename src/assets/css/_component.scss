@@ -434,8 +434,13 @@ a.btn {
 	}
 }
 .swiper-slide {
+	border-radius: 20px;
+	overflow: hidden;
 	background: {
 		repeat:no-repeat;
+	}
+	> a {
+		display: block;
 	}
 }
 
