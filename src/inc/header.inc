@@ -5,7 +5,7 @@
 
 			<div class="util">
 				<a href="#" class="ic-25 ic_notice" alt="알림"><span class="cnt">10</span><span class="a11y">알림</span></a>
-				<a href="#" id="gnbmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenubtn" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
@@ -34,7 +34,7 @@
 
 			<div class="util">
 				<a href="#" class="ic-25 ic_cart" alt="장바구니"><span class="cnt">99</span><span class="a11y">장바구니</span></a>
-				<a href="#" id="gnbmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenubtn" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
@@ -46,7 +46,7 @@
 			</div>
 			<div class="util">
 				<a href="#" class="ic-25 ic_cart" alt="장바구니"><span class="cnt">99</span><span class="a11y">장바구니</span></a>
-				<a href="#" id="gnbmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenubtn" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
@@ -59,7 +59,7 @@
 			<h1 class="page_title">@@subtitle</h1>
 			<div class="util">
 				<a href="#" class="ic-25 ic_cart" alt="장바구니"><span class="cnt">99</span><span class="a11y">장바구니</span></a>
-				<a href="#" id="gnbmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenubtn" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
@@ -81,7 +81,7 @@
 			<h1 class="page_title">@@subtitle</h1>
 			<div class="util">
 				<a href="#" class="ic-25 ic_share" alt="공유하기"><span class="a11y">공유하기</span></a>
-				<a href="#" id="gnbmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenubtn" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
@@ -92,7 +92,7 @@
 				<a href="#" onclick="history.back(-1);"><i class="_w"></i><span class="a11y">이전페이지</span></a>
 			</div>
 			<div class="util">
-				<a href="#" id="gnbmenu" class="ic-25 ic_menu_w" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenubtn" class="ic-25 ic_menu_w" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
@@ -104,15 +104,30 @@
 			</div>
 			<h1 class="page_title">@@subtitle</h1>
 			<div class="util">
-				<a href="#" id="gnbmenu" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
+				<a href="#" id="gnbmenubtn" class="ic-25 ic_menu" alt="메뉴"><span class="a11y">메뉴</span></a>
 			</div>
 		</div>
 }
 		<div class="gnb-menu">
-			<!-- <div class="util-menu_close">
-				
-			</div> -->
-			<section>
+			<div class="gnb-head">
+				<h2>
+					<span class="bf_login" style="display: none;">로그인 해주세요.</span>
+					<span class="aftr_login"><i>김유한</i>님! 반갑습니다.</span>
+					<div class="util">
+						<a href="#" class="ic-25 gnb_btn-setting" alt="설정"><span class="a11y">설정</span></a>
+						<a href="#" class="ic-25 gnb_btn-close" alt="닫기"><span class="a11y">닫기</span></a>
+					</div>
+				</h2>
+				<div class="aftr_login">
+					<ul class="myinfo">
+						<li class="my"><a href="#">MY</a></li>
+						<li class="order"><a href="#"><span>0</span>주문배송</a></li>
+						<li class="coupon"><a href="#"><span>3</span>쿠폰</a></li>
+						<li class="point"><a href="#"><span>630</span>포인트</a></li>
+					</ul>
+				</div>
+			</div>
+			<section class="today_market">
 				<div class="sec_heading">
 					<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>마켓</h2>
 					<a href="#" class="btn_all">전체보기 <i> </i></a>
@@ -128,7 +143,7 @@
 					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd08.png" alt="오늘의 도전"/></p>오늘의 도전</a></li>
 				</ul>
 			</section>
-			<section>
+			<section class="today_talk">
 				<div class="sec_heading">
 					<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>톡</h2>
 					<a href="#" class="btn_all">전체보기 <i> </i></a>
@@ -136,26 +151,45 @@
 				<div id="utilSwp_talk" class="swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy_img01.png"/></p>
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_img01.png);"><span class="label">트렌드 따라잡기</span></p>
 						</a></div>
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy_img02.png"/></p>
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_img02.png);"><span class="label">톡톡퀴즈</span></p>
 						</a></div>
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy_img01.png"/></p>
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_img01.png);"><span class="label">오늘의 학습</span></p>
 						</a></div>
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy_img02.png"/></p>
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_img02.png);"><span class="label">설문조사</span></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_img01.png);"><span class="label">이런 거 어때요?</span></p>
 						</a></div>
 					</div>
 				</div>
 			</section>
-			<section>
+			<section class="gnb_map">
 				<div class="sec_heading">
-					<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>카테고리</h2>
+					<h2>카테고리</h2>
 				</div>
+				<ul class="cate_map">
+					<li><a href="#"><span>디펜드</span></a></li>
+					<li><a href="#"><span>누워있을 때</span></a></li>
+					<li><a href="#"><span>욕실도구</span></a></li>
+					<li><a href="#"><span>스킨케어</span></a></li>
+					<li><a href="#"><span>헤어케어</span></a></li>
+					<li><a href="#"><span>식사할 때</span></a></li>
+					<li><a href="#"><span>풋케어</span></a></li>
+					<li><a href="#"><span>간병용품</span></a></li>
+					<li><a href="#"><span>앉아있을 때</span></a></li>
+					<li><a href="#"><span>이동보조도구</span></a></li>
+					<li><a href="#"><span>이동할 때</span></a></li>
+					<li><a href="#"><span>욕실도구</span></a></li>
+					<li><a href="#"><span>생활할 때</span></a></li>
+					<li><a href="#"><span>주방도구</span></a></li>
+				</ul>
 			</section>
-			<section>
+			<section class="today_info">
 				<div class="sec_heading">
 					<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>정보</h2>
 					<a href="#" class="btn_all">전체보기 <i> </i></a>
@@ -163,21 +197,27 @@
 				<div id="utilSwp_info" class="swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy_img01.png"/></p>
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_img01.png);"><span class="label">건강정보</span></p>
 						</a></div>
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy_img02.png"/></p>
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_img02.png);"><span class="label">커리어</span></p>
 						</a></div>
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy_img01.png"/></p>
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_img01.png);"><span class="label">자산관리</span></p>
 						</a></div>
 						<div class="swiper-slide"><a href="#">
-							<p class="img"><img src="../assets/images/dummy/dummy_img02.png"/></p>
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_img02.png);"><span class="label">여행/문화</span></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_img01.png);"><span class="label">라이프스타일</span></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_img02.png);"><span class="label">요양/간병</span></p>
 						</a></div>
 					</div>
 				</div>
 			</section>
-			<section>
+			<section class="today_brand">
 				<div class="sec_heading">
 					<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>브랜드</h2>
 					<a href="#" class="btn_all">전체보기 <i> </i></a>
@@ -193,11 +233,31 @@
 					<li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd15.png" alt="티엔"/></p>티엔</a></li>
 				</ul>
 			</section>
-			<section>
+			<section class="today_event">
 				<div class="sec_heading">
 					<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>이벤트</h2>
 					<a href="#" class="btn_all">전체보기 <i> </i></a>
 				</div>
+				<div id="utilSwp_event" class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="#">
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_eventbanner01.png);"></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_eventbanner02.png);"></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_eventbanner01.png);"></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_eventbanner02.png);"></p>
+						</a></div>
+						<div class="swiper-slide"><a href="#">
+							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_eventbanner01.png);"></p>
+						</a></div>
+					</div>
+				</div>
 			</section>
 		</div>		
+		<div class="overlay-dimmed"></div>
 	</header>

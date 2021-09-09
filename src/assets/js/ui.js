@@ -72,11 +72,11 @@ function headFixed(){
 }
 
 function headGnbMenu(){
-	$("#gnbmenu").click(function(e) {
+	$("#gnbmenubtn").click(function(e) {
 		e.preventDefault();
 		$(".header").addClass('on');
 	});
-	$("#gnbmenu .util-menu_close").click(function(e) {
+	$(".gnb-head .util .gnb_btn-close").click(function(e) {
 		e.preventDefault();
 		$(".header").removeClass('on');
 	});
@@ -95,9 +95,10 @@ function headGnbMenu(){
 }
 
 // 화면 확인용 > 헤더 내 스와이프 함수 호출 필요시 참고
-$('#gnbmenu').click(function(){
+$('#gnbmenubtn').click(function(){
 	defaultSwipe('utilSwp_talk', '2.45', 10);
 	defaultSwipe('utilSwp_info', '2.45', 10);
+	defaultSwipe('utilSwp_event', '1', 20); 
 });
 
 
