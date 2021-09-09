@@ -22,31 +22,40 @@
 	<!-- contents body -->
 	<div class="contents_body">
     <div style="padding-top:50px;text-align: center;">
-<a href="#" aria-haspopup="dialog" aria-controls="alert-layer01" id="alert01-opener" aria-pressed="false" class="btn secondary">작성 가능한 리뷰가 없는 경우(알럿)</a>
-<br><br>
+			<a href="#" aria-haspopup="dialog" aria-controls="alert-layer01" id="alert01-opener" aria-pressed="false" class="btn secondary">작성 가능한 리뷰가 없는 경우(알럿)</a>
+			<br><br>
 
-<a href="#" aria-haspopup="dialog" aria-controls="alert-layer02" id="alert02-opener" aria-pressed="false" class="btn secondary">리뷰 작성 가능여부 확인 팝업(알럿)</a>
-<br><br>
+			<a href="#" aria-haspopup="dialog" aria-controls="alert-layer02" id="alert02-opener" aria-pressed="false" class="btn secondary">리뷰 작성 가능여부 확인 팝업(알럿)</a>
+			<br><br>
 
-<a href="#" aria-haspopup="dialog" aria-controls="coupon-layer" id="coupon-opener" aria-pressed="false"  class="btn small manual_fn" onclick="openLayer('#coupon-layer')">쿠폰변경</a>
-<br><br>
+			<a href="#" aria-haspopup="dialog" aria-controls="coupon-layer" id="coupon-opener" aria-pressed="false"  class="btn small manual_fn" onclick="openLayer('#coupon-layer')">쿠폰변경</a>
+			<br><br>
 
-<a href="#" aria-haspopup="dialog" aria-controls="coupon_ord-layer" id="coupon_ord-opener" aria-pressed="false" class="btn primary full manual_fn" onclick="openLayer('#coupon_ord-layer')">장바구니 쿠폰/쇼핑지원금/배송비 쿠폰<i></i></a>
-<br><br>
+			<a href="#" aria-haspopup="dialog" aria-controls="coupon_ord-layer" id="coupon_ord-opener" aria-pressed="false" class="btn primary full manual_fn" onclick="openLayer('#coupon_ord-layer')">장바구니 쿠폰/쇼핑지원금/배송비 쿠폰<i></i></a>
+			<br><br>
 
-<button class="btn small manual_fn" onclick="openLayer('#coupon_popup-fn')">쿠폰받기</button>
-<br><br>
+			<button class="btn small manual_fn" onclick="openLayer('#coupon_popup-fn')">쿠폰받기</button>
+			<br><br>
 
-<a href="#" onclick="openLayer('#thisLike_popup');" class="btn manual_fn"><i class="ic-25 ic_like"></i><span class="a11y">좋아요</span></a>
-<br><br>
+			<a href="#" onclick="openLayer('#thisLike_popup');" class="btn manual_fn"><i class="ic-25 ic_like"></i><span class="a11y">좋아요</span></a>
+			<br><br>
 
-<a href="#" onclick="openLayer('#cartCheck_popup')" class="btn gray-btn">장바구니</a>
-<br><br>
+			<a href="#" onclick="openLayer('#cartCheck_popup')" class="btn gray-btn">장바구니</a>
+			<br><br>
 
-<a href="#" aria-haspopup="dialog" aria-controls="alert-layer03" id="alert03-opener" aria-pressed="false" class="btn secondary">찜하기</a>
-<br><br>
+			<a href="#" aria-haspopup="dialog" aria-controls="alert-layer03" id="alert03-opener" aria-pressed="false" class="btn secondary">찜하기</a>
+			<br><br>
 
-    </div>
+			<p class="radiowrap"><input type="radio" name="s_type" id="ship03"><label for="ship03" onclick="openLayer('#addrSearch01')">신규</label></p>
+			<br><br>
+
+			<p>(조건) 1~3일 내 배송 <i aria-haspopup="dialog" aria-controls="delivery_popup" id="delivery_opener" aria-pressed="false" class="btn_tooltip">?</i></p>
+			<br><br>
+
+			<button onclick="openLayer('#share_popup')" class="btn"><i class="ic-20 ic_share"></i><span class="a11y">공유하기</span></button>
+			<br><br>
+	
+		</div>
 
     <!-- 작성 가능한 리뷰가 없는 경우 팝업 -->
 		<div class="overlay-popup alert-layer" role="dialog" id="alert-layer01" aria-labelledby="alert01-opener" aria-modal="true">
@@ -245,6 +254,120 @@
     </div>
     <!--// 찜하기 후 팝업 -->
 
+		<!-- 신규배송지 선택 > 배송지 검색 -->
+		<div class="overlay-popup addrSearch" role="dialog" id="addrSearch01" aria-labelledby="addrSearch-opener" aria-modal="true">
+			<div class="contents">
+				<div class="heading">
+					배송지 검색 <button class="btn_close"><i></i></button>
+				</div>
+				<div class="inner">
+					<div class="addr_type">
+						<p class="radiowrap"><input type="radio" name="addrtype" id="addr01" checked><label for="addr01">도로명 검색</label></p>
+						<p class="radiowrap"><input type="radio" name="addrtype" id="addr02"><label for="addr02">지번+도로명 검색</label></p>
+					</div>
+
+					<div class="msg_wrap">
+						<p><span>도로명(건물명)</span>을 2글자 이상 입력하세요.</p>
+						<span>예) 강남대로100길, 가산디지털1로</span>
+						<span>해외 주소의 경우 "해외"를 입력하세요.</span>
+						<span>(To ship to foreign country, please enter “oversea”)</span>
+					</div>
+					<!-- 
+					<div class="msg_wrap">
+						<p><span>도로명(건물명)</span>을 두 단어 이상 입력하세요.</p>
+						<span>예) 가산동 우림라이온스밸리, 압구정 로데오</span>
+						<span>해외 주소의 경우 "해외"를 입력하세요.</span>
+						<span>(To ship to foreign country, please enter "oversea")</span>
+					</div> 
+					//-->
+					
+					<div class="search_frm">
+						<dl class="vertical">
+							<dd>
+								<input type="text" value="">
+								<a href="#" class="btn small">검색</a>
+							</dd>
+						</dl>
+						<dl class="vertical">
+							<dt>주소 선택</dt>
+							<dd>
+								<select>
+									<option value="주소를 선택해주세요.">주소를 선택해주세요.</option>
+									<option value=""></option>
+								</select>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" onclick="closeLayer('#addrSearch01');openLayer('#addrSearch02')" class="btn primary">다음</a>
+				</div>
+			</div>
+			<div class="overlay-dimmed"></div>
+		</div>
+		<div class="overlay-popup addrSearch" role="dialog" id="addrSearch02" aria-labelledby="addrSearch-opener" aria-modal="true">
+			<div class="contents">
+				<div class="heading">
+					배송지 검색 <button class="btn_close"><i></i></button>
+				</div>
+				<div class="inner">
+					<div class="msg_wrap">
+						<p> 상세 주소를 입력해주세요.</p>
+					</div>
+					<div class="search_frm">
+						<dl class="vertical">
+							<dt>우편번호</dt>
+							<dd>
+								<input type="text" value="12345" readonly>
+							</dd>
+						</dl>
+						<dl class="vertical">
+							<dt>주소</dt>
+							<dd>
+								<p><input type="text" value="서울시 강남구 논현동 288-9" readonly></p>
+								<p><input type="text" value="" placeholder="상세 주소를 입력해주세요."></p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" onclick="closeLayer('#addrSearch02');" class="btn primary">확인</a>
+				</div>
+			</div>
+			<div class="overlay-dimmed"></div>
+		</div>
+		<!--// 신규배송지 선택 > 배송지 검색 -->
+
+		<!-- 배송비 안내 팝업 -->
+		<div class="overlay-popup" role="dialog" id="delivery_popup" aria-labelledby="delivery_opener" aria-modal="true" style="display: none;">
+			<div class="contents tooltip" style="margin-top: 488.5px;">
+				<button class="btn_close"><i></i></button>
+				<div class="inner">
+					<p>주문금액기 3만원 미만시<br>배송비 2,500원이 청구됩니다.</p>
+				</div>
+			</div>
+			<div class="overlay-dimmed"></div>
+		</div>
+		<!--// 배송비 안내 팝업 -->
+
+		<!-- 공유하기 팝업 -->
+		<div class="overlay-popup share_popup" role="dialog" id="share_popup" aria-labelledby="share_opener" aria-modal="true">
+			<div class="contents">
+				<div class="heading">
+					공유하기 <button class="btn_close"><i></i></button>
+				</div>
+				<div class="inner">
+					<div class="share_list">
+						<a href="#" class="btn_share"><i class="ic_kakao"></i>카카오톡</a>
+						<a href="#" class="btn_share"><i class="ic_line"></i>라인</a>
+						<a href="#" class="btn_share"><i class="ic_facebook"></i>페이스북</a>
+						<a href="#" class="btn_share"><i class="ic_url"></i>URL 복사</a>
+					</div>
+				</div>
+			</div>
+			<div class="overlay-dimmed"></div>
+		</div>
+		<!--// 공유하기 팝업 -->
 
   </div>
   <!-- footer -->
