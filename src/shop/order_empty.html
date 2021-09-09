@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"주문내역",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/order.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"주문내역"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="order_wrap">
+			<div class="empty_data _full">
+        <p><i class="mark"></i>주문하신 내역이 없습니다.</p>
+      </div>
+		</div>
+		<!--// order_wrap -->
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+
+</body>
+
+</html>
