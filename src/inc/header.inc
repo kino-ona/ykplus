@@ -256,6 +256,7 @@
 							<p class="imgbg" style="background-image: url(../assets/images/dummy/dummy_eventbanner01.png);"></p>
 						</a></div>
 					</div>
+					<div class="swiper-pagination"></div>
 				</div>
 			</section>
 		</div>		

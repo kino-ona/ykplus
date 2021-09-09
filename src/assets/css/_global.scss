@@ -640,6 +640,7 @@ body {
 	width: 100%;
 	max-width: 768px;
 	margin: 0 auto;
+	padding-bottom: 40px;
 	height: 100%;
 	top: 0;
 	right: -100%;
@@ -776,6 +777,24 @@ body {
 			}
 		}
 	}
+	.swiper-pagination {
+		width: 100%;
+		bottom: -10px!important;
+		.swiper-pagination-bullet {
+			display: inline-block;
+			width: 5px;
+			height: 5px;
+			border-radius: 10px;
+			background-color: #D0D0D0;
+			opacity: 1;
+			transition: width .4s;
+			margin-right: 5px;
+		}
+		.swiper-pagination-bullet-active {
+			width: 11px;
+			background-color: #000;
+		}
+	}
 	.today_talk, .today_info {
 		.swiper-slide {
 			.label {
@@ -806,6 +825,7 @@ body {
 		}
 	}
 	.today_event {
+		border-bottom: none;
 		.swiper-slide {
 			height: auto;
 			.imgbg {
