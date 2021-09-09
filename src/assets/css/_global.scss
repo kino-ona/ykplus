@@ -628,6 +628,8 @@ body {
 			& + .overlay-dimmed {
 				opacity: 1;
 				z-index: 99;
+				overflow: visible;
+				clip: unset;
 			} 
 		}
 	}
@@ -647,6 +649,8 @@ body {
 	& + .overlay-dimmed {
 		opacity: 0;
 		z-index: -1;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
 		@include transition(.3s, ease-in);
 	} 
 	.gnb-head {
