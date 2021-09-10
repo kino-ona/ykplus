@@ -5,13 +5,16 @@ $(document).ready(function () {
 	if($('[role="dialog"]').length > 0) popupLayer();
 	if($('.toggle_trigger').length > 0) toggleContent();
 });
-/** Aria boolean 
+
+
+/** Aria boolean
 ****************************************/
 function toggleBool(props, attrName) {
 	props.each(function() {
 		$(this).attr(attrName, $(this).attr(attrName) == "false" ? "true" : "false");
 	});
 }
+
 
 /** Overlay popup Set
 ****************************************/
@@ -28,9 +31,9 @@ var popupLayer = function() {
 	});
 }
 
+
 /** Header Set
 ****************************************/
-
 function headFixed(){
 	var $header = $(".header"),
 		  headerH = $header.outerHeight();
@@ -74,7 +77,7 @@ function headFixed(){
 function headGnbMenu(){
 	$("#gnbmenubtn").click(function(e) {
 		e.preventDefault();
-		$(".header").addClass('on');
+		$(".header").addClass('on').find(".item_box").removeClass('active');
 		$('body').addClass('noscroll');
 	});
 	$(".gnb-head .util .gnb_btn-close").click(function(e) {
@@ -116,7 +119,8 @@ $('#gnbmenubtn').click(function(){
 /** Overlay popup Set
 ****************************************/
 
-/** Accordion 
+
+/** Accordion
 ****************************************/
 $('.ui-accordion').each(function () {
 	if (!$(this).hasClass('manualfn')) {
@@ -156,7 +160,8 @@ $('.ui-accordion').each(function () {
 	}
 });
 
-/** Tab control 
+
+/** Tab control
 ****************************************/
 var actvTabList = function(tabid, actNum){
 	var basicTabs = new Tabs('#' + tabid);
@@ -173,7 +178,7 @@ $('.tab_wrap').each(function(){  // default
 });
 
 
-/** Overlay Popup  
+/** Overlay Popup
 ****************************************/
 var currentPosition = 0;
 var parentPop;
@@ -309,6 +314,7 @@ var closeFixedBottom = function(target){
 	isOpen = false;
 }
 
+
 /** toggle contents
 ****************************************/
 var toggleContent = function() {
@@ -361,6 +367,7 @@ function defaultSwipe(swipeId, $perView, $space){
 		speed: 400,
 	});
 }
+
 
 /** dropdown list
 ****************************************/
