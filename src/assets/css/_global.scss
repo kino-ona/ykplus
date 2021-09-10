@@ -523,6 +523,7 @@ body {
 		@include transform(translateY(-50%));
 	}
 	.util {
+		z-index: 99;
 		position:absolute;
 		right:20px;
 		top:50%;
@@ -546,6 +547,7 @@ body {
 		}
 	}
 	.back {
+		z-index: 99;
 		position:absolute;
 		left:20px;
 		width:24px;
@@ -575,6 +577,7 @@ body {
 	}
 	.dropdown_list {
 		width:100%;
+		z-index: 98;
 		text-align: center;
 		.dropdown_value {
 			display: inline-block;
@@ -590,7 +593,7 @@ body {
 			margin-left:-20px;
 			padding:10px 0;
 			background-color: #fff;
-			z-index: 101;
+			z-index: 100;
 			box-shadow: -1px 200px 119px 30px rgba(0,0,0,0.32);
 			-webkit-box-shadow: -1px 200px 119px 30px rgba(0,0,0,0.32);
 			-moz-box-shadow: -1px 200px 119px 30px rgba(0,0,0,0.32);
