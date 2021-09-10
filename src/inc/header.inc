@@ -262,3 +262,21 @@
 		</div>		
 		<div class="overlay-dimmed"></div>
 	</header>
+
+	<script>
+		// 화면 확인용 > 헤더 내 스와이프 함수 호출 필요시 참고
+		$('#gnbmenubtn').click(function(){
+			defaultSwipe('utilSwp_talk', '2.45', 10);
+			defaultSwipe('utilSwp_info', '2.45', 10);
+			var swiper = new Swiper('#utilSwp_event', {
+				slidesPerView: 1,
+				spaceBetween: 20,
+				paginationClickable: true,
+				speed: 400,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+				},
+			});
+		});
+	</script>
