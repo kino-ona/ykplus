@@ -3543,6 +3543,10 @@
 					line-height: inherit;
 					font-weight: 800;
 					vertical-align: middle;
+					&.unit {
+						line-height: 2.05;
+						vertical-align: top;
+					}
 				}
 			}
 			> a {
