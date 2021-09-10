@@ -3477,21 +3477,85 @@
 		}
 	}
 	.event_conts {
-		.eventbanner_sec {
-			position: relative;
-			> a {
-				max-width: 60%;
-				width: 100%;
+		width: 100%;
+		max-width: 1024px;
+		text-align: center;
+		img {
+			width: 100%;
+		}
+	}
+	.eventbanner_sec {
+		width: 100%;
+		position: relative;
+		padding: 50px 0;
+		text-align: center;
+		background-color: #DEE6F4;
+		h3 {
+			font-size: 28px;
+			font-weight: 800;
+			margin-bottom: 20px;
+			span {
 				display: block;
-				position: absolute;
-				text-align: center;
-				left: 50%;
-				bottom: 50px;
-				transform: translateX(-50%);
+				color: #009AFF;
+				font-size: 20px;
+				font-weight: 800;
+				margin-bottom: 10px;
 			}
 		}
-		.figure {
-			text-align: center;
+		.item-coupon {
+			margin-bottom: 30px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			.img {
+				position: relative;
+				margin: 0 auto;
+				&._defaultcoupon {
+					display: inline-block;
+					padding: 0 16.667%;
+					margin-bottom: 2%;
+					p {
+						position: absolute;
+						left: 50%;
+						top: 45%;
+						transform: translate(-50%, -50%);
+					}
+				}
+			}
+			.tit {
+				display: block;
+				font-family: 'roboto';
+				color: #009AFF;
+				font-size: 14px;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+			.fig {
+				display: block;
+				font-family: 'roboto';
+				font-size: 34px;
+				line-height: 1.5;
+				font-weight: 700;
+				i {
+					font-family: 'NanumSquareRound', 'Helvetica', 'Malgun Gothic', sans-serif, Arial;
+					font-style: normal;
+					font-size: 26px;
+					line-height: inherit;
+					font-weight: 800;
+					vertical-align: middle;
+				}
+			}
+			> a {
+				display: inline-block;
+				width: 100%;
+				max-width: 30%;
+				min-width: 160px;
+				padding: 14px 36px;
+				color: #fff;
+				line-height: 1.333;
+				border-radius: 32px;
+				background-color: #000;
+			}
 		}
 	}
 	.more {
@@ -3708,4 +3772,39 @@
 			}
 		}		
 	}
+}
+@media screen and (min-width: 361px) and (max-width: 768px) {
+	.event_wrap .eventbanner_sec .item-coupon {
+		.img {
+			&._defaultcoupon {
+				padding: 0 16.667%;
+				margin-bottom: 2.5%;
+			}
+		}
+		.tit {
+			font-size: 3.889vw;
+		}
+		.fig {
+			font-size: 9.444vw;
+			i {
+				font-size: 7.222vw;
+			}
+		}		
+	}	
+}
+@media screen and (min-width: 769px) {
+	.event_wrap .eventbanner_sec .item-coupon {
+		.tit {
+			font-size: 30px;
+		}
+		.fig {
+			font-size: 72.5px;
+			i {
+				font-size: 55.5px;
+			}
+		}
+		> a {
+			font-size: 18px;
+		}		
+	}	
 }
