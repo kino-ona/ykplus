@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"submain"
+		},
+		"subtitle":"디펜드 광고"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <div class="brand_wrap">
+      <div class="brand_area_wrap">
+        <div class="post">
+          <div class="para">
+            <div class="row">
+              <div id="gallery_area" class="gallery_area">
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/dummy_img02.png);" data-imgsrc="../assets/images/dummy/dummy_img02.png"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="more">
+            <p><i class="ic-16 ic_likes_clicked"></i><span class="cnt">333</span></p>
+            <p><i class="ic-16 ic_reply-gray"></i> 댓글<span class="cnt">3</span></p>
+          </div>
+          <div class="para">
+            <div class="row">
+              <p>
+                스타일 언더웨어 라이트핏 슬림 <br>
+                티나지 않아 놀란 핏! <br>
+                디펜드 스타일 언더웨어 라이트핏 슬림 <br>
+                티 나지 않고 흡수까지 안심이죠 <br>
+              </p>
+            </div>
+          </div>
+          <div class="navi">
+						<ol>
+							<li><a href="#">
+								<span>이전글</span>
+								<p class="tit">이전 글이 없습니다.</p>
+							</a></li>
+							<li><a href="#">
+								<span>다음글</span>
+								<p class="tit">한 여름 건강을 챙기기위해 꼭 섭취해야하는 음식 </p>
+							</a></li>
+						</ol>
+					</div>
+        </div>
+      </div>
+
+
+    </div>
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>

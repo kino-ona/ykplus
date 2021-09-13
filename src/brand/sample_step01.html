@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"샘플 신청하기"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <div class="brand_wrap">
+      <div class="note_sec">
+        <div class="note">전화 신청은 <a href="tel:080-554-5959">080-554-5959</a>로 연락주세요</div>
+      </div>
+      <div class="subtop_sec">
+        <h2>디펜드 무료 샘플 신청</h2>
+        <p>설문에 참여해 주시면 적합한 상품을 <br>발송해 드립니다</p>
+        <div class="pagi_phrase">
+          <p><span>Step 1</span>정보입력</p> <i class="right"></i>
+          <p class="active"><span>2</span>주소입력</p>
+        </div>
+      </div>
+
+      <div class="sampleq1 radioselectwrap" id="sampleq1">
+        <div>
+          <div class="radiotitle"><span>01</span><p>실제 디펜드 샘플 사용자는 신청자 본인과 어떤 관계이신가요?</p></div>
+          <ul>
+            <li class="">
+              <label class="checked">
+                <span>부모</span>
+                <input type="radio" name="samplea1" form="sample_form" value="부모" checked="checked">
+              </label>
+            </li>
+            <li class="">
+              <label>
+                <span>자녀</span>
+                <input type="radio" name="samplea1" form="sample_form" value="자녀">
+              </label>
+            </li>
+            <li class="">
+              <label>
+                <span>배우자</span>
+                <input type="radio" name="samplea1" form="sample_form" value="배우자">
+              </label>
+            </li>
+            <li class="">
+              <label>
+                <span>본인</span>
+                <input type="radio" name="samplea1" form="sample_form" value="본인">
+              </label>
+            </li>
+            <li class="">
+              <label>
+                <span>조부모</span>
+                <input type="radio" name="samplea1" form="sample_form" value="조부모">
+              </label>
+            </li>
+            <li class="">
+              <label>
+                <span>기타</span>
+                <input type="radio" name="samplea1" form="sample_form" value="기타">
+              </label>
+            </li>
+            <li class="">
+              <label>
+                <span>임산부</span>
+                <input type="radio" name="samplea1" form="sample_form" value="임산부">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sampleq2 radioselectwrap" id="sampleq2">
+        <div>
+          <div class="radiotitle"><span>02</span><p>디펜드 샘플을 사용하실 분의 성별이 어떻게 되나요?</p></div>
+          <ul>
+            <li class="">
+              <label class="checked">
+                <span>여성</span>
+                <input type="radio" name="samplea2" form="sample_form" value="여성" checked="checked">
+              </label>
+            </li>
+            <li class="">
+              <label>
+                <span>남성</span>
+                <input type="radio" name="samplea2" form="sample_form" value="남성">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sampleq3 radioselectwrap" id="sampleq3">
+        <div>
+          <div class="radiotitle"><span>03</span><p>현재 입고계신 속옷의 사이즈는 어떻게 되나요?</p></div>
+          <ul>
+            <li class="">
+              <label class="checked">
+                <span>90-100호</span>
+                <input type="radio" name="samplea3" form="sample_form" value="90-100호" checked="checked">
+              </label>
+            </li>
+            <li class="">
+              <label>
+                <span>100호 이상</span>
+                <input type="radio" name="samplea3" form="sample_form" value="100호 이상">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sampleq4 radioselectwrap" id="sampleq4">
+        <div>
+          <div class="radiotitle"><span>04</span><p>디펜드 샘플을 사용하실 고객님이 평소에 혼자 활동을 수월하게 하시나요?</p></div>
+          <ul>
+            <li class="full">
+              <label class="checked">
+                <span>혼자 활동 가능</span>
+                <input type="radio" name="samplea4" form="sample_form" value="혼자 활동 가능" checked="checked">
+              </label>
+            </li>
+            <li class="full">
+              <label>
+                <span>불편하지만 혼자 활동 가능</span>
+                <input type="radio" name="samplea4" form="sample_form" value="불편하지만 혼자 활동 가능">
+              </label>
+            </li>
+            <li class="full">
+              <label>
+                <span>부축해야 활동 가능</span>
+                <input type="radio" name="samplea4" form="sample_form" value="부축해야 활동 가능">
+              </label>
+            </li>
+            <li class="full">
+              <label>
+                <span>전혀 활동 못함</span>
+                <input type="radio" name="samplea4" form="sample_form" value="전혀 활동 못함">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sampleq5 radioselectwrap" id="sampleq5">
+        <div>
+          <div class="radiotitle"><span>05</span><p>최근 3개월 요실금 증상을 얼마나 자주 경험하셨나요?</p></div>
+          <ul>
+            <li class="full">
+              <label class="checked">
+                <span>한 달에 한 번 이하</span>
+                <input type="radio" name="samplea5" form="sample_form" value="한 달에 한 번 이하" checked="checked">
+              </label>
+            </li>
+            <li class="full">
+              <label>
+                <span>한 달에 몇 번</span>
+                <input type="radio" name="samplea5" form="sample_form" value="한 달에 몇 번">
+              </label>
+            </li>
+            <li class="full">
+              <label>
+                <span>일주일에 몇 번</span>
+                <input type="radio" name="samplea5" form="sample_form" value="일주일에 몇 번">
+              </label>
+            </li>
+            <li class="full">
+              <label>
+                <span>거의 매일/하루에도 몇 번</span>
+                <input type="radio" name="samplea5" form="sample_form" value="거의 매일/하루에도 몇 번">
+              </label>
+            </li>
+            <li class="full">
+              <label>
+                <span>증상을 알 수 없음</span>
+                <input type="radio" name="samplea5" form="sample_form" value="증상을 알 수 없음">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sampleq6 radioselectwrap" id="sampleq6">
+        <div>
+          <div class="radiotitle"><span>06</span><p>요실금 증상이 있을 때 소변의 양은 어느 정도인가요?</p></div>
+          <ul>
+            <li class="full">
+              <label class="checked">
+                <span>단지 몇 방을 또는 아주 소량이 흘러 나온다.</span>
+                <input type="radio" name="samplea6" form="sample_form" value="단지 몇 방을 또는 아주 소량이 흘러 나온다." checked="checked">
+              </label>
+            </li>
+            <li class="full">
+              <label>
+                <span>웃거나, 재채기하거나, 무언가를 들어올릴 때 방울이 크지만 계속적으로 흘러내리는 정도는 아니다.</span>
+                <input type="radio" name="samplea6" form="sample_form" value="웃거나, 재채기하거나, 무언가를 들어올릴 때 방울이 크지만 계속적으로 흘러내리는 정도는 아니다.">
+              </label>
+            </li>
+            <li class="full">
+              <label>
+                <span>정기적이거나 지속적으로 소변이 흘러나온다.</span>
+                <input type="radio" name="samplea6" form="sample_form" value="정기적이거나 지속적으로 소변이 흘러나온다.">
+              </label>
+            </li>
+            <li class="full">
+              <label>
+                <span>이따금 상당량 또는 지속적으로 소변이 흘러 나온다.</span>
+                <input type="radio" name="samplea6" form="sample_form" value="이따금 상당량 또는 지속적으로 소변이 흘러 나온다.">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sampleq7 radioselectwrap" id="sampleq7">
+        <div>
+          <div class="radiotitle"><span>07</span><p>선호하시는 제품형태는 무엇인가요?</p></div>
+          <ul>
+            <li class="">
+              <label data-pay-tab="팬티형" class="checked">
+                <span>팬티형</span>
+                <input type="radio" name="samplea7" form="sample_form" value="팬티형" checked="checked">
+              </label>
+            </li>
+            <li class="">
+              <label data-pay-tab="패드형">
+                <span>패드형</span>
+                <input type="radio" name="samplea7" form="sample_form" value="패드형">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="btn_wrap _foo">
+				<a href="#" class="btn secondary blue-btn">다음</a>
+			</div>
+    </div>
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+  <script>
+  $('.radioselectwrap input[type=radio]').each(function(){
+    $(this).click(function(){
+      $('.radioselectwrap label').removeClass('checked');
+
+      if($(this).prop('checked')){
+        $(this).parent('label').addClass('checked');
+      }
+    });
+  });
+  </script>
+</body>
+</html>
