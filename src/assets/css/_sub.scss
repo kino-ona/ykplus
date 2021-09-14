@@ -2981,6 +2981,7 @@
 		min-height: 180px;
 		padding: 30px 20px 16px;
 		background-color: #fff;
+		border-bottom: 1px solid #E5E5E5;
 		h2 {
 			font-size: 20px;
 			line-height: 1.5;
@@ -3024,10 +3025,36 @@
 			}
 		}
 	}
+	.subbottom_sec {
+		padding: 24px 20px;
+		background-color: #fff;
+		h2 {
+			font-size: 15px;
+			line-height: 1.5;
+			font-weight: 800;
+			b {
+				color: #009AFF;
+				font-size: inherit;
+				line-height: inherit;
+				font-weight: inherit;
+			}
+			margin-bottom: 16px;
+		}
+		p {
+			font-size: 13px;
+			b {
+				font-size: inherit;
+				line-height: inherit;
+				font-weight: 700;
+			}
+		}
+	}
 	.radioselectwrap {
 		border-top: 1px solid #E5E5E5;
-		padding: 26px 0 30px;
+		padding: 26px 0 30px;		
 		.radiotitle {
+			max-width: 60%;
+			margin: 0 auto;
 			text-align: center;
 			padding-bottom: 20px;
 			span {
@@ -3114,9 +3141,89 @@
 				opacity: 0;
 			}
 		}
+		& + .btn_wrap {
+			border-top: 1px solid #E5E5E5;
+		}
+	}
+	.shipping_info {
+		padding-top: 30px;
+		padding-left: 20px;
+		padding-right: 20px;
+		.shipping_type {
+			margin-bottom: 16px;
+			.title {
+				font-size: 13px;
+				color: #666;
+				margin-bottom: 16px;
+			}
+			.radiowrap {
+				margin-right:15px;
+			}
+			.btn {
+				margin-top:10px;
+			}
+		}
+	}
+	.privacy_agree {
+		margin-top: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
+		.title {
+			font-weight: 700;
+			margin-bottom: 22px;
+		}
+	}
+	.vertical {
+		padding-bottom: 20px;
+		dt {
+			padding-bottom:4px;
+			font-size:13px;
+			color:#666;
+		}
+		dt, dd {
+			margin-bottom:5px;
+		}
+		dd {
+			position: relative;
+			line-height:1.4;
+			color:#666;
+			p {	
+				font-size:inherit;
+				color:inherit;
+				margin-bottom: 8px;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.btn-zipcode {
+			position:absolute;
+			right:7px;
+			top:8px;
+			background-color: #EDEDED;
+			border:0;
+		}
+	}
+	.frm_mix {
+		display: flex;
+		select, input {
+			flex:1;
+		}
+		span {
+			position: relative;
+			display: inline-block;
+			padding:0 5px;
+			&:before {
+				content: '-';
+				position:absolute;
+				left:50%;
+				top:50%;
+				@include transform(translate(-50%, -50%));
+				color:#999;
+			}
+		}
 	}
 	.btn_wrap._foo {
-		border-top: 1px solid #E5E5E5;
 		padding-top: 30px;
 		padding-bottom: 30px;
 		a {

@@ -29,16 +29,67 @@
         <p>설문에 참여해 주시면 적합한 상품을 <br>발송해 드립니다</p>
         <div class="pagi_phrase">
           <p><span>Step 1</span>정보입력</p> <i class="right"></i>
-          <p><span>2</span>주소입력</p>
+          <p class="active"><span>2</span>주소입력</p>
         </div>
       </div>
-
-
+				
+			<div class="shipping_info">
+				<div class="shipping_type">
+					<p class="title">받으시는 분</p>
+					<p class="radiowrap"><input type="radio" name="s_type" id="ship01" checked="checked"><label for="ship01">본인</label></p>
+					<p class="radiowrap"><input type="radio" name="s_type" id="ship02"><label for="ship02">가족</label></p>
+					<p class="radiowrap"><input type="radio" name="s_type" id="ship03"><label for="ship03">기타</label></p>
+				</div>
+				<dl class="vertical">
+					<dd><input type="text"></dd>
+				</dl>
+				<dl class="vertical">
+					<dt>이름</dt>
+					<dd><input type="text" placeholder="이름을 입력해주세요."></dd>
+				</dl>
+				<dl class="vertical">
+					<dt>생년월일</dt>
+					<dd><input type="text" placeholder="20150101"></dd>
+				</dl>
+				<dl class="vertical">
+					<dt>핸드폰</dt>
+					<dd class="frm_mix">
+						<select>
+							<option>010</option>
+						</select>
+						<span><em class="a11y">-</em></span>
+						<input type="text">
+						<span><em class="a11y">-</em></span>
+						<input type="text">
+					</dd>
+				</dl>
+				<dl class="vertical">
+					<dt>주소</dt>
+					<dd>
+						<input type="text" placeholder="우편번호 검색해주세요."> 
+						<a href="#" class="btn small btn-zipcode">우편번호</a>
+					</dd>
+					<dd>
+						<p><input type="text" name="address1" placeholder="주소" value=""></p>
+						<p><input type="text" name="address2" placeholder="상세 주소를 입력해주세요." value=""></p>
+					</dd>
+				</dl>
+			</div>
+			<div class="privacy_agree">
+				<p class="title">개인정보 보호 이용 동의서</p>
+				<p class="radiowrap"><input type="radio" name="privacy_agree" id="privacy0" checked="checked"><label for="privacy0">동의안함</label></p>
+				<p class="radiowrap"><input type="radio" name="privacy_agree" id="privacy1"><label for="privacy1">동의</label></p>
+			</div>
       
       <div class="btn_wrap _foo">
 				<a href="#" class="btn secondary gray-btn">취소</a>
 				<a href="#" class="btn secondary blue-btn">샘플 신청하기</a>
 			</div>
+
+      <div class="subbottom_sec">
+        <h2>무료샘플 이용 후, <b>사용후기</b>를 남겨주세요!</h2>
+        <p>매월 세 분을 추첨하여 <br><b>디펜드 스타일 언더웨어 정품 1팩</b>을 드립니다.</p>
+      </div>
     </div>
 
 	</div>
@@ -56,9 +107,9 @@
 	})
 	<!-- //footer -->
   <script>
-  $('.radioselectwrap input[type=radio]').each(function(){
+  $('.radiowrap input[type=radio]').each(function(){
     $(this).click(function(){
-      $('.radioselectwrap label').removeClass('checked');
+      $('.radiowrap label').removeClass('checked');
 
       if($(this).prop('checked')){
         $(this).parent('label').addClass('checked');
