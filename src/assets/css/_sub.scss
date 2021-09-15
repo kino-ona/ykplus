@@ -3374,7 +3374,6 @@
 		border-bottom: 1px solid #E5E5E5;
 	}
 	.product_list {
-		padding: 0 0 120px;
 		margin-bottom: 0;
 		.item.banner {
 			border-bottom: 1px solid #F0F0F0;
@@ -3631,6 +3630,15 @@
 				right: 20px;
 				top: 0;
 			}
+		}
+	}
+	.btn_wrap {
+		margin-top: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 120px;
+		.btn {
+			width: 100%;
 		}
 	}
 	.subtop_custom {
