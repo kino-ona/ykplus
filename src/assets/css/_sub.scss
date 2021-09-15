@@ -3265,6 +3265,7 @@
 				color: #666;
 				font-size: 13px;
 				line-height: 20px;
+				opacity: .8;
 				margin-bottom: 16px;
 			}
 			.btn_wrap {
@@ -3311,7 +3312,7 @@
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
-			div {
+			a {
 				flex: 1;
 				&:last-of-type {
 					border-left: 1px solid #E5E5E5;
@@ -3373,7 +3374,7 @@
 		border-bottom: 1px solid #E5E5E5;
 	}
 	.product_list {
-		padding: 0 0 90px;
+		padding: 0 0 120px;
 		margin-bottom: 0;
 		.item.banner {
 			border-bottom: 1px solid #F0F0F0;
@@ -3437,6 +3438,21 @@
 		.post {
 			.video {
 				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					background-color: rgba(0, 0, 0, .3);
+				}
+			}
+			.videoplay_area {
+				position: relative;
+				iframe {
+					border-radius: 0;
+				}				
 				&::after {
 					content: '';
 					position: absolute;
@@ -3625,13 +3641,12 @@
 	}
 	.brandintro_sec {
 		.swiper-container {
-			margin: 20px 20px 0;
+			margin: 20px 0 0 20px;
 		}
 	}
 	.brandcf_sec {
 		.swiper-container {
 			margin-left: 20px;
-			margin-right: 20px;
 		}
 		.swiper-slide {
 			border-radius: 0;
