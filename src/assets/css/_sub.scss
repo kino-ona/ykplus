@@ -11,6 +11,7 @@
 		padding-right: 25px;
 	}
 	.swiper-slide {
+		border-radius: 0;
 		a {
 			width: 100%;
 			display: inline-block;
@@ -3236,6 +3237,101 @@
 			}
 		}
 	}
+	.subtop_wrap {
+		z-index: 2;
+		margin-top: -21px;
+    .img {
+			margin: 0 auto;
+			display: block;
+		 img {
+			 width: 100%;
+		 } 
+    }
+		.subtop_banner {
+			position: relative;
+			margin: -40px 20px 20px;
+			border-radius: 20px;
+			padding: 24px 20px;
+			text-align: center;
+			background-color: #fff;
+			box-shadow: 5px 10px 15px rgba(0, 0, 0, .1);
+			h4 {
+				font-size: 18px;
+				line-height: 30px;
+				font-weight: 700;
+				margin-bottom: 12px;
+			}
+			.desc {
+				color: #666;
+				font-size: 13px;
+				line-height: 20px;
+				margin-bottom: 16px;
+			}
+			.btn_wrap {
+				.btn {
+					width: 100%;
+					border: none;
+					color: #fff;
+					font-weight: 700;
+					background-color: #009AFF;
+				}
+			}
+		}
+	}
+	.subtop_custom {
+		padding: 0 20px 30px;
+		border-bottom: 1px solid #E5E5E5;
+		margin-bottom: 0;
+		h4 {
+			margin-top: 20px;
+			font-weight: 800;
+		}
+		> div {
+			margin-top: 10px;
+			display: block;
+			padding: 20px 0;
+			text-align: center;
+			border-radius: 20px;
+			background-color: #F5F7F8;
+			> a {
+				display: block;
+				padding: 0 20px;
+				cursor: pointer;
+			}
+		}
+		.sample-call {
+			p {
+				font-family: 'roboto';
+				font-size: 18px;
+				font-weight: 800;
+				text-decoration: underline;
+			}
+		}
+		.custom-as {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			div {
+				flex: 1;
+				&:last-of-type {
+					border-left: 1px solid #E5E5E5;
+				}
+			}
+			i {
+				display: block;
+				margin: 0 auto 13px;
+			}
+			span {
+				display: inline-block;
+				font-weight: 700;
+				margin-bottom: 6px;
+			}
+			p {
+				color: #666;
+				font-size: 13px;
+			}
+		}
+	}
 	.subtop_kv {
 		position:relative;
 		&::after {
@@ -3269,10 +3365,12 @@
 			}
 		}
 	}
+	.borad_wrap {
+		border: none!important;
+	}
 	.list_sort {
 		padding: 0 20px 20px;
 		border-bottom: 1px solid #E5E5E5;
-		margin-bottom: 20px;
 	}
 	.product_list {
 		padding: 0 0 90px;
@@ -3284,7 +3382,7 @@
 			}
 		}
 		.video {
-			border-radius: 20px;
+			border-radius: 10px;
 			overflow: hidden;
 			margin-bottom: 16px;
 		}
@@ -3310,7 +3408,7 @@
 			}
 			span {
 				display: inline-block;
-				width: 30%;
+				width: 35%;
 				color: #666;
 				font-size: inherit;
 				line-height: inherit;
@@ -3334,6 +3432,25 @@
 				line-height: 30px;
 				font-weight: 700;
 				margin-bottom: 20px;
+			}
+		}
+		.post {
+			.video {
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					background-color: rgba(0, 0, 0, .3);
+				}
+			}
+			.btn-vplay {
+				z-index: 2;
+				width: 11.111%;
+				padding-bottom: 12.5%;
 			}
 		}
 		.para {
@@ -3443,7 +3560,7 @@
 			}
 		}
 	}
-	.algorithm_sec {		
+	.algorithm_sec {
 		border-top: 8px solid #F5F7F8;
 		.tit {
 			margin-top: 20px;
@@ -3456,16 +3573,78 @@
 		}	
 		.origin {
 			margin-left: 0;
+			transform: translateY(1px);
+			span {
+				font-size: 15px;
+				font-weight: 800;
+				transform: translateY(-1px);
+			}
 		}
 		.sale {
 			vertical-align: sub;
 		}
 		.discount {
 			font-size: 1.125rem;
+			margin-right: 4px;
 			em {
-				font-size: 0.813rem;
+				font-size: inherit;
 			}
 		}
+	}
+	.section {
+		border-top: 8px solid #F5F7F8;
+		border-bottom: 1px solid #E5E5E5;
+		padding-bottom: 30px;
+		margin-bottom: 0;
+		.tit_wrap {
+			position: relative;
+			padding-bottom: 17px;
+			text-align: left;
+			border-bottom: 1px solid #e5e5e5;
+			.row {
+				display: block;
+			}
+			h3, h4 {
+				position: relative;
+				line-height: 1.5rem;
+				font-weight: 800;
+				letter-spacing: -0.02em;
+			}
+			.btn_all {
+				position: absolute;
+				right: 20px;
+				top: 0;
+			}
+		}
+	}
+	.subtop_custom {
+		border-top: none;
+	}
+	.algorithm_sec {
+		padding-bottom: 25px;
+	}
+	.brandintro_sec {
+		.swiper-container {
+			margin: 20px 20px 0;
+		}
+	}
+	.brandcf_sec {
+		.swiper-container {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.swiper-slide {
+			border-radius: 0;
+		}
+		.tit {
+			margin: 16px 0;
+			font-weight: 700;
+			line-height: 20px;
+		}
+	}
+	.banner._full {
+		border-top: 8px solid #F5F7F8;
+		text-align: center;
 	}
 }
 
