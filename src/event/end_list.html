@@ -23,11 +23,9 @@
     <div class="main_body">
       <div class="tab-navigation">
         <div class="tab-row">
-          <!-- 210916 탭 페이지 추가 및 마크업 수정 -->
-          <p class="item active"><a href="#" role="tab" aria-label="진행중인 이벤트" aria-selected="true"><span>진행중인 이벤트</span></a></p>
-          <p class="item"><a href="end_list.html" role="tab" aria-label="완료 이벤트" aria-selected="false"><span>완료 이벤트</span></a></p>
+          <p class="item"><a href="list.html" role="tab" aria-label="진행중인 이벤트" aria-selected="true"><span>진행중인 이벤트</span></a></p>
+          <p class="item active"><a href="#" role="tab" aria-label="완료 이벤트" aria-selected="false"><span>완료 이벤트</span></a></p>
           <p class="item"><a href="result_list.html" role="tab" aria-label="당첨자 발표" aria-selected="false"><span>당첨자 발표</span></a></p>
-          <!--// 210916 탭 페이지 추가 및 마크업 수정 -->
         </div>
       </div>
       
@@ -50,7 +48,7 @@
 
         <section class="section borad_wrap">
           <div class="list_sort">
-            <p class="total"><span>20</span>개 이벤트</p><!-- 210903 수량표기법 변경 -->
+            <p class="total"><span>20</span>개 이벤트</p>
             <div class="sort">
               <select>
                 <option>인기순</option>
@@ -61,34 +59,32 @@
               </select>
             </div>
           </div>
-          <!-- 210916 리스트 내 이미지 마크업 수정 -->
           <ul class="product_list">
-            <li class="item banner"><a href="#">
+            <li class="item banner _evntend"><a href="#">
+              <span class="label">완료</span>
               <p class="img"><img src="../assets/images/dummy/dummy_eventbanner01.png"/></p>
             </a></li>
-            <li class="item banner"><a href="#">
+            <li class="item banner _evntend"><a href="#">
+              <span class="label">완료</span>
               <p class="img"><img src="../assets/images/dummy/dummy_eventbanner02.png"/></p>
             </a></li>
-            <!-- 210916 라벨 추가 -->
-            <li class="item banner _evntresult"><a href="#">
-              <span class="label">당첨자 발표중</span>
+            <li class="item banner _evntend"><a href="#">
+              <span class="label">완료</span>
+              <p class="img"><img src="../assets/images/dummy/dummy_eventbanner03.png"/></p>
+            </a></li>
+            <li class="item banner _evntend"><a href="#">
+              <span class="label">완료</span>
               <p class="img"><img src="../assets/images/dummy/dummy_eventbanner04.png"/></p>
             </a></li>
-            <!--// 210916 라벨 추가 -->
-            <!-- 210916 라벨 추가 -->
-            <li class="item banner _evntresult"><a href="#">
-              <span class="label">당첨자 발표중</span>
-              <p class="img"><img src="../assets/images/dummy/dummy_eventbanner01.png"/></p>
-            </a></li>
-            <!--// 210916 라벨 추가 -->
-            <li class="item banner"><a href="#">
+            <li class="item banner _evntend"><a href="#">
+              <span class="label">완료</span>
               <p class="img"><img src="../assets/images/dummy/dummy_eventbanner02.png"/></p>
             </a></li>
-            <li class="item banner"><a href="#">
+            <li class="item banner _evntend"><a href="#">
+              <span class="label">완료</span>
               <p class="img"><img src="../assets/images/dummy/dummy_eventbanner04.png"/></p>
             </a></li>
           </ul>
-          <!--// 210916 리스트 내 이미지 마크업 수정 -->
         </section>
       </div>
     </div>

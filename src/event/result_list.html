@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"submain"
+		},
+		"subtitle":""
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <div class="main_body">
+      <div class="tab-navigation">
+        <div class="tab-row">
+          <p class="item"><a href="list.html" role="tab" aria-label="진행중인 이벤트" aria-selected="true"><span>진행중인 이벤트</span></a></p>
+          <p class="item"><a href="end_list.html" role="tab" aria-label="완료 이벤트" aria-selected="false"><span>완료 이벤트</span></a></p>
+          <p class="item active"><a href="#" role="tab" aria-label="당첨자 발표" aria-selected="false"><span>당첨자 발표</span></a></p>
+        </div>
+      </div>
+
+      <div class="event_wrap">
+        <section class="section borad_wrap">
+          <div class="list_sort">
+            <p class="total"><span>20</span>개</p>
+            <div class="sort">
+              <select>
+                <option>최신순</option>
+                <option>신상품순</option>
+                <option>높은 가격순</option>
+                <option>낮은 가격순</option>
+                <option>가나다순</option>
+              </select>
+            </div>
+          </div>
+        <ul class="board_list">
+          <li class="item"><a href="result_view.html"><dl>
+            <dt>'우리아기 용품 특가전' 당첨자가 발표되었습니다.</dt>
+            <dd>이벤트 기간<span class="date">2021.08.01 ~ 14</span></dd>
+            <dd>당첨자 발표<span class="date">2021.08.21</span></dd>
+          </dl></a></li>
+          <li class="item"><a href="result_view.html"><dl>
+            <dt>‘무료배송쿠폰’ 당첨자가 ‘무료배송쿠폰’ '우리아기 용품 특가전' 당첨자가 '우리아기 용품 특가전' 당첨자가 발표되었습니다.</dt>
+            <dd>이벤트 기간<span class="date">2021.09.14 ~ 20</span></dd>
+            <dd>당첨자 발표<span class="date">2021.09.27</span></dd>
+          </dl></a></li>
+          <li class="item"><a href="result_view.html"><dl>
+            <dt>'우리아기 용품 특가전' 당첨자가 발표되었습니다.</dt>
+            <dd>이벤트 기간<span class="date">2021.08.01 ~ 14</span></dd>
+            <dd>당첨자 발표<span class="date">2021.08.21</span></dd>
+          </dl></a></li>
+          <li class="item"><a href="result_view.html"><dl>
+            <dt>‘무료배송쿠폰’ 당첨자가 발표되었습니다.</dt>
+            <dd>이벤트 기간<span class="date">2021.09.14 ~ 20</span></dd>
+            <dd>당첨자 발표<span class="date">2021.09.27</span></dd>
+          </dl></a></li>
+          </dl></a></li>
+          <li class="item"><a href="result_view.html"><dl>
+            <dt>‘무료배송쿠폰’ 당첨자가 ‘무료배송쿠폰’ '우리아기 용품 특가전' 당첨자가 '우리아기 용품 특가전' 당첨자가 발표되었습니다.</dt>
+            <dd>이벤트 기간<span class="date">2021.09.14 ~ 20</span></dd>
+            <dd>당첨자 발표<span class="date">2021.09.27</span></dd>
+          </dl></a></li>
+          <li class="item"><a href="result_view.html"><dl>
+            <dt>'우리아기 용품 특가전' 당첨자가 발표되었습니다.</dt>
+            <dd>이벤트 기간<span class="date">2021.08.01 ~ 14</span></dd>
+            <dd>당첨자 발표<span class="date">2021.08.21</span></dd>
+          </dl></a></li>
+          <li class="item"><a href="result_view.html"><dl>
+            <dt>‘무료배송쿠폰’ 당첨자가 발표되었습니다.</dt>
+            <dd>이벤트 기간<span class="date">2021.09.14 ~ 20</span></dd>
+            <dd>당첨자 발표<span class="date">2021.09.27</span></dd>
+          </dl></a></li>
+        </ul>
+      </section>
+
+      </div>
+
+    </div>
+  </div>
+  <!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"show"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
