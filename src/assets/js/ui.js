@@ -77,11 +77,13 @@ function headFixed(){
 function headGnbMenu(){
 	$("#gnbmenubtn").click(function(e) {
 		e.preventDefault();
+		$('.gnb-menu').addClass('show');
 		$(".header").addClass('on').find(".item_box").removeClass('active');
 		$('body').addClass('noscroll');
 	});
 	$(".gnb-head .util .gnb_btn-close").click(function(e) {
 		e.preventDefault();
+		$('.gnb-menu').removeClass('show');
 		$(".header").removeClass('on');
 		$('body').removeClass('noscroll');
 	});
