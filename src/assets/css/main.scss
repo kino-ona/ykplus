@@ -430,6 +430,9 @@ html {
     margin-right:-20px;
     padding-bottom:24px;
   }
+  .swiper-slide {
+    border-radius: 0;
+  }
   .swiper-pagination.bullet-type {
     bottom: -12px;
   }
@@ -472,6 +475,7 @@ html {
   }
   .swiper-slide {
     width:100% !important;
+    border-radius: 0;
     .product_list {
       margin-left:0;
       margin-right:0;
