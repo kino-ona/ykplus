@@ -651,7 +651,7 @@ body {
 	background-color: #fff;
 	overflow-y: auto;
 	@include transition(.3s, ease-in);
-	h1,h2,h3,h4,h5,h6 {display: block;}
+	h2 {display: block;}
 	& + .overlay-dimmed {
 		opacity: 0;
 		z-index: -1;
