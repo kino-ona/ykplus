@@ -3438,6 +3438,8 @@
 		}
 		.prdinfo {
 			margin-top: 15px;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 		.item {
 			> a {
@@ -4199,6 +4201,14 @@
 		.list_sort {
 			padding-top: 0;
 		}
+		> .btn_wrap {
+			.btn {
+				width: 100%;
+			}
+		}
+	}
+	.board_list {
+		margin-bottom: 20px;
 	}
   .product_list {
     margin-left:-24px;
@@ -4273,6 +4283,7 @@
 		.title {
 			padding-left: 20px;
 			padding-right: 20px;
+			font-size: 18px;
 			font-weight: 700;
 			line-height: 1.5rem;
 		}
