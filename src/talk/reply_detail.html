@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"subtype2"
+		},
+		"subtitle":"댓글쓰기"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <div class="talk_wrap">
+      <div class="tk_area_wrap"></div>
+      
+      <!-- 댓글 영역 -->
+      <div class="replyarea_wrap _detail">
+        <div class="ui-accordion">
+          <div class="item" data-status="expanded">
+            <div class="target">
+              <div class="user_info">
+                <div class="headdata">
+                  <p class="img"><img src="../assets/images/common/default_user.png"/><span class="a11y">사용자 프로필사진</span></p>
+                  <p class="userid">emdfpm84</p>
+                  <p class="date">2일 전</p>
+                </div>
+                <a href="#" class="btn_fnc click-util"><span class="a11y">더보기</span></a>
+                <div class="util-pop revw-more">
+                  <ul>
+                    <li><a href="#">수정하기</a></li>
+                    <li><a href="#">신고하기</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="reply">
+                <p class="message">아니! 이곳은? 저희 동네가 같네요. 저도 가끔 운동 나가는데 꾸준히 하기가 영~ 힘드네요 허허</p>
+                <div class="more">
+                  <p><i class="ic-16 ic_likes-gray"></i><span class="cnt">999</span></p>
+                  <p><i class="ic-16 ic_reply-gray"></i> 댓글달기<span class="cnt"></span></p>
+                  <span class="btn_all"><span>답글 <span>2</span>개 보기</span><span data-status="expanded">답글 숨기기</span><i> </i></span>
+                </div>
+              </div>
+            </div>
+            <!-- 대댓글 -->
+            <div class="panel">
+              <div class="item_depth01">
+                <div class="user_info">
+                  <div class="headdata">
+                    <p class="img"><img src="../assets/images/common/default_user.png"/><span class="a11y">사용자 프로필사진</span></p>
+                    <p class="userid">emdfpm84
+                    <p class="date">2일 전</p>
+                    <span class="label writer">작성자</span>
+                  </div>
+                  <a href="#" class="btn_fnc click-util"><span class="a11y">더보기</span></a>
+                  <div class="util-pop revw-more">
+                    <ul>
+                      <li><a href="#">수정하기</a></li>
+                      <li><a href="#">신고하기</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="reply">
+                  <p class="message">꾸준히 하는 게 가장 중요한 거 같아요! 저랑 함께 즐겁게 운동해요!</p>
+                  <div class="more">
+                    <p><i class="ic-16 ic_likes-gray"></i><span class="cnt">999</span></p>
+                  </div>
+                </div>
+                <div class="user_info">
+                  <div class="headdata">
+                    <p class="img"><img src="../assets/images/common/default_user.png"/><span class="a11y">사용자 프로필사진</span></p>
+                    <p class="userid">emdfpm84</p>
+                    <p class="date">2일 전</p>
+                  </div>
+                  <a href="#" class="btn_fnc click-util"><span class="a11y">더보기</span></a>
+                  <div class="util-pop revw-more">
+                    <ul>
+                      <li><a href="#">수정하기</a></li>
+                      <li><a href="#">신고하기</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="reply">
+                  <p class="message">좋아요. 이번엔 꾸준히~!</p>
+                  <div class="more">
+                    <p><i class="ic-16 ic_likes-gray"></i><span class="cnt">999</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--// 대댓글 -->
+          </div>
+        </div>
+      </div>
+      <!--// 댓글 영역 -->
+
+      <div class="inp-btn_wrap02">
+        <div class="search_wrap">
+          <div class="row">
+            <button class="btn" onclick="openLayer('#allowcamera_popup')" ><i class="ic-20 ic_gallery"></i></button>	
+            <input id="noticeSearch" type="text" placeholder="따뜻한 댓글을 남겨주세요!">
+            <label for="noticeSearch"><span class="a11y">댓글 작성하기</span></label>
+            <button class="btn" tabindex="0"><i class="btn_act"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+      
+	</div>
+	<!--// contents body -->
+
+  <!-- 이미지 전체보기 팝업 -->
+  <div id="lightbox-overlay" class="lightbox-overlay">
+    <button onclick="lightboxClose()" class="btn_close"><i></i><span class="a11y">닫기</span></button>
+    <div id="postgallerySwp" class="swiper-container">
+      <div class="swiper-wrapper">
+      </div>
+    </div>
+  </div>
+  <!--// 이미지 전체보기 팝업 -->
+
+  <!-- 사진 접근권한이 없는 경우 알림 팝업 -->
+  <div class="overlay-popup alert-layer allowcamera_popup" role="dialog" id="allowcamera_popup" aria-labelledby="alert_opener" aria-modal="true">
+    <div class="contents">
+      <div class="inner">
+        <p>사진에 접근 권한 허용이 필요합니다.</p>
+      </div>
+      <div class="btn_wrap">
+        <a href="#" onclick="closeLayer('#allowcamera_popup')" class="btn gray-btn">취소</a>
+        <a href="#" onclick="closeLayer('#allowcamera_popup')" class="btn primary">허용하기</a>
+      </div>
+    </div>
+    <div class="overlay-dimmed"></div>
+  </div>
+  <!--// 사진 접근권한이 없는 경우 알림 팝업 -->
+  
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+
+  <script>
+    /** gallery arrange **/
+    $('.gallery_area').each(function(){ 
+      var figCnt = $(this).find('.figure').length;
+
+      if(figCnt > 3) {
+        $(this).addClass('morethree');
+        $(this).find('.figure:nth-child(3)').append('<p class=figcnt>+' + (figCnt - 3) + '장</p>')
+      }
+      if(figCnt < 2) {
+        $(this).addClass('onlyone')
+      }
+    })
+
+    /** gallery pop **/
+    var lightbox = $('#lightbox-overlay'),
+        lightboximg = lightbox.find('.lightbox-img');
+    $('.gallery_area').each(function(){ 
+      var parentGall = $(this);
+
+      $(this).click(function(){
+        $('#postgallerySwp').find('.swiper-wrapper').empty();	
+
+        parentGall.find('.figure').each(function(){
+          var figCnt = $(this).length/2;
+          var imgSrc = $(this).find('.imgbg').attr('data-imgsrc');
+
+          for (var i = 0; i <= figCnt; i++) {
+            $('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
+          }
+        })
+        lightbox.addClass('visible');
+        $('body').addClass('noscroll');
+
+        defaultSwipe('postgallerySwp', '1', 20); 
+      });
+    });
+  </script>
+</body>
+</html>
