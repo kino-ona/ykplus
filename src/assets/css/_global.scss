@@ -639,7 +639,7 @@ body {
 }
 .gnb-menu {
 	position: fixed;
-	z-index: 100;
+	z-index: 1001;
 	width: 100%;
 	max-width: 768px;
 	margin: 0 auto;
@@ -657,6 +657,30 @@ body {
 		clip: rect(0, 0, 0, 0);
 		@include transition(.3s, ease-in);
 	} 
+	.util {
+		z-index: 99;
+		position:absolute;
+		right:20px;
+		top:50%;
+		@include transform(translateY(-50%));
+		a {
+			display: inline-block;
+			margin-left: 10px;
+		}
+		.btn_write {
+			color: #999;
+			font-size: 15px;
+			font-weight: 800;
+			&._available {
+				color: #009AFF;
+			}
+		}
+		.btn_close {
+			i {
+				@include iconX($size: 15px, $thick: 2px, $color: #000, $padding: 0, $display: inline-block, $position: relative)
+			}
+		}
+	}
 	.gnb-head {
 		position: relative;
 		border-bottom: 1px solid #E5E5E5;
@@ -850,6 +874,15 @@ body {
 			&:nth-of-type(2n-1) {
 				border-right: 1px solid #E5E5E5;
 			}
+		}
+	}
+	&.show {
+		right:0;
+		& + .overlay-dimmed {
+			opacity: 1;
+			z-index: 99;
+			overflow: visible;
+			clip: unset;
 		}
 	}
 }
