@@ -269,42 +269,42 @@
 	<!-- //footer -->
 
   <script>
-    /** gallery arrange **/
-    $('.gallery_area').each(function(){ 
-      var figCnt = $(this).find('.figure').length;
+  /** gallery arrange **/
+  $('.gallery_area').each(function(){ 
+    var figCnt = $(this).find('.figure').length;
 
-      if(figCnt > 3) {
-        $(this).addClass('morethree');
-        $(this).find('.figure:nth-child(3)').append('<p class=figcnt>+' + (figCnt - 3) + '장</p>')
-      }
-      if(figCnt < 2) {
-        $(this).addClass('onlyone')
-      }
-    })
+    if(figCnt > 3) {
+      $(this).addClass('morethree');
+      $(this).find('.figure:nth-child(3)').append('<p class=figcnt>+' + (figCnt - 3) + '장</p>')
+    }
+    if(figCnt < 2) {
+      $(this).addClass('onlyone')
+    }
+  })
 
-    /** gallery pop **/
-    var lightbox = $('#lightbox-overlay'),
-        lightboximg = lightbox.find('.lightbox-img');
-    $('.gallery_area').each(function(){ 
-      var parentGall = $(this);
+  /** gallery pop **/
+  var lightbox = $('#lightbox-overlay'),
+      lightboximg = lightbox.find('.lightbox-img');
+  $('.gallery_area').each(function(){ 
+    var parentGall = $(this);
 
-      $(this).click(function(){
-        $('#postgallerySwp').find('.swiper-wrapper').empty();	
+    $(this).click(function(){
+      $('#postgallerySwp').find('.swiper-wrapper').empty();	
 
-        parentGall.find('.figure').each(function(){
-          var figCnt = $(this).length/2;
-          var imgSrc = $(this).find('.imgbg').attr('data-imgsrc');
+      parentGall.find('.figure').each(function(){
+        var figCnt = $(this).length/2;
+        var imgSrc = $(this).find('.imgbg').attr('data-imgsrc');
 
-          for (var i = 0; i <= figCnt; i++) {
-            $('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
-          }
-        })
-        lightbox.addClass('visible');
-        $('body').addClass('noscroll');
+        for (var i = 0; i <= figCnt; i++) {
+          $('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
+        }
+      })
+      lightbox.addClass('visible');
+      $('body').addClass('noscroll');
 
-        defaultSwipe('postgallerySwp', '1.05', 8); 
-      });
+      defaultSwipe('postgallerySwp', '1.05', 8); 
     });
+  });
   </script>
 </body>
 </html>

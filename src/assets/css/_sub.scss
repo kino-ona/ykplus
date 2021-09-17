@@ -3286,7 +3286,7 @@
 			}
 		}
 		.btn_wrap._foo {
-			padding-top: 30px;
+			margin-top: 30px;
 			padding-bottom: 30px;
 			a {
 				font-weight: 700;
@@ -3296,36 +3296,26 @@
 	.subtop_wrap {
 		z-index: 2;
 		margin-top: -21px;
-    .img {
-			margin: 0 auto;
-			display: block;
-		 img {
-			 width: 100%;
-		 } 
-    }
-		.subtop_banner {
+		background-color: #F5F7F8;
+		padding-bottom: 30px;
+		.row {
+			justify-content: flex-start;
+		}
+		._banner {
 			position: relative;
-			margin: -40px 20px 20px;
+			margin: 16px 20px 0;
 			border-radius: 20px;
 			padding: 24px 20px;
-			text-align: center;
 			background-color: #fff;
 			box-shadow: 5px 10px 15px rgba(0, 0, 0, .1);
-			h4 {
-				font-size: 18px;
-				line-height: 30px;
-				font-weight: 700;
-				margin-bottom: 12px;
-			}
-			.desc {
-				color: #666;
+			p {
 				font-size: 13px;
-				line-height: 20px;
-				opacity: .8;
-				margin-bottom: 16px;
+				line-height: 1.6;
+				font-weight: 700;
 			}
 			.btn_wrap {
-				padding-bottom: 0;
+				margin: 12px 0 20px;
+				padding: 0;
 				.btn {
 					width: 100%;
 					border: none;
@@ -3335,58 +3325,53 @@
 				}
 			}
 		}
-	}
-	.subtop_custom {
-		padding: 0 20px 30px;
-		border-bottom: 1px solid #E5E5E5;
-		margin-bottom: 0;
-		h4 {
-			margin-top: 20px;
-			font-weight: 800;
-		}
-		> div {
-			margin-top: 10px;
-			display: block;
-			padding: 20px 0;
-			text-align: center;
-			border-radius: 20px;
-			background-color: #F5F7F8;
-			> a {
+		.brand-main_sec {
+			.img {
+				margin: 0 auto;
 				display: block;
-				padding: 0 20px;
-				cursor: pointer;
+			 img {
+				 width: 100%;
+			 } 
 			}
+			._banner {
+				margin-top: -40px;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+		}
+		h4 {
+			font-size: 13px;
+			line-height: 1.6;
+			font-weight: 800;
+			text-align: left;
+		}
+		h3 {
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 12px;
+		}
+		.desc {
+			color: #666;
+			font-size: 13px;
+			line-height: 20px;
+			opacity: .8;
 		}
 		.sample-call {
-			a {
-				font-family: 'roboto';
-				font-size: 18px;
-				font-weight: 800;
-				text-decoration: underline;
-			}
-		}
-		.custom-as {
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			a {
-				flex: 1;
-				&:last-of-type {
-					border-left: 1px solid #E5E5E5;
-				}
-			}
-			i {
-				display: block;
-				margin: 0 auto 13px;
-			}
-			span {
-				display: inline-block;
-				font-weight: 700;
-				margin-bottom: 6px;
-			}
+			border-top: 1px solid #F0F0F0;
+			padding-top: 22px;
 			p {
-				color: #666;
-				font-size: 13px;
+				margin-bottom: 13px;
+			}
+			a {
+				display: block;
+				padding: 13px 20px;
+				font-family: 'roboto';
+				font-weight: 800;
+				text-align: center;
+				text-decoration: underline;
+				border-radius: 50px;
+				background-color: #F5F7F8;
+				cursor: pointer;
 			}
 		}
 	}
@@ -3451,8 +3436,6 @@
 		}
 		.prdinfo {
 			margin-top: 15px;
-			padding-left: 20px;
-			padding-right: 20px;
 		}
 		.item {
 			> a {
@@ -3705,6 +3688,10 @@
 	}
 	.algorithm_sec {
 		padding-bottom: 25px;
+		.tab-navigation {
+			border-top: 0;
+			margin-top: 0;
+		}
 	}
 	.brandintro_sec {
 		.swiper-container {
@@ -3722,6 +3709,39 @@
 			margin: 16px 0;
 			font-weight: 700;
 			line-height: 20px;
+		}
+	}
+	.brandcustom_sec {
+		.custom-as {
+			margin: 20px 20px 0;
+			.row {
+				justify-content: space-around;
+				padding: 20px 0;
+				border-radius: 20px;
+				background-color: #F5F7F8;
+			}
+			a {
+				flex: 1;
+				display: inline-block;
+				text-align: center;
+				cursor: pointer;
+				&:last-of-type {
+					border-left: 1px solid #E5E5E5;
+				}
+				i {
+					display: block;
+					margin: 0 auto 13px;
+				}
+				span {
+					display: inline-block;
+					font-weight: 700;
+					margin-bottom: 6px;
+				}
+				p {
+					color: #666;
+					font-size: 13px;
+				}
+			}
 		}
 	}
 	.banner._full {

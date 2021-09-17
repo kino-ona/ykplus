@@ -1023,10 +1023,13 @@ a.btn {
 	.item {
 		position:relative;
 		float:left;
-		width:calc(50% - 4px);
-		margin-left:4px;
+		width: calc(50% - 2px);
+		margin-left: 4px;
 		margin-bottom:4px;
 		background-color: #F5F7F8;
+		&:nth-of-type(2n-1) {
+			margin-left: 0;
+		}
 		> a {
 			display: block;
 			height:100%;
@@ -1351,6 +1354,7 @@ a.btn {
 		}
 		&.active {
 			background-color: #009AFF;
+			border-color: #009AFF;
 			span {
 				color: #fff;
 				&:after {
@@ -1361,6 +1365,51 @@ a.btn {
 	}
 	a {
 		display: inline-block;
+	}
+}
+.tab-navigation.tabletype {
+	border: 1px solid #E5E5E5;
+	border-bottom: none;
+	max-height: unset;
+	padding-bottom: 0;
+	border-bottom: none;
+	margin-bottom: 5px;
+	.tab-row {
+		display: block;
+    padding-bottom: 0;
+    overflow-x: visible;
+		&:after {
+			@extend %clearer;
+		}
+	}
+	.item {
+		display: inline-block;
+		width: calc(50% - 1px);
+		margin: 0;
+		padding: 13px 0;
+		color: #666;
+		text-align: center;
+		border-bottom: 1px solid #E5E5E5;
+		&:nth-of-type(2n - 1) {
+			border-right: 1px solid #E5E5E5;
+		}
+	}
+	p {
+		span {
+			font-size: 13px;
+			font-weight: 500;
+		}
+		&.active {
+			background-color: #159AFF;
+			border-color: #159AFF;
+			span {
+				color: #fff;
+				font-weight: 700;
+				&:after {
+					content: none;
+				}
+			}
+		}
 	}
 }
 
