@@ -95,6 +95,9 @@
 		display: inline-flex;
 		align-items: center;
 		height:100%;
+		label {
+			font-weight: 700;
+		}
 	}
 	.bundle_control {
 		float:right;
@@ -103,6 +106,7 @@
 		height:100%;
 		button {
 			color:#009AFF;
+			font-weight: 700;
 		}
 	}
 }
@@ -710,6 +714,7 @@
 		line-height: normal;
 	}
 	.total {
+		margin-top: 16px;
 		padding-bottom:20px;
 		background-color: #F5F7F8;
 	}
@@ -1338,6 +1343,9 @@
 				}
 			}
 		}
+		.item div.btn_wrap:nth-of-type(4) {
+			margin-top: 5px;
+		}
 	}
 	.sum_price {
 		padding-bottom:0;
@@ -1387,7 +1395,6 @@
 			padding:0;
 		}
 		.total {
-			margin-top:16px;
 			margin-left:-20px;
 			margin-right:-20px;
 			padding:20px 0;

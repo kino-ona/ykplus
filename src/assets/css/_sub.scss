@@ -2549,12 +2549,13 @@
 	}	
 	.btn_close {
 		position:absolute;
-		right:20px;
-		top:5%;
+		z-index: 999;
+		right: 5%;
+		top: 5%;
 		width:24px;
 		height:24px;
 		i {
-			@include iconX($size: 15px, $thick: 1px, $color: #fff, $padding: 0, $display: inline-block, $position: relative)
+			@include iconX($size: 24px, $thick: 2px, $color: #fff, $padding: 0, $display: inline-block, $position: relative)
 		}
 	}
 	.swiper-container {
@@ -2563,6 +2564,9 @@
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
+	}
+	.swiper-slide {
+		align-self: center;
 	}
 	.lightbox-img {
 		width: 100%;
@@ -3894,7 +3898,7 @@
 		}
 		.panel {
 			padding: 20px 0;
-			background-color: #E5E5E5;
+			background-color: #F5F7F8;
 		}
 	}
 	.tag_wrap {
@@ -3982,6 +3986,7 @@
 						background-color: #fff;
 						z-index: 10;
 						vertical-align: baseline;
+						transform: translateY(3px);
 					}
 				}
 				.btn_all {
