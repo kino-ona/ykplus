@@ -75,6 +75,9 @@
               <div class="more">
                 <p><i class="ic-16 ic_likes_clicked"></i><span class="cnt">999</span></p>
                 <p><i class="ic-16 ic_reply-gray"></i> 댓글달기<span class="cnt"></span></p>
+                <!-- 210923 스크랩 추가 -->
+                <p class="btn-scrap"><i class="ic-16 ic_scrap-gray"></i> 스크랩</p>
+                <!--// 210923 스크랩 추가 -->
               </div>
             </div>
           </li>
@@ -100,9 +103,55 @@
               <div class="more">
                 <p><i class="ic-16 ic_likes_clicked"></i><span class="cnt">999</span></p>
                 <p><i class="ic-16 ic_reply-gray"></i> 댓글달기<span class="cnt"></span></p>
+                <!-- 210923 스크랩 추가 -->
+                <p class="btn-scrap"><i class="ic-16 ic_scrap-gray"></i> 스크랩</p>
+                <!--// 210923 스크랩 추가 -->
               </div>
             </div>
           </li>
+          <!-- 210923 갤러리팝업 항목 추가 -->
+          <li class="item">
+            <div class="user_info">
+              <div class="headdata">
+                <p class="img"><img src="../assets/images/dummy/dummy_user04.png"/><span class="a11y">사용자 프로필사진</span></p>
+                <p class="userid">emdfpm84</p>
+                <p class="date">2일전</p>
+              </div>
+              <a href="#" class="btn_fnc click-util"><span class="a11y">더보기</span></a>
+              <div class="util-pop revw-more">
+                <ul>
+                  <li><a href="#">수정하기</a></li>
+                  <li><a href="#">신고하기</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="post">
+              <div class="edit">
+                비가오네요. 8월이 떠나기 싫어 눈물 흘리고 <br>
+                그래도 가야 한다기에 말없이 보냅니다. <br>
+                다가올 풍성함으로 익어가는 활기찬 9월이 풍성함으로 익어가는 활기찬 9월이 풍성함으로 익어가는 활기찬 9월이 되기를.
+
+                <div id="gallery_area01" class="gallery_area">
+                  <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn01.png);" data-imgsrc="../assets/images/dummy/replies_thumn01.png"></div></div>
+                  <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn02.png);" data-imgsrc="../assets/images/dummy/replies_thumn02.png"></div></div>
+                  <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn03.png);" data-imgsrc="../assets/images/dummy/replies_thumn03.png"></div></div>
+                  <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn01.png);" data-imgsrc="../assets/images/dummy/replies_thumn01.png"></div></div>
+                  <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn02.png);" data-imgsrc="../assets/images/dummy/replies_thumn02.png"></div></div>
+                  <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn03.png);" data-imgsrc="../assets/images/dummy/replies_thumn03.png"></div></div>
+                  <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn01.png);" data-imgsrc="../assets/images/dummy/replies_thumn01.png"></div></div>
+                </div>
+              </div>
+              
+              <div class="more">
+                <p><i class="ic-16 ic_likes_clicked"></i><span class="cnt">999</span></p>
+                <p><i class="ic-16 ic_reply-gray"></i> 댓글달기<span class="cnt"></span></p>
+                <!-- 210923 스크랩 추가 -->
+                <p class="btn-scrap"><i class="ic-16 ic_scrap-gray"></i> 스크랩</p>
+                <!--// 210923 스크랩 추가 -->
+              </div>
+            </div>
+          </li>
+          <!--// 210923 갤러리팝업 항목 추가 -->
         </ul>
       </div>
     </div>
@@ -110,10 +159,19 @@
     <div class="fixed_float">
       <a href="#" class="fbtn"><i class="ic-20 ic_fbtn-tk"> </i> 글쓰기</a>
     </div>
-      
+
 	</div>
 	<!--// contents body -->
-  
+
+  <!-- 이미지 전체보기 팝업 -->
+  <div id="lightbox-overlay" class="lightbox-overlay">
+    <button onclick="lightboxClose()" class="btn_close"><i></i><span class="a11y">닫기</span></button>
+    <div id="postgallerySwp" class="swiper-container">
+      <div class="swiper-wrapper">
+      </div>
+    </div>
+  </div>
+  <!--// 이미지 전체보기 팝업 -->  
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
 		"webroot":"..",
@@ -125,5 +183,45 @@
 		}
 	})
 	<!-- //footer -->
+
+  <script>
+  /** gallery arrange **/
+  $('.gallery_area').each(function(){ 
+    var figCnt = $(this).find('.figure').length;
+
+    if(figCnt > 3) {
+      $(this).addClass('morethree');
+      $(this).find('.figure:nth-child(3)').append('<p class=figcnt>+' + (figCnt - 3) + '장</p>')
+    }
+    if(figCnt < 2) {
+      $(this).addClass('onlyone')
+    }
+  })
+
+  /** gallery pop **/
+  var lightbox = $('#lightbox-overlay'),
+      lightboximg = lightbox.find('.lightbox-img');
+  $('.gallery_area').each(function(){ 
+    var parentGall = $(this);
+
+    $(this).click(function(){
+      $('#postgallerySwp').find('.swiper-wrapper').empty();	
+
+      parentGall.find('.figure').each(function(){
+        var figCnt = $(this).length/2;
+        var imgSrc = $(this).find('.imgbg').attr('data-imgsrc');
+
+        for (var i = 0; i <= figCnt; i++) {
+          $('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
+        }
+      })
+      lightbox.addClass('visible');
+      $('body').addClass('noscroll');
+
+      defaultSwipe('postgallerySwp', '1.05', 8); 
+    });
+  });
+  </script>
+
 </body>
 </html>

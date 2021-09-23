@@ -218,13 +218,23 @@
   if($('#brandevent_swipe').length > 0) {
 		var recommendswiper = new Swiper('#brandevent_swipe', { 
 			slidesPerView: 1.5,
-		  spaceBetween: 10
+		  spaceBetween: 10,
+      breakpoints: {
+        768: {
+          slidesPerView: 2.45,
+        }
+      }
 		});
 	}
   if($('#brandcf_swipe').length > 0) {
 		var recommendswiper = new Swiper('#brandcf_swipe', { 
 			slidesPerView: 1.1,
-		  spaceBetween: 10
+		  spaceBetween: 10,
+      breakpoints: {
+        768: {
+          slidesPerView: 2.45,
+        }
+      }
 		});
 	}
 </script>
