@@ -1941,7 +1941,6 @@
 		margin-bottom:0;
   }
   .subtop_kv {
-		margin-top: -21px;
 		position:relative;
     .figure {
       padding-top: 37.335%;
@@ -2314,6 +2313,7 @@
 /** Talk **/
 .talk_wrap {
   .subtop_kv {
+		margin-top:-21px;
     margin-bottom: 20px;
 	}
 	.more {
@@ -2584,6 +2584,15 @@
 
 /** Information **/
 .info_wrap {
+	.subtop_kv {
+		.kv_inner .title_wrap {
+			width:calc(100% - 40px);
+			padding-right:0;
+			.title {
+				padding-right:30px;
+			}
+		}
+	}
 	.product_list {
 		.item.banner {
 			.more {
