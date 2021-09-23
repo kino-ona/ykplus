@@ -1377,7 +1377,8 @@ a.btn {
 	}
 }
 .tab-navigation.tabletype {
-	border: 1px solid #E5E5E5;
+	border-top: 1px solid #E5E5E5;
+	border-bottom: 1px solid #E5E5E5;
 	border-bottom: none;
 	max-height: unset;
 	padding-bottom: 0;
@@ -1393,7 +1394,7 @@ a.btn {
 	}
 	.item {
 		display: inline-block;
-		width: calc(50% - 1px);
+		width: 50%;
 		margin: 0;
 		padding: 13px 0;
 		color: #666;

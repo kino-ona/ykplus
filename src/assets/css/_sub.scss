@@ -3309,7 +3309,6 @@
 			background-color: #fff;
 			box-shadow: 5px 10px 15px rgba(0, 0, 0, .1);
 			p {
-				font-size: 13px;
 				line-height: 1.6;
 				font-weight: 700;
 			}
@@ -3340,7 +3339,6 @@
 			}
 		}
 		h4 {
-			font-size: 13px;
 			line-height: 1.6;
 			font-weight: 800;
 			text-align: left;
@@ -3388,7 +3386,7 @@
 			background-color: rgba(0, 0, 0, .15);
 		}
     .figure {
-      padding-top: 37.335%;
+      padding-top: 38.89%;
       background: {
         repeat: no-repeat;
         position:center center;
@@ -3491,6 +3489,7 @@
 			}
 			.videoplay_area {
 				position: relative;
+				max-width: 100%;
 				iframe {
 					border-radius: 0;
 				}				
@@ -3704,6 +3703,9 @@
 		}
 		.swiper-slide {
 			border-radius: 0;
+		}
+		.videoplay_area {
+			padding-bottom: 54%;
 		}
 		.tit {
 			margin: 16px 0;
