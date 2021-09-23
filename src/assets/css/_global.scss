@@ -515,7 +515,9 @@ body {
 		top:-64px;
 	}
 	.row {
+		max-width:1024px;
 		height:100%;
+		margin:0 auto;
 	}
 	h1.logo {
 		position:absolute;
