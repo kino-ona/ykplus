@@ -24,7 +24,7 @@
 				<div class="kv_inner">
 					<p class="figure" style="background-image:url(../assets/images/dummy/dummy_infokeybanner03.png)"></p>
 					<div class="title_wrap">
-						<p class="title">계속되는 열대야 속 <br>숙면하는 방법 함께 읽으면 좋은 정보 함께 읽으면 좋은 정보<button class="btn"><i class="ic-25 ic_share_w"></i><span class="a11y">공유하기</span></button></p><!-- 210903 헤더타입 및 공유 버튼 위치 변경 -->
+						<p class="title">계속되는 열대야 속 <br>숙면하는 방법 함께 읽으면 좋은 정보 함께 읽으면 좋은 정보<button onclick="openLayer('#share_popup')" class="btn"><i class="ic-25 ic_share_w"></i><span class="a11y">공유하기</span></button></p><!-- 210903 헤더타입 및 공유 버튼 위치 변경 -->
 					</div>
 				</div>
 			</div>
@@ -209,6 +209,25 @@
 		</div>
 	</div>
 	<!--// contents body -->
+
+	<!-- 공유하기 팝업 -->
+	<div class="overlay-popup share_popup" role="dialog" id="share_popup" aria-labelledby="share_opener" aria-modal="true">
+		<div class="contents">
+			<div class="heading">
+				공유하기 <button class="btn_close"><i></i></button>
+			</div>
+			<div class="inner">
+				<div class="share_list">
+					<a href="#" class="btn_share"><i class="ic_kakao"></i>카카오톡</a>
+					<a href="#" class="btn_share"><i class="ic_line"></i>라인</a>
+					<a href="#" class="btn_share"><i class="ic_facebook"></i>페이스북</a>
+					<a href="#" class="btn_share"><i class="ic_url"></i>URL 복사</a>
+				</div>
+			</div>
+		</div>
+		<div class="overlay-dimmed"></div>
+	</div>
+	<!--// 공유하기 팝업 -->
 
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
