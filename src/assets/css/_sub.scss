@@ -3430,9 +3430,6 @@
 		margin-bottom: 0;
 		.item.banner {
 			border-bottom: 1px solid #F0F0F0;
-			> a {
-				padding: 20px 20px 12px;
-			}
 		}
 		.video {
 			border-radius: 10px;
@@ -3446,12 +3443,7 @@
 			margin-bottom: 16px;
 		}
 		.prdinfo {
-			margin-top: 15px;
-		}
-		.item {
-			> a {
-				padding: 20px;
-			}
+			padding:15px 25px 20px;
 		}
 		.details {
 			margin-top: 10px;
