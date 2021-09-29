@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('./inc/pagehead.inc',{
+		"pagetitle":"",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/main.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('./inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"default"
+		},
+		"subtitle":""
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="page404">
+			<div class="empty_data _full">
+        <div>
+          <i class="mark"></i>불편을 드려 죄송합니다.<br>이 페이지를 표시할 수 없습니다.
+          <span>새로고침 버튼을 클릭하시거나 <br>접속하신 URL을 확인해주세요.<br><br>감사합니다.</span>
+          <div class="btn_wrap _foo">
+            <a href="#" class="btn secondary gray-btn">이전 페이지</a>
+            <a href="#" class="btn secondary blue-btn">홈으로 가기</a>
+          </div>
+        </div>
+      </div>
+		</div>
+
+	</div>
+	<!--// contents body -->
+  
+	<!-- footer -->
+	@@include('./inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+
+</html>
