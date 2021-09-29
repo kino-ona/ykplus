@@ -22,6 +22,7 @@
 			background-color: #F5F7F8;
 			border-radius: 20px;
 			margin-bottom: 15px;
+			overflow: hidden;
 		}
 	}
 	.tit_wrap {
@@ -1333,10 +1334,13 @@
 .detail-bottom {
 	.fixed_btn {
 		flex:.4;
+		&.full {
+			flex:.8
+		}
 	}
 	.fixed-like {
 		flex:.2;
-		border:1px solid #AAAAAA;
+		border-top:1px solid #E5E5E5;
 		i {
 			width:100%;
 			height:100%;

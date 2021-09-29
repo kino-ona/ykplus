@@ -22,6 +22,10 @@ a.btn {
 	border-radius: 50px;
 	vertical-align: middle;
 	border:1px solid #D8DBDD;
+	&:disabled {
+		background-color: #D8DBDD;
+		color:#fff;
+	}
 	&.primary {
 		height: 48px;
 		padding:15px 10px;
@@ -1042,10 +1046,10 @@ a.btn {
 		> a {
 			display: block;
 			height:100%;
-			padding:20px 25px;
 		}
 		.figure {
 			position: relative;
+			padding:20px 25px;
 			padding-bottom: 83.34%;
 			overflow: hidden;
 			img {
@@ -1054,7 +1058,7 @@ a.btn {
 				top:50%;
 				left:50%;
 				@include transform(translate(-50%, -50%));
-				padding:10px;
+				padding:20px;
 			}
 		}
 		&.banner {
@@ -1081,7 +1085,7 @@ a.btn {
 					@include ellipse(1);
 				}
 				.figure {
-					padding-bottom: 45.9%;
+					padding-bottom: 50.6%;
 					img {
 						top:45%;
 						max-width: 40%;
@@ -1091,6 +1095,9 @@ a.btn {
 			}
 			&:not(._full) {
 				margin-left:0;
+				.figure {
+					padding-bottom: 85.0%;
+				}
 				&:nth-of-type(2n-1) {
 					margin-left: 4px;
 				}
@@ -1098,29 +1105,56 @@ a.btn {
 			&:nth-of-type(2n-1) {
 				clear:none;
 			}
+			@media screen and (max-width: 375px) {
+				&._full {
+					.figure {
+						padding-bottom: 51.7%;
+					}
+				}
+				&:not(._full) {
+					.figure {
+						padding-bottom: 83.3%;
+					}
+				}
+			}
+			@media screen and (max-width: 361px) {
+				&._full {
+					.figure {
+						padding-bottom: 52.0%;
+					}
+				}
+				&:not(._full) {
+					.figure {
+						padding-bottom: 83.3%;
+					}
+				}
+			}
 			@media screen and (min-width: 768px) {
 				&._full {
 					.figure {
-						padding-bottom: 43.22%;
+						padding-bottom: 46.22%;
 					}
 				}
-				.figure {
-					padding-bottom: 83.0%;
+				&:not(._full) {
+					.figure {
+						padding-bottom: 83.3%;
+					}
 				}
 			}
 			@media screen and (min-width: 1024px) {
 				&._full {
 					.figure {
-						padding-bottom: 42.9%;
+						padding-bottom: 45.1%;
 					}
 				}
 			}
 		}
 	}
 	.info {
-		margin-top:15px;
+		margin-bottom:20px;
 		display: inline-block;
 		height:95px;
+		padding:0 25px;
 	}
 	.name {
 		display: inline-block;
@@ -1173,6 +1207,9 @@ a.btn {
 						height:26px;
 						background-size:26px;
 					}
+				}
+				img {
+					padding:0;
 				}
 			}
 			.info {
@@ -1634,60 +1671,31 @@ a.btn {
 	shop/detail.html : .prdkv_wrap .soldout
 
 ****************************************/
+.status-txt {
+	display: none;
+}
 .soldout {
-	z-index: 9;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	border: 1px solid green;
-	&::after {
-		z-index: inherit;
-		content: '일시품절';
+	.status-txt {
 		position: absolute;
-		border: 1px solid blue;
-		top: 25%;
-		left: 50%;
-		transform: translateX(-50%);
-		text-align: center;
-		font-size: inherit;
-		font-weight: 700;
-	}
-	.soldout-container {
-		z-index: 9;
-		border: 1px solid red;
-		position: absolute;
-		left: 0;
+		top:0;
+		left:0;
 		right: 0;
+		width:100%;
+		height:100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(245,247,248, .6);
+		z-index: 9;
 		text-align: center;
-		padding-bottom: 66%;
-		background-color: #F5F7F8;
-		opacity: .6;
 		span {
-			z-index: inherit;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			display: block;
+			font-weight: 700;
 		}
 	}
 }
-
-
-.order_list .soldout {
-	position: relative;
-	&::after {
-		z-index: inherit;
-    content: '일시품절'!important;
-		position: absolute;
-		top: unset;
-		bottom: unset;
-		left: unset;
-		right: unset;
-		transform: none;
-	}
-	.soldout-container {
-		padding-bottom: 40%;
+.cart_list, .order_list {
+	.status-txt {
+		border-radius: 20px;
 	}
 }

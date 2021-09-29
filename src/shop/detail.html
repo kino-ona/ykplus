@@ -24,11 +24,6 @@
 		<div class="shop_wrap contents_top">
 			<div class="prdmain_sec"> 
 				<div class="prdkv_wrap">
-					<!-- 20210928 soldout 추가 -->
-					<div class="soldout">
-						<span class="soldout-txt">일시품절</span>
-					</div>
-					<!--// 20210928 soldout 추가 -->
 					<div id="product-swipe" class="swiper-container">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
@@ -272,8 +267,8 @@
 								</div>
 								<div id="Recmmd1_Swipe" class="row swiper-container">
 									<div class="swiper-wrapper">
-										<div class="swiper-slide"><a href="#">
-											<p class="img"><img src="../assets/images/dummy/dummy01.png" alt="하기스 네이처메이드"></p>
+										<div class="swiper-slide soldout"><a href="#"> <!-- 20210928 soldout 케이스 //-->
+											<p class="img"><span class="status-txt"><span>품절</span></span> <!-- 20210928 soldout 케이스 //--><img src="../assets/images/dummy/dummy01.png" alt="하기스 네이처메이드"></p>
 											<p class="prd_name">스타일 언더웨어 라이프 여성 중대형 9매(EA)</p>
 											<div class="price">
 												<div>
@@ -668,8 +663,9 @@
 		<div class="fixed_bottom detail-bottom">
 			<div class="fixed_btn fixed-like"><a href="#" onclick="openLayer('#thisLike_popup');" class="btn manual_fn"><i class="ic-25 ic_like"></i><span class="a11y">좋아요</span></a></div>
 			<!-- <div class="fixed_btn fixed-like"><a href="#" onclick="openLayer('#thisLike_popup');" class="btn manual_fn"><i class="ic-25 ic_like-on"></i><span class="a11y">좋아요</span></a></div> -->
-			<div class="fixed_btn"><a href="#" onclick="openLayer('#cartCheck_popup')" class="btn gray-btn">장바구니</a></div>
-			<div class="fixed_btn"><a href="#" onclick="openFixedBottom('#buy_popup')" class="btn blue-btn">바로구매</a></div>
+			<!-- <div class="fixed_btn"><a href="#" onclick="openLayer('#cartCheck_popup')" class="btn gray-btn">장바구니</a></div>
+			<div class="fixed_btn"><a href="#" onclick="openFixedBottom('#buy_popup')" class="btn blue-btn">바로구매</a></div> -->
+			<div class="fixed_btn full"><button class="btn" disabled>일시품절</button></div>  <!-- 20210928 soldout 케이스 //-->
 		</div>
 	</div>
 	<!--// contents body -->

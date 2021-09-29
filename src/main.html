@@ -457,9 +457,9 @@
 				<div class="swiper-wrapper">
 					<!-- loop : in max 4 items -->
 					<div class="swiper-slide item_list">
-						<div class="item">
+						<div class="item soldout">
 							<a href="#"><div class="row">
-								<p class="figure"><img src="./assets/images/dummy/product_thumn01.png"></p>
+								<p class="figure"><span class="status-txt"><span>일시품절</span></span>  <!-- 20210928 soldout 케이스 //--><img src="./assets/images/dummy/product_thumn01.png"></p>
 								<div class="item_conts">
 									<p class="name">디펜드 스타일 언더웨어 여성패드 참숯 중용량</p>
 									<p class="price">
@@ -631,6 +631,11 @@
 		slidesPerView: 1.25,
 		speed: 400,
 		spaceBetween: 10,
+		breakpoints: {
+			768: {
+				slidesPerView: 2.45,
+			}
+		}
 	});
 
 	// 오늘의 추천 스와이프

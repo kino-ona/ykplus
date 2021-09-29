@@ -754,8 +754,10 @@
 		}
 	}
 	.thumb {
+		position:relative;
 		float:left;
-		width:102px;
+		width: 90px;
+		margin-right:12px;
 		> p {
 			width: 90px;
 			padding:15px;
