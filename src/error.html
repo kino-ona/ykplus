@@ -3,9 +3,8 @@
 <head>
 	@@include('./inc/pagehead.inc',{
 		"pagetitle":"",
-		"webroot":".."
+		"webroot":"."
 	})
-	<link rel="stylesheet" href="../assets/css/main.css"/>
 </head>
 <body>
 	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
@@ -22,7 +21,7 @@
 	<!-- contents body -->
 	<div class="contents_body">
 		
-		<div class="page404">
+		<div class="err-page">
 			<div class="empty_data _full">
         <div>
           <i class="mark"></i>불편을 드려 죄송합니다.<br>이 페이지를 표시할 수 없습니다.
@@ -40,7 +39,7 @@
   
 	<!-- footer -->
 	@@include('./inc/footer.inc',{
-		"webroot":"..",
+		"webroot":".",
 		"footer": {
 			"visibles":"hide"
 		},

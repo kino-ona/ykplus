@@ -551,14 +551,14 @@
 	<!--// contents body -->
 
   <!-- 네트워크 오류 팝업 -->
-  <div class="overlay-popup alert-layer" role="dialog" id="alert-layer01" aria-labelledby="alert01-opener" aria-modal="true" style="display: block;">
+  <div class="overlay-popup alert-layer" role="dialog" id="error-layer01" aria-labelledby="error01-opener" aria-modal="true">
     <div class="contents">
       <div class="inner">
         <p>네트워크 오류</p>
         <p class="desc">네트워크 상태가 불안합니다. <br>연결 상태를 확인하시고 재시도해주세요.</p>
       </div>
       <div class="btn_wrap">
-        <a href="#" onclick="closeLayer('#alert-layer01');return false;" class="btn primary">확인</a>
+        <a href="#" onclick="closeLayer('#error-layer01');return false;" class="btn primary">확인</a>
       </div>
     </div>
     <div class="overlay-dimmed"></div>
@@ -566,14 +566,14 @@
   <!--// 네트워크 오류 팝업 -->
 
   <!-- 서버 오류 팝업 -->
-  <div class="overlay-popup alert-layer" role="dialog" id="alert-layer02" aria-labelledby="alert02-opener" aria-modal="true" style="display: block;">
+  <div class="overlay-popup alert-layer" role="dialog" id="error-layer02" aria-labelledby="error02-opener" aria-modal="true">
     <div class="contents">
       <div class="inner">
         <p>서버 오류</p>
         <p class="desc">문제가 발생했습니다. <br>잠시 후 재시도해주세요.</p>
       </div>
       <div class="btn_wrap">
-        <a href="#" onclick="closeLayer('#alert-layer02');return false;" class="btn primary">확인</a>
+        <a href="#" onclick="closeLayer('#error-layer02');return false;" class="btn primary">확인</a>
       </div>
     </div>
     <div class="overlay-dimmed"></div>
@@ -593,6 +593,9 @@
 	<!-- //footer -->
 </body>
 <script>
+	// openLayer('#error-layer01'); // 네트워크오류 팝업
+	// openLayer('#error-layer02'); // 서버오류 팝업
+
 	// 키비주얼 스와이프
 	var swiper = new Swiper('#Shop_kvSwipe', {
 		slidesPerView: 1,
