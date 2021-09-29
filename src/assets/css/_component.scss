@@ -1625,3 +1625,69 @@ a.btn {
 		}
 	}
 }
+
+/** Soldout 
+
+					  *.html : .item.soldout
+	shop/basket.html : .cart_list .item > div.soldout
+
+	shop/detail.html : .prdkv_wrap .soldout
+
+****************************************/
+.soldout {
+	z-index: 9;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 1px solid green;
+	&::after {
+		z-index: inherit;
+		content: '일시품절';
+		position: absolute;
+		border: 1px solid blue;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		font-size: inherit;
+		font-weight: 700;
+	}
+	.soldout-container {
+		z-index: 9;
+		border: 1px solid red;
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+		padding-bottom: 66%;
+		background-color: #F5F7F8;
+		opacity: .6;
+		span {
+			z-index: inherit;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+
+.order_list .soldout {
+	position: relative;
+	&::after {
+		z-index: inherit;
+    content: '일시품절'!important;
+		position: absolute;
+		top: unset;
+		bottom: unset;
+		left: unset;
+		right: unset;
+		transform: none;
+	}
+	.soldout-container {
+		padding-bottom: 40%;
+	}
+}
