@@ -14,23 +14,27 @@
 		"headtype": {
 			"layout":"orderhead"
 		},
-		"subtitle":"샘플 신청하기"
+		"subtitle":"샘플 신청"
 	})
 	<!-- //header -->
 
 	<!-- contents body -->
   <div class="contents_body">
-    <div class="brand_wrap _sample">
+    <div class="brand_wrap _sample _01">
       <div class="note_sec">
         <div class="note">전화 신청은 <a href="tel:080-554-5959">080-554-5959</a>로 연락주세요</div>
       </div>
+      <!-- 20210930 문구 및 마크업 수정 -->
       <div class="subtop_sec">
         <h2>디펜드 무료 샘플 신청</h2>
-        <p>설문에 참여해 주시면 적합한 상품을 <br>발송해 드립니다</p>
+        <p>샘플로 먼저 체험해 보세요!</p>
+        <!--// 20210930 문구 및 마크업 수정 -->
+        <!-- 20210930 삭제 
         <div class="pagi_phrase">
           <p class="active"><span>Step 1</span>정보입력</p> <i class="right"></i>
           <p><span>2</span>주소입력</p>
         </div>
+        // 20210930 삭제 -->
       </div>
 
       <div class="sampleq1 radioselectwrap" id="sampleq1">
@@ -244,6 +248,54 @@
           </ul>
         </div>
       </div>
+
+      <!-- 20210930 주관식 항목 추가 -->
+      <div class="sampleq8 radioselectwrap" id="sampleq8">
+        <div>
+          <div class="radiotitle"><span>08</span><p>주관식이 있을 경우의 질문입니다.</p></div>
+          <ul>
+            <li class="frm_field">
+              <textarea placeholder="내용을 입력해 주세요."></textarea>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sampleq9 radioselectwrap" id="sampleq9">
+        <div>
+          <div class="radiotitle"><span>09</span><p>기타 선택 후 주관식일 경우</p></div>
+          <ul>
+            <li class="">
+              <label data-pay-tab="선택 1" class="checked">
+                <span>선택 1</span>
+                <input type="radio" name="samplea8" form="sample_form" value="선택 1" checked="checked">
+              </label>
+            </li>
+            <li class="">
+              <label data-pay-tab="선택 2">
+                <span>선택 2</span>
+                <input type="radio" name="samplea8" form="sample_form" value="선택 2">
+              </label>
+            </li>
+            <li class="">
+              <label data-pay-tab="선택 3" class="checked">
+                <span>선택 3</span>
+                <input type="radio" name="samplea8" form="sample_form" value="선택 3" checked="checked">
+              </label>
+            </li>
+            <li class="">
+              <label data-pay-tab="기타">
+                <span>기타</span>
+                <input type="radio" name="samplea8" form="sample_form" value="기타">
+              </label>
+            </li>
+            <li class="frm_field">
+              <textarea placeholder="내용을 입력해 주세요."></textarea>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--// 20210930 주관식 항목 추가 -->
 
       <div class="btn_wrap _foo">
 				<a href="sample_step02.html" class="btn secondary blue-btn">다음</a>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"샘플 신청"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <div class="brand_wrap _sample _03">
+      <div class="subtop_sec">
+        <div class="mark"></div>
+        <p class="tit">샘플신청이 완료되었습니다.</p>
+        <p>최소 하루 ~ 1주일 이내 택배로 샘플이 발송될 예정입니다.
+          <span>기존에 샘플신청을 하신 고객님께는 샘플 발송이 
+            되지 않습니다.</span>
+        </p>
+        <div class="tel">
+          발송 및 제품 구매문의는 <br>
+          언제든지 <a href="tel:080-554-5959">080.554.5959</a>로 문의해 주세요.
+        </div>
+      </div>
+
+      <div class="btn_wrap _foo">
+				<a href="#" class="btn secondary blue-btn">메인으로</a>
+			</div>
+    </div>
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>

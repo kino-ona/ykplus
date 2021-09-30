@@ -14,24 +14,33 @@
 		"headtype": {
 			"layout":"orderhead"
 		},
-		"subtitle":"샘플 신청하기"
+		"subtitle":"샘플 신청"
 	})
 	<!-- //header -->
 
 	<!-- contents body -->
   <div class="contents_body">
-    <div class="brand_wrap _sample">
-      <div class="note_sec">
+    <div class="brand_wrap _sample _02">
+      <!-- 20210930 삭제 
+			<div class="note_sec">
         <div class="note">전화 신청은 <a href="tel:080-554-5959">080-554-5959</a>로 연락주세요</div>
-      </div>
+      </div> 
+			//20210930 삭제 -->
+			<!-- 20210930 수정 -->
       <div class="subtop_sec">
-        <h2>디펜드 무료 샘플 신청</h2>
-        <p>설문에 참여해 주시면 적합한 상품을 <br>발송해 드립니다</p>
-        <div class="pagi_phrase">
-          <p><span>Step 1</span>정보입력</p> <i class="right"></i>
-          <p class="active"><span>2</span>주소입력</p>
-        </div>
+				<p class="tit">추천샘플</p>
+				<div class="subtop_wrap">
+					<p class="figure"><img src="../assets/images/dummy/product_thumn03.png"></p>
+					<div class="tit_wrap">
+						<h3>슬림 체험 키트[남성/중형]</h3>
+						<p class="desc">외출 시 자신감을 살려주고 옷맵시는 매끈하게 만들어주는 디펜드 스타일 언더웨어 슬림을 추천합니다.</p>
+					</div>
+					<div class="pagi_phrase">
+						<div><span>구성</span>디펜드 스타일 언더웨어 라이트 핏 슬림 중형 1매 + 디펜드 스타일 남성용 패드 1매</div>
+					</div>
+				</div>
       </div>
+			<!--// 20210930 수정 -->
 				
 			<div class="shipping_info">
 				<!-- 210917 라디오 버튼 영역 삭제 
@@ -44,6 +53,9 @@
 				<dl class="vertical">
 					<dd><input type="text"></dd>
 				</dl> -->
+				<!-- 20210930 추가 -->
+				<p class="tit">받으시는 분의 정보를 <br>입력해주세요.</p>
+				<!--// 20210930 추가 -->
 				<dl class="vertical">
 					<dt>이름</dt>
 					<dd><input type="text" placeholder="이름을 입력해주세요."></dd>
@@ -53,7 +65,9 @@
 					<dd><input type="text" placeholder="20150101"></dd>
 				</dl>
 				<dl class="vertical">
-					<dt>핸드폰</dt>
+					<!-- 20210930 수정 -->
+					<dt>연락처</dt>
+					<!--// 20210930 수정 -->
 					<dd class="frm_mix">
 						<select>
 							<option>010</option>
@@ -77,14 +91,16 @@
 				</dl>
 			</div>
 			<div class="privacy_agree">
-				<p class="title">개인정보 보호 이용 동의서</p>
+				<!-- 20210930 자세히보기 -->
+				<p class="title">개인정보 보호 이용 동의서 <i>자세히보기</i></p>
+				<!--// 20210930 자세히보기 -->
 				<p class="radiowrap"><input type="radio" name="privacy_agree" id="privacy0" checked="checked"><label for="privacy0">동의안함</label></p>
 				<p class="radiowrap"><input type="radio" name="privacy_agree" id="privacy1"><label for="privacy1">동의</label></p>
 			</div>
       
       <div class="btn_wrap _foo">
 				<!-- 210917 버튼 순서 -->
-				<a href="#" class="btn secondary blue-btn">샘플 신청하기</a>
+				<a href="sample_step03.html" class="btn secondary blue-btn">샘플 신청하기</a>
 				<a href="#" class="btn secondary gray-btn">취소</a>
 				<!--// 210917 버튼 순서 -->
 			</div>
