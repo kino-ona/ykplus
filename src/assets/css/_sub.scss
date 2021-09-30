@@ -1936,7 +1936,7 @@
 .talk_wrap, .info_wrap {
 	height: 100%;
 	min-height: 100%;
-	padding-bottom: 30%;
+	padding-bottom: 45%;
 	.row {
 		display: block;
 	}
@@ -3129,7 +3129,7 @@
 				}
 			}
 		}
-		&._01 {
+		&.step_01 {
 			background-color: #F6F6F6;
 			.subtop_sec {
 				background-color: #fff;
@@ -3137,7 +3137,7 @@
 				border-bottom: 1px solid #E5E5E5;
 			}
 		}
-		&._02 {
+		&.step_02 {
 			background-color: #E5F1FC;
 			.subtop_sec {
 				border-top: 1px solid #E5E5E5;
@@ -3149,7 +3149,7 @@
 				}
 			}
 			.tit {
-				margin-top: 20px;
+				margin-top: 10px;
 				font-size: 20px;
 				line-height: 1.5;
 				font-weight: 700;
@@ -3175,7 +3175,7 @@
 				}
 			}
 		}
-		&._03 {
+		&.step_03 {
 			text-align: center;
 			background-color: #fff;
 			.mark {
@@ -3256,7 +3256,8 @@
 					padding-top: 8px;
 					display: inline-block;
 					position: relative;
-					width: 49.0%;
+					width:calc(50% - 5px);
+					margin-right:5px;
 					text-align: center;
 					vertical-align: top;
 					&:before {
@@ -3268,9 +3269,7 @@
 						background-color:#999;
 					}
 					&:nth-child(2n) {
-						label {
-							margin-right:0;
-						}
+						margin-right:0;
 					}
 					&.full {
 						width: 100%;
@@ -3279,7 +3278,6 @@
 				}
 				label {
 					display: block;
-					margin-right:5px;
 					border:1px solid #E5E5E5;
 					border-radius: 6px;
 					background-color: #fff;
@@ -3289,7 +3287,7 @@
 					}
 					> span {
 						display: block;
-						padding: 15px 20px;
+						padding: 15px 20px 13px;
 						font-size:15px;
 						line-height:1.333;
 						color:#666;
@@ -3297,7 +3295,7 @@
 					&.checked {
 						border:2px solid #009AFF;
 						> span {
-							padding: 14px 19px;
+							padding: 14px 19px 12px;
 							font-weight: 700;
 							color:#000;
 						}
@@ -3342,17 +3340,19 @@
 					margin-top:10px;
 				}
 			}
+			.btn_wrap._foo {
+				padding-left:0;
+				padding-right:0;
+			}
 		}
 		.privacy_agree {
 			padding-top: 10px;
-			padding-left: 20px;
-			padding-right: 20px;
 			background-color: #fff;
 			.title {
 				position: relative;
 				font-weight: 700;
 				margin-bottom: 22px;
-				i {
+				.btn-agr {
 					cursor: pointer;
 					position: absolute;
 					right: 0;
@@ -3360,6 +3360,7 @@
 					transform: translateY(-50%);
 					font-style: normal;
 					font-size: 13px;
+					color:#666666;
 					text-decoration: underline;
 				}
 			}
@@ -3417,8 +3418,7 @@
 		.btn_wrap._foo {
 			margin: 0;
 			padding-top: 30px;
-			padding-bottom: 30px;
-			background-color: #fff;
+			padding-bottom: 40px;
 			a {
 				font-weight: 700;
 			}
@@ -3872,6 +3872,30 @@
 	.banner._full {
 		border-top: 8px solid #F5F7F8;
 		text-align: center;
+	}
+}
+.personalagr_popup {
+	.terms_dl {
+		margin-bottom:30px;
+		dt {
+			margin-bottom:10px;
+			font-weight: 700;
+		}
+		dd {
+			font-size:13px;
+			color:#666666;
+		}
+		.help_list {
+			li {
+				padding-top:1px;
+				&:before {
+					top:7px;
+				}
+				&:first-of-type {
+					padding-top:0;
+				}
+			}
+		}
 	}
 }
 

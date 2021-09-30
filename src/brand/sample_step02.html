@@ -20,7 +20,7 @@
 
 	<!-- contents body -->
   <div class="contents_body">
-    <div class="brand_wrap _sample _02">
+    <div class="brand_wrap _sample step_02">
       <!-- 20210930 삭제 
 			<div class="note_sec">
         <div class="note">전화 신청은 <a href="tel:080-554-5959">080-554-5959</a>로 연락주세요</div>
@@ -36,7 +36,7 @@
 						<p class="desc">외출 시 자신감을 살려주고 옷맵시는 매끈하게 만들어주는 디펜드 스타일 언더웨어 슬림을 추천합니다.</p>
 					</div>
 					<div class="pagi_phrase">
-						<div><span>구성</span>디펜드 스타일 언더웨어 라이트 핏 슬림 중형 1매 + 디펜드 스타일 남성용 패드 1매</div>
+						<div><span>구성</span>디펜드 스타일 언더웨어 라이트 핏 슬림 중형 1매<br>+ 디펜드 스타일 남성용 패드 1매</div>
 					</div>
 				</div>
       </div>
@@ -89,20 +89,23 @@
 						<p><input type="text" name="address2" placeholder="상세 주소를 입력해주세요." value=""></p>
 					</dd>
 				</dl>
-			</div>
-			<div class="privacy_agree">
-				<!-- 20210930 자세히보기 -->
-				<p class="title">개인정보 보호 이용 동의서 <i>자세히보기</i></p>
-				<!--// 20210930 자세히보기 -->
-				<p class="radiowrap"><input type="radio" name="privacy_agree" id="privacy0" checked="checked"><label for="privacy0">동의안함</label></p>
-				<p class="radiowrap"><input type="radio" name="privacy_agree" id="privacy1"><label for="privacy1">동의</label></p>
-			</div>
-      
-      <div class="btn_wrap _foo">
-				<!-- 210917 버튼 순서 -->
-				<a href="sample_step03.html" class="btn secondary blue-btn">샘플 신청하기</a>
-				<a href="#" class="btn secondary gray-btn">취소</a>
-				<!--// 210917 버튼 순서 -->
+
+				<div class="privacy_agree">
+					<!-- 20210930 자세히보기 -->
+					<p class="title">개인정보 보호 이용 동의서 
+						<button aria-haspopup="dialog" aria-controls="personalagr_popup"  id="personalagr-opener" aria-pressed="false" class="btn-agr">자세히보기</button>
+					</p>
+					<!--// 20210930 자세히보기 -->
+					<p class="radiowrap"><input type="radio" name="privacy_agree" id="privacy0" checked="checked"><label for="privacy0">동의</label></p>
+					<p class="radiowrap"><input type="radio" name="privacy_agree" id="privacy1"><label for="privacy1">동의안함</label></p>
+				</div>
+				
+				<div class="btn_wrap _foo">
+					<!-- 210917 버튼 순서 -->
+					<a href="sample_step03.html" class="btn secondary blue-btn">샘플 신청하기</a>
+					<a href="#" class="btn secondary gray-btn">취소</a>
+					<!--// 210917 버튼 순서 -->
+				</div>
 			</div>
 
 			<!-- 210917 하단 문구 삭제
@@ -112,6 +115,42 @@
       </div>
 			-->
     </div>
+
+		<div class="overlay-popup personalagr_popup" role="dialog" id="personalagr_popup" aria-labelledby="personalagr-opener" aria-modal="true">
+			<div class="contents">
+				<div class="heading">
+					개인정보 수집 및 이용에 대한 동의 <button class="btn_close"><i></i></button>
+				</div>
+				<div class="inner">
+					<dl class="terms_dl">
+						<dt>개인정보의 수집 및 이용목적</dt>
+						<dd>샘플상품 배송의 서비스 이행을 위한 정보수집 및 고객만족도 조사, 제품 과련 문의에 대한 안내</dd>
+					</dl>
+					<dl class="terms_dl">
+						<dt>수집하는 개인정보의 항목</dt>
+						<dd>받으시는 분의 성명, 생년월일, 연락처, 우편번호, 주소 및 샘플 종류(성별 등)</dd>
+					</dl>
+					<dl class="terms_dl">
+						<dt>개인정보 보유 및 이용기간</dt>
+						<dd>샘플 배송 완료 후 1년간(단, 관련법령에 따라 보존의무가 있는 경우 해당기간 동안 안전하게 보관합니다.)</dd>
+					</dl>
+					<dl class="terms_dl">
+						<dt>수집한 개인정보의 위탁</dt>
+						<dd>
+							<ul class="help_list">
+								<li>샘플 신청 접수 업무 : 신텍정보시스템, 금강오길비</li>
+								<li>샘플 발송 업무: 그린기획</li>
+								<li>만족도 조사 및 고객 민원 처리: 효성 ITX</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" onclick="closeLayer('#personalagr_popup');" class="btn primary">확인</a>
+				</div>
+			</div>
+			<div class="overlay-dimmed"></div>
+		</div>
 
 	</div>
 	<!--// contents body -->
