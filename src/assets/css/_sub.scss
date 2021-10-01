@@ -2144,9 +2144,9 @@
 		.item {
 			border-top: 1px solid #F0F0F0;
 			padding: 20px;
-			&:first-of-type {
-				border: none;
-			}
+			// &:first-of-type {
+			// 	border: none;
+			// }
 			&_depth01 {
 				margin-top: 18px;
 				border-left: 2px solid #E5E5E5;
@@ -2228,7 +2228,11 @@
 				padding: 0;
 			}
 			.panel {
+				display: block;
 				padding: 0;
+				&.hide {
+					display: none;
+				}
 			}
 			.more {
 				width: 100%;
@@ -2247,28 +2251,43 @@
 					i::before {
 						margin-left: 6px;
 						border-color: #999;
-						transform: translate(-50%, -100%) rotate(-45deg);
+						transform: translate(-50%, -50%) rotate(135deg);
 					}
 					> span:not([data-status="expanded"]) {
-						display: inline-block;
-					}
-					> span[data-status="expanded"] {
 						display: none;
 					}
-				}
-				&[data-status="expanded"] {
-					.btn_all {
+					> span[data-status="expanded"] {
+						display: inline-block;
+						margin-right:5px;
+					}
+					
+					&.hide {
 						i::before {
-							transform: translate(-50%, -50%) rotate(135deg);
+							margin-left: 6px;
+							border-color: #999;
+							transform: translate(-50%, -100%) rotate(-45deg);
 						}
 						> span:not([data-status="expanded"]) {
-							display: none;
+							display: inline-block;
 						}
 						> span[data-status="expanded"] {
-							display: inline-block;
+							display: none;
 						}
 					}
 				}
+				// &[data-status="expanded"] {
+				// 	.btn_all {
+				// 		i::before {
+				// 			transform: translate(-50%, -50%) rotate(135deg);
+				// 		}
+				// 		> span:not([data-status="expanded"]) {
+				// 			display: none;
+				// 		}
+				// 		> span[data-status="expanded"] {
+				// 			display: inline-block;
+				// 		}
+				// 	}
+				// }
 			}
 		}
 	}

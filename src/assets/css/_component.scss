@@ -207,7 +207,17 @@ a.btn {
 		}
 	}
 }
-
+.btn-scrap {
+	color: #999;
+	font-size: 12px;
+	font-weight: 700;
+	&.--active {
+		color:#009AFF;
+		i {
+			background-image:url(../images/icons/ic_data-scrapblue.png);
+		}
+	}
+}
 .more {
 	display: flex;
 	p {
@@ -223,14 +233,13 @@ a.btn {
 	i {
 		background-position:center top -2px;
 	}
-	/* 210923 스크랩 추가 s */
 	.btn-scrap {
 		margin-left: auto;
 		i {
 			background-position:center top -1px;
 		}
+		
 	}
-	/* 210923 스크랩 추가 e */
 	.cnt {
 		margin-left:4px;
 		color:inherit;
@@ -1691,5 +1700,40 @@ a.btn {
 .cart_list, .order_list {
 	.status-txt {
 		border-radius: 20px;
+	}
+}
+// loading
+.loadingBox {
+	display: none;
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	&.show {
+		display: flex;
+	}
+	.circle {
+		width:80px;
+		height:80px;
+		background: {
+			image: url(../images/common/loading.png);
+			size:cover;
+			position:center center;
+			repeat:no-repeat;
+		}
+		-webkit-animation: spinCircle 2s infinite linear;
+	}
+	@keyframes spinCircle {
+    from {
+			transform:translate(-50%, -50%) rotate(0);
+    }
+    to {
+			transform:translate(-50%, -50%) rotate(360deg);
+    }
 	}
 }
