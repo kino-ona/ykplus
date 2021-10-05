@@ -787,3 +787,47 @@
     }
   }
 }
+
+.my-manage_list {
+  .item {
+    padding: 20px 0;
+    background-color: #fff; 
+    border-bottom: 1px solid #E5E5E5;
+  }
+  .item-cont {
+    padding: 0 20px;
+  }
+  .item-tit {
+    position: relative;
+    color: #009AFF;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .btn_edit {
+    margin-top: 0;
+    color: #999;
+    font-size: 13px;
+  }
+  .title {
+    font-weight: 700;
+    margin-bottom: 12px;
+    @include ellipse(1);
+  }
+  .date {
+    font-family: 'roboto';
+    color: #999;
+    font-size: 13px;
+    .posting {
+      font-family: 'NanumSquareRound';
+      color: #999;
+      font-size: 12px;
+      line-height: inherit;
+      font-weight: 700;
+      vertical-align: baseline;
+      border-right: 1px solid #D8DBDD;
+      padding-right: 6px;
+      margin-right: 6px;
+    }
+  }
+}
