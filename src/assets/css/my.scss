@@ -100,10 +100,14 @@
 		padding-right: 16px;
 		color: #999;
 		vertical-align: bottom;
+    span {
+      font-family: inherit;
+      color: inherit;
+      font-weight: inherit;
+    }
     &.active {
       span {
         color: #009AFF;
-        font-weight: inherit;
       }
     }
 	}
@@ -196,6 +200,206 @@
 			}
 		}
 	}
+}
+
+.my-main {
+  border-top: 1px solid #E5E5E5;
+  section {
+    border-top: 8px solid #F5F7F8;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 20px;
+    &:first-of-type {
+      border-top: 0;
+    }
+    &:last-of-type {
+      padding-bottom: 40px;
+      border-bottom: 0;
+    }
+  }  
+  .myinfo {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    li {
+      flex: 1;
+      border-right: 1px dotted #999;
+      border-color: rgba(153, 153, 153, .5);
+      &:last-of-type {
+        border: 0;
+      }
+      > a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #666;
+        font-size: 12px;
+        span {
+          display: block;
+          font-family: "roboto";
+          color: #000;
+          font-size: 16px;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .row {
+    > .img {
+      flex: 1;
+      img {
+        border-radius: 50%;
+        width: 100%;
+      }
+    }
+  }
+  //****************************************/
+  .sec_myprofile {
+    .img {
+      max-width: 125px;
+    }
+    h2 {
+			position: relative;
+      flex: 4;
+      margin-left: 4%;
+			> span {
+				display: block;
+				font-size: 18px;
+        font-weight: 700;
+        span {
+          margin-top: 8px;
+          display: block;
+          color: #999;
+          font-size: 13px;
+          font-weight: inherit;
+        }
+			}
+			i {
+				font-style: normal;
+				color: inherit;
+				font-size: inherit;
+				font-weight: inherit;
+			}	
+		}
+  } 
+  .sec_myshipping {
+    .title {
+      position: relative;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .btn_all {
+      color: #000;
+      font-size: 15px;
+      font-weight: 800;
+      i {
+        margin-left: 6px;
+      }
+    }
+    .myshipping {
+      border: 1px solid #E5E5E5;
+      border-radius: 8px;
+    }
+    .myinfo {
+      padding: 18px 0;
+      margin-bottom: 0;
+      li {
+        flex: 1;
+        border-right: 1px dotted #999;
+        border-color: rgba(153, 153, 153, .5);
+        &:last-of-type {
+          border: 0;
+        }
+        &.shipping_done {
+          > a span {
+            color: #999;
+          }
+        }
+        > a span {
+          font-size: 22px;
+        }
+      }
+    }
+    .myhistory {
+      border-top: 1px solid #E5E5E5;
+      display: flex;
+      padding: 14px 0 12px;
+      background-color: #F5F7F8;
+      overflow: hidden;
+      li {
+        flex: 1;
+        align-self: center;
+        font-size: 13px;
+        line-height: 26px;
+        font-weight: 700;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        span {
+          margin-left: 6px;
+          display: inline-block;
+          color: #009AFF;
+          font-family: 'roboto';
+          font-size: 15px;
+          font-weight: inherit;
+        }
+        &:not(:last-of-type) {
+          border-right: 1px solid #E5E5E5;
+        }
+      }
+    }
+  }
+  .sec_myacc, .sec_myshop {
+    padding: 0;
+  }
+  [class^="my-manage_"] {
+    padding: 20px;
+    border-bottom: 1px solid #F0F0F0;
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    .title {
+      position: relative;
+      font-weight: 700;
+    }
+  }
+  .sec_myprofile-edit {
+    .row {
+      max-width: 31.25%;
+      justify-content: center;
+      margin: 0 auto;
+      .img {
+        margin: 0 auto;
+      }
+      .btn_edit-pic {
+        bottom: 0;
+        right: 0;
+        width: 32%;
+        height: 32%;
+      }
+    }
+    .txtarea {
+      margin-top: 30px;
+      padding-top: 2px;
+      padding-bottom: 0;
+      padding-right: 60px;
+      textarea {
+        min-height: 36px;
+        height: 36px;
+        line-height: unset;
+        overflow-y: hidden;
+      }
+      .txcnt {
+        font-size: 13px;
+      }
+    }
+    > p {
+      margin-top: 30px;
+      text-align: center;
+      color: #666;
+      font-size: 13px;
+    }
+  }
 }
 
 .my-manage_reviews {
@@ -449,202 +653,137 @@
   }
 }
 
-.my-main {
-  border-top: 1px solid #E5E5E5;
-  section {
-    border-top: 8px solid #F5F7F8;
-    border-bottom: 1px solid #E5E5E5;
+.my-manage_coupons {
+  .my-coupon_topsec {
+    border-top: 1px solid #E5E5E5;
+    position: relative;
     padding: 20px;
-    &:first-of-type {
-      border-top: 0;
-    }
-    &:last-of-type {
-      padding-bottom: 40px;
-      border-bottom: 0;
-    }
-  }  
-  .myinfo {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-    li {
-      flex: 1;
-      border-right: 1px dotted #999;
-      border-color: rgba(153, 153, 153, .5);
-      &:last-of-type {
-        border: 0;
-      }
-      > a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        color: #666;
-        font-size: 12px;
-        span {
-          display: block;
-          font-family: "roboto";
-          color: #000;
-          font-size: 16px;
-          font-weight: 700;
-          margin-bottom: 10px;
-        }
-      }
-    }
-  }
-  .row {
-    > .img {
-      flex: 1;
-      img {
-        border-radius: 50%;
-        width: 100%;
-      }
-    }
-  }
-  //****************************************/
-  .sec_myprofile {
-    .img {
-      max-width: 125px;
-    }
-    h2 {
-			position: relative;
-      flex: 4;
-      margin-left: 4%;
-			> span {
-				display: block;
-				font-size: 18px;
-        font-weight: 700;
-        span {
-          margin-top: 8px;
-          display: block;
-          color: #999;
-          font-size: 13px;
-          font-weight: inherit;
-        }
-			}
-			i {
-				font-style: normal;
-				color: inherit;
-				font-size: inherit;
-				font-weight: inherit;
-			}	
-		}
-  } 
-  .sec_myshipping {
-    .title {
-      position: relative;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-    .btn_all {
-      color: #000;
-      font-size: 15px;
-      font-weight: 800;
-      i {
-        margin-left: 6px;
-      }
-    }
-    .myshipping {
-      border: 1px solid #E5E5E5;
-      border-radius: 8px;
-    }
-    .myinfo {
-      padding: 18px 0;
-      margin-bottom: 0;
-      li {
-        flex: 1;
-        border-right: 1px dotted #999;
-        border-color: rgba(153, 153, 153, .5);
-        &:last-of-type {
-          border: 0;
-        }
-        &.shipping_done {
-          > a span {
-            color: #999;
-          }
-        }
-        > a span {
-          font-size: 22px;
-        }
-      }
-    }
-    .myhistory {
-      border-top: 1px solid #E5E5E5;
-      display: flex;
-      padding: 14px 0 12px;
-      background-color: #F5F7F8;
-      overflow: hidden;
-      li {
-        flex: 1;
-        align-self: center;
-        font-size: 13px;
-        line-height: 26px;
-        font-weight: 700;
-        padding: 0 20px;
-        display: flex;
-        justify-content: space-between;
-        span {
-          margin-left: 6px;
-          display: inline-block;
-          color: #009AFF;
-          font-family: 'roboto';
-          font-size: 15px;
-          font-weight: inherit;
-        }
-        &:not(:last-of-type) {
-          border-right: 1px solid #E5E5E5;
-        }
-      }
-    }
-  }
-  .sec_myacc, .sec_myshop {
-    padding: 0;
-  }
-  [class^="my-manage_"] {
-    padding: 20px;
-    border-bottom: 1px solid #F0F0F0;
-    &:last-of-type {
-      border-bottom: 0;
+    &::after {
+      @extend %clearer;
     }
     .title {
-      position: relative;
       font-weight: 700;
-    }
-  }
-  .sec_myprofile-edit {
-    .row {
-      max-width: 31.25%;
-      justify-content: center;
-      margin: 0 auto;
-      .img {
-        margin: 0 auto;
-      }
-      .btn_edit-pic {
-        bottom: 0;
-        right: 0;
-        width: 32%;
-        height: 32%;
-      }
+      margin-bottom: 12px;
     }
     .txtarea {
-      margin-top: 30px;
       padding-top: 2px;
       padding-bottom: 0;
-      padding-right: 60px;
+      width: calc(100% - 66px);
+      float: left;
       textarea {
         min-height: 36px;
         height: 36px;
         line-height: unset;
         overflow-y: hidden;
       }
-      .txcnt {
-        font-size: 13px;
+    }
+    .btn {
+      float: right;
+      width: 60px;
+      height: 44px;
+      border-radius: 8px;
+      border-color: transparent;
+      background-color: #009AFF;
+      color: #fff;
+      line-height: 44px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .desc {
+      margin-top: 16px;
+      display: inline-block;
+      position: relative;
+      padding-left: 8px;
+      color: #999;
+      font-size: 13px;
+      line-height: 1.6;
+      &::before {
+        content: '·';
+        position: absolute;
+        left: 0;
       }
     }
-    > p {
-      margin-top: 30px;
-      text-align: center;
-      color: #666;
-      font-size: 13px;
+  }
+  .tablist {
+    border-top: 0;
+  }
+  .label {
+    padding: 7px 12px;
+    display: inline;
+    border-radius: initial;
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    vertical-align: text-bottom;
+    margin-right: 0;
+    background-color: #fff;
+    border: 1px solid #AAA;
+    border-radius: 20px;
+    vertical-align: baseline;
+  }
+  .pagination {
+    border: 0;
+    padding: 0;
+  }
+  .item {
+    background-color: #fff; 
+    border: 1px solid #E5E5E5;
+    margin: 20px;
+    border-radius: 8px;
+    .item-head {
+      display: flex;
+      padding: 10px 16px;
+      background-color: #F5F7F8;
+      overflow: hidden;
+      div {
+        flex: 1;
+        font-size: 13px;
+        line-height: 30px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .item-cont {
+      padding: 20px;
+      > span {
+        display: block;
+        color: #666;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+    }
+    .item-tit {
+      color: #009AFF;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      span {
+        color: inherit;
+        font-family: 'roboto';
+        font-size: 24px;
+        line-height: inherit;
+        font-weight: inherit;
+      }
+    }
+    .title {
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .desc {
+      margin-bottom: 12px;
+    }
+    .date { 
+      .label {
+        padding: 2px 7px;
+        margin-left: 4px;
+        color: #009AFF;
+        font-size: 10px;
+        border-color: #009AFF;
+      }
     }
   }
 }
