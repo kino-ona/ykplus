@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"리뷰작성",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"리뷰작성"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-manage_reviews">
+			<div class="my-review_topsec">
+				<i></i>(여성용) 스타일 언더웨어 라이트핏 슬림
+			</div>
+			<div class="my-scoring">
+				<p class="title">상품은 만족하셨나요?</p>
+				<div class="content_detail">
+          <ul class="orderscore_info">
+            <li>
+              <p class="tit">상품</p>
+              <div class="star_wrap">
+                <span class="star on"></span>
+                <span class="star on"></span>
+                <span class="star on"></span>
+                <span class="star on"></span>
+                <span class="star on"></span>
+              </div>
+              <span class="scoring">5</span>
+            </li>
+            <li>
+              <p class="tit">가격</p>
+              <div class="star_wrap">
+                <span class="star on"></span>
+                <span class="star on"></span>
+                <span class="star on"></span>
+                <span class="star off"></span>
+                <span class="star off"></span>
+              </div>
+              <span class="scoring">3</span>
+            </li>
+            <li>
+              <p class="tit">배송</p>
+              <div class="star_wrap">
+                <span class="star on"></span>
+                <span class="star on"></span>
+                <span class="star on"></span>
+                <span class="star on"></span>
+                <span class="star off"></span>
+              </div>
+              <span class="scoring">5</span>
+            </li>
+          </ul>
+				</div>
+			</div>
+			<div class="my-review">
+				<p class="title">후기를 작성해주세요</p>
+				<div class="content_detail review_message">
+          <div class="txtarea">
+            <textarea id="review_message" placeholder="작성해주신 내용을 기반으로 서비스/제품 개선 및 기타 목적으로 고객센터에서 연락을 드릴 수 있는 점 참고하시기 바랍니다."></textarea>
+            <p class="txcnt"><span>0</span> / 2,000</p>
+          </div>
+				</div>
+				<div class="btn_wrap">
+					<div class="row">
+						<button class="btn dashed"><i> </i> 사진/동영상 첨부</button>
+					</div>
+				</div>
+			</div>
+
+      <div class="fixed_bottom"> 
+        <div class="fixed_btn"><a href="#" class="btn blue-btn">등록</a></div>
+      </div>
+
+		</div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+  <script>
+    $(document).ready(function() {
+      $('#review_message').on('keyup', function() {
+        $('.txtarea .txcnt').html("<span>"+$(this).val().length+"</span> / 2,000");
+
+        if($(this).val().length > 2000) {
+          $(this).val($(this).val().substring(0, 2000));
+          $('.txtarea .txcnt').html("<span>2,000</span> / 2,000");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

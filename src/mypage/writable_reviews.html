@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"리뷰작성",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"작성 가능한 리뷰"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-manage_reviews">
+			<section class="section">
+				<div class="tab_wrap manualfn" id="CustMenu">
+					<ul class="tablist" role="tablist">
+						<li><a href="writable_reviews.html" class="tab active">작성 가능한 리뷰 <span>3</span></a></li>
+						<li><a href="written_reviews.html" class="tab">작성한 리뷰 <span>2</span></a></li>
+					</ul>
+					<div class="tab_contents">
+            <div class="tab_panel" role="tabpanel">
+              <div class="panel_inner">
+                <!-- 주문 상품 -->
+                <div class="order_info">
+                  <p class="title"><span>2021.09.05</span> 구매</p>
+                  <div class="content_detail">
+                    <div class="order_list">
+                      <div class="item">
+                        <div class="thumb" onclick="alert('lnk');"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+                        <div class="details">
+                          <p class="name">
+                            <a href="#">디펜드 스타일 언더웨어 여성패드 참숯 중용량</a>
+                          </p>
+                          <div class="btn_wrap">
+                            <a href="#" class="btn func-btn full">리뷰 작성</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--// 주문 상품 -->
+                <div class="order_info">
+                  <p class="title"><span>2021.09.05</span> 구매</p>
+                  <div class="content_detail">
+                    <div class="order_list">
+                      <div class="item">
+                        <div class="thumb" onclick="alert('lnk');"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+                        <div class="details">
+                          <p class="name">
+                            <a href="#">디펜드 스타일 언더웨어 여성패드 참숯 중용량</a>
+                          </p>
+                          <div class="btn_wrap">
+                            <a href="#" class="btn func-btn full">리뷰 작성</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order_info">
+                  <p class="title"><span>2021.09.05</span> 구매</p>
+                  <div class="content_detail">
+                    <div class="order_list">
+                      <div class="item">
+                        <div class="thumb" onclick="alert('lnk');"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+                        <div class="details">
+                          <p class="name">
+                            <a href="#">디펜드 스타일 언더웨어 여성패드 참숯 중용량</a>
+                          </p>
+                          <div class="btn_wrap">
+                            <a href="#" class="btn func-btn full">리뷰 작성</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+							<div class="btn_wrap">
+								<button class="btn primary">더 보기 <i class="down"></i></button>
+							</div>
+            </div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>

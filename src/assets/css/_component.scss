@@ -205,7 +205,25 @@ a.btn {
 			position: center center;
 			repeat: no-repeat;
 		}
-	}
+	}	
+  &.dashed {
+		border-radius: 8px;
+		border-color: #666;
+		border-style: dashed;
+    height: 50px;
+    padding: 15px 10px;
+		font-weight: 700;
+    i {    
+			padding: 15px;
+			margin: 0 8px 0 0;
+			background-size: 25px;
+      background-image: url(../images/icons/icon_pic.png);
+			background: {
+				repeat: no-repeat;
+				position: center center;
+			}
+    }
+  }
 }
 .btn-scrap {
 	color: #999;
