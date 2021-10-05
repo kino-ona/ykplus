@@ -365,17 +365,21 @@
   }
   .sec_myprofile-edit {
     .row {
-      max-width: 31.25%;
+      width: 31.25%;
+      max-width: 225px;
       justify-content: center;
       margin: 0 auto;
       .img {
         margin: 0 auto;
+        max-width: 225px;
       }
       .btn_edit-pic {
         bottom: 0;
         right: 0;
         width: 32%;
         height: 32%;
+        max-width: 50px;
+        max-height: 50px;
       }
     }
     .txtarea {
