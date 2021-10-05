@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"프로필 설정",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"프로필 설정"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-main">
+			<section class="sec_myprofile-edit">
+        <div class="row">
+          <p class="img"><img src="../assets/images/dummy/dummy_img01.png"><span class="a11y">사용자 프로필사진</span></p>
+          <button class="btn_edit-pic"> <i> </i></button>
+        </div>
+        <div class="txtarea">
+          <textarea id="edit_username" placeholder="닉네임을 입력해주세요!"></textarea>
+          <p class="txcnt"><span>0</span> / 10</p>
+        </div>
+        <p>상품평(리뷰), 댓글 작성시 노출됩니다.</p>
+			</section>
+      
+      <div class="fixed_bottom"> 
+        <div class="fixed_btn"><a href="#" class="btn blue-btn">저장</a></div>
+      </div>
+		</div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+  <script>
+    $(document).ready(function() {
+      $('#edit_username').on('keyup', function() {
+        $('.txtarea .txcnt').html("<span>"+$(this).val().length+"</span> / 10");
+  
+        if($(this).val().length > 10) {
+          $(this).val($(this).val().substring(0, 10));
+          $('.txtarea .txcnt').html("<span>10</span> / 10");
+        }
+      });
+    });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"마이페이지",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"마이페이지"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-main">
+			<section class="sec_myprofile">
+        <div class="row">
+          <p class="img"><img src="../assets/images/dummy/dummy_img01.png"><span class="a11y">사용자 프로필사진</span></p>
+          <h2>
+            <span class="bf_login">로그인 해주세요.</span>
+            <span class="aftr_login"><i>김유한</i>님, 반갑습니다! <span>구름이 아빠</span></span>
+          </h2>
+          <button onclick="location.href='myprofile.html'" class="btn_edit">수정</button>
+        </div>
+			</section>
+      <section class="sec_myinfo">
+        <div class="aftr_login">
+          <ul class="myinfo">
+            <li class="my"><a href="#"><span>5,063</span>포인트</a></li>
+            <li class="order"><a href="#"><span>2100</span>적립금</a></li>
+            <li class="coupon"><a href="#"><span>3</span>쿠폰</a></li>
+            <li class="point"><a href="#"><span>450</span>오늘+도전</a></li>
+          </ul>
+        </div>
+				<div class="banner _full">
+					<a href="#"><div>
+						<p class="img"><img src="../assets/images/dummy/banner07.png"><span class="a11y">오늘플러스에서 회원가입 시 배송비 무료!</span></p>
+					</div></a>
+				</div>
+      </section>
+      <section class="sec_myshipping">
+        <div class="aftr_login">
+          <p class="title">주문/배송현황<span class="btn_all">전체 주문내역<span class="a11y">보기</span><i> </i></span></p>
+        </div>
+        <div class="myshipping">
+          <ul class="myinfo">
+            <li class="payment_done"><a href="#"><span>5</span>주문완료</a></li>
+            <li class="shipping_inprogress"><a href="#"><span>6</span>배송중</a></li>
+            <li class="shipping_done"><a href="#"><span>0</span>배송완료</a></li>
+          </ul>
+          <ul class="myhistory">
+            <li>작성 가능한 리뷰 <span>3</span></li>
+            <li>찜한 상품 <span>12</span></li>
+          </ul>
+        </div>
+      </section>
+      <section class="sec_myshop">
+        <div class="my-manage_shop">
+          <p class="title">배송지 관리<span class="btn_all"><span class="a11y">보기</span><i> </i></span></p>
+        </div>
+        <div class="my-manage_shop">
+          <p class="title">환불계좌 관리<span class="btn_all"><span class="a11y">보기</span><i> </i></span></p>
+        </div>
+      </section>
+      <section class="sec_myacc">
+        <div class="my-manage_acc">
+          <p class="title">1:1문의 목록<span class="btn_all"><span class="a11y">보기</span><i> </i></span></p>
+        </div>
+        <!-- <div class="my-manage_acc">
+          <p class="title">상품 문의<span class="btn_all"><span class="a11y">보기</span><i> </i></span></p>
+        </div> -->
+        <div class="my-manage_acc">
+          <p class="title">내 작성글 보기<span class="btn_all"><span class="a11y">보기</span><i> </i></span></p>
+        </div>
+        <div class="my-manage_acc">
+          <p class="title">스크랩 보기<span class="btn_all"><span class="a11y">보기</span><i> </i></span></p>
+        </div>
+        <div class="my-manage_acc">
+          <p class="title">앱 수신 동의 설정<span class="btn_all"><span class="a11y">보기</span><i> </i></span></p>
+        </div>
+      </section>
+		</div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
