@@ -25,11 +25,11 @@
 		<div class="my_wrap my-main">
 			<section class="sec_myprofile-edit">
         <div class="row">
-          <p class="img"><img src="../assets/images/dummy/dummy_img01.png"><span class="a11y">사용자 프로필사진</span></p>
-          <button class="btn_edit-pic"> <i> </i></button>
+          <p class="img"><img src="../assets/images/sub/profile_default.png"><span class="a11y">사용자 프로필사진</span></p>
+          <button onclick="openLayer('#edit-pic_popup')" class="btn_edit-pic"> <i> </i></button>
         </div>
         <div class="txtarea">
-          <textarea id="edit_username" placeholder="닉네임을 입력해주세요!"></textarea>
+          <input id="edit_username" placeholder="닉네임을 입력해주세요!"></input>
           <p class="txcnt"><span>0</span> / 10</p>
         </div>
         <p>상품평(리뷰), 댓글 작성시 노출됩니다.</p>
@@ -41,6 +41,31 @@
 		</div>
 	</div>
 	<!--// contents body -->
+
+	<!-- 프로필 사진 설정 팝업 -->
+	<div class="overlay-popup edit-pic_popup" role="dialog" id="edit-pic_popup" aria-labelledby="pic_opener" aria-modal="true">
+		<div class="contents">
+			<div class="heading">
+				프로필 사진 설정 <button class="btn_close"><i></i></button>
+			</div>
+			<div class="inner">
+				<div class="thumb_list">
+					<a href="#" class="thumb"></a>
+					<a href="#" class="thumb"></a>
+					<a href="#" class="thumb"></a>
+					<a href="#" class="thumb"></a>
+				</div>
+			</div>
+			<div class="btn_wrap">
+				<a href="#" class="btn" onclick="">앨범에서 선택</a>
+			</div>
+			<div class="btn_wrap">
+				<a href="#" class="btn" onclick="">촬영하기</a>
+			</div>
+		</div>
+		<div class="overlay-dimmed"></div>
+	</div>
+	<!--// 프로필 사진 설정 팝업 -->
 
 	<!-- footer -->
 	@@include('../inc/footer.inc',{

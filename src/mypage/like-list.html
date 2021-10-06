@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"찜 리스트",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"찜 리스트"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-manage_list">
+			<div class="likes_head">
+				<div class="row">
+					<p class="chkwrap likes_checker"><input type="checkbox" id="check-all"><label for="check-all">전체선택/해제(1/4)</label></p>
+					<ul class="bundle_control">
+						<li><button type="button" class="btn t-btn">선택삭제</button></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="like_list">
+				<div class="item">
+					<!-- 찜 상품 -->
+					<div>
+						<p class="chkwrap"><input type="checkbox" id="check-01"><label for="check-01"><span class="a11y">상품 선택</span></label></p>
+						<div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+						<div class="details">
+							<p class="name">
+								<a href="#" onclick="alert('link');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+							</p>
+							<p class="qty">999개</p>
+							<p class="price"><span class="origin">999,500</span><span class="unit">원</span></p>
+						</div>
+						<div class="edit">
+							<a href="#" class="btn func-btn full">장바구니 담기</a>
+						</div>
+					</div>
+					<!--// 찜 상품 -->
+					
+					<div class="soldout"> <!-- soldout 케이스 //-->
+						<p class="chkwrap"><input type="checkbox" id="check-02"><label for="check-02"><span class="a11y">상품 선택</span></label></p>
+						<div class="thumb">
+							<span class="status-txt"><span>품절</span></span> <!-- soldout 케이스 //-->
+							<p><img src="../assets/images/dummy/product_thumn02.png" alt="상품명"></p>
+						</div>
+						<div class="details">
+							<p class="name">
+								<a href="#" onclick="alert('link');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+							</p>
+							<p class="qty">999개</p>
+							<p class="price"><span class="origin">999,500</span><span class="unit">원</span></p>
+						</div>
+						<div class="edit">
+							<a href="#" class="btn func-btn full">장바구니 담기</a>
+						</div>
+					</div>
+
+					<div>
+						<p class="chkwrap"><input type="checkbox" id="check-03"><label for="check-03"><span class="a11y">상품 선택</span></label></p>
+						<div class="thumb"><p><img src="../assets/images/dummy/product_thumn03.png" alt="상품명"></p></div>
+						<div class="details">
+							<p class="name">
+								<a href="#" onclick="alert('link');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+							</p>
+							<p class="qty">999개</p>
+							<p class="price"><span class="origin">999,500</span><span class="unit">원</span></p>
+						</div>
+						<div class="edit">
+							<a href="#" class="btn func-btn full">장바구니 담기</a>
+						</div>
+					</div>
+
+					<div>
+						<p class="chkwrap"><input type="checkbox" id="check-04"><label for="check-04"><span class="a11y">상품 선택</span></label></p>
+						<div class="thumb"><p><img src="../assets/images/dummy/product_thumn04.png" alt="상품명"></p></div>
+						<div class="details">
+							<p class="name">
+								<a href="#" onclick="alert('link');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+							</p>
+							<p class="qty">999개</p>
+							<p class="price"><span class="origin">999,500</span><span class="unit">원</span></p>
+						</div>
+						<div class="edit">
+							<a href="#" class="btn func-btn full">장바구니 담기</a>
+						</div>
+					</div>
+
+					<div class="btn_wrap">
+						<button class="btn primary">더 보기 <i class="down"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+
+</html>

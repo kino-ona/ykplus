@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"찜 리스트",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"찜 리스트"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-manage_list">
+			<div class="likes_head">
+				<div class="row">
+					<p class="chkwrap likes_checker"><input type="checkbox" id="check-all"><label for="check-all">전체선택/해제(1/4)</label></p>
+					<ul class="bundle_control">
+						<li><button type="button" class="btn t-btn disabled">선택삭제</button></li>
+					</ul>
+				</div>
+			</div>
+			<div class="empty_data _full">
+        <p><i class="mark"></i>찜한 상품이 없습니다.</p>
+      </div>
+		</div>
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+
+</html>
