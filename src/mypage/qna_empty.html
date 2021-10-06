@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"1:1 문의",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"1:1 문의"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-manage_list">
+			<div class="qna_head">
+				<div class="row">
+					<a href="#"><em>자주묻는 질문들</em>을 살펴보실래요?</a>
+				</div>
+			</div>
+			<div class="empty_data _full">
+        <p><i class="mark"></i>작성하신 문의 글이 없습니다.</p>
+      </div>
+
+			<div class="fixed_bottom">
+				<div class="fixed_btn"><a href="#" class="btn blue-btn">1:1 문의하기</a></div>
+			</div>
+		</div>
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+
+</html>

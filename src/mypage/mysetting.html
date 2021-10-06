@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"앱 동의 설정",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"앱 동의 설정"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-setting">
+      <ul>
+        <li class="row linkwrap">알림
+          <input class="input_tgg" id="cb1" type="checkbox">
+          <label class="btn_tgg" for="cb1"></label>
+        </li>
+      </ul>
+			<span class="desc">알림 수신에 동의하시면 맞춤 정보와 다양한 이벤트 프로모션 혜택을 알려드립니다. 놓치면 아까운 소식을 받으려면 알림은 ‘on’	으로 해주세요!</span>
+		</div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
