@@ -1671,6 +1671,30 @@ a.btn {
 	}
 }
 
+.report_contents {
+	border-top: 1px solid #E5E5E5;
+	padding: 30px 20px 80px;
+	.title {
+		font-size: 18px;
+		font-weight: 700;
+		margin-bottom: 25px;
+	}
+	li {
+		line-height: 1.4;
+		margin-bottom: 10px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+.report_popup {
+	.tit_wrap {
+		padding: 20px 0;
+		font-weight: 700;
+		text-align: center;
+	}
+}
+
 .swiper-pagination {
 	&.bullet-type {
 		bottom:0;

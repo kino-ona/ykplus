@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"submain"
+		},
+		"subtitle":"톡톡+ 퀴즈"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+
+    <div class="talk_wrap _tkquiz">
+      <div class="subtop_kv">
+        <p class="figure" style="background-image:url(../assets/images/dummy/dummy_talkkeybanner02.png)"></p>
+        <div class="pagi_phrase"><span>톡톡+퀴즈</span></div>
+      </div>          
+
+      <div class="talkq1 radioselectwrap" id="talkq1">
+        <div>
+          <div class="radiotitle"><span>Q1</span><p class="tit">제목을 넣어주세요.</p><p class="desc">퀴즈 질문을 넣어주세요! 질문을 넣어주세요. 퀴즈 질문을 넣어주세요! 질문을 넣어주세요.</p></div>
+          <ul>
+            <li class="mix">
+              <label class="" style="background-image: url(../assets/images/dummy/dummy_infokeybanner02.png);">
+                <span>바다</span>
+                <input type="radio" name="talka1" form="tkquiz_form" value="바다" checked="checked">
+              </label>
+            </li>
+            <li class="mix">
+              <label class="checked" style="background-image: url(../assets/images/dummy/replies_thumn03.png);">
+                <span>숲</span>
+                <input type="radio" name="talka1" form="tkquiz_form" value="숲">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="talkq2 radioselectwrap" id="talkq2">
+        <div>
+          <div class="radiotitle"><span>Q2</span><p class="tit">제목을 넣어주세요. 제목을 넣어주세요. 제목을 넣어주세요.</p></div>
+          <ul>
+            <li class="figures">
+              <label class="checked" style="background-image: url(../assets/images/dummy/tk_dummy05.png);">
+                <span class="a11y">선택지 1</span>
+                <input type="radio" name="talka2" form="tkquiz_form" value="선택지 1" checked="checked">
+              </label>
+            </li>
+            <li class="figures">
+              <label style="background-image: url(../assets/images/dummy/tk_dummy06.png);">
+                <span class="a11y">선택지 2</span>
+                <input type="radio" name="talka2" form="tkquiz_form" value="선택지 2">
+              </label>
+            </li>
+            <li class="figures">
+              <label style="background-image: url(../assets/images/dummy/tk_dummy07.png);">
+                <span class="a11y">선택지 3</span>
+                <input type="radio" name="talka2" form="tkquiz_form" value="선택지 3" checked="checked">
+              </label>
+            </li>
+            <li class="figures">
+              <label style="background-image: url(../assets/images/dummy/tk_dummy08.png);">
+                <span class="a11y">선택지 4</span>
+                <input type="radio" name="talka2" form="tkquiz_form" value="선택지 4">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="talkq3 radioselectwrap" id="talkq3">
+        <div>
+          <div class="radiotitle"><span>Q3</span><p class="tit">제목을 넣어주세요.</p><p class="desc">퀴즈 질문을 넣어주세요! 질문을 넣어주세요. 퀴즈 질문을 넣어주세요! 질문을 넣어주세요. 퀴즈 질문을 넣어주세요! 질문을 넣어주세요. 퀴즈 질문을 넣어주세요! 질문을 넣어주세요.</p></div>
+          <ul>
+            <li class="">
+              <label class="checked">
+                <span>여성</span>
+                <input type="radio" name="talka3" form="tkquiz_form" value="여성" checked="checked">
+              </label>
+            </li>
+            <li class="">
+              <label>
+                <span>남성</span>
+                <input type="radio" name="talka3" form="tkquiz_form" value="남성">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="talkq4 radioselectwrap" id="talkq4">
+        <div>
+          <div class="radiotitle"><span>Q4</span><p class="tit">제목을 넣어주세요.</p></div>
+          <ul>
+            <li class="figures">
+              <label style="background-image: url(../assets/images/dummy/tk_dummy02.png);">
+                <span class="a11y">선택지 1</span>
+                <input type="radio" name="talka4" form="tkquiz_form" value="선택지 1" checked="checked">
+              </label>
+            </li>
+            <li class="figures">
+              <label class="checked" style="background-image: url(../assets/images/dummy/tk_dummy01.png);">
+                <span class="a11y">선택지 2</span>
+                <input type="radio" name="talka4" form="tkquiz_form" value="선택지 2">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="talkq5 radioselectwrap" id="talkq5">
+        <div>
+          <div class="radiotitle"><span>Q5</span><p class="tit">제목을 넣어주세요.</p><p class="desc">퀴즈 질문을 넣어주세요! 질문을 넣어주세요. 퀴즈 질문을 넣어주세요! 질문을 넣어주세요.</p></div>
+          <ul>
+            <li class="mix">
+              <label class="" style="background-image: url(../assets/images/dummy/tk_dummy03.png);">
+                <span>선택지 1</span>
+                <input type="radio" name="talka5" form="tkquiz_form" value="선택지 1" checked="checked">
+              </label>
+            </li>
+            <li class="mix">
+              <label class="checked" style="background-image: url(../assets/images/dummy/tk_dummy04.png);">
+                <span>선택지 2</span>
+                <input type="radio" name="talka5" form="tkquiz_form" value="선택지 2">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subbottom_sec">
+        <p>퀴즈 참여하신 분들 중 <br>추첨을 통해 <em>오늘포인트를 지급</em>합니다.</p>
+        <div class="btn_wrap _foo">
+          <a href="#" class="btn secondary blue-btn" aria-haspopup="dialog" aria-controls="tkquiz-participation_popup" id="tkquiz-participation-opener" aria-pressed="false">참여하기</a>
+        </div>
+      </div>
+    </div>
+
+	</div>
+	<!--// contents body -->
+
+  <div class="overlay-popup tkquiz-participation_popup" role="dialog" id="tkquiz-participation_popup" aria-labelledby="tkquiz-participation-opener" aria-modal="true">
+    <div class="contents">
+      <div class="inner">
+        <div class="mark"></div>
+        <p class="tit">톡톡+퀴즈에 참여되었습니다.</p>
+        <p>퀴즈 참여하신 분들 중 추첨을 통해 <br>오늘포인트를 지급합니다. <span>지급 포인트는 마이페이지> 포인트 에서 <br>확인하실 수 있습니다.</span></p>
+      </div>
+      <div class="btn_wrap">
+        <a href="#" onclick="closeLayer('#tkquiz-participation_popup');" class="btn gray-btn">오늘+톡으로</a>
+        <a href="#" onclick="closeLayer('#tkquiz-participation_popup');" class="btn primary">메인으로</a>
+      </div>
+    </div>
+    <div class="overlay-dimmed"></div>
+  </div>
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
