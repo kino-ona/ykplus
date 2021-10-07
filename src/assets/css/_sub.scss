@@ -110,7 +110,7 @@
 	border-top: 1px solid #F0F0F0;
 	padding-top: 20px;
 	display: block;
-	> div {
+	> div:not(.btn_wrap) {
 		width: 100%;
 		margin: 0 auto;
 		max-width: 300px;
@@ -2290,6 +2290,7 @@
 				// }
 			}
 		}
+
 	}
 }
 .tk_area_wrap, .q_area_wrap {
@@ -4535,6 +4536,8 @@
 		text-align: center;
 		background-color: #DEE6F4;
 		.title {
+			padding-left:20px;
+			padding-right:20px;
 			font-size: 28px;
 			font-weight: 800;
 			margin-bottom: 20px;
@@ -4869,6 +4872,12 @@
 				border-color: #AAA;
 			}
 		}
+	}
+
+	.pagination {
+		padding-left:20px;
+		padding-right:20px;
+		margin-bottom:60px;
 	}
 }
 @media screen and (min-width: 361px) and (max-width: 768px) {
