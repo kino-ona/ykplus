@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"배송지 추가",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"배송지 추가"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-setting">
+      <div class="shipping-address">
+				<!-- 배송지 추가 -->
+				<div class="address-add">
+					<dl class="vertical">
+						<dt>배송지명</dt>
+						<dd>
+							<input type="text" placeholder="배송지 별명을 입력해주세요. 예) 직장, 집"> 
+						</dd>
+					</dl>
+					<dl class="vertical">
+						<dt>받는사람</dt>
+						<dd>
+							<input type="text" value="" placeholder="받는 사람을 입력해주세요."> 
+						</dd>
+					</dl>
+					<dl class="vertical">
+						<dt>주소</dt>
+						<dd>
+							<input type="text" placeholder="우편번호 검색해주세요."> 
+							<a href="" class="btn small btn-zipcode">우편번호</a>
+						</dd>
+						<dd>
+							<p><input type="text" placeholder="상세 주소를 입력해주세요." name="address1" value=""></p>
+							<!-- <p><input type="text" name="address2" value=""></p> -->
+						</dd>
+					</dl>
+					<dl class="vertical">
+						<dt>연락처</dt>
+						<dd class="frm_mix">
+							<select>
+								<option>02</option>
+							</select>
+							<span><em class="a11y">-</em></span>
+							<input type="text" value="1234">
+							<span><em class="a11y">-</em></span>
+							<input type="text" value="5678">
+						</dd>
+					</dl>
+					<dl class="vertical">
+						<dt>핸드폰</dt>
+						<dd class="frm_mix">
+							<select>
+								<option>010</option>
+							</select>
+							<span><em class="a11y">-</em></span>
+							<input type="text" value="1234">
+							<span><em class="a11y">-</em></span>
+							<input type="text" value="5678">
+						</dd>
+					</dl>
+					<p class="chkwrap"> 
+						<input type="checkbox" id="is_standard"><label for="is_standard">기본 배송지로 설정</label>
+					</p>
+				</div>
+				<!--// 배송지 추가 -->  
+
+				<div class="fixed_bottom"> 
+					<div class="fixed_btn"><a href="#" class="btn blue-btn">확인</a></div>
+				</div>
+      </div>
+		</div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>

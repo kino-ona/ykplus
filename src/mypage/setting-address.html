@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"배송지 관리",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"배송지 관리"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-setting">
+      <div class="shipping-address">
+        <!-- 배송지 목록 -->
+        <ul class="address-list">
+          <li>
+						<p class="btn_edit">
+							<a href="#">수정</a>
+							<a href="#">삭제</a>
+						</p>
+						<label for="addr01">
+							<dl>
+								<dt>김유한(집)<span class="basic">기본배송지</span></dt>	
+								<dd>
+									<p>서울 강남구 봉은사로 43길 6-8 (논현동, 5층)</p>
+									<p>010-8550-5678 / 02-8841-0655</p>
+								</dd>
+							</dl>
+						</label>
+          </li>
+          <li>
+						<p class="btn_edit">
+							<a href="#">수정</a>
+							<a href="#">삭제</a>
+						</p>
+						<label for="addr02">
+							<dl>
+								<dt>김유한(회사)</dt>	
+								<dd>
+									<p>서울 강남구 봉은사로 43길 6-8 (논현동, 5층)</p>
+									<p>010-8550-5678 / 02-8841-0655</p>
+								</dd>
+							</dl>
+          </li>
+        </ul>
+        <div class="btn_wrap">
+          <button onclick="openLayer('#srchaddress1_popup')" class="btn full">배송지 추가</button>
+        </div>
+        <!--// 배송지 목록 -->
+      </div>
+		</div>
+	</div>
+	<!--// contents body -->
+
+  <!-- 배송지 검색 팝업 -->
+  <div class="overlay-popup srchaddress1_popup" role="dialog" id="srchaddress1_popup" aria-labelledby="alert_opener" aria-modal="true">
+    <div class="contents">
+			<div class="heading">
+				배송지 검색 <button class="btn_close"><i></i></button>
+			</div>
+      <div class="inner">
+				<section>
+					<p class="chkwrap"> 
+						<input type="checkbox" id="addrtype1" checked><label for="addrtype1">도로명 검색</label>
+					</p>					
+					<p class="chkwrap"> 
+						<input type="checkbox" id="addrtype2"><label for="addrtype2">지번+도로명 검색</label>
+					</p>
+				</section>
+				<section>
+					<p class="tit"><em>도로명(건물명)</em>을 2글자 이상 입력하세요.</p>
+					<p>예) 강남대로 100길, 가산디지털로1로 해외 주소의 경우 “해외”를 입력하세요. (To ship to foreign country, please enter “oversea”)</p>
+				</section>
+				<div class="shipping-address">
+					<!-- 배송지 검색 -->
+					<div class="address-srch">
+						<dl class="vertical">
+							<dt class="a11y">주소 검색</dt>
+							<dd>
+								<input type="text" value="신사"> 
+								<a href="" class="btn small btn-srch">검색</a>
+							</dd>
+						</dl>
+						<dl class="vertical">
+							<dt>주소 선택</dt>
+							<dd>
+								<p><input type="text" placeholder="주소를 선택해주세요." name="address1" value=""></p>
+							</dd>
+						</dl>
+      		</div>
+					<!--// 배송지 검색 -->
+      	</div>
+      </div>
+      <div class="btn_wrap">
+        <a href="#" onclick="openLayer('#srchaddress2_popup')" class="btn primary">다음</a>
+      </div>
+    </div>
+    <div class="overlay-dimmed"></div>
+  </div>
+  <!--// 배송지 검색 팝업 -->
+
+  <!-- 주문상품 선택 팝업 -->
+  <div class="overlay-popup srchaddress2_popup" role="dialog" id="srchaddress2_popup" aria-labelledby="alert_opener" aria-modal="true">
+    <div class="contents">
+			<div class="heading">
+				주문상품 선택 <button class="btn_close"><i></i></button>
+			</div>
+      <div class="inner">
+				<section>
+					<p class="title"> 상세 주소를 입력해주세요.</p>
+				</section>
+				<div class="shipping-address">
+					<!--  주문상품 선택 옵션 -->
+					<div class="address-srch">
+						<dl class="vertical">
+							<dt>우편번호</dt>
+							<dd>
+								<input type="text" value="06029"> 
+							</dd>
+						</dl>
+						<dl class="vertical">
+							<dt>주소</dt>
+							<dd>
+								<p><input type="text" name="address1" value="서울시 강남구 논현동 288-9" readonly></p>
+								<p><input type="text" placeholder="상세 주소를 입력해주세요." name="address2" value=""></p>
+							</dd>
+						</dl>
+      		</div>
+					<!--// 주문상품 선택 옵션 -->
+      	</div>
+      </div>
+      <div class="btn_wrap">
+        <a href="#" onclick="closeLayer('#srchaddress2_popup')" class="btn primary">다음</a>
+      </div>
+    </div>
+    <div class="overlay-dimmed"></div>
+  </div>
+  <!--// 주문상품 선택 팝업 -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
