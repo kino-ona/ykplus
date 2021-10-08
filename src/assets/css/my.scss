@@ -834,6 +834,18 @@ textarea {
       width: 100%;
     }
   }
+  .txtarea {
+    padding: 0 0 30px;
+    textarea {
+      min-height: 100px;
+      height: 100px;
+      padding-left: 16px;
+      padding-right: 16px;
+      border: 0;
+      resize: none;
+      line-height: 1.6;
+    }
+  }
   //****************************************/
   .item-cont {
     padding: 0 20px;
