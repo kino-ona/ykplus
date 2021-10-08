@@ -751,7 +751,7 @@ textarea {
           cursor: pointer;
           user-select: none;
           @include transition(.3s, ease-in-out);  
-          &:after {
+          &::after {
             position: absolute;
             display: inline-block;
             content: "";
@@ -762,13 +762,31 @@ textarea {
             border-radius: 50%;
             @include transition(.3s, ease-in-out);
           }
+          &::before {
+            @include transition(.3s, ease-in-out);  
+            position: absolute;
+            content: 'Off';
+            left: 38px;
+            top: 0;
+            bottom: 0;
+            text-transform: uppercase;
+            color: #fff;
+            font-family: 'roboto';
+            font-size: 13px;
+            line-height: 30px;
+            font-weight: 500;
+          }
         }  
         &:checked+.btn_tgg {
           background-color: #009AFF;
+          &::after {
+            left: calc(50% + 8px);
+          }
+          &::before {
+            content: 'On';
+            left: 12px;
+          }
         }  
-        &:checked+.btn_tgg:after {
-          left: calc(50% + 8px);
-        }
       }
     }
   }
