@@ -83,6 +83,37 @@
     border-radius: 20px;
     vertical-align: baseline;
   }
+  .note_sec {
+    margin-top: 20px;
+    border-top: 0;
+    position: relative;
+    border-radius: 8px;
+    p {
+      color: #666;
+      font-size: 13px;
+      b {
+        display: block;
+        color: inherit;
+        font-family: 'roboto';
+        font-size: inherit;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+    }
+    .btn_close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 16px;
+      height: 16px;
+      background: {
+        image: url(../images/icons/btn_close-small.png);
+        position: center center;
+        repeat: no-repeat;
+        size: 16px;
+      }
+    }
+  }
 }
 textarea {
   border: 0;
