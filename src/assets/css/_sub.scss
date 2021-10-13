@@ -2020,9 +2020,38 @@
 		}
 		.para {
 			min-height: calc(100vh - 138px);
-			input {
+			.postimgthum {
+				position: relative;
+				overflow: visible;
+				width: 60px;
+				height: 60px;
+				margin: 6px 16px 20px 0;
+				display: inline-block;
+				background: {
+					size: cover;
+					position: center center;
+					repeat: no-repeat;
+				}
+				border-radius: 6px;
+				.thum-close {
+					width: 16px;
+					height: 16px;
+					position: absolute;
+					top: -6px;
+					right: -6px;
+					background: {
+						image: url(../images/icons/thum-close.png);
+						size: 100%;
+						position: center center;
+						repeat: no-repeat;
+					}					
+				}
+			}
+			textarea {
 				color: #000;
-				line-height: 1.8;
+				line-height: 1.667;
+				border: 0;
+				padding: 0;
 				&::placeholder {
 					color: #999;
 				}
