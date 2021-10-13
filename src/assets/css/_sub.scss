@@ -1200,6 +1200,17 @@
 		}
 	}
 }
+.main_body .tab-navigation + .tab-navigation {
+	border-top: 0;
+	margin-top: 0;
+	padding-top: 12px;
+	max-height: 56px;
+	background-color: #F5F7F8;
+	p {
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+}
 
 .coupon_popup {
 	.contents {
@@ -2910,11 +2921,9 @@
 	}
 }	
 
-.tab-navigation {
-	& + .talk_wrap {
-		.note_sec {
-			margin-top: -21px;
-		}
+.tab-navigation + .talk_wrap {
+	.note_sec {
+		margin-top: -21px;
 	}
 }
 
