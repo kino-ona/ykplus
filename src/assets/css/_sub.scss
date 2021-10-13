@@ -2020,6 +2020,8 @@
 		}
 		.para {
 			min-height: calc(100vh - 138px);
+			margin-bottom:-40%;
+			overflow: hidden;
 			.postimgthum {
 				position: relative;
 				overflow: visible;
@@ -2048,12 +2050,18 @@
 				}
 			}
 			textarea {
+				min-height:35vh;
 				color: #000;
 				line-height: 1.667;
 				border: 0;
 				padding: 0;
+				margin-bottom:0;
 				&::placeholder {
 					color: #999;
+				}
+				@media (orientation: landscape) {
+					min-height:40vh;
+					margin-bottom:50px;
 				}
 			}
 		}
