@@ -2574,11 +2574,15 @@
 					&.figures {
 						label {
 							padding-bottom: 62%;
+							padding-bottom: calc(62% - 2px);
 							background: {
 								size: cover;
 								position: center center;
 								repeat: no-repeat;
 							};
+							&.checked {
+								padding-bottom: calc(62% - 6px);
+							}
 						}
 					}
 					&.mix {
@@ -2637,6 +2641,7 @@
 						color:#666;
 					}
 					&.checked {
+						padding-bottom: calc(87.75% - 2px);
 						border:2px solid #009AFF;
 						> span {
 							padding: 14px 19px 12px;
