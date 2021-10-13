@@ -891,29 +891,117 @@
 			padding-bottom: 20px;
 			text-align: center;
 			background-color: #F5F7F8;
-			.prdscore_info {
-				.star_wrap {
-					margin-bottom: 8px;
-					span.star {
-						width: 18px;
-						height: 18px;
-						&.off {
-							background-image: url(../images/dummy/score-star_0_grey.png);
-						}
+			.item {
+				border-bottom: 0;
+			}
+			.panel {
+				border-top: 1px solid #E5E5E5;
+			}
+		}
+		.prdscore_info {
+			.star_wrap {
+				margin-bottom: 12px;
+				span.star {
+					width: 18px;
+					height: 18px;
+					&.off {
+						background-image: url(../images/dummy/score-star_0_grey.png);
 					}
-					.num {
-						line-height: 18px;
-						margin-left: 12px;
+				}
+				.num {
+					line-height: 18px;
+					vertical-align: unset;
+					margin-left: 12px;
+					em {
+						color: #000;
+						font-family: inherit;
+						line-height: inherit;
+						font-weight: 800;
 					}
 				}
 			}
 			> p {
-				font-size: 0.813rem;
 				font-weight: 700;
 				letter-spacing: -0.02em;
+				padding-bottom: 10px;
 				span {
+					color: #009AFF;
 					font-size: inherit;
 					font-weight: inherit;
+				}
+			}
+		}
+		.orderscore_info {
+			li {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				height: 15px;
+				margin-bottom: 15px;
+			}
+			.tit {
+				font-size: 13px;
+				line-height: 15px;
+				font-weight: 700;
+			}
+			.dotted {
+				flex: 1;
+				width: 6px;
+				margin-left: 10px;
+				margin-right: 10px;
+				padding-right: 5px;
+				height: 1px;
+				background: {
+					image: linear-gradient(to right, rgba(153, 153, 153, 1) 0, rgba(153, 153, 153, 1) 1px, rgba(245, 247, 248, 1) 1px, rgba(245, 247, 248, 1) 100%);
+					size: 6px;
+					position: 0 center;
+					repeat: repeat-x;
+				}
+			}
+			.star_wrap {
+				line-height: 15px;
+				white-space: nowrap;
+				margin-right: 10px;
+			}
+			.scoring {
+				display: inline-block;
+				min-width: 30px;
+				color: #999;
+				font-family: 'roboto';
+				font-size: 13px;
+				line-height: 15px;
+				font-weight: 500;
+				white-space: nowrap;
+				em {
+					font-family: inherit;
+					color: #000;
+					font-size: inherit;
+					line-height: 15px;
+					font-weight: inherit;
+				}
+			}
+		}
+		.panel-status {
+			position: relative;
+			display: inline-block;
+			color: #666;
+			font-size: 13px;
+			font-weight: 700;
+			.btn_all {
+				position: absolute;
+				right: -15px;
+				top: 5px;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				display: inline-block;
+				i::before {
+					transform: translate(-50%, -50%) rotate(-45deg);
+					border-color: #666;
+				}
+			}
+			&[aria-hidden="false"] .btn_all {
+				i::before {
+					transform: translate(-50%, -50%) rotate(135deg);
 				}
 			}
 		}
@@ -1791,9 +1879,6 @@
 		}
 	}
 }
-
-
-/** Benefit **/
 
 
 /** Talk & Info Common **/
