@@ -2498,8 +2498,10 @@
 			margin: 0;
 		}
 		.radioselectwrap {
+			max-width:480px;
+			margin:0 auto;
 			border-top: 1px solid #E5E5E5;
-			padding: 30px 0 30px;		
+			padding: 30px 20px 30px;		
 			.radiotitle {
 				text-align: center;
 				padding-bottom: 20px;
@@ -2558,6 +2560,7 @@
 					}
 					&.figures {
 						label {
+							padding-bottom: 62%;
 							background: {
 								size: cover;
 								position: center center;
@@ -2605,7 +2608,7 @@
 				label {
 					display: inline-block;
 					width: 100%;
-					padding-bottom: 70%;
+					padding-bottom: 87.75%;
 					border:1px solid #E5E5E5;
 					border-radius: 6px;
 					background-color: #fff;
