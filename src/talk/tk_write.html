@@ -23,70 +23,98 @@
 	<!-- //header -->
 
 	<!-- contents body -->
-  <div class="contents_body">
-    <div class="talk_wrap">
-      <div class="write_wrap">
-        <div class="posthead">
-          <div class="select">
-            <select class="sel-write_topic" name="sel-write_topic" id="sel-write_topic">
-              <option value="주제를 선택해 주세요.">주제를 선택해 주세요.</option>
-              <option value="트렌드 따라잡기">트렌드 따라잡기</option>
-              <option value="트렌드 따라잡기">트렌드 따라잡기</option>
-              <option value="트렌드 따라잡기">트렌드 따라잡기</option>
-            </select>
-          </div>
-          <p class="title">
-            <!-- 에디터 영역 -->
-            <!-- 20211013 글쓰기 영역 수정
-            <input type="text" placeholder="제목을 입력해주세요"> -->
-            <!--// 에디터 영역 -->
-          </p>
-        </div>
-        <div class="post">
-          <div class="para">
-            <!-- 20211013 글쓰기 영역 수정 -->
-            <div class="row">
-              <p class="postimgthum" style="background-image: url(../assets/images/dummy/talk_thumn01.png);"><span class="thum-close"><span class="a11y">erase</span></span></p>
-              <p class="postimgthum" style="background-image: url(../assets/images/dummy/talk_thumn02.png);"><span class="thum-close"><span class="a11y">erase</span></span></p>
-              <p class="postimgthum" style="background-image: url(../assets/images/dummy/dummy_img01.png);"><span class="thum-close"><span class="a11y">erase</span></span></p>
-              <p class="postimgthum" style="background-image: url(../assets/images/dummy/dummy_img02.png);"><span class="thum-close"><span class="a11y">erase</span></span></p>
-              <div class="note_sec">
-                <button class="btn_close"><i></i><span class="a11y">닫기</span></button>
-                <div class="note"><b>글 작성 전에 읽어주세요.</b>타인을 배려하지 않은 부적절한 게시글은 작성자의 동의없이 삭제될 수 있습니다. </div>
-              </div>
-              <!-- 에디터 영역 -->
-              <div>
-                <textarea name="userTxtInp" id="userTxtInp" cols="30" placeholder="내용을 입력해주세요.">어제 오랫만에 저녁운동을 했습니다. 동네 친구도 만나도 즐거운 시간이었습니다. 여러분들도 같이 하실래요?</textarea>
-              </div>
-              <!--// 에디터 영역 -->
-            </div>
-            <!--// 20211013 글쓰기 영역 수정 -->
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="inp-btn_wrap01">
-      <button class="btn" onclick="openLayer('#allowcamera_popup')" ><i class="ic-20 ic_gallery"></i> <span>0</span><span>/</span><span>102</span></button>
-    </div>
-    
+	<div class="contents_body">
+		<div class="talk_wrap">
+			<div class="write_wrap">
+				<div class="posthead">
+					<div class="select">
+						<select class="sel-write_topic" name="sel-write_topic" id="sel-write_topic">
+							<option value="주제를 선택해 주세요.">주제를 선택해 주세요.</option>
+							<option value="트렌드 따라잡기">트렌드 따라잡기</option>
+							<option value="트렌드 따라잡기">트렌드 따라잡기</option>
+							<option value="트렌드 따라잡기">트렌드 따라잡기</option>
+						</select>
+					</div>
+					<p class="title">
+						<!-- 에디터 영역 -->
+						<!-- 20211013 글쓰기 영역 수정
+						<input type="text" placeholder="제목을 입력해주세요"> -->
+						<!--// 에디터 영역 -->
+					</p>
+				</div>
+				<div class="post">
+					<div class="para">
+						<!-- 20211013 글쓰기 영역 수정 -->
+						<div class="pic_list">
+							<div class="pic_row">
+								<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn01.png" style="background-image: url(../assets/images/dummy/talk_thumn01.png);">
+									<button class="thum-close"><span class="a11y">erase</span></button>
+								</p>
+								<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn02.png" style="background-image: url(../assets/images/dummy/talk_thumn02.png);">
+									<button class="thum-close"><span class="a11y">erase</span></button>
+								</p>
+								<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn03.png" style="background-image: url(../assets/images/dummy/talk_thumn03.png);">
+									<button class="thum-close"><span class="a11y">erase</span></button>
+								</p>
+								<p class="postimgthum" data-imgsrc="../assets/images/dummy/dummy_img01.png" style="background-image: url(../assets/images/dummy/dummy_img01.png);">
+									<button class="thum-close"><span class="a11y">erase</span></button>
+								</p>
+								<p class="postimgthum" data-imgsrc="../assets/images/dummy/dummy_img02.png" style="background-image: url(../assets/images/dummy/dummy_img02.png);">
+									<button class="thum-close"><span class="a11y">erase</span></button>
+								</p>
+								<p class="postimgthum" data-imgsrc="../assets/images/dummy/dummy_img02.png" style="background-image: url(../assets/images/dummy/dummy_img02.png);">
+									<button class="thum-close"><span class="a11y">erase</span></button>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="note_sec">
+								<button onclick="elDelete(this);" class="btn_close"><i></i><span class="a11y">닫기</span></button>
+								<div class="note"><b>글 작성 전에 읽어주세요.</b>타인을 배려하지 않은 부적절한 게시글은 작성자의 동의없이 삭제될 수 있습니다. </div>
+							</div>
+							<!-- 에디터 영역 -->
+							<div>
+								<textarea name="userTxtInp" id="userTxtInp" cols="30" placeholder="내용을 입력해주세요.">어제 오랫만에 저녁운동을 했습니다. 동네 친구도 만나도 즐거운 시간이었습니다. 여러분들도 같이 하실래요?</textarea>
+							</div>
+							<!--// 에디터 영역 -->
+						</div>
+						<!--// 20211013 글쓰기 영역 수정 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="inp-btn_wrap01">
+			<button class="btn" onclick="openLayer('#allowcamera_popup')" ><i class="ic-20 ic_gallery"></i> <span>0</span><span>/</span><span>102</span></button>
+		</div>
+		
 	</div>
 	<!--// contents body -->
 
-  <!-- 사진 접근권한이 없는 경우 알림 팝업 -->
-  <div class="overlay-popup alert-layer allowcamera_popup" role="dialog" id="allowcamera_popup" aria-labelledby="alert_opener" aria-modal="true">
-    <div class="contents">
-      <div class="inner">
-        <p>사진에 접근 권한 허용이 필요합니다.</p>
-      </div>
-      <div class="btn_wrap">
-        <a href="#" onclick="closeLayer('#allowcamera_popup')" class="btn gray-btn">취소</a>
-        <a href="#" onclick="closeLayer('#allowcamera_popup')" class="btn primary">허용하기</a>
+	<!-- 사진 접근권한이 없는 경우 알림 팝업 -->
+	<div class="overlay-popup alert-layer allowcamera_popup" role="dialog" id="allowcamera_popup" aria-labelledby="alert_opener" aria-modal="true">
+		<div class="contents">
+			<div class="inner">
+				<p>사진에 접근 권한 허용이 필요합니다.</p>
+			</div>
+			<div class="btn_wrap">
+				<a href="#" onclick="closeLayer('#allowcamera_popup')" class="btn gray-btn">취소</a>
+				<a href="#" onclick="closeLayer('#allowcamera_popup')" class="btn primary">허용하기</a>
+			</div>
+		</div>
+		<div class="overlay-dimmed"></div>
+	</div>
+	<!--// 사진 접근권한이 없는 경우 알림 팝업 -->
+
+	<!-- 이미지 전체보기 팝업 -->
+  <div id="lightbox-overlay" class="lightbox-overlay">
+    <button onclick="lightboxClose()" class="btn_close"><i></i><span class="a11y">닫기</span></button>
+    <div id="postgallerySwp" class="swiper-container">
+      <div class="swiper-wrapper">
       </div>
     </div>
-    <div class="overlay-dimmed"></div>
   </div>
-  <!--// 사진 접근권한이 없는 경우 알림 팝업 -->
+  <!--// 이미지 전체보기 팝업 -->
 
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
@@ -99,5 +127,45 @@
 		}
 	})
 	<!-- //footer -->
+	<script>
+		$('.thum-close').each(function() {
+			$(this).click(function() { 
+				var result = confirm('삭제하시겠습니까?'); 
+				if(result) { 
+					elDelete(this)
+				} else { //no 
+					return false;
+				} 
+			});
+		});
+		var elDelete = function (set) {
+			$(set).parent().remove();
+		}
+
+		/** gallery pop **/
+		var lightbox = $('#lightbox-overlay'),
+      	lightboximg = lightbox.find('.lightbox-img');
+		$('.pic_list').each(function(){ 
+			var parentGall = $(this);
+
+			$(this).find('.postimgthum').click(function(){
+				$('#postgallerySwp').find('.swiper-wrapper').empty();	
+
+				parentGall.find('.postimgthum').each(function(){
+					var figCnt = $(this).length/2;
+					var imgSrc = $(this).attr('data-imgsrc');
+
+					for (var i = 0; i <= figCnt; i++) {
+						$('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
+					}
+				})
+				lightbox.addClass('visible');
+				$('body').addClass('noscroll');
+
+				defaultSwipe('postgallerySwp', '1.05', 8);
+			});
+		});
+
+	</script>
 </body>
 </html>

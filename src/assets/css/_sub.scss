@@ -1956,7 +1956,7 @@
 		border-top: none;
 		background-color: rgba(0, 154, 255, .06);
 		border-radius: 8px;
-		margin-bottom: 20px;
+		margin-bottom: 0;
 		.note {
 			font-size: 13px;
 			line-height: 20px;
@@ -2022,33 +2022,7 @@
 			min-height: calc(100vh - 138px);
 			margin-bottom:-40%;
 			overflow: hidden;
-			.postimgthum {
-				position: relative;
-				overflow: visible;
-				width: 60px;
-				height: 60px;
-				margin: 6px 16px 20px 0;
-				display: inline-block;
-				background: {
-					size: cover;
-					position: center center;
-					repeat: no-repeat;
-				}
-				border-radius: 6px;
-				.thum-close {
-					width: 16px;
-					height: 16px;
-					position: absolute;
-					top: -6px;
-					right: -6px;
-					background: {
-						image: url(../images/icons/thum-close.png);
-						size: 100%;
-						position: center center;
-						repeat: no-repeat;
-					}					
-				}
-			}
+			
 			textarea {
 				min-height:35vh;
 				color: #000;
@@ -2056,6 +2030,7 @@
 				border: 0;
 				padding: 0;
 				margin-bottom:0;
+				margin-top:20px;
 				&::placeholder {
 					color: #999;
 				}
@@ -2063,6 +2038,52 @@
 					min-height:40vh;
 					margin-bottom:50px;
 				}
+			}
+		}
+	}
+	.pic_list {
+		position:relative;
+		width:100%;
+		margin-left:20px;
+		overflow: hidden;
+		.pic_row {
+			display: flex;
+			padding-left: 0;
+			overflow-x: scroll;
+			-webkit-overflow-scrolling: touch;
+			&::after {
+				content: '';
+				display: block;
+				clear:both;
+			}
+		}
+		.postimgthum {
+			flex: none;
+			display: inline-block;
+			position: relative;
+			overflow: visible;
+			width: 60px;
+			height: 60px;
+			margin: 6px 16px 20px 0;
+			display: block;
+			background: {
+				size: cover;
+				position: center center;
+				repeat: no-repeat;
+			}
+			border-radius: 6px;
+			.thum-close {
+				width: 25px;
+				height: 25px;
+				position: absolute;
+				top: -6px;
+				right: -6px;
+				background: {
+					image: url(../images/icons/thum-close.png);
+					size: 16px;
+					position: right top;
+					repeat: no-repeat;
+				}					
 			}
 		}
 	}
