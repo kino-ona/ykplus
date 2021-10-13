@@ -64,7 +64,9 @@
               <div class="util-pop revw-more">
                 <ul>
                   <li><a href="#">수정하기</a></li>
-                  <li><a href="#">신고하기</a></li>
+                  <!-- 20211013 신고하기 팝업 -->
+                  <li><a href="#" aria-haspopup="dialog" aria-controls="report_popup-fn" id="report-opener-fn" aria-pressed="false">신고하기</a></li>
+                  <!--// 20211013 신고하기 팝업 -->
                 </ul>
               </div>
             </div>
@@ -92,7 +94,9 @@
               <div class="util-pop revw-more">
                 <ul>
                   <li><a href="#">수정하기</a></li>
-                  <li><a href="#">신고하기</a></li>
+                  <!-- 20211013 신고하기 팝업 -->
+                  <li><a href="#" aria-haspopup="dialog" aria-controls="report_popup-fn" id="report-opener-fn" aria-pressed="false">신고하기</a></li>
+                  <!--// 20211013 신고하기 팝업 -->
                 </ul>
               </div>
             </div>
@@ -121,7 +125,9 @@
               <div class="util-pop revw-more">
                 <ul>
                   <li><a href="#">수정하기</a></li>
-                  <li><a href="#">신고하기</a></li>
+                  <!-- 20211013 신고하기 팝업 -->
+                  <li><a href="#" aria-haspopup="dialog" aria-controls="report_popup-fn" id="report-opener-fn" aria-pressed="false">신고하기</a></li>
+                  <!--// 20211013 신고하기 팝업 -->
                 </ul>
               </div>
             </div>
@@ -180,6 +186,75 @@
     </div>
   </div>
   <!--// 이미지 전체보기 팝업 -->  
+  
+  <!-- 20211013 신고하기 팝업 -->
+  <div class="overlay-popup report_popup" role="dialog" id="report_popup-fn" aria-labelledby="report_popup-opener" aria-modal="true">
+    <div class="contents">
+			<div class="heading">
+				신고하기 <button class="btn_close"><i></i></button>
+			</div>
+      <div class="inner">
+        <div class="report_contents">
+          <div class="title">신고하시는 이유를 선택해주세요.</div>
+          <!-- 신고 사유 목록 -->
+          <ul class="report-list">
+            <li>
+              <div class="radiowrap">
+                <input type="radio" name="radio_report" id="report01">
+                <label for="report01">광고/홍보하는 글이에요.</label>
+              </div>
+            </li>
+            <li>
+              <div class="radiowrap">
+                <input type="radio" name="radio_report" id="report02">
+                <label for="report02">타인을 비방하는 글이에요.</label>
+              </div>
+            </li>
+            <li>
+              <div class="radiowrap">
+                <input type="radio" name="radio_report" id="report03">
+                <label for="report03">불법정보, 음란물, 욕설, 혐오 차별적 글이에요.</label>
+              </div>
+            </li>
+            <li>
+              <div class="radiowrap">
+                <input type="radio" name="radio_report" id="report04">
+                <label for="report04">개인정보가 노출된 글이에요.</label>
+              </div>
+            </li>
+            <li>
+              <div class="radiowrap">
+                <input type="radio" name="radio_report" id="report05">
+                <label for="report05">스팸, 홍보하는 글이에요.</label>
+              </div>
+            </li>
+          </ul>
+          <!--// 신고 사유 목록 -->
+        </div>
+      </div>
+      <div class="btn_wrap">
+        <a href="#" class="btn gray-btn manual_fn" onclick="closeLayer('#report_popup-fn')" aria-haspopup="dialog" aria-controls="report_popup-fn" id="report_popup-opener-fn" aria-pressed="false">신고하기</a>
+        <a href="#" class="btn primary" aria-haspopup="dialog" aria-controls="report-result_popup-fn" id="report-result-opener-fn" aria-pressed="false">신고하기</a>
+      </div>
+    </div>
+    <div class="overlay-dimmed"></div>
+  </div>
+
+  <div class="overlay-popup report-result_popup" role="dialog" id="report-result_popup-fn" aria-labelledby="report-result_popup-opener" aria-modal="true">
+    <div class="contents">
+      <div class="inner">
+        <div class="tit_wrap">
+          신고 완료되었습니다.
+        </div>
+      </div>
+      <div class="btn_wrap">
+        <a href="#" class="btn primary manual_fn" onclick="closeLayer('#report-result_popup-fn')" aria-haspopup="dialog" aria-controls="report-result_popup-fn" id="report-result_popup-opener-fn" aria-pressed="false">확인</a>
+      </div>
+    </div>
+    <div class="overlay-dimmed"></div>
+  </div>
+  <!--/ 20211013 신고하기 팝업 -->
+
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
 		"webroot":"..",

@@ -1671,27 +1671,34 @@ a.btn {
 	}
 }
 
-.report_contents {
-	border-top: 1px solid #E5E5E5;
-	padding: 30px 20px 80px;
-	.title {
-		font-size: 18px;
-		font-weight: 700;
-		margin-bottom: 25px;
-	}
-	li {
-		line-height: 1.4;
-		margin-bottom: 10px;
-		&:last-of-type {
-			margin-bottom: 0;
+.report_popup, .report-result_popup {
+	.report_contents {
+		.title {
+			font-size: 15px;
+			font-weight: 800;
+			margin-bottom: 20px;
+		}
+		.report-list {
+			margin-bottom: 10px;
+		}
+		li {
+			line-height: 1.4;
+			margin-bottom: 10px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
 		}
 	}
-}
-.report_popup {
 	.tit_wrap {
 		padding: 20px 0;
 		font-weight: 700;
 		text-align: center;
+	}
+	.btn_wrap {
+		.gray-btn {
+			border: 0;
+			border-radius: 0;
+		}
 	}
 }
 
