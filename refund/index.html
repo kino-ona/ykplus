@@ -1,0 +1,174 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>DoubleHeart - 환불 안내</title>
+<link rel="shortcut icon" href="http://www.doubleheart.co.kr/images/common/favicon.ico" type="image/x-icon" />
+<meta name="description" content="엄마를 닮은 육아용품 더블하트입니다.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="http://www.doubleheart.co.kr/css/import.css">
+<style>
+@import url(http://www.openhiun.com/hangul/nanumbarungothic.css);
+</style>
+<script src="http://www.doubleheart.co.kr/js/vendor/modernizr-2.8.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+<script>
+	function goodsSearch() {
+			form = new $Form('bsForm');
+			form.submit();
+	}
+	// 에이젼트 체크
+	var isMobile = false;
+	var mobileKeyWords = new Array('iPhone', 'iPod', 'iPad', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson');
+
+	setTimeout(function () {
+	for (var word in mobileKeyWords) {
+		if (navigator.userAgent.match(mobileKeyWords[word]) != null) {
+			isMobile = true;
+			break;
+		}
+	}
+	var href = location.href;
+	if (isMobile) {	// 웹에서 모바일로
+		// location.href = 'http://' + href.split('/')[2] + '/mobile';
+		$('#wrap').css('min-width', '100%')
+	}
+	}, 100);
+</script>
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">현재 사용하고 계신 브라우저는 <strong>공식지원</strong>이 끊긴 브라우저입니다. 다음 페이지에서 <a href="http://browsehappy.com/">브라우저 업그레이드</a>를 진행해 주세요.</p>
+	<![endif]-->
+	<!-- Content 영역 -->
+	<div id="wrap">
+
+		<div id="container">
+			<h2 class="blind">본문</h2>
+
+			<!-- 12.16 refund -->
+			<style>
+				body {background-color: #f3f3f3;}
+				.refund {width:100%;max-width:1040px;margin:0 auto;background-color:#fff;color:#222222;font-family:nanumbarungothic, 'Nanum Barun Gothic', 'Malgun Gothic', 'Arial','AppleGothic','sans-serif';}
+				.refund .head {width:100%;border-bottom:2px solid #ed1c24;background-color: #f3f3f3;}
+				.refund .head .logo {max-width:800px;padding:30px 0;margin:0 auto;}
+				.refund .information_wrap {width:100%;max-width:800px;margin:0 auto;padding:80px 0;word-break: keep-all;}
+				.refund .refund_header {width:100%;padding:0 0;margin-bottom:50px;text-align: left;font-size:20px;font-weight: 700;}
+				.refund .refund_header p {padding-top:10px;font-weight:400;line-height: 1.3;font-size:38px;}
+				.refund .refund_header .ti {margin-top:10px;font-weight: 300;font-size:45px;}
+				.refund .refund_header span {display:block;font-weight: 700;font-size:20px;}
+				.refund .refund_header h2 {font-size:38px;line-height: 1.4;}
+				.refund .refund_header h2 span {font-weight:normal;margin-top:10px;}
+				.refund .refund_info {width:100%;padding:0;margin-bottom:30px;text-align: left;}
+				.refund .information_wrap .information_content {margin-bottom:85px;}
+				.refund .information_wrap .information_content p {font-size:16px;font-weight:normal;line-height: 1.5;}
+				.refund label {margin-right:20px;font-size:16px;}
+				.refund input[type=checkbox],
+				.refund input[type=radio] {width:16px;height:16px;margin:-2px 10px 0 0;border:1px solid #ddd;vertical-align: middle;}
+				.refund .refund_tbl {width:100%;padding:0;border-top:1px solid #000;border-bottom:1px solid #000;margin-bottom:60px;}
+				.refund .refund_tbl input[type=text] {width:65%;height:40px;padding:0;border:0;font-size:15px;vertical-align: middle;font-family:nanumbarungothic, 'Nanum Barun Gothic', 'Malgun Gothic', 'Arial','AppleGothic','sans-serif';}
+				.refund .refund_tbl table th {color:#888888;font-weight: normal;}
+				.refund .refund_tbl table th, 
+				.refund .refund_tbl table td {padding:15px;font-size:16px;text-align: left;background-color: #fff;border:0;color:#222222;line-height: 1.5;vertical-align: top;}
+				.refund .refund_tbl table td {padding-top:22px;}
+				.refund .refund_tbl table th span {display: inline-block;min-width:100px;padding:6px 10px 5px;border-radius:20px;background-color: #eeeeee;color:#222222;text-align: center;}
+				.refund .refund_tbl .col1 {width:28%;}
+				.refund .refund_tbl .col2 {width:72%;}
+				.refund .btnArea {text-align: center;}
+				.refund .btnArea .btn {width:45%;min-height: 60px;line-height:62px;font-weight: 600;font-size: 16px;color: #fff; }
+				.refund .btn {display: inline-block;text-align: center;vertical-align: middle;}
+				.refund .inline .sbtn {position:absolute;right:0;top:0;min-width:80px;padding:10px 10px; color: #222;font-size:13px;border:1px solid #ddd;background-color: #fff;}
+				.refund .inline._product {margin-top:13px !important;border-bottom:0;}
+				.refund .inline._product label {display: block;margin-bottom:10px;}
+				.refund .inline._product select {height:40px;border-bottom:1px solid #ddd;}
+				.refund .btn01 {background-color:#ed1c24;}
+				.refund .btn02 { background-color: #666666;}
+				.refund .refund_notice {margin:40px 0;padding:20px;background-color:#f2f2f2;border:1px solid #ddd;}
+				.refund .refund_notice p {position:relative; display:block;padding-left:10px;margin-bottom:10px;font-size:14px;line-height: 1.6;}
+				.refund .refund_notice p > span {color:#ed1c24;}
+				.refund .refund_notice p:before {content: '- ';position:absolute;left:0;top:0;display: block;font-size: 14px;}
+				@media screen and (max-width: 1024px) {
+					.refund .head .logo {padding:16px;}
+					.refund .head .logo img {width:133px;}
+					.refund .information_wrap {width:calc(100% - 40px);padding:40px 20px;}
+					.refund .refund_header {margin-bottom:30px;font-size:14px;}
+					.refund .refund_header .ti, .refund .refund_header h2 {font-size:26px;}
+					.refund .refund_header h2 span {font-size:16px;}
+					.refund .information_wrap .information_content {margin-bottom:40px;}
+					.refund .information_wrap .information_content p {font-size: 14px;}
+					.refund .refund_tbl {margin-bottom:30px;}
+					.refund .refund_tbl table th, .refund .refund_tbl table td {display: block;width:100% !important;padding:13px 0;font-size:13px;}
+					.refund .btnArea .btn {display: block;width:100%;margin-bottom:5px;font-size:14px;min-height: 50px; line-height: 52px;}
+					.refund .refund_notice p {font-size:12px;}
+				}
+			</style>
+			<div class="refund">
+				<div class="head">
+					<h1 class="logo"><a href="/default.aspx"><img src="./images/logo_doubleheart.jpg" alt="DoubleHeart"></a></h1>
+				</div>
+				<div class="information_wrap">
+					<div class="refund_header">
+						더블하트 젖병 세정제 사용 고객님께 안내드립니다.
+						<p class="ti">고객님들께 불편을 드린 점<br>진심으로 사과드립니다.</p>
+					</div>
+					<!-- 12.17 -->
+					<div class="information_content">
+						<p>
+							우선, 판매사로서 사전에 보다 철저히 관리하지 못한 데 대하여 깊은 책임감을 느끼며, 이로 인해 고객님께 불편과 심려를 드린 점 다시 한번 깊이 사과 드립니다.<br><br>
+							해당 제품의 국내 제조사 및 시험전문기관에 의뢰하여 확인 한 결과, 공정 세척 과정에서 유입된 이물질과 함께 생산공정의 설비에서 마모된 금속 이물질도 유입된 것으로 확인했다고 통보 받았습니다.<br><br>
+						</p>
+						<p>
+							당사는 원인 파악과 함께 세척 후 이물질 잔류 여부를 확인하기 위한 시험을 시행했습니다. 이물질이 포함된 세정제를 흐르는 물로 헹구는 방법과 세척솔을 사용하는 2가지 경우로 시험했으며, 
+							세척 후 정제수를 붓고 여과하여 확인한 결과, 5회 반복 시험에서 이물질은 모두 씻겨 나가 잔류하지 않는 것으로 확인하였습니다.<br>
+							실험 결과를 떠나 사전에 보다 철저히 관리하지 못한 데 대해 거듭 사과 드립니다.<br><br>
+						</p>
+						<p>
+							당사는 12월 11일(금)부터 해당 제품에 대한 환불을 시행하고 있습니다. 해당 기간에 제조된 제품을 사용 중이거나 보관 중인
+							고객님께서는 개봉 여부와 관계없이 당사 고객센터를 통해 모두 환불 받으실 수 있습니다.<br>현재는 코로나 상황으로 고객센터 직원의
+							충원이 어려워 환불 접수가 원활하지 않을 수 있음을 말씀 드립니다. 최대한 신속하게 상담 직원을 충원하고, 온라인 환불 시스템도 오픈할 예정입니다.<br><br>
+						</p>
+						<p>심려를 끼쳐 드린 점 진심으로 사과 드리며, 향후 이러한 일이 재발되는 일이 없도록 모든 조치를 취하도록 하겠습니다.<br><br>유한킴벌리 드림</p>
+					</div>
+					<div class="refund_tbl">
+						<table>
+							<tr>
+								<th class="col1"><span>대상 제품</span></th>
+								<td class="col2"><strong>더블하트 젖병세정제<br>2020년 5월 8일부터 10월 16일 생산분</strong></td>
+							</tr>
+							<tr>
+								<th><span>환불 접수</span></th>
+								<td><strong>무료상담전화</strong><br>(080-010-3200, 평일 오전 9시~오후 5시 30분, 주말/공휴일 제외)<br><strong>문자 : 1666-7067</strong> (발신자 부담)</td>
+							</tr>
+							<tr>
+								<th><span>환불 기간</span></th>
+								<td>2020. 12. 11(금) ~ 2021. 3. 10(수)</td>
+							</tr>
+						</table>
+					</div>
+					<div class="btnArea">
+						<a href="#" class="btn btn01">환불 접수</a>
+						<a href="#" class="btn btn02">나의 환불 접수 내역 확인</a>
+					</div>
+					<div class="refund_notice">
+						<p>본 제품의 환불은 판매사인 유한킴벌리 고객지원센터에서 진행됩니다.</p>
+						<p>통화가 어려우실 경우 문자(1666-7067) 남겨 주시면 연락 드리도록 하겠습니다.</p>
+						<p>판매원이 당사인 제품만 해당되며, 병행수입 제품은 해당하지 않습니다.</p>
+					</div>
+					<!--// 12.17 -->
+				</div>
+
+			</div>
+			<!--// 12.16 refund -->
+
+		</div>
+
+
+
+	</div>
+	<!--// Content 영역 -->
+
+</body>
+
+</html>
