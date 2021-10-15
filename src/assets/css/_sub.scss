@@ -999,7 +999,7 @@
 					border-color: #666;
 				}
 			}
-			&[aria-hidden="false"] .btn_all {
+			&[aria-expanded="true"] .btn_all {
 				i::before {
 					transform: translate(-50%, -50%) rotate(135deg);
 				}

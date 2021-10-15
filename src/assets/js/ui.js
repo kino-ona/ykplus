@@ -161,7 +161,10 @@ if($('.replyarea_wrap .ui-accordion').length > 0) {
 }
 if($('.review_sec .ui-accordion').length > 0) {
 	$('.review_sec .ui-accordion').find('.item').each(function () {
-		$('.panel').attr('aria-expanded').parent().siblings('.panel-status').attr('aria-hidden');
+		$(this).click(function(){
+			var status = $(this).find('.target').attr('aria-expanded');
+			$(this).siblings('.panel-status').attr('aria-expanded', status);
+		});
 	});
 }
 
