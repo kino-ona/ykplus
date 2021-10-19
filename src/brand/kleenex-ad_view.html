@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"크리넥스 광고"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <div class="brand_wrap _kleenex">
+      <div class="brand_area_wrap">
+        <div class="post">
+					<div class="video">
+						<i class="btn-vplay"></i>
+						<video width="100%" poster="../assets/images/dummy/ad_thum05.png" autoplay="0">
+							<source src="#" type="video/mp4">
+						</video>
+					</div>
+					<div class="videoplay_area">
+						<!-- <i class="btn-vplay"></i> -->
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="tit_wrap">
+						<p class="tit">화장실용 물티슈 변기에 버려도 되죠?</p>
+						<div class="more">
+							<p><i class="ic-16 ic_likes-gray"></i><span class="cnt">333</span></p>
+							<p><i class="ic-16 ic_show"></i><span class="cnt">250</span></p>
+              <p class="date">2021.05.12</p>
+						</div>
+					</div>
+          <div class="para">
+            <div class="row">
+              <p>
+              화장실용 물티슈 크리넥스 마이비데는 미국과 유럽에서 통용되는 국제부직포협회 변기 내림 적합성 평가 기준을 통과한 제품입니다.<br>
+<br>
+사용 후 화장실 변기에 버리면 녹는 것이 아니라 배관-정화의 과정을 거치면서 점차 해리되고 최종적으로 생분해가 됩니다.<br>
+<br>
+쓰고계신 물티슈가 화장실용물티슈라면 언제어디서든누구나 사용 후 안심하고 변기에 버리셔도 됩니다.<br>
+              </p>
+            </div>
+          </div>
+          <div class="navi">
+						<ol>
+							<li><a href="#">
+								<span>이전글</span>
+								<p class="tit blank">이전 글이 없습니다.</p>
+							</a></li>
+							<li><a href="#">
+								<span>다음글</span>
+								<p class="tit">한 여름 건강을 챙기기위해 꼭 섭취해야하는 음식 </p>
+							</a></li>
+						</ol>
+					</div>
+        </div>
+      </div>
+
+			<div class="algorithm_sec">
+				<p class="tit">관련 상품</p>
+				<ul class="item_list">
+					<li class="item soldout">
+						<a href="#"><div class="row">
+							<p class="figure"><img src="../assets/images/dummy/product_thumn04.png"></p>
+							<div class="item_conts">
+								<p class="name">크리넥스 마이비데 키즈</p>
+								<!-- <p class="price">
+									<span class="discount">25<em class="unit">%</em></span>
+									<span class="origin">19,900<em class="unit">원</em></span>
+									<span class="sale">20,500</span>
+								</p> -->
+							</div>
+						</div></a>
+					</li>
+					<li class="item">
+						<a href="#"><div class="row">
+							<p class="figure"><img src="../assets/images/dummy/product_thumn03.png"></p>
+							<div class="item_conts">
+								<p class="name">크리넥스 크리넥스 비말차단 에어마스크</p>
+								<!-- <p class="price">
+									<span class="discount blind">25<em class="unit">%</em></span>
+									<span class="origin">25,900<em class="unit">원</em></span>
+									<span class="sale blind">20,500</span>
+								</p> -->
+							</div>
+						</div></a>
+					</li>
+					<li class="item">
+						<a href="#"><div class="row">
+							<p class="figure"><img src="../assets/images/dummy/product_thumn02.png"></p>
+							<div class="item_conts">
+								<p class="name">크리넥스 비말차단 에어마스크 크리넥스 비말차단 에어마스크 크리넥스 비말차단 에어마스크 크리넥스 비말차단 에어마스크</p>
+								<!-- <p class="price">
+									<span class="discount blind">25<em class="unit">%</em></span>
+									<span class="origin">19,900<em class="unit">원</em></span>
+									<span class="sale blind">20,500</span>
+								</p> -->
+							</div>
+						</div></a>
+					</li>
+					<li class="item">
+						<a href="#"><div class="row">
+							<p class="figure"><img src="../assets/images/dummy/product_thumn01.png"></p>
+							<div class="item_conts">
+								<p class="name">크리넥스 수앤수 코튼클린</p>
+								<!-- <p class="price">
+									<span class="discount">20<em class="unit">%</em></span>
+									<span class="origin">28,900<em class="unit">원</em></span>
+									<span class="sale">30,500</span> -->
+								</p>
+							</div>
+						</div></a>
+					</li>
+				</ul>
+			</div>
+
+    </div>
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"show"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
