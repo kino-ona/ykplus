@@ -631,6 +631,11 @@
 			margin-top:10px;
 		}
 	}
+	dd {
+		> input:read-only {
+			padding-right: 90px;
+		}
+	}
 }
 .shipping_detail {
 	.vertical {
