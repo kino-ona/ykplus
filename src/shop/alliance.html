@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"제휴문의",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"subtype2"
+		},
+		"subtitle":"제휴문의"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="shop_wrap">
+      <ul class="alliance_request">
+        <li class="row linkwrap">
+          <p class="tit">입점 판매 문의</p>
+          <a href="mailto:xxxx@y-k.co.kr">xxxx@y-k.co.kr</a>
+        </li>
+        <li class="row linkwrap">
+          <p class="tit">제휴 마케팅 문의</p>
+          <a href="mailto:xxxx@y-k.co.kr">xxxx@y-k.co.kr</a>
+        </li>
+      </ul>
+		</div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
