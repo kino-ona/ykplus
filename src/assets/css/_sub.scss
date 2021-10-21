@@ -1524,9 +1524,13 @@
 		border-radius: 6px;
 		background-color: #F5F7F8;
 		.name {
-			margin-bottom:16px;
+			margin-bottom:7px;
 			font-weight: 700;
 			@include ellipse(1);
+		}
+		.detail {
+			margin-bottom:15px;
+			font-size:13px;
 		}
 	}
 	.opt-edit {
@@ -1535,7 +1539,29 @@
 		.price {
 			top:19px;
 		}
+		.ti {
+			margin-top:15px;
+			margin-bottom:10px;
+			font-size:13px;
+			color:#999;
+			&:first-of-type {
+				margin-top:0;
+			}
+		}
+		.amount {
+			width:100%;
+			max-width:100%;
+			.calc {
+				width:44px;
+				height:44px;
+			}
+			input[type=text],
+			input[type=number] {
+				height:44px;
+			}
+		}
 	}
+
 	.total_price {
 		padding:16px 0 0;
 		text-align: right;
