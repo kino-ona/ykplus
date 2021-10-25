@@ -6,10 +6,9 @@
 			<span class="bf_login">로그인 해주세요.</span>
 			<span class="aftr_login"><i>김유한</i>님! 반갑습니다.</span>
 			<div class="util">
-				<!-- 20211025 로그인/아웃버튼 -->
+				<!-- 20211025 로그인 버튼 -->
 				<button class="btn small bf_login manual_fn">로그인</button>
-				<button class="btn small aftr_login manual_fn">로그아웃</button>
-				<!--// 20211025 로그인/아웃버튼 -->
+				<!--// 20211025 로그인 버튼 -->
 				<a href="#" class="ic-25 gnb_btn-setting" alt="설정"><span class="a11y">설정</span></a>
 				<a href="#" class="ic-25 gnb_btn-close" alt="닫기"><span class="a11y">닫기</span></a>
 			</div>
@@ -155,8 +154,13 @@
 			<div class="swiper-pagination"></div>
 		</div>
 	</section>
+	<!-- 20211025 로그아웃 버튼 -->
+	<section class="btn_wrap">
+		<button class="btn primary aftr_login">로그아웃</button>
+	</section>
+	<!--// 20211025 로그아웃 버튼 -->
 </div>
-<div class="overlay-dimmed"></div>		
+<div class="overlay-dimmed"></div>
 <!--// 210916 gnb -->
 
 @@if (headtype.layout==='default') {

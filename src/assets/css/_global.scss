@@ -670,6 +670,12 @@ body {
 			display: inline-block;
 			margin-left: 10px;
 		}
+		.btn.small {
+			border: 0;
+			background-color: #EDEDED;
+			color: #111;
+			font-weight: 700;
+		}
 		.btn_write {
 			color: #999;
 			font-size: 15px;
@@ -850,7 +856,7 @@ body {
 		}
 	}
 	.today_event {
-		border-bottom: none;
+		padding-bottom: 24px;
 		.swiper-slide {
 			height: auto;
 			.imgbg {
@@ -886,6 +892,15 @@ body {
 			z-index: 99;
 			overflow: visible;
 			clip: unset;
+		}
+	}
+	section.btn_wrap {
+    border-top: 8px solid #F5F7F8;
+		padding: 20px;
+		border-bottom: 0;
+		.btn {
+			width: 100%;
+			border-color: #AAA;
 		}
 	}
 }
