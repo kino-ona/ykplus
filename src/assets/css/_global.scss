@@ -652,7 +652,20 @@ body {
 	background-color: #fff;
 	overflow-y: auto;
 	@include transition(.3s, ease-in);
-	h2 {display: block;}
+	h2 {
+		display: block;
+		span {
+			display: block;
+			.btn.small {
+				border: 0;
+				margin-left: 6px;
+				margin-bottom: 4px;
+				color: #111;
+				font-weight: 700;
+				background-color: #EDEDED;
+			}
+		}
+	}
 	& + .overlay-dimmed {
 		opacity: 0;
 		z-index: -1;
@@ -669,12 +682,6 @@ body {
 		a {
 			display: inline-block;
 			margin-left: 10px;
-		}
-		.btn.small {
-			border: 0;
-			background-color: #EDEDED;
-			color: #111;
-			font-weight: 700;
 		}
 		.btn_write {
 			color: #999;

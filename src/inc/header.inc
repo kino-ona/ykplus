@@ -3,12 +3,13 @@
 <div class="gnb-menu">
 	<div class="gnb-head">
 		<h2>
-			<span class="bf_login">로그인 해주세요.</span>
-			<span class="aftr_login"><i>김유한</i>님! 반갑습니다.</span>
-			<div class="util">
+			<span class="bf_login">로그인 해주세요.
 				<!-- 20211025 로그인 버튼 -->
 				<button class="btn small bf_login manual_fn">로그인</button>
 				<!--// 20211025 로그인 버튼 -->
+			</span>
+			<span class="aftr_login"><i>김유한</i>님! 반갑습니다.</span>
+			<div class="util">
 				<a href="#" class="ic-25 gnb_btn-setting" alt="설정"><span class="a11y">설정</span></a>
 				<a href="#" class="ic-25 gnb_btn-close" alt="닫기"><span class="a11y">닫기</span></a>
 			</div>
