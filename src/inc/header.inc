@@ -5,7 +5,7 @@
 		<h2>
 			<span class="bf_login">로그인 해주세요.
 				<!-- 20211025 로그인 버튼 -->
-				<button class="btn small bf_login manual_fn">로그인</button>
+				<button class="btn small bf_login">로그인</button>
 				<!--// 20211025 로그인 버튼 -->
 			</span>
 			<span class="aftr_login"><i>김유한</i>님! 반갑습니다.</span>
