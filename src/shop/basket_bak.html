@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"장바구니",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/order.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":".",
+		"headtype": {
+			"layout":"subtype2"
+		},
+		"subtitle":"장바구니"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="cart_wrap">
+			<div class="cart_head">
+				<div class="row">
+					<p class="chkwrap cart_checker"><input type="checkbox" id="check-all"><label for="check-all">전체선택/해제(1/4)</label></p> <!-- 210901 카운트 추가 //-->
+					<ul class="bundle_control">
+						<li><button type="button" class="btn t-btn">선택삭제</button></li>
+					</ul>
+				</div>
+			</div>
+
+			<p class="delivery_type">유한킴벌리 배송상품</p>
+			<div class="cart_list">
+				<!-- loop -->
+				<div class="item">
+					<div>
+						<button class="btn_delete"><span class="a11y">삭제</span></button>
+						<p class="chkwrap"><input type="checkbox" id="check-01"><label for="check-01"><span class="a11y">상품 선택</span></label></p>
+						<div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+						<div class="details">
+							<p class="name">
+								<a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+							</p>
+							<div class="edit">
+								<div class="amount">
+									<button class="calc _minus" type="button" data-inc="-1"><span class="a11y">수량빼기</span></button>
+									<button class="calc _plus" type="button" data-inc="1"><span class="a11y">수량더하기</span></button>
+									<input type="text" value="99" readonly>
+								</div>
+								<button class="_submit" type="button">변경</button>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="total_count">
+							<p class="ti">구매가격</p>
+							<p class="price">9,999,000<span class="unit">원</span></p>
+						</div>
+						<div class="delivery_summary">
+							<p class="ti">배송비</p>
+							<p class="fee">
+								<span class="price">2,500<span class="unit">원</span></span>
+								<i aria-haspopup="dialog" aria-controls="delivery_popup" id="delivery_opener" aria-pressed="false" class="ic-20 ic_exclamation"><span class="a11y">배송비 안내</span></i>
+							</p>
+							<!-- 배송비 안내 팝업 -->
+							<div class="overlay-popup" role="dialog" id="delivery_popup" aria-labelledby="delivery_opener" aria-modal="true">
+								<div class="contents tooltip">
+									<button class="btn_close"><i></i></button>
+									<div class="inner">
+										<p>주문금액기 3만원 미만시 배송비 2,500원이 청구됩니다.</p>
+									</div>
+								</div>
+								<div class="overlay-dimmed"></div>
+							</div>
+							<!--// 배송비 안내 팝업 -->
+						</div>
+						<div class="btn_wrap">
+							<button class="btn primary">바로구매</button>
+						</div>
+					</div>
+				</div>
+				<!--// loop -->
+
+				<div class="item">
+					<div>
+						<button class="btn_delete"><span class="a11y">삭제</span></button>
+						<p class="chkwrap"><input type="checkbox" id="check-02"><label for="check-02"><span class="a11y">상품 선택</span></label></p>
+						<div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+						<div class="details">
+							<p class="name">
+								<a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+							</p>
+							<div class="edit">
+								<div class="amount">
+									<button class="calc _minus" type="button" data-inc="-1"><span class="a11y">수량빼기</span></button>
+									<button class="calc _plus" type="button" data-inc="1"><span class="a11y">수량더하기</span></button>
+									<input type="text" value="99" readonly>
+								</div>
+								<button class="_submit" type="button">변경</button>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="total_count">
+							<p class="ti">구매가격</p>
+							<p class="price">99,999,000<span class="unit">원</span></p>
+						</div>
+						<div class="delivery_summary">
+							<p class="ti">배송비</p>
+							<p class="fee">기본배송 <i aria-haspopup="dialog" aria-controls="delivery_popup" id="delivery_opener" aria-pressed="false" class="ic-20 ic_exclamation"><span class="a11y">배송비 안내</span></i></p>
+							<!-- 배송비 안내 팝업 -->
+							<div class="overlay-popup" role="dialog" id="delivery_popup" aria-labelledby="delivery_opener" aria-modal="true">
+								<div class="contents tooltip">
+									<button class="btn_close"><i></i></button>
+									<div class="inner">
+										<p>주문금액기 3만원 미만시 배송비 2,500원이 청구됩니다.</p>
+									</div>
+								</div>
+								<div class="overlay-dimmed"></div>
+							</div>
+							<!--// 배송비 안내 팝업 -->
+						</div>
+						<div class="btn_wrap">
+							<button class="btn primary">바로구매</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--// -->
+
+			<div class="total_price">
+				<dl>
+					<dt>할인가 합계</dt>
+					<dd class="price">1,000<span class="unit">원</span></dd>
+				</dl>
+				<dl>
+					<dt>배송비</dt>
+					<dd class="price">2,500<span class="unit">원</span></dd>
+				</dl>
+				<dl>
+					<dt>배송비</dt>
+					<dd class="price">무료</dd>
+				</dl>
+				<div class="total">
+					<dl>
+						<dt>총 할인가 합계</dt>
+						<dd class="price">21,900<span class="unit">원</span></dd>
+					</dl>
+					<dl class="sum">
+						<dt>총 주문금액 합계</dt>
+						<dd class="price">9,999,900<span class="unit">원</span></dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="fixed_bottom"> 
+				<div class="fixed_btn"><a href="#" class="btn blue-btn">주문하기</a></div>
+			</div>
+
+		</div>
+		<!--// cart_wrap -->
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+
+	<script>
+		$('.amount button.calc').click(function() {
+			var $btn = $(this);
+			$('.amount input').val(function(i, val) {
+				val = val * 1 + $btn.data('inc');
+				return (val <= 0 ? '' : '') + val;
+			});
+		});
+	</script>
+</body>
+
+</html>

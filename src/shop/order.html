@@ -11,7 +11,7 @@
 	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
 	<!-- header  -->
 	@@include('../inc/header.inc',{ 
-		"webroot":".",
+		"webroot":"..",
 		"headtype": {
 			"layout":"orderhead"
 		},
@@ -28,7 +28,7 @@
 					<button class="btn toggle_trigger" aria-controls="orderer_modify" type="button" aria-pressed="true"><span class="a11y">상세정보보기</span><i></i></button>
 				</p>
 
-				<div id="orderer_modify" class="content_toggle orderer_info" style="display: block;">
+				<div id="orderer_modify" class="content_toggle orderer_info">
 					<dl class="horizon">
 						<dt>주문자명</dt>
 						<dd>이정선 <button class="btn small">변경</button></dd>
