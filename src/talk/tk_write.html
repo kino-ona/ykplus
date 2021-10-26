@@ -50,6 +50,14 @@
 								<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn01.png" style="background-image: url(../assets/images/dummy/talk_thumn01.png);">
 									<button class="thum-close"><span class="a11y">erase</span></button>
 								</p>
+								<!-- 20211026 영상 -->
+								<p class="postimgthum vodtype">
+									<video class="video" !poster="../assets/images/dummy/ad_thum01.png" autoplay="0">
+										<source src="../assets/images/dummy/@vod.mp4" type="video/mp4">
+									</video>
+									<button class="thum-close"><span class="a11y">erase</span></button>
+								</p>
+								<!--// 20211026 영상 -->
 								<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn02.png" style="background-image: url(../assets/images/dummy/talk_thumn02.png);">
 									<button class="thum-close"><span class="a11y">erase</span></button>
 								</p>
@@ -141,31 +149,35 @@
 		var elDelete = function (set) {
 			$(set).parent().remove();
 		}
-
-		/** gallery pop **/
+		
+		// 20211026 s
 		var lightbox = $('#lightbox-overlay'),
-      	lightboximg = lightbox.find('.lightbox-img');
-		$('.pic_list').each(function(){ 
-			var parentGall = $(this);
+		lightboximg = lightbox.find('.lightbox-img');
+	$('.pic_list').each(function(){ 
+		var parentGall = $(this);
 
-			$(this).find('.postimgthum').click(function(){
-				$('#postgallerySwp').find('.swiper-wrapper').empty();	
+		$(this).find('.postimgthum').click(function(){
+			$('#postgallerySwp').find('.swiper-wrapper').empty();	
 
-				parentGall.find('.postimgthum').each(function(){
-					var figCnt = $(this).length/2;
-					var imgSrc = $(this).attr('data-imgsrc');
+			parentGall.find('.postimgthum').each(function(){
+				var figCnt = $(this).length/2;
+				var imgSrc = $(this).attr('data-imgsrc');
 
-					for (var i = 0; i <= figCnt; i++) {
+				for (var i = 0; i <= figCnt; i++) {
+					if(imgSrc == null){
+						$('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide">"' + $(this).html() + '" </div>')
+					} else {
 						$('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
 					}
-				})
-				lightbox.addClass('visible');
-				$('body').addClass('noscroll');
+				}
+			})
+			lightbox.addClass('visible');
+			$('body').addClass('noscroll');
 
-				defaultSwipe('postgallerySwp', '1.05', 8);
-			});
+			defaultSwipe('postgallerySwp', '1.05', 8);
 		});
-
+	});
+	// 20211026 e
 	</script>
 </body>
 </html>
