@@ -63,9 +63,9 @@
 						<button class="thum-close"><span class="a11y">erase</span></button>
 					</p>
 					<!-- 영상 -->
-					<p class="postimgthum">
-						<video class="video" poster="../assets/images/dummy/ad_thum01.png" autoplay="0">
-							<source src="#" type="video/mp4">
+					<p class="postimgthum vodtype">
+						<video class="video" !poster="../assets/images/dummy/ad_thum01.png" autoplay="0">
+							<source src="../assets/images/dummy/@vod.mp4" type="video/mp4">
 						</video>
 						<button class="thum-close"><span class="a11y">erase</span></button>
 					</p>
@@ -158,7 +158,11 @@
 				var imgSrc = $(this).attr('data-imgsrc');
 
 				for (var i = 0; i <= figCnt; i++) {
-					$('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
+					if(imgSrc == null){
+						$('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide">"' + $(this).html() + '" </div>')
+					} else {
+						$('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
+					}
 				}
 			})
 			lightbox.addClass('visible');
