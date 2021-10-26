@@ -1680,37 +1680,35 @@ a.btn {
 }
 
 
-.swiper-slide.vodtype {
-	.videoplay_area {
-		border-radius: inherit;
-		&::before {
-			content: '';
-			z-index: 2;
-			width: 48px;
-			height: 48px;
-			display: block;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			cursor: pointer;
-			background: {
-				image: url(../images/icons/ic_vplay.png);
-				size: 100%;
-				position: center center;
-				repeat: no-repeat;
-			}
+.swiper-slide .videoplay_area {
+	border-radius: inherit;
+	&::before {
+		content: '';
+		z-index: 2;
+		width: 48px;
+		height: 48px;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+		background: {
+			image: url(../images/icons/ic_vplay.png);
+			size: 100%;
+			position: center center;
+			repeat: no-repeat;
 		}
-		&::after {
-			content: '';
-			z-index: 1;
-			position: absolute;
-			top: 0%;
-			left: 0%;
-			right: 0;
-			bottom: 0;
-			background-color: rgba(0, 0, 0, .3);
-		}
+	}
+	&::after {
+		content: '';
+		z-index: 1;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, .3);
 	}
 }
 
