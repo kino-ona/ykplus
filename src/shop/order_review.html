@@ -48,7 +48,32 @@
             <p class="txcnt"><span>0</span> / 2,000</p>
           </div>
 				</div>
+				<!-- 20211026 파일첨부하기 -->
+				<div class="pic_list">
+					<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn01.png" style="background-image: url(../assets/images/dummy/talk_thumn01.png);">
+						<button class="thum-close"><span class="a11y">erase</span></button>
+					</p>
+					<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn02.png" style="background-image: url(../assets/images/dummy/talk_thumn02.png);">
+						<button class="thum-close"><span class="a11y">erase</span></button>
+					</p>
+					<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn03.png" style="background-image: url(../assets/images/dummy/talk_thumn03.png);">
+						<button class="thum-close"><span class="a11y">erase</span></button>
+					</p>
+					<p class="postimgthum" data-imgsrc="../assets/images/dummy/dummy_img01.png" style="background-image: url(../assets/images/dummy/dummy_img01.png);">
+						<button class="thum-close"><span class="a11y">erase</span></button>
+					</p>
+					<p class="postimgthum" data-imgsrc="../assets/images/dummy/dummy_img02.png" style="background-image: url(../assets/images/dummy/dummy_img02.png);">
+						<button class="thum-close"><span class="a11y">erase</span></button>
+					</p>
+				</div>
+
+				<div class="btn_wrap">
+					<div class="row">
+						<a href="#" class="btn primary full">파일첨부하기</a>
+					</div>
+				</div>
 			</div>
+			<!--// 20211026 파일첨부하기 -->
 
       <div class="fixed_bottom"> 
         <div class="fixed_btn"><a href="#" class="btn gray-btn">나중에 하기</a></div>
@@ -58,6 +83,16 @@
 		</div>
 	</div>
 	<!--// contents body -->
+	
+	<!-- 20211026 이미지 전체보기 팝업 -->
+  <div id="lightbox-overlay" class="lightbox-overlay">
+    <button onclick="lightboxClose()" class="btn_close"><i></i><span class="a11y">닫기</span></button>
+    <div id="postgallerySwp" class="swiper-container">
+      <div class="swiper-wrapper">
+      </div>
+    </div>
+  </div>
+  <!--// 20211026 이미지 전체보기 팝업 -->
 
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
@@ -90,6 +125,31 @@
 			}
 		});
   });
+
+	// 20211026 gallery pop s
+	var lightbox = $('#lightbox-overlay'),
+		lightboximg = lightbox.find('.lightbox-img');
+	$('.pic_list').each(function(){ 
+		var parentGall = $(this);
+
+		$(this).find('.postimgthum').click(function(){
+			$('#postgallerySwp').find('.swiper-wrapper').empty();	
+
+			parentGall.find('.postimgthum').each(function(){
+				var figCnt = $(this).length/2;
+				var imgSrc = $(this).attr('data-imgsrc');
+
+				for (var i = 0; i <= figCnt; i++) {
+					$('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
+				}
+			})
+			lightbox.addClass('visible');
+			$('body').addClass('noscroll');
+
+			defaultSwipe('postgallerySwp', '1.05', 8);
+		});
+	});
+	// 20211026 gallery pop e
 </script>
 </body>
 </html>

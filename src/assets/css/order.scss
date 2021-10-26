@@ -492,7 +492,7 @@
 		}
 	}
 	.content_toggle {
-		display: none;
+		display: block;
 		&.total_price {
 			padding-top:0;
 			border-top:0;
@@ -1532,8 +1532,15 @@
 		font-size: 15px;
 		font-weight: 800;
 	}
-	.content_detail {
-		padding: 12px 20px 18px;
+	.review_message {
+		padding: 12px 20px 0;
+		margin-bottom: 12px;
+	}
+	.btn_wrap {
+		margin-bottom: 40px;
+		.btn {
+			border-color: #AAA;
+		}
 	}
 }
 .review_message {
@@ -1561,6 +1568,44 @@
 			span {
 				color:#009AFF;
 			}
+		}
+	}
+}
+.pic_list {
+	position:relative;
+	width:100%;
+	padding: 0 20px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	.postimgthum {
+		flex: none;
+		display: inline-block;
+		position: relative;
+		overflow: visible;
+		width: 60px;
+		height: 60px;
+		margin: 6px 16px 20px 0;
+		display: block;
+		background: {
+			size: cover;
+			position: center center;
+			repeat: no-repeat;
+		}
+		border-radius: 6px;
+		.thum-close {
+			width: 25px;
+			height: 25px;
+			position: absolute;
+			top: -6px;
+			right: -6px;
+			background: {
+				image: url(../images/icons/thum-close.png);
+				size: 16px;
+				position: right top;
+				repeat: no-repeat;
+			}					
 		}
 	}
 }
