@@ -644,11 +644,40 @@
 												<!--// 210906 -->
 											</div>
 											<div class="review">
-												<div class="videoplay_area">
-													<iframe width="100%" height="100%" src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-												</div>
-												<div class="videoplay_area">
-													<iframe width="100%" height="100%" src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+												<div id="reviewSwpVideo" class="swiper-container">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide vodtype">
+															<div class="videoplay_area">
+																<iframe src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+															</div>
+														</div>
+														<div class="swiper-slide vodtype">
+															<div class="videoplay_area">
+																<iframe src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+															</div>
+														</div>
+														<div class="swiper-slide vodtype">
+															<div class="videoplay_area">
+																<iframe src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+															</div>
+														</div>
+														<div class="swiper-slide vodtype">
+															<div class="videoplay_area">
+																<iframe src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+															</div>
+														</div>
+														<div class="swiper-slide vodtype">
+															<div class="videoplay_area">
+																<iframe src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+															</div>
+														</div>
+														<div class="swiper-slide vodtype">
+															<div class="videoplay_area">
+																<iframe src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-pagination"></div>
 												</div>
 												<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
 												<div class="btn_wrap">
@@ -1012,6 +1041,16 @@
 	$('.prddetail_sec .tablist').find('li').each(function(){ 
 		$(this).find('.tab').click(function(){
 			defaultSwipe('reviewSwp02', '3.25', 10); 
+			var swiper = new Swiper('#reviewSwpVideo', {
+				slidesPerView: 1,
+				spaceBetween: 20,
+				paginationClickable: true,
+				speed: 400,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+				},
+			});
 		});
 	})
 </script>
