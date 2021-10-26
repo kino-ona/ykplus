@@ -112,7 +112,7 @@
 			spaceBetween: 10,
 		});
 	</script>
-	
+
 <script>
   $(document).ready(function() {
     $('#review_message').on('keyup', function() {
@@ -125,7 +125,21 @@
 		});
   });
 
-	// 20211026 gallery pop s
+	// 20211026 s
+	$('.thum-close').each(function() {
+		$(this).click(function() { 
+			var result = confirm('삭제하시겠습니까?'); 
+			if(result) { 
+				elDelete(this)
+			} else { //no 
+				return false;
+			} 
+		});
+	});
+	var elDelete = function (set) {
+		$(set).parent().remove();
+	}
+		
 	var lightbox = $('#lightbox-overlay'),
 		lightboximg = lightbox.find('.lightbox-img');
 	$('.pic_list').each(function(){ 
@@ -148,7 +162,7 @@
 			defaultSwipe('postgallerySwp', '1.05', 8);
 		});
 	});
-	// 20211026 gallery pop e
+	// 20211026 e
 </script>
 </body>
 </html>
