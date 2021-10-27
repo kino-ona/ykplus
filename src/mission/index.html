@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"subtype5"
+		},
+		"subtitle":""
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <div class="main_body">
+      <div class="tab-navigation">
+        <div class="tab-row">
+          <p class="item active"><a href="#" role="tab" aria-label="메인" aria-selected="true"><span>메인</span></a></p>
+          <p class="item"><a href="#" role="tab" aria-label="오늘의 걸음" aria-selected="false"><span>오늘의 걸음</span></a></p>
+          <p class="item"><a href="#" role="tab" aria-label="오늘의 미션" aria-selected="false"><span>오늘의 미션</span></a></p>
+        </div>
+      </div>
+      
+      <div class="mission_wrap">
+        <section class="subtop_sec">
+          <div class="subtop_wrap">
+            <p class="head_date">오늘, <em>7월 22일(화)</em> 입니다. <span>7월 22일 11:33 기준</span></p>
+            <h3>오늘까지<br><em>5,254</em> 걸음 걸었습니다.</h3>
+            <div class="fig_sec">
+              <p>포인트로 전환 가능한 걸음<span class="fig">5,000</span></p>
+              <button class="btn small">포인트 전환</button>              
+            </div>
+          </div>
+          <div class="graphing_sec">
+            <div class="graph">
+              <div class="graph-x">
+                <div class="percent day1" style="height: 15%;"><span>수</span></div>
+                <div class="percent day2" style="height: 55%;"><span>목</span></div>
+                <div class="percent day3" style="height: 45%;"><span>금</span></div>
+                <div class="percent day4" style="height: 25%;"><span>토</span></div>
+                <div class="percent day5" style="height: 50%;"><span>일</span></div>
+                <div class="percent day6" style="height: 75%;"><span>월</span></div>
+                <div class="percent today" style="height: 90%;"><span>오늘</span></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="btn_wrap">
+            <button class="btn primary">오늘의 걸음 바로가기</button>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="tit_wrap">
+            <div class="row">
+              <h4>이번주 미션</h4>
+            </div>
+          </div>
+          <ul class="product_list">
+            <li class="item banner"><a href="#">
+              <p class="img"><img src="../assets/images/dummy/dummy_eventbanner04.png"/></p>
+            </a></li>
+            <li class="item banner"><a href="#">
+              <p class="img"><img src="../assets/images/dummy/dummy_eventbanner04.png"/></p>
+            </a></li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <div class="tit_wrap">
+            <div class="row">
+              <h4>참여중인 미션<span>최근 도전 3개월까지만 보여집니다.</span></h4>
+            </div>
+          </div>
+          <ul class="product_list">
+            <li class="item banner _evntresult"><a href="#">
+              <span class="label">참여중</span>
+              <p class="img"><img src="../assets/images/dummy/dummy_eventbanner02.png"/></p>
+            </a></li>
+          </ul>
+        </section>
+
+        <section class="section borad_wrap">
+          <div class="ui-accordion">
+            <div class="item" data-status="disabled">
+              <div class="target">
+                <div class="tit_wrap">
+                  <div class="row">
+                    <h4>완료된 미션<span>최근 도전 3개월까지만 보여집니다.</span></h4>
+                  </div>
+                </div>              
+              </div>
+              <div class="panel">
+                <ul class="product_list">
+                  <li class="item banner _evntend"><a href="#">
+                    <span class="label">미션완료</span>
+                    <p class="img"><img src="../assets/images/dummy/dummy_eventbanner01.png"></p>
+                  </a></li>
+                  <li class="item banner _evntend"><a href="#">
+                    <span class="label">미션완료</span>
+                    <p class="img"><img src="../assets/images/dummy/dummy_eventbanner01.png"></p>
+                  </a></li>
+                </ul>              
+              </div>
+            </div>
+          </div>
+          <div class="btn_wrap">
+            <button class="btn primary">완료된 미션 보러가기</button>
+          </div>
+        </section>
+      </div>
+    </div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"show"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+	<script>
+		var swiper = new Swiper('#subTopswipe', {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			paginationClickable: true,
+			keyboard: true,
+			speed: 400,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			},
+		});
+	</script>
+</body>
+</html>
