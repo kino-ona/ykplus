@@ -93,6 +93,27 @@
               </div>
               <div class="reply">
                 <p class="message">아니! 이곳은? 저희 동네가 같네요. 저도 가끔 운동 나가는데 꾸준히 하기가 영~ 힘드네요 허허</p>
+                <div id="replySwp01" class="swiper-container">
+                  <div class="swiper-wrapper gallery_area">
+                    <div class="swiper-slide"><a href="#">
+                      <p class="img"><img src="../assets/images/dummy/replies_thumn01.png"/></p>
+                    </a></div>
+                    <div class="swiper-slide"><a href="#">
+                      <p class="img"><img src="../assets/images/dummy/replies_thumn02.png"/></p>
+                    </a></div>
+                    <div class="swiper-slide"><a href="#">
+                      <p class="img"><img src="../assets/images/dummy/replies_thumn03.png"/></p>
+                    </a></div>
+                    <div class="swiper-slide"><a href="#">
+                      <p class="img"><img src="../assets/images/common/default_image.jpg"/></p>
+                    </a></div>
+                  </div>
+                </div>
+                <script>
+                  $(document).ready(function() {
+                    defaultSwipe('replySwp01', '3.25', 10);
+                  });
+                </script>
                 <div class="more">
                   <p><i class="ic-16 ic_likes-gray"></i><span class="cnt">999</span></p>
                   <p><i class="ic-16 ic_reply-gray"></i> 댓글달기<span class="cnt"></span></p>
@@ -120,6 +141,28 @@
                 </div>
                 <div class="reply">
                   <p class="message">꾸준히 하는 게 가장 중요한 거 같아요! 저랑 함께 즐겁게 운동해요!</p>
+                  <div id="replySwp02" class="swiper-container">
+                    <div class="swiper-wrapper gallery_area">
+                      <div class="swiper-slide"><a href="#">
+                        <p class="img"><img src="../assets/images/dummy/replies_thumn01.png"/></p>
+                      </a></div>
+                      <div class="swiper-slide"><a href="#">
+                        <p class="img"><img src="../assets/images/dummy/replies_thumn02.png"/></p>
+                      </a></div>
+                      <div class="swiper-slide"><a href="#">
+                        <p class="img"><img src="../assets/images/dummy/replies_thumn03.png"/></p>
+                      </a></div>
+                      <div class="swiper-slide"><a href="#">
+                        <p class="img"><img src="../assets/images/common/default_image.jpg"/></p>
+                      </a></div>
+                    </div>
+                  </div>
+                  <script>
+                    $(document).ready(function() {
+                      defaultSwipe('replySwp02', '3.25', 10);
+                    });
+                  </script>
+
                   <div class="more">
                     <p><i class="ic-16 ic_likes-gray"></i><span class="cnt">999</span></p>
                   </div>
@@ -228,6 +271,31 @@
           <label for="noticeSearch"><span class="a11y">댓글 작성하기</span></label>
           <button class="btn" tabindex="0"><i class="btn_act"></i></button>
         </div>
+        <!-- 댓글 내 이미지 첨부가 있는 경우 -->
+        <div class="pic_list">
+					<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn01.png" style="background-image: url(../assets/images/dummy/talk_thumn01.png);">
+						<button class="thum-close"><span class="a11y">erase</span></button>
+					</p>
+					<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn02.png" style="background-image: url(../assets/images/dummy/talk_thumn02.png);">
+						<button class="thum-close"><span class="a11y">erase</span></button>
+					</p>
+					<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn03.png" style="background-image: url(../assets/images/dummy/talk_thumn03.png);">
+						<button class="thum-close"><span class="a11y">erase</span></button>
+					</p>
+					<p class="postimgthum" data-imgsrc="../assets/images/dummy/dummy_img01.png" style="background-image: url(../assets/images/dummy/dummy_img01.png);">
+						<button class="thum-close"><span class="a11y">erase</span></button>
+					</p>
+					<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn01.png" style="background-image: url(../assets/images/dummy/talk_thumn01.png);">
+						<button class="thum-close"><span class="a11y">erase</span></button>
+					</p>
+					<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn02.png" style="background-image: url(../assets/images/dummy/talk_thumn02.png);">
+						<button class="thum-close"><span class="a11y">erase</span></button>
+					</p>
+					<p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn03.png" style="background-image: url(../assets/images/dummy/talk_thumn03.png);">
+						<button class="thum-close"><span class="a11y">erase</span></button>
+					</p>
+				</div>
+        <!--// 댓글 내 이미지 첨부가 있는 경우 -->
       </div>
     </div>
       
@@ -305,7 +373,29 @@
       lightbox.addClass('visible');
       $('body').addClass('noscroll');
 
-      defaultSwipe('postgallerySwp', '1.05', 8);  // 210923 스와이퍼 수정
+      defaultSwipe('postgallerySwp', '1.05', 8);
+    });
+  });
+
+  /** 댓글용 **/
+  $('.pic_list').each(function(){ 
+    var parentGall = $(this);
+
+    $(this).find('.postimgthum').click(function(){
+      $('#postgallerySwp').find('.swiper-wrapper').empty();	
+
+      parentGall.find('.postimgthum').each(function(){
+        var figCnt = $(this).length/2;
+        var imgSrc = $(this).attr('data-imgsrc');
+
+        for (var i = 0; i <= figCnt; i++) {
+          $('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
+        }
+      })
+      lightbox.addClass('visible');
+      $('body').addClass('noscroll');
+
+      defaultSwipe('postgallerySwp', '1.05', 8);
     });
   });
   </script>

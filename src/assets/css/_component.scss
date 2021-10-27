@@ -1649,6 +1649,29 @@ a.btn {
 	.shipping_message {
 		padding:0;
 	}
+
+	.btn_edit {
+		position:absolute;
+		right:0;
+    margin-top: 0;
+    top: 20px;
+    right: 20px;
+		color:#009AFF;
+		font-weight: 700;
+    a {
+      display: inline-block;
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      &:not(:last-of-type) {
+        padding-right: 8px;
+        border-right: 1px solid #D8DBDD;
+      }
+      &:last-of-type {
+        padding-left: 4px;
+      }
+    }
+  }
 }
 
 /** Util layer 
