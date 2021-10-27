@@ -51,7 +51,6 @@
                 <div class="percent today" style="height: 90%;"><span>오늘</span></div>
               </div>
             </div>
-
           </div>
           <div class="btn_wrap">
             <button class="btn primary">오늘의 걸음 바로가기</button>
@@ -65,11 +64,15 @@
             </div>
           </div>
           <ul class="product_list">
-            <li class="item banner"><a href="#">
-              <p class="img"><img src="../assets/images/dummy/dummy_eventbanner04.png"/></p>
+            <li class="item type01"><a href="#">
+              <span class="label">참여하기</span>
+              <p class="tit"><span>8월 첫째주 (8/01~8/07)</span>핫플레이스 인증 도전</p>
+              <div class="img"><img src="../assets/images/sub/mission_banner01.png"/></div>
             </a></li>
-            <li class="item banner"><a href="#">
-              <p class="img"><img src="../assets/images/dummy/dummy_eventbanner04.png"/></p>
+            <li class="item type02"><a href="#">
+              <span class="label">참여하기</span>
+              <p class="tit"><span>8월 첫째주 (8/01~8/07)</span>물마시기 도전</p>
+              <div class="img"><img src="../assets/images/sub/mission_banner02.png"/></div>
             </a></li>
           </ul>
         </section>
@@ -81,9 +84,10 @@
             </div>
           </div>
           <ul class="product_list">
-            <li class="item banner _evntresult"><a href="#">
+            <li class="item type02 _ongoing"><a href="#">
               <span class="label">참여중</span>
-              <p class="img"><img src="../assets/images/dummy/dummy_eventbanner02.png"/></p>
+              <p class="tit"><span>8월 첫째주 (8/01~8/07)</span>물마시기 도전</p>
+              <div class="img"><img src="../assets/images/sub/mission_banner02.png"/></div>
             </a></li>
           </ul>
         </section>
@@ -95,18 +99,21 @@
                 <div class="tit_wrap">
                   <div class="row">
                     <h4>완료된 미션<span>최근 도전 3개월까지만 보여집니다.</span></h4>
+                    <button class="btn toggle_trigger" type="button" aria-pressed="false"><span class="a11y">전체보기</span><i></i></button>
                   </div>
                 </div>              
               </div>
               <div class="panel">
                 <ul class="product_list">
-                  <li class="item banner _evntend"><a href="#">
+                  <li class="item type01 _closed"><a href="#">
                     <span class="label">미션완료</span>
-                    <p class="img"><img src="../assets/images/dummy/dummy_eventbanner01.png"></p>
+                    <p class="tit"><span>8월 첫째주 (8/01~8/07)</span>핫플레이스 인증 도전</p>
+                    <div class="img"><img src="../assets/images/sub/mission_banner01.png"/></div>
                   </a></li>
-                  <li class="item banner _evntend"><a href="#">
-                    <span class="label">미션완료</span>
-                    <p class="img"><img src="../assets/images/dummy/dummy_eventbanner01.png"></p>
+                  <li class="item type02 _closed"><a href="#">
+                    <span class="label">미션실패</span>
+                    <p class="tit"><span>8월 첫째주 (8/01~8/07)</span>물마시기 도전</p>
+                    <div class="img"><img src="../assets/images/sub/mission_banner02.png"/></div>
                   </a></li>
                 </ul>              
               </div>
@@ -125,25 +132,12 @@
 	@@include('../inc/footer.inc',{
 		"webroot":"..",
 		"footer": {
-			"visibles":"show"
+			"visibles":"hide"
 		},
 		"appbar": {
 			"visibles":"show"
 		}
 	})
 	<!-- //footer -->
-	<script>
-		var swiper = new Swiper('#subTopswipe', {
-			slidesPerView: 1,
-			spaceBetween: 20,
-			paginationClickable: true,
-			keyboard: true,
-			speed: 400,
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'fraction',
-			},
-		});
-	</script>
 </body>
 </html>
