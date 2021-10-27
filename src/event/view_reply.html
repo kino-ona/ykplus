@@ -89,7 +89,7 @@
           </div>
           <div class="reply">
             <div id="replySwp01" class="swiper-container">
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper gallery_area">
                 <div class="swiper-slide"><a href="#">
                   <p class="img"><img src="../assets/images/dummy/replies_thumn01.png"/></p>
                 </a></div>
@@ -108,22 +108,19 @@
           </div>
         </div>
 
-				<!-- 2101007 페이지네이션 마크업 변경 -->
 				<div class="pagination">
 					<div class="btn_wrap">
 						<button class="btn primary full">더 보기 <i class="down"></i></button>
 					</div>
-				</div>        
-				<!--// 2101007 페이지네이션 마크업 변경 -->
+				</div>
       </div>
 
 			<div class="fixed_bottom">
-				<div class="fixed_btn"><a href="#" class="btn blue-btn">댓글/리뷰 작성하기</a></div>
+				<div class="fixed_btn"><a href="reply_write.html" class="btn blue-btn">댓글/리뷰 작성하기</a></div>
 			</div>			
 		</div>
 	</div>
 	<!--// contents body -->
-
 	
 	<!-- 공유하기 팝업 -->
 	<div class="overlay-popup share_popup" role="dialog" id="share_popup" aria-labelledby="share_opener" aria-modal="true">
@@ -143,6 +140,16 @@
 		<div class="overlay-dimmed"></div>
 	</div>
 	<!--// 공유하기 팝업 -->
+
+	<!-- 이미지 전체보기 팝업 -->
+  <div id="lightbox-overlay" class="lightbox-overlay">
+    <button onclick="lightboxClose()" class="btn_close"><i></i><span class="a11y">닫기</span></button>
+    <div id="postgallerySwp" class="swiper-container">
+      <div class="swiper-wrapper">
+      </div>
+    </div>
+  </div>
+  <!--// 이미지 전체보기 팝업 -->
 
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
@@ -170,6 +177,33 @@
 	</script>
   <script>
     defaultSwipe('replySwp01', '3.25', 10);
+
+		var lightbox = $('#lightbox-overlay'),
+		lightboximg = lightbox.find('.lightbox-img');
+		$('.gallery_area').each(function(){ 
+			var parentGall = $(this);
+
+			$(this).find('.img').click(function(){
+				$('#postgallerySwp').find('.swiper-wrapper').empty();	
+
+				parentGall.find('.img').each(function(){
+					var figCnt = $(this).length/2;
+					var imgSrc = $(this).find('img').attr('src');
+
+					for (var i = 0; i <= figCnt; i++) {
+						if(imgSrc == null){
+							$('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide">"' + $(this).html() + '" </div>')
+						} else {
+							$('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
+						}
+					}
+				})
+				lightbox.addClass('visible');
+				$('body').addClass('noscroll');
+
+				defaultSwipe('postgallerySwp', '1.05', 8);
+			});
+		});
   </script>
 </body>
 </html>
