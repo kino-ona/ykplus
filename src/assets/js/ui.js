@@ -436,12 +436,40 @@ var clickUtilControl = function () {
 	});
 }
 
+
+/** youtube/video
+****************************************/
+$(document).ready(function() {
+	if($('.videoplay_area').length > 0) { youtube_play_api(); }
+});
+function youtube_play_api(){
+	var tag = document.createElement('script');
+	tag.src = "https://www.youtube.com/iframe_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	$('.videoplay_area').each(function(i) {
+		var control = $(this).find('.vplay_button');
+		if($(this).find('iframe#youtube_video').length > 0) {
+			control.click(function(){
+				control.next('iframe#youtube_video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+				control.hide();
+			});
+		} 
+		if($(this).find('video').length > 0) {
+			control.click(function(){
+				control.next('video').get(0).play();
+				control.hide();
+			})
+		}
+	});
+}
+
 var lightboxClose = function () {
 	$('#lightbox-overlay').removeClass('visible');
 	$('body').removeClass('noscroll');
 	$('#postgallerySwp').find('.swiper-wrapper').empty();	
 }
-
 
 var loadingshow = function () {
 	$('.loadingBox').addClass('show');

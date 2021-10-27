@@ -1125,21 +1125,7 @@
 			}
 			.swiper-pagination {
 				width: 100%;
-				bottom: -10px!important;
-				.swiper-pagination-bullet {
-					display: inline-block;
-					width: 5px;
-					height: 5px;
-					border-radius: 10px;
-					background-color: #D0D0D0;
-					opacity: 1;
-					transition: width .4s;
-					margin-right: 5px;
-				}
-				.swiper-pagination-bullet-active {
-					width: 40px;
-					background-color: #000;
-				}
+				bottom: -10px !important;
 			}
 			.message {
 				padding-top: 16px;
@@ -3106,14 +3092,41 @@
 .videoplay_area {
 	position: relative;
 	max-width:420px;
+	width:100%;
 	margin-top: 16px;
-	padding-bottom: 50%;
-	iframe {
+	padding-bottom: 56.25%;
+	border-radius: 6px;
+	overflow: hidden;
+	@media screen and (min-width:767px) {
+		padding-bottom: 33%;
+	}
+	iframe, video {
 		position: absolute;
 		left: 0;
 		right: 0;
 		top: 0;
-		border-radius: 15px;
+		width:100%;
+		height:100%;
+		border-radius: 6px;
+	}
+	.vplay_button {
+		display: inline-block;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+		background: {
+			color: rgba(0, 0, 0, .8);
+			image: url(../images/icons/ic_vplay.png);
+			size: 48px;
+			position: center center;
+			repeat: no-repeat;
+		}
 	}
 }
 .lightbox-overlay {

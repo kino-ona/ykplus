@@ -33,7 +33,11 @@
 <div class="gnb-menu">
 	<div class="gnb-head">
 		<h2>
-			<span class="bf_login">로그인 해주세요.</span>
+			<span class="bf_login">로그인 해주세요.
+				<!-- 20211025 로그인 버튼 -->
+				<button class="btn small bf_login">로그인</button>
+				<!--// 20211025 로그인 버튼 -->
+			</span>
 			<span class="aftr_login"><i>김유한</i>님! 반갑습니다.</span>
 			<div class="util">
 				<a href="#" class="ic-25 gnb_btn-setting" alt="설정"><span class="a11y">설정</span></a>
@@ -181,8 +185,13 @@
 			<div class="swiper-pagination"></div>
 		</div>
 	</section>
+	<!-- 20211025 로그아웃 버튼 -->
+	<section class="btn_wrap">
+		<button class="btn primary aftr_login">로그아웃</button>
+	</section>
+	<!--// 20211025 로그아웃 버튼 -->
 </div>
-<div class="overlay-dimmed"></div>		
+<div class="overlay-dimmed"></div>
 <!--// 210916 gnb -->
 
 
@@ -297,6 +306,35 @@
             <div class="post">
               <div class="edit">
                 노화방지에 좋은 음식 종류가 알고 싶어요! 여기 혹시 전문가 있으신가요?
+
+                <!-- 영상 -->
+                <div id="reviewSwpVideo" class="swiper-container swiper-video">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="videoplay_area">
+                        <button class="vplay_button"><span class="a11y">play</span></button>
+                        <iframe id="youtube_video" src="https://www.youtube.com/embed/j568VCRMsRc?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="videoplay_area">
+                        <button class="vplay_button"><span class="a11y">play</span></button>
+                        <iframe id="youtube_video" src="https://www.youtube.com/embed/j568VCRMsRc?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="videoplay_area">
+                        <button class="vplay_button"><span class="a11y">play</span></button>
+                        <video class="video" muted="muted" loop onloadedmetadata="this.muted = true" playsinline>
+                          <source src="../assets/images/dummy/@vod.mp4" type="video/mp4" autostart="false">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <!--// 영상 -->
+                
               </div>
               <div class="more">
                 <p><i class="ic-16 ic_likes_clicked"></i><span class="cnt">999</span></p>
@@ -550,6 +588,37 @@
       defaultSwipe('postgallerySwp', '1.05', 8);  // 210923 스와이퍼 수정
     });
   });
+
+
+  // 영상 스와이프 s
+  var swiper = new Swiper('#reviewSwpVideo', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    paginationClickable: true,
+    speed: 400,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      type: 'bullets',
+    },
+    on: {
+      slideChange: function () {
+        $('.swiper-slide').each(function () {
+          var youtubePlayer = $(this).find('iframe').get(0);
+          var vodPlayer = $(this).find('video').get(0);
+          if (youtubePlayer) {
+            youtubePlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            $(this).find('.vplay_button').show();
+          }
+          if (vodPlayer) {
+            $(this).find('video').get(0).pause();
+            $(this).find('.vplay_button').show();
+          }
+        })
+      }
+    }
+  });
+  // 영상 스와이프 e
   </script>
 
 </body>

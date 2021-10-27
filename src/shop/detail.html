@@ -638,49 +638,39 @@
 												<div class="util-pop revw-more">
 													<ul>
 														<li><a href="#">수정하기</a></li>
-														<li><a href="#"  aria-haspopup="dialog" aria-controls="report_popup-fn" id="report-opener-fn" aria-pressed="false">신고하기</a></li>
+														<li><a href="#" aria-haspopup="dialog" aria-controls="report_popup-fn" id="report-opener-fn" aria-pressed="false">신고하기</a></li>
 													</ul>
 												</div>
 												<!--// 210906 -->
 											</div>
 											<div class="review">
-												<!-- 영상 -->
+												<!-- 211027 영상 -->
 												<div id="reviewSwpVideo" class="swiper-container">
 													<div class="swiper-wrapper">
 														<div class="swiper-slide">
 															<div class="videoplay_area">
-																<iframe src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+																<button class="vplay_button"><span class="a11y">play</span></button>
+																<iframe id="youtube_video" src="https://www.youtube.com/embed/j568VCRMsRc?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 															</div>
 														</div>
 														<div class="swiper-slide">
 															<div class="videoplay_area">
-																<iframe src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+																<button class="vplay_button"><span class="a11y">play</span></button>
+																<iframe id="youtube_video" src="https://www.youtube.com/embed/j568VCRMsRc?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 															</div>
 														</div>
 														<div class="swiper-slide">
 															<div class="videoplay_area">
-																<iframe src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="videoplay_area">
-																<iframe src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="videoplay_area">
-																<iframe src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="videoplay_area">
-																<iframe src="https://www.youtube.com/embed/j568VCRMsRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+																<button class="vplay_button"><span class="a11y">play</span></button>
+																<video class="video" muted="muted" loop onloadedmetadata="this.muted = true" playsinline>
+																	<source src="../assets/images/dummy/@vod.mp4" type="video/mp4" autostart="false">
+																</video>
 															</div>
 														</div>
 													</div>
 													<div class="swiper-pagination"></div>
 												</div>
-												<!--// 영상 -->
+												<!--// 211027 영상 -->
 												<p class="message">생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다. 생각처럼 만족스러웠습니다.</p>
 												<div class="btn_wrap">
 													<button class="btn"><i class="ic-16 ic_blikes"></i> <span>20</span></button>
@@ -1039,10 +1029,12 @@
 		});
 	});
 
-	// 화면 확인용 > 리뷰 탭 내 스와이프 함수 호출 필요시 참고
+	// 리뷰 탭 내 스와이프 함수 호출
 	$('.prddetail_sec .tablist').find('li').each(function(){ 
 		$(this).find('.tab').click(function(){
 			defaultSwipe('reviewSwp02', '3.25', 10); 
+ 
+			// 영상 스와이프 s 211027
 			var swiper = new Swiper('#reviewSwpVideo', {
 				slidesPerView: 1,
 				spaceBetween: 20,
@@ -1050,9 +1042,28 @@
 				speed: 400,
 				pagination: {
 					el: '.swiper-pagination',
+					clickable: true,
 					type: 'bullets',
 				},
+				on: {
+					slideChange: function () {
+						$('.swiper-slide').each(function () {
+							var youtubePlayer = $(this).find('iframe').get(0);
+							var vodPlayer = $(this).find('video').get(0);
+							if (youtubePlayer) {
+								youtubePlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+								$(this).find('.vplay_button').show();
+							}
+							if (vodPlayer) {
+								$(this).find('video').get(0).pause();
+								$(this).find('.vplay_button').show();
+							}
+						})
+					}
+				}
 			});
+			// 영상 스와이프 e 211027
+
 		});
 	})
 </script>
