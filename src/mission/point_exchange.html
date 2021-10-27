@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"포인트 전환",
+		"webroot":".."
+	})
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"subtype3"
+		},
+		"subtitle":"포인트 전환"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		<div class="mission_wrap">
+			<div class="mission-topsec point_info">
+				<p class="title">오늘의 걸음</p>
+				<span class="figs">15,000</span>
+				<span class="desc">100걸음 = 1포인트로 전환됩니다.</span>
+				<section class="_banner">
+					<div class="points_exchange">
+						<div class="fig_sec">
+							<span class="tit">전환 가능한 걸음 수</span>
+							<span class="fig">15,000</span>
+						</div>
+						<i></i>
+						<div class="fig_sec">
+							<span class="tit">전환 포인트</span>
+							<span class="fig">150</span>
+						</div>
+						<p class="desc">전환포인트는 100걸음 단위로 입력해주세요!</p>
+					</div>
+					<div class="points_exchange">
+						<div class="fig_sec">
+							<span class="tit">전환 가능한 걸음 수</span>
+							<span class="fig"><span class="empty">0</span></span>
+						</div>
+						<i></i>
+						<div class="fig_sec">
+							<span class="tit">전환 포인트</span>
+							<span class="fig"><span class="empty">0</span></span>
+						</div>
+						<p class="desc">전환포인트는 100걸음 단위로 입력해주세요!</p>
+					</div>
+					<p class="chkwrap">
+						<input type="checkbox" id="p_exchng-all"><label for="p_exchng-all">전체 전환 <span class="desc">전환된 포인트는 되돌릴 수 없습니다.</span> </label>
+					</p>
+          <div class="btn_wrap">
+            <button class="btn primary blue" onclick="openLayer('#exchanged_popup')">전환</button>
+            <button class="btn primary blue disabled" onclick="openLayer('#exchanged_popup')">전환</button>
+          </div>
+				</section>
+			</div>
+			<div class="btn_wrap">
+				<button class="btn primary">전환내역 상세보기</button>
+			</div>
+			<dl class="desc">
+				<dt>알려드립니다.</dt>
+				<dd>하루에 최대 10,000걸음(만보)까지 포인트로 전환할 수 있습니다.</dd>
+				<dd>100걸음은 1포인트로 전환됩니다.</dd>
+				<dd>100걸음 단위로 포인트 전환을  신청하실 수 있습니다.<br>
+        (예시_100걸음, 200걸음, 300걸음)</dd>
+				<dd>전환된 포인트는 되돌릴 수 없습니다.</dd>
+			</dl>
+		</div>
+		
+	</div>
+	<!--// contents body -->
+
+  <!-- 전환하기 팝업 -->
+  <div class="overlay-popup exchanged_popup" role="dialog" id="exchanged_popup" aria-labelledby="alert_opener" aria-modal="true">
+    <div class="contents">
+      <div class="inner">
+        <div class="tit_wrap">
+          1000걸음이 10 포인트로 <br>전환되었습니다.
+        </div>
+      </div>
+      <div class="btn_wrap">
+        <a href="#" onclick="closeLayer('#exchanged_popup')" class="btn primary">확인</a>
+      </div>
+    </div>
+    <div class="overlay-dimmed"></div>
+  </div>
+  <!--// 전환하기 팝업 -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+	<script>
+		function frmreset(set) {
+			$(set).siblings('input').val(' ').focus();
+		}
+	</script>
+</body>
+</html>
