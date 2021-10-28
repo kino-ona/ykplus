@@ -37,11 +37,16 @@
         </h3>
         <section class="section subtop_sec">
           <div class="subtop_wrap">
-            <h3>오늘까지<br><em>5,254</em> 걸음 걸었습니다.</h3>
+            <p class="head_date"><span><i class="ic-16 ic_exclamation"></i> 7월 2일 11:33 기준</span></p>
+            <h3>
+              <span>오늘의 걸음 수</span>
+              <em>23,510</em> 걸음
+            </h3>            
             <div class="fig_sec">
               <p>포인트로 전환 가능한 걸음<span class="fig">5,000</span></p>
-              <button class="btn small">포인트 전환</button>              
+              <button class="btn small">포인트 전환</button>
             </div>
+            <p class="desc">하루에 전환 가능한  걸음 수는 10,000걸음(만보) 입니다.</p>      
           </div>
           <div class="graphing_sec">
             <div class="graph">
@@ -58,38 +63,87 @@
           </div>
         </section>
         
-        <section class="section borad_wrap">
+        <section class="section gauging_sec borad_wrap">
           <div class="ui-accordion">
             <div class="item" data-status="expanded">
               <div class="target">
                 <div class="tit_wrap">
-                  <div class="row">
-                    <h4><span>오늘은 전날 대비</span><p><em>50</em>걸음 더 걸었습니다</p></h4>
-                    <button class="btn toggle_trigger" type="button" aria-pressed="false"><span class="a11y">전체보기</span><i></i></button>
-                  </div>
+                  <h4><span>오늘은 전날 대비</span><strong><em>50</em>걸음</strong> 더 걸었습니다</h4>
+                  <button class="btn toggle_trigger" type="button" aria-pressed="false"><span class="a11y">전체보기</span><i></i></button>
                 </div>
               </div>
               <div class="panel">
-                <dl class="gauge _first">
+                <dl class="gauge">
                   <dt><strong>5,254</strong>걸음</dt>
                   <dd><div class="gaugebar today" data-percent="85%"><span>오늘</span></div></dd>
-                  <dd><div class="gaugebar" data-percent="75%"><span>월</span></div></dd>
-                  <dd><div class="gaugebar" data-percent="45%"><span>일</span></div></dd>
-                  <dd><div class="gaugebar" data-percent="25%"><span>토</span></div></dd>
-                  <dd><div class="gaugebar" data-percent="15%"><span>목</span></div></dd>
-                  <dd><div class="gaugebar" data-percent="55%"><span>금</span></div></dd>
-                  <dd><div class="gaugebar" data-percent="10%"><span>화</span></div></dd>
+                  <dd><div class="gaugebar" data-percent="75%"><span>월 <i>6,000</i></span></div></dd>
+                  <dd><div class="gaugebar" data-percent="45%"><span>일 <i>4,234</i></span></div></dd>
+                  <dd><div class="gaugebar" data-percent="25%"><span>토 <i>4,260</i></span></div></dd>
+                  <dd><div class="gaugebar" data-percent="15%"><span>목 <i>1,989</i></span></div></dd>
+                  <dd><div class="gaugebar" data-percent="55%"><span>금 <i>4,155</i></span></div></dd>
+                  <dd><div class="gaugebar" data-percent="10%"><span>화 <i>1,540</i></span></div></dd>
                 </dl>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="section borad_wrap">
+        <section class="section prd_sec borad_wrap">
           <div class="tit_wrap">
-            <h4>걷기가 불편하신가요? <em>신발</em>을 바꿔보세요!</h4>
+            <div class="row">
+              <h4>걷기가 불편하신가요? <em>신발</em>을 바꿔보세요!</h4>
+            </div>
           </div>
           <ul class="product_list horizon">
+            <li class="item">
+              <div class="figure">
+                <img src="../assets/images/dummy/product_thumn01.png">
+              </div>
+              <div class="info">
+                <p class="chkwrap likechk"><input type="checkbox" id="check1"><label for="check1"><span class="a11y">좋아요</span></label></p>
+                <a href="#">
+                  <p class="name">[디펜드] 구강 청결 물티슈구강 청결 물티슈 물티슈</p>
+                  <p class="price">
+                    <span class="discount">20<em class="unit">%</em></span>
+                    <span class="origin">928,900<em class="unit">원</em></span>
+                    <span class="sale">930,500</span>
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="item soldout">
+              <div class="figure">
+                <span class="status-txt"><span>품절</span></span>
+                <img src="../assets/images/dummy/product_thumn02.png">
+              </div>
+              <div class="info">
+                <p class="chkwrap likechk"><input type="checkbox" id="check2"><label for="check2"><span class="a11y">좋아요</span></label></p>
+                <a href="#">
+                  <p class="name">[디펜드] 구강 청결 물티슈구강 청결 물티슈 물티슈</p>
+                  <p class="price">
+                    <span class="discount">20<em class="unit">%</em></span>
+                    <span class="origin">928,900<em class="unit">원</em></span>
+                    <span class="sale">930,500</span>
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="item">
+              <div class="figure">
+                <img src="../assets/images/common/default_image.jpg">
+              </div>
+              <div class="info">
+                <p class="chkwrap likechk"><input type="checkbox" id="check3"><label for="check3"><span class="a11y">좋아요</span></label></p>  <!-- 210906 마크업위치 이동 //-->
+                <a href="#">
+                  <p class="name">[디펜드] 구강 청결 물티슈구강 청결 물티슈 물티슈</p>
+                  <p class="price">
+                    <span class="discount">20<em class="unit">%</em></span>
+                    <span class="origin">928,900<em class="unit">원</em></span>
+                    <span class="sale">930,500</span>
+                  </p>
+                </a>
+              </div>
+            </li>
             <li class="item">
               <div class="figure">
                 <img src="../assets/images/dummy/product_thumn01.png">
@@ -145,11 +199,10 @@
           </div>
         </section>
 
-        <section class="section">
-          <div class="row">
-            <div class="tit_wrap">
-              <h4>함께 나눠요~</h4>
-              <a href="#" class="btn_all">전체보기 <i> </i></a>
+        <section class="section talklist_sec">
+          <div class="tit_wrap">
+            <div class="row">
+              <h4>함께 나눠요~</h4><a href="#" class="btn_all">전체보기 <i class="right"></i></a>
             </div>
           </div>
           <ul class="tk_list">
@@ -288,10 +341,9 @@
         </section>
 
         <section class="section recomm_sec">
-          <div class="row">
-            <div class="tit_wrap">
-              <h4>이런 정보는 어때요?</h4>
-              <a href="#" class="btn_all">전체보기 <i> </i></a>
+          <div class="tit_wrap">
+            <div class="row">
+              <h4>이런 정보는 어때요?</h4> <a href="#" class="btn_all">전체보기 <i class="right"></i></a>
             </div>
           </div>
           <ul class="product_list">
