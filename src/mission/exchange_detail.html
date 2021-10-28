@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"포인트 전환내역",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/mission.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"subtype3"
+		},
+		"subtitle":"포인트 전환내역"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		<div class="mission_wrap mis-points">
+      <section class="table_sec borad_wrap">
+        <div class="list_sort">
+          <p class="total"><span>20</span>개</p>
+          <div class="sort">
+            <select>
+              <option>최신순</option>
+              <option>포인트순</option>
+              <option>걸음순</option>
+            </select>
+          </div>
+        </div>   
+        <div class="para">
+          <div class="row">   
+            <table cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <th class="row-th">날짜</th>
+                  <th>참여이벤트</th>
+                  <th>걸음수</th>
+                  <th>전환 포인트</th>
+                </tr>
+                <tr>
+                  <td class="row-th">2021.07.02</td>
+                  <td>오늘도전</td>
+                  <td>21310</td>
+                  <td>1000</td>
+                </tr>
+                <tr>
+                  <td class="row-th">2021.07.02</td>
+                  <td>오늘도전</td>
+                  <td>12310</td>
+                  <td>1000</td>
+                </tr>
+                <tr>
+                  <td class="row-th">2021.07.02</td>
+                  <td>오늘걸음</td>
+                  <td>510</td>
+                  <td>250</td>
+                </tr>
+                <tr>
+                  <td class="row-th">2021.07.02</td>
+                  <td>오늘걸음</td>
+                  <td>1310</td>
+                  <td>500</td>
+                </tr>
+                <tr>
+                  <td class="row-th">2021.07.02</td>
+                  <td>오늘걸음</td>
+                  <td>2310</td>
+                  <td>1000</td>
+                </tr>
+                <tr>
+                  <td class="row-th">2021.07.02</td>
+                  <td>오늘도전</td>
+                  <td>21310</td>
+                  <td>1000</td>
+                </tr>
+                <tr>
+                  <td class="row-th">2021.07.02</td>
+                  <td>오늘도전</td>
+                  <td>12310</td>
+                  <td>1000</td>
+                </tr>
+                <tr>
+                  <td class="row-th">2021.07.02</td>
+                  <td>오늘걸음</td>
+                  <td>510</td>
+                  <td>250</td>
+                </tr>
+                <tr>
+                  <td class="row-th">2021.07.02</td>
+                  <td>오늘걸음</td>
+                  <td>1310</td>
+                  <td>500</td>
+                </tr>
+                <tr>
+                  <td class="row-th">2021.07.02</td>
+                  <td>오늘걸음</td>
+                  <td>2310</td>
+                  <td>1000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>  
+      </section>
+      <div class="btn_wrap">
+        <a href="./exchange_detail.html" class="btn primary">더 보기</a>
+      </div>
+		</div>
+		
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
