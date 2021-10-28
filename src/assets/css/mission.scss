@@ -282,20 +282,6 @@ dl.desc {
   color: #666;
   font-size: 13px;
   background-color: #F5F7F8;
-  li {
-    margin-top: 10px;
-    display: inline-block;
-    position: relative;
-    padding-left: 8px;
-    color: #999;
-    font-size: inherit;
-    line-height: 1.3;
-    &::before {
-      content: '·';
-      position: absolute;
-      left: 0;
-    }
-  }
   dt {
     padding-top: 24px;
     font-weight: 800;
@@ -315,6 +301,25 @@ dl.desc {
     }
   }
 }
+ul.noti {
+  text-align: left;
+  margin-bottom: 30px;
+  li {
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+    padding-left: 8px;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.3;
+    &::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
 .product_list {
   .type01 {
     background-color: #FCEFE5;
@@ -756,6 +761,9 @@ dl.desc {
 }
 
 .mis-mis {
+  &[class*="type"] {
+    padding-bottom: 0;
+  }
   .section {
     padding-left: 0;
     padding-right: 0;
@@ -842,8 +850,12 @@ dl.desc {
       .img {
         margin-top: 20px;
       }
-      .title {
+      .tit {
         margin-top: 15px;
+        font-size: 26px;
+        font-weight: 800;
+      }
+      .title {
         font-size: 26px;
         font-weight: 800;
       }
@@ -853,7 +865,39 @@ dl.desc {
         padding-left: 20px;
         padding-right: 20px;
         margin-bottom: 30px;
-      }      
+      }
+      .frm {
+        position: relative;
+        height: 56px;
+        margin-bottom: 10px;
+        input {
+          border: 0;
+          height: 100%;
+          padding-left: 55%;
+          padding-right: 40px;
+          font-family: 'roboto';
+          font-size: 26px;
+          text-align: right;
+          background-color: #F5F7F8;
+        }
+        span {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          font-weight: 700;
+        }
+        .placeholder {
+          left: 20px;
+        }
+        .unit {
+          right: 20px;
+          font-size: 20px;
+        }
+      }  
+    }
+    & + dl.desc {
+      padding-top: 24px;
+      padding-bottom: 40px;
     }
   }
 }

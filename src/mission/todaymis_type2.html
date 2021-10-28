@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"오늘플러스",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/mission.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"subtype5"
+		},
+		"subtitle":""
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <div class="main_body">
+      <div class="tab-navigation">
+        <div class="tab-row">
+          <p class="item"><a href="./index.html" role="tab" aria-label="메인" aria-selected="true"><span>메인</span></a></p>
+          <p class="item"><a href="./index-walk.html" role="tab" aria-label="오늘의 걸음" aria-selected="false"><span>오늘의 걸음</span></a></p>
+          <p class="item active"><a href="./index-mis.html" role="tab" aria-label="오늘의 미션" aria-selected="false"><span>오늘의 미션</span></a></p>
+        </div>
+      </div>
+      
+      <div class="mission_wrap mis-mis type02">
+        <div class="subtop_sec">
+          <h3>
+            <p><em>10</em>월</p>
+            <span><em>첫째주</em> 도전이 시작됩니다. (6일~12일)</span>
+          </h3>
+        </div>
+        
+        <section class="section">
+          <div class="item">
+            <div class="img"><img src="../assets/images/sub/mission_02.png"/></div>
+            <div class="label">성공시<span>200P</span></div>
+            <h4 class="title">핫!플! 인증하기</h4>
+            <p>요즘 핫플은 어디일까요~?<br>
+              2주간 핫플레이스를 방문하시어 인증사진을 <br>
+              남겨주시면 포인트를 드립니다.  
+            </p>
+            <div class="frm">
+              <input type="text" name="mission-inp" id="mission-inp"/>
+              <span class="placeholder">나의 목표</span> <span class="unit">곳</span>
+            </div>
+            <ul class="noti">
+              <li>목표는 1회만 설정 가능하며 저장 후에는 변경하실 수 없습니다.</li>
+              <li>목표 저장 후에는 미션 도전이 시작됩니다.</li>
+            </ul>
+            <div class="btn_wrap">
+              <button class="btn primary blue">목표 설정하고 참여하기</button>
+            </div>
+          </div>
+        </section>
+
+        <dl class="desc">
+          <dt>알려드립니다.</dt>
+          <dd>미션목표는 1회 설정 가능하며 수정하실 수 없습니다.</dd>
+          <dd>설정하신 미션은 매일 매일 달성해야 합니다.</dd>
+          <dd>하루라도 설정하신 목표를 달성하지 못할 경우 부분 포인트가 지급되지 않습니다.</dd>
+          <dd>목표 당일에만 결과값을 입력 및 수정하실 수 있습니다.</dd>
+          <dd>미션 성공 후 포인트를  일괄 지급해 드립니다.</dd>
+        </dl>
+      </div>
+    </div>
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
