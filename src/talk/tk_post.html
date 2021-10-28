@@ -359,12 +359,15 @@
   $('.gallery_area').each(function(){ 
     var parentGall = $(this);
 
+    // 20211028 이미지 확대 보기 수정 s
     $(this).click(function(){
       $('#postgallerySwp').find('.swiper-wrapper').empty();	
-
-      parentGall.find('.figure').each(function(){
+      parentGall.find('.figure, .img').each(function(){
         var figCnt = $(this).length/2;
         var imgSrc = $(this).find('.imgbg').attr('data-imgsrc');
+        if(imgSrc == null){
+        var imgSrc = $(this).find('img').attr('src');
+        }
 
         for (var i = 0; i <= figCnt; i++) {
           $('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
@@ -375,6 +378,7 @@
 
       defaultSwipe('postgallerySwp', '1.05', 8);
     });
+    // 20211028 이미지 확대 보기 수정 e
   });
 
   /** 댓글용 **/
