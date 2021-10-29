@@ -207,8 +207,55 @@
 			</div>
 
 		</div>
+
+		<div class="inp-btn_wrap02">
+      <div class="search_wrap">
+        <div class="row">
+          <button class="btn" onclick="openLayer('#allowcamera_popup')" ><i class="ic-20 ic_gallery"></i></button>	
+          <input id="noticeSearch" type="text" value="" placeholder="댓글을 남겨주세요">
+          <label for="noticeSearch"><span class="a11y">댓글 작성하기</span></label>
+          <button class="btn" tabindex="0"><i class="btn_act"></i></button>
+        </div>
+
+        <!-- 댓글 내 이미지 첨부가 있는 경우 -->
+        <div class="pic_list">
+          <p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn01.png" style="background-image: url(../assets/images/dummy/talk_thumn01.png);">
+            <button class="thum-close"><span class="a11y">erase</span></button>
+          </p>
+          <p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn02.png" style="background-image: url(../assets/images/dummy/talk_thumn02.png);">
+            <button class="thum-close"><span class="a11y">erase</span></button>
+          </p>
+          <p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn03.png" style="background-image: url(../assets/images/dummy/talk_thumn03.png);">
+            <button class="thum-close"><span class="a11y">erase</span></button>
+          </p>
+          <p class="postimgthum" data-imgsrc="../assets/images/dummy/dummy_img01.png" style="background-image: url(../assets/images/dummy/dummy_img01.png);">
+            <button class="thum-close"><span class="a11y">erase</span></button>
+          </p>
+          <p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn01.png" style="background-image: url(../assets/images/dummy/talk_thumn01.png);">
+            <button class="thum-close"><span class="a11y">erase</span></button>
+          </p>
+          <p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn02.png" style="background-image: url(../assets/images/dummy/talk_thumn02.png);">
+            <button class="thum-close"><span class="a11y">erase</span></button>
+          </p>
+          <p class="postimgthum" data-imgsrc="../assets/images/dummy/talk_thumn03.png" style="background-image: url(../assets/images/dummy/talk_thumn03.png);">
+            <button class="thum-close"><span class="a11y">erase</span></button>
+          </p>
+        </div>
+        <!--// 댓글 내 이미지 첨부가 있는 경우 -->
+      </div>
+    </div>
 	</div>
 	<!--// contents body -->
+
+	<!-- 이미지 전체보기 팝업 -->
+  <div id="lightbox-overlay" class="lightbox-overlay">
+    <button onclick="lightboxClose()" class="btn_close"><i></i><span class="a11y">닫기</span></button>
+    <div id="postgallerySwp" class="swiper-container">
+      <div class="swiper-wrapper">
+      </div>
+    </div>
+  </div>
+  <!--// 이미지 전체보기 팝업 -->
 
 	<!-- 공유하기 팝업 -->
 	<div class="overlay-popup share_popup" role="dialog" id="share_popup" aria-labelledby="share_opener" aria-modal="true">
@@ -233,10 +280,10 @@
 	@@include('../inc/footer.inc',{
 		"webroot":"..",
 		"footer": {
-			"visibles":"show"
+			"visibles":"hide"
 		},
 		"appbar": {
-			"visibles":"show"
+			"visibles":"hide"
 		}
 	})
 	<!-- //footer -->
@@ -252,9 +299,36 @@
 				type: 'fraction',
 			},
 		});
-	</script>
-  <script>
+
     defaultSwipe('replySwp01', '3.25', 10);
-  </script>
+	</script>
+
+	<script>
+		var lightbox = $('#lightbox-overlay'),
+				lightboximg = lightbox.find('.lightbox-img');
+				
+		/** 댓글용 **/
+		$('.pic_list').each(function(){ 
+			var parentGall = $(this);
+
+			$(this).find('.postimgthum').click(function(){
+				$('#postgallerySwp').find('.swiper-wrapper').empty();	
+
+				parentGall.find('.postimgthum').each(function(){
+					var figCnt = $(this).length/2;
+					var imgSrc = $(this).attr('data-imgsrc');
+
+					for (var i = 0; i <= figCnt; i++) {
+						$('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
+					}
+				})
+				lightbox.addClass('visible');
+				$('body').addClass('noscroll');
+
+				defaultSwipe('postgallerySwp', '1.05', 8);
+			});
+		});
+	</script>
+
 </body>
 </html>
