@@ -43,8 +43,8 @@
               <em>23,510</em> 걸음
             </h3>            
             <div class="fig_sec">
-              <p>포인트로 전환 가능한 걸음<span class="fig">5,000</span></p>
-              <button class="btn small">포인트 전환</button>
+              <p>포인트로 전환 가능한 걸음<span class="cnt">5,000</span></p>
+              <button aria-haspopup="dialog" aria-controls="point_popup" id="point_opener" aria-pressed="false" class="btn small">포인트 전환</button>
             </div>
             <p class="desc">하루에 전환 가능한  걸음 수는 10,000걸음(만보) 입니다.</p>      
           </div>
@@ -76,7 +76,7 @@
                 <dl class="gauge">
                   <dt><strong>5,254</strong>걸음</dt>
                   <dd><div class="gaugebar today" data-percent="85%"><span>오늘</span></div></dd>
-                  <dd><div class="gaugebar" data-percent="75%"><span>월 <i>6,000</i></span></div></dd>
+                  <dd><div class="gaugebar" data-percent="100%"><span>월 <i>10,000</i></span></div></dd>
                   <dd><div class="gaugebar" data-percent="45%"><span>일 <i>4,234</i></span></div></dd>
                   <dd><div class="gaugebar" data-percent="25%"><span>토 <i>4,260</i></span></div></dd>
                   <dd><div class="gaugebar" data-percent="15%"><span>목 <i>1,989</i></span></div></dd>
@@ -133,7 +133,7 @@
                 <img src="../assets/images/common/default_image.jpg">
               </div>
               <div class="info">
-                <p class="chkwrap likechk"><input type="checkbox" id="check3"><label for="check3"><span class="a11y">좋아요</span></label></p>  <!-- 210906 마크업위치 이동 //-->
+                <p class="chkwrap likechk"><input type="checkbox" id="check3"><label for="check3"><span class="a11y">좋아요</span></label></p>
                 <a href="#">
                   <p class="name">[디펜드] 구강 청결 물티슈구강 청결 물티슈 물티슈</p>
                   <p class="price">
@@ -370,20 +370,31 @@
     </div>
 	</div>
 	<!--// contents body -->
-<script>
-  if($('.gauge').length > 0) {
-    function Gauge() {
-      $('.gauge .gaugebar').each(function () {
-        var gaugebar = $(this),
-            $width = gaugebar.attr('data-percent');
-        gaugebar.find('span').animate({
-          'width': $width
-        }, 600)
-      });
-    }
-  }
-  Gauge();
-</script>
+
+  <!-- 포인트전환 알림 팝업 -->
+  <div class="overlay-popup alert-layer" role="dialog" id="point_popup" aria-labelledby="point_opener" aria-modal="true">
+    <div class="contents">
+      <div class="inner">
+        <p>1000걸음이 10 포인트로 <br>전환되었습니다.</p>
+      </div>
+      <div class="btn_wrap">
+        <a href="#" onclick="closeLayer('#point_popup')" class="btn primary">확인</a>
+      </div>
+    </div>
+    <div class="overlay-dimmed"></div>
+  </div>
+  <!--// 포인트전환 알림 팝업 -->
+
+  <!-- 이미지 전체보기 팝업 -->
+  <div id="lightbox-overlay" class="lightbox-overlay">
+    <button onclick="lightboxClose()" class="btn_close"><i></i><span class="a11y">닫기</span></button>
+    <div id="postgallerySwp" class="swiper-container">
+      <div class="swiper-wrapper">
+      </div>
+    </div>
+  </div>
+  <!--// 이미지 전체보기 팝업 -->
+
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
 		"webroot":"..",
@@ -395,5 +406,45 @@
 		}
 	})
 	<!-- //footer -->
+
+  <script>
+    if($('.gauge').length > 0) {
+      function Gauge() {
+        $('.gauge .gaugebar').each(function () {
+          var gaugebar = $(this),
+              $width = gaugebar.attr('data-percent');
+          gaugebar.find('span').animate({
+            'width': $width
+          }, 600)
+        });
+      }
+      Gauge();
+    }
+  </script>
+  <script>
+    /** gallery pop **/
+    var lightbox = $('#lightbox-overlay'),
+        lightboximg = lightbox.find('.lightbox-img');
+    $('.gallery_area').each(function(){ 
+      var parentGall = $(this);
+
+      $(this).click(function(){
+        $('#postgallerySwp').find('.swiper-wrapper').empty();	
+
+        parentGall.find('.figure').each(function(){
+          var figCnt = $(this).length/2;
+          var imgSrc = $(this).find('.imgbg').attr('data-imgsrc');
+
+          for (var i = 0; i <= figCnt; i++) {
+            $('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
+          }
+        })
+        lightbox.addClass('visible');
+        $('body').addClass('noscroll');
+
+        defaultSwipe('postgallerySwp', '1.05', 8);
+      });
+    });
+  </script>
 </body>
 </html>

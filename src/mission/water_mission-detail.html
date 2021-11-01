@@ -30,7 +30,7 @@
         </div>
       </div>
       
-      <div class="mission_wrap mis-mis type02">
+      <div class="mission_wrap today-mission">
         <div class="subtop_sec">
           <h3>
             <p><em>10</em>월</p>
@@ -40,17 +40,22 @@
         
         <section class="section">
           <div class="item">
-            <div class="img"><img src="../assets/images/sub/mission_02.png"/></div>
+            <div class="img"><img src="../assets/images/sub/mission_01.png"/></div>
             <div class="label">성공시<span>200P</span></div>
-            <h4 class="title">핫!플! 인증하기</h4>
-            <p>요즘 핫플은 어디일까요~?<br>
-              2주간 핫플레이스를 방문하시어 인증사진을 <br>
-              남겨주시면 포인트를 드립니다.  
+            <h4 class="tit">물 마시기 도전</h4>
+            <p>물 마시기, 그 중요성은 다들 아시죠?<br>
+              하루에 10잔의 물은 마셔야 건강에 좋다고 합니다.<br>
+              다 같이 물 마시기에 도전에 보시는건 어떠세요?
             </p>
-            <div class="frm">
-              <input type="text" name="mission-inp" id="mission-inp"/>
-              <span class="placeholder">나의 목표</span> <span class="unit">곳</span>
+            <div class="frm ">
+              <input type="number" placeholder="00" name="mission-inp" id="mission-inp"/>
+              <span class="placeholder">나의 목표</span> <span class="unit">잔</span>
             </div>
+            <div class="frm progress-frm">
+              <span class="placeholder">도전 진행률</span> <span class="percent">70%</span>
+              <div class="progress"><p style="width:70%;"></p></div>
+            </div>
+
             <ul class="noti">
               <li>목표는 1회만 설정 가능하며 저장 후에는 변경하실 수 없습니다.</li>
               <li>목표 저장 후에는 미션 도전이 시작됩니다.</li>
@@ -60,6 +65,37 @@
             </div>
           </div>
         </section>
+
+        <div class="mission-status">
+          <p class="ti">도전 현황</p>
+          <ul class="status-list">
+            <li>
+              <div class="day">1일째<span>(20일)</span></div>
+              <div class="stat">
+                <input type="text" value="2"><span class="unit">잔</span>
+              </div>
+            </li>
+            <li>
+              <div class="day">2일째<span>(20일)</span></div>
+              <div class="stat">
+                <input type="text" value="2"><span class="unit">잔</span>
+              </div>
+            </li>
+            <li>
+              <div class="day">3일째<span>(20일)</span></div>
+              <div class="stat">
+                <input type="text" value="2"><span class="unit">잔</span>
+              </div>
+            </li>
+          </ul>
+          <div class="status-result">
+            <p>최종</p>
+            <p class="cnt">20<span class="unit">잔</span></p>
+          </div>
+          <ul class="noti">
+            <li>목표를 달성하는 대로 자동으로 저장되어 보여집니다.</li>
+          </ul>
+        </div>
 
         <dl class="desc">
           <dt>알려드립니다.</dt>
