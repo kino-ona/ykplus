@@ -454,12 +454,18 @@ function youtube_play_api(){
 			control.click(function(){
 				control.next('iframe#youtube_video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
 				control.hide();
+				$(this).parents('.videoplay_area').addClass('hide');
 			});
 		} 
 		if($(this).find('video').length > 0) {
 			control.click(function(){
-				control.next('video').get(0).play();
-				control.hide();
+				if(control.hasClass('pause')) {
+					control.next('video').get(0).pause();
+					control.removeClass('pause');
+				}else{
+					control.next('video').get(0).play();
+					control.addClass('pause');
+				}
 			})
 		}
 	});
