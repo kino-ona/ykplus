@@ -288,6 +288,10 @@
 	})
 	<!-- //footer -->
 	<script>
+		if($('.replyarea_wrap .ui-accordion').length > 0) {
+			replyAccordion();
+		}
+		
 		var swiper = new Swiper('#subTopswipe', {
 			slidesPerView: 1,
 			spaceBetween: 10,

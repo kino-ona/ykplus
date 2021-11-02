@@ -1021,6 +1021,9 @@
 </script>
 
 <script>
+	if($('.review_sec .ui-accordion').length > 0) {
+		reviewAccordion();
+	}
 	$('.amount button.calc').click(function() {
 		var $btn = $(this);
 		$('.amount input').val(function(i, val) {

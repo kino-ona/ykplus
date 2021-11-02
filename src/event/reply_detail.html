@@ -157,6 +157,10 @@
 	<!-- //footer -->
 
   <script>
+  if($('.replyarea_wrap .ui-accordion').length > 0) {
+    replyAccordion();
+  }
+  
   /** gallery arrange **/
   $('.gallery_area').each(function(){ 
     var figCnt = $(this).find('.figure').length;

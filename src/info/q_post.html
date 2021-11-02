@@ -221,6 +221,10 @@
 	<!-- //footer -->
 
   <script>
+    if($('.replyarea_wrap .ui-accordion').length > 0) {
+      replyAccordion();
+    }
+    
     var lightbox = $('#lightbox-overlay'),
         lightboximg = lightbox.find('.lightbox-img');
     /** 댓글용 **/

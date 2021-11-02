@@ -146,7 +146,7 @@ $('.ui-accordion').each(function () {
 		}
 	}
 });
-if($('.replyarea_wrap .ui-accordion').length > 0) {
+function replyAccordion(){
 	$('.replyarea_wrap .ui-accordion').find('.item').each(function () {
 		$(this).find('.btn_all').click(function(){
 			if($(this).parents('.item').find('.panel').hasClass('hide')){
@@ -159,7 +159,7 @@ if($('.replyarea_wrap .ui-accordion').length > 0) {
 		});
 	});
 }
-if($('.review_sec .ui-accordion').length > 0) {
+function reviewAccordion(){
 	$('.review_sec .ui-accordion').find('.item').each(function () {
 		$(this).click(function(){
 			var status = $(this).find('.target').attr('aria-expanded');

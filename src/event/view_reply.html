@@ -176,6 +176,10 @@
 		});
 	</script>
   <script>
+		if($('.replyarea_wrap .ui-accordion').length > 0) {
+			replyAccordion();
+		}
+		
     defaultSwipe('replySwp01', '3.25', 10);
 
 		var lightbox = $('#lightbox-overlay'),
