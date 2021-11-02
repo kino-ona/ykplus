@@ -408,6 +408,10 @@
 	<!-- //footer -->
 
   <script>
+		$(document).ready(function() {
+			if($('.videoplay_area').length > 0) { youtube_play_api(); }
+		});
+    
     if($('.gauge').length > 0) {
       function Gauge() {
         $('.gauge .gaugebar').each(function () {

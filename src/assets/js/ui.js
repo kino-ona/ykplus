@@ -439,9 +439,6 @@ var clickUtilControl = function () {
 
 /** youtube/video
 ****************************************/
-$(document).ready(function() {
-	if($('.videoplay_area').length > 0) { youtube_play_api(); }
-});
 function youtube_play_api(){
 	var tag = document.createElement('script');
 	tag.src = "https://www.youtube.com/iframe_api";

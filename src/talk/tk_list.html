@@ -297,6 +297,9 @@
 	<!-- //footer -->
 
   <script>
+  $(document).ready(function() {
+    if($('.videoplay_area').length > 0) { youtube_play_api(); }
+  });
   /** gallery arrange **/
   $('.gallery_area').each(function(){ 
     var figCnt = $(this).find('.figure').length;

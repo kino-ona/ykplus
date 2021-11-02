@@ -209,6 +209,9 @@
 	<!-- //footer -->
 </body>
 <script>
+  $(document).ready(function() {
+    if($('.videoplay_area').length > 0) { youtube_play_api(); }
+  });
   if($('#recommend_swipe').length > 0) {
 		var recommendswiper = new Swiper('#recommend_swipe', { 
 			slidesPerView: 2.45,

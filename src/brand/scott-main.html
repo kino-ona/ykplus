@@ -232,7 +232,10 @@
 	defaultSwipe('recommend_swipe', '2.45', 10);  // (스와이프 ID, 스와이프 노출 갯수, 사이간격);
 </script>
 <script>
-  	// 화면 확인용 > 리뷰 탭 내 스와이프 함수 호출 필요시 참고
+  $(document).ready(function() {
+    if($('.videoplay_area').length > 0) { youtube_play_api(); }
+  });
+  // 화면 확인용 > 리뷰 탭 내 스와이프 함수 호출 필요시 참고
 	$('.tab_wrap .tablist').find('li').each(function(){ 
 		$(this).find('.tab').click(function(){
       defaultSwipe('recommend_swipe', '2.45', 10);

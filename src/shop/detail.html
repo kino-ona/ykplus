@@ -1021,6 +1021,9 @@
 </script>
 
 <script>
+	$(document).ready(function() {
+		if($('.videoplay_area').length > 0) { youtube_play_api(); }
+	});
 	if($('.review_sec .ui-accordion').length > 0) {
 		reviewAccordion();
 	}
