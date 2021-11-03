@@ -1061,6 +1061,10 @@ ul.noti {
     .inp_wrap {
       input {
         padding-right: 78px;
+        &:disabled, &:read-only {
+          background-color: #fff;
+          color: #000;
+        }
       }
       .unit {
         right: 62px;
@@ -1080,14 +1084,22 @@ ul.noti {
         &[class*="attached"] {
           color: #999;
           background-color: #EDEDED;
+          i {
+            margin-top: 1px;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background: {
+              image: url(../images/icons/icon_gallery_small.png);
+              size: 14px;
+              repeat: no-repeat;
+              position: center center;
+            };
+          }
         }
         &[class*="save"] {
           color: #fff;
           background-color: #009AFF;
-        }
-        &[class*="omit"] {
-          color: #000;
-          background-color: #EDEDED;
         }
       }
     }
