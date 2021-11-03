@@ -58,9 +58,9 @@
             <ul class="vertical">
               <li class="frm_mix">
                 <span><em class="a11y">-</em></span>
-                <input type="text" onclick="openLayer('#calendar_popup-fn')" aria-haspopup="dialog" aria-controls="calendar_popup-fn" id="calendar_popup-opener-fn" aria-pressed="false">
+                <input type="text" id="datepicker1">
                 <span><em class="a11y">-</em></span>
-                <input type="text" onclick="openLayer('#calendar_popup-fn')" aria-haspopup="dialog" aria-controls="calendar_popup-fn" id="calendar_popup-opener-fn" aria-pressed="false">
+                <input type="text" id="datepicker2">
               </li>
             </ul>
             <div class="btn_wrap">
@@ -99,22 +99,8 @@
     </div>
 	</div>
 	<!--// contents body -->
-  
-  <!-- 날짜 선택 달력 팝업 -->
-  <div class="overlay-popup calendar_popup" role="dialog" id="calendar_popup-fn" aria-labelledby="calendar_popup-opener" aria-modal="true">
-    <div class="contents">
-			<div class="heading">
-				날짜 선택 <button class="btn_close"><i></i></button>
-			</div>
-      <div class="inner">
-        
 
-        
-      </div>
-    </div>
-    <div class="overlay-dimmed"></div>
-  </div>
-  <!--// 날짜 선택 달력 팝업 -->
+  <div class="overlay-dimmed" style="display: none;"></div>
 
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
@@ -137,6 +123,14 @@
         }
       });
     });
-    </script>
+  </script>
+  <script>
+    $( function() {
+      $( "#datepicker1" ).datepicker();
+    } );
+    $( function() {
+      $( "#datepicker2" ).datepicker();
+    } );
+  </script>
 </body>
 </html>
