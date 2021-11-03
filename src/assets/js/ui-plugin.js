@@ -556,10 +556,6 @@ function datepickerControl() {
 			},
 			beforeShow: function () {
 				$('body').append("<div onclick='calenderHide()' class='overlay-dimmed'></div>");
-				var delay = setTimeout(function () {
-					$('.ui-datepicker').prepend("<div class='ui_calender-title'>날짜 선택 <button onclick='calenderHide();' class='btn-calclose'><i></i></button></div>")
-					clearTimeout(delay);
-				}, 100);
 			},
 	}
 	var defaultOptShort = {
@@ -578,10 +574,6 @@ function datepickerControl() {
 			},
 			beforeShow: function () {
 				$('body').append("<div onclick='calenderHide()' class='overlay-dimmed'></div>");
-				var delay = setTimeout(function () {
-					$('.ui-datepicker').prepend("<div class='ui_calender-title'>날짜 선택 <button onclick='calenderHide();' class='btn-calclose'><i></i></button></div>")
-					clearTimeout(delay);
-				}, 100);
 			},
 	}
 	var defaultOptMinDate = {
@@ -601,10 +593,6 @@ function datepickerControl() {
 			},
 			beforeShow: function () {
 				$('body').append("<div onclick='calenderHide()' class='overlay-dimmed'></div>");
-				var delay = setTimeout(function () {
-					$('.ui-datepicker').prepend("<div class='ui_calender-title'>날짜 선택 <button onclick='calenderHide();' class='btn-calclose'><i></i></button></div>")
-					clearTimeout(delay);
-				}, 100);
 			},
 	}
 	$(".datepicker").each(function () {
