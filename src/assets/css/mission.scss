@@ -1005,12 +1005,13 @@ ul.noti {
   .ti {
     font-size:15px;
     font-weight: 900;
+    margin-bottom: 20px;
   }
   .status-list {
-    margin-top:20px;
     li {
+      position: relative;
       display: flex;
-      margin-top:12px;
+      margin-top: 12px;
       align-items: center;
       &:first-of-type {
         margin-top:0;
@@ -1031,11 +1032,22 @@ ul.noti {
       position:relative;
       width:calc(100% - 60px);
       input {
-        padding-right:35px;
+        padding-right: 35px;
         font-family: 'roboto';
-        font-size:18px;
+        font-size: 18px;
         font-weight: 700;
+        text-align: inherit;
+      }
+      &.right {
         text-align: right;
+      }
+      &.left {
+        text-align: left;
+        input {
+          font-family: inherit;
+          font-size: 15px;
+          padding-right: 80px;
+        }
       }
       .unit {
         position:absolute;
@@ -1044,6 +1056,39 @@ ul.noti {
         @include transform(translateY(-50%));
         font-size:15px;
         font-weight: 700;
+      }
+    }
+    .inp_wrap {
+      input {
+        padding-right: 78px;
+      }
+      .unit {
+        right: 62px;
+      }
+      .btn {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        border: 0;
+        font-size: 13px;
+        font-weight: 700;
+        &[class*="filesrch"] {
+          color: #fff;
+          background-color: #009AFF;
+        }
+        &[class*="attached"] {
+          color: #999;
+          background-color: #EDEDED;
+        }
+        &[class*="save"] {
+          color: #fff;
+          background-color: #009AFF;
+        }
+        &[class*="omit"] {
+          color: #000;
+          background-color: #EDEDED;
+        }
       }
     }
   }
@@ -1076,6 +1121,51 @@ ul.noti {
   }
   .noti {
     margin-bottom:0;
+  }
+  &._closed {
+    border: 0;
+    margin-top: 0;
+    padding-top: 0;
+    background-color: #fff;
+    > .btn_wrap {
+      margin-top: 24px;
+      margin-bottom: 10px;
+      .btn {
+        width: 100%;
+        border-color: #AAA;
+      }
+    }
+  }
+}
+.result_detail {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #F5F7F8;
+  border-radius: 6px;
+  dt {
+    display: block;
+    padding: 24px 0;
+    font-weight: 800;
+  }
+  dd {
+    border-top: 1px solid #E5E5E5;
+    display: block;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    span {
+      font-weight: inherit;
+    }
+  }
+  em {
+    font-weight: inherit;
+    &.success {
+      color: #009AFF;
+    }
+    &.fail {
+      color: #FF2B4C;
+    }
   }
 }
 
@@ -1284,7 +1374,7 @@ ul.noti {
     .target {
       position: absolute;
       top: 20px;
-      right: 0;
+      right: 20px;
       .toggle_trigger {
         width: auto;
         i:before {
@@ -1431,4 +1521,3 @@ ul.noti {
     }
   }
 }
-
