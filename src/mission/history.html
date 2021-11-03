@@ -58,9 +58,9 @@
             <ul class="vertical">
               <li class="frm_mix">
                 <span><em class="a11y">-</em></span>
-                <input type="text" id="datepicker1">
+                <input type="text" id="datepicker1" class="datepicker">
                 <span><em class="a11y">-</em></span>
-                <input type="text" id="datepicker2">
+                <input type="text" id="datepicker2" class="datepicker">
               </li>
             </ul>
             <div class="btn_wrap">
@@ -100,24 +100,6 @@
 	</div>
 	<!--// contents body -->
 
-  <!-- Datepicker UI 팝업 -->
-  <div class="overlay-dimmed" style="display: none;"></div>
-  <!--// Datepicker UI 팝업 -->
-
-  <!-- 날짜 선택 달력 팝업 -->
-  <!-- <div class="overlay-popup calendar_popup" role="dialog" id="calendar_popup-fn" aria-labelledby="calendar_popup-opener" aria-modal="true">
-    <div class="contents">
-			<div class="heading">
-				날짜 선택 <button class="btn_close"><i></i></button>
-			</div>
-      <div class="inner"> 
-        
-      </div>
-    </div>
-    <div class="overlay-dimmed"></div>
-  </div> -->
-  <!--// 날짜 선택 달력 팝업 -->
-
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
 		"webroot":"..",
@@ -139,14 +121,6 @@
         }
       });
     });
-  </script>
-  <script>
-    $( function() {
-      $( "#datepicker1" ).datepicker();
-    } );
-    $( function() {
-      $( "#datepicker2" ).datepicker();
-    } );
   </script>
 </body>
 </html>

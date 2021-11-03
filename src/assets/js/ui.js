@@ -4,8 +4,14 @@ $(document).ready(function () {
 
 	if($('[role="dialog"]').length > 0) popupLayer();
 	if($('.toggle_trigger').length > 0) toggleContent();
+	if($('.datepicker').length > 0) datepickerControl();
+
 });
 
+function calenderHide() {
+	$('.datepicker').datepicker('hide');
+	$('.overlay-dimmed').remove()
+}
 
 /** Aria boolean
 ****************************************/
