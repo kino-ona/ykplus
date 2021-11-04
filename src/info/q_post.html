@@ -225,6 +225,7 @@
       replyAccordion();
     }
 
+    /* 20211104 s */
 		$('.thum-close').each(function() {
 			$(this).click(function() { 
 				var result = confirm('삭제하시겠습니까?'); 
@@ -238,6 +239,7 @@
 		var elDelete = function (set) {
 			$(set).parent().remove();
 		}
+    /* 20211104 e */
     
     var lightbox = $('#lightbox-overlay'),
         lightboximg = lightbox.find('.lightbox-img');
