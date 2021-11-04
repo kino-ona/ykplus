@@ -224,6 +224,20 @@
     if($('.replyarea_wrap .ui-accordion').length > 0) {
       replyAccordion();
     }
+
+		$('.thum-close').each(function() {
+			$(this).click(function() { 
+				var result = confirm('삭제하시겠습니까?'); 
+				if(result) { 
+					elDelete(this)
+				} else { //no 
+					return false;
+				} 
+			});
+		});
+		var elDelete = function (set) {
+			$(set).parent().remove();
+		}
     
     var lightbox = $('#lightbox-overlay'),
         lightboximg = lightbox.find('.lightbox-img');

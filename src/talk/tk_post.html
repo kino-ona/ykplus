@@ -345,6 +345,20 @@
     replyAccordion();
   }
 
+  $('.thum-close').each(function() {
+    $(this).click(function() { 
+      var result = confirm('삭제하시겠습니까?'); 
+      if(result) { 
+        elDelete(this)
+      } else { //no 
+        return false;
+      } 
+    });
+  });
+  var elDelete = function (set) {
+    $(set).parent().remove();
+  }
+
   /** gallery arrange **/
   $('.gallery_area').each(function(){ 
     var figCnt = $(this).find('.figure').length;
