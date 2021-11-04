@@ -324,13 +324,13 @@ ul.noti {
 
 .product_list {
   .type01 {
-    background-color: #FCEFE5;
+    position: relative;
     .tit {
       color: #760214;
     }
   }
   .type02 {
-    background-color: #D3EEFF;
+    position: relative;
     .tit {
       color: #24416F;
     }
@@ -406,6 +406,22 @@ ul.noti {
     }
   }
   .product_list {
+    .tit {
+      text-align: left;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      font-weight: 800;
+      span {
+        display: block;
+        color: inherit;
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 6px;
+      }
+    }
     .item.banner {
       overflow: hidden;
       margin-bottom: 10px; 
@@ -413,25 +429,25 @@ ul.noti {
         position: relative;
         max-width: 640px;
         margin: 0 auto;
-        padding: 0;
+        padding: 0 0 31.25% 0;
         border-radius: 20px;
-        .img {
-          overflow: hidden;
-        }
+        background: {
+          size: 100%;
+          position: center center;
+          repeat: no-repeat;
+        };
       }      
       &._missionend  {
         > a {
-          .img {
-            &::after {
-              content: '';
-              position: absolute;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              top: 0;
-              border-radius: 20px;
-              background-color: rgba(0, 0, 0, .2);
-            }
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, .2);
           }
         }
       }
