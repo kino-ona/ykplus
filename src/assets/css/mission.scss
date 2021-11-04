@@ -432,10 +432,11 @@ ul.noti {
         padding: 0 0 31.25% 0;
         border-radius: 20px;
         background: {
-          size: 100%;
+          size: cover;
           position: center center;
           repeat: no-repeat;
         };
+        overflow: hidden;
       }      
       &._missionend  {
         > a {
@@ -449,6 +450,12 @@ ul.noti {
             border-radius: 20px;
             background-color: rgba(0, 0, 0, .2);
           }
+        }
+      }
+      @media screen and (min-width: 768px) {
+        > a {
+          max-height:100px;
+          padding: 0 0 27.25% 0;
         }
       }
     }
