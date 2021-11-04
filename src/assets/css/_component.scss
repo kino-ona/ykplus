@@ -369,6 +369,7 @@ a.btn {
 }
 
 .chkwrap.likechk {
+	z-index: 1;
 	display: inline-block;
 	input[type=checkbox] {
 		& + label {
