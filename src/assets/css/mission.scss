@@ -899,11 +899,13 @@ ul.noti {
         margin-bottom: 30px;
       }
       .frm {
+        & + .frm {
+          margin-top: 10px;
+        }
         position: relative;
         display: flex;
         align-items: center;
         min-height: 56px;
-        margin-bottom: 10px;
         background-color: #F5F7F8;
         border-radius: 6px;
         input {
@@ -998,7 +1000,6 @@ ul.noti {
 }
 .mission-status {
   padding:30px 20px;
-  margin-top:30px;
   border-top:1px solid #E5E5E5;
   border-bottom:1px solid #E5E5E5;
   background-color: #F5F7F8;
@@ -1056,7 +1057,7 @@ ul.noti {
         input {
           font-family: inherit;
           font-size: 15px;
-          padding-right: 80px;
+          padding-right: 100px;
         }
       }
       .unit {
