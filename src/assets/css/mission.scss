@@ -1035,11 +1035,18 @@ ul.noti {
       position:relative;
       width:calc(100% - 60px);
       input {
-        padding-right: 35px;
+        padding-right: 31px;
         font-family: 'roboto';
         font-size: 18px;
         font-weight: 700;
         text-align: inherit;
+        &:disabled {
+          background-color: #fff;
+          color: #000;
+          & + span {
+            color: #999;
+          }
+        }
       }
       &.right {
         text-align: right;
@@ -1055,7 +1062,7 @@ ul.noti {
       .unit {
         position:absolute;
         right:16px;
-        top:52%;
+        top:53.667%;
         @include transform(translateY(-50%));
         font-size:15px;
         font-weight: 700;
@@ -1063,11 +1070,7 @@ ul.noti {
     }
     .inp_wrap {
       input {
-        padding-right: 78px;
-        &:disabled, &:read-only {
-          background-color: #fff;
-          color: #000;
-        }
+        padding-right: 76px;
       }
       .unit {
         right: 62px;
