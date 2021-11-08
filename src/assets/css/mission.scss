@@ -1176,12 +1176,15 @@ ul.noti {
     margin-top: 0;
     padding-top: 0;
     background-color: #fff;
-    > .btn_wrap {
-      margin-top: 24px;
-      margin-bottom: 10px;
-      .btn {
-        width: 100%;
-        border-color: #AAA;
+    .panel {
+      margin-bottom: 24px;
+    }
+    .target {
+      .btn_wrap {
+        .btn {
+          width: 100%;
+          border-color: #AAA;
+        }
       }
     }
   }
