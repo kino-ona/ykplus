@@ -1310,14 +1310,23 @@ ul.noti {
       }
       .fig {
         display: block;
-        font-family: 'roboto';
-        font-size: 24px;
-        .empty {
-          display: inherit;
+        input {
+          border: 0;
+          color: inherit;
+          font-family: 'roboto';
+          font-size: 24px;
+          &::placeholder {
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+          }
+          &.empty {
+            background-color: transparent;
+            color: #D8DBDD;
+          }
+        }
+        &._result {
           color: #D8DBDD;
-          font-size: inherit;
-          line-height: inherit;
-          font-weight: inherit;
         }
       }
     }
