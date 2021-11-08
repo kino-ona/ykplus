@@ -125,7 +125,7 @@
 }
 .graphing_sec {
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
   .graph {
     z-index: 1;
     position: relative;
@@ -556,11 +556,6 @@ ul.noti {
       }
     }
   }
-  .subtop_sec {
-    .graphing_sec {
-      margin-bottom: 15px;
-    }
-  }
   .subtop_wrap {
     h3 {
       font-size: 20px;
@@ -612,31 +607,26 @@ ul.noti {
   }
   .gauging_sec {
     padding-bottom: 0;
-    .ui-accordion {
-      padding-left: 20px;
-      padding-right: 20px;
-      border-bottom: 1px solid #E5E5E5;
-    }
-    .target {
-      .tit_wrap {
-        border-bottom: 0;
-        h4 {
-          font-size: 20px;
-          font-weight: 700;
-          span {
-            margin: 0 0 4px;
-            display: block;
-            color: #000;
-          }
-          strong {
-            color: #009AFF;;
-          }
-          em {
-            font-family: 'roboto';
-            font-size: 24px;
-          }
+    .tit_wrap {
+      border-bottom: 0;
+      h4 {
+        font-size: 20px;
+        font-weight: 700;
+        span {
+          margin: 0 0 4px;
+          display: block;
+          color: #000;
+        }
+        strong {
+          color: #009AFF;;
+        }
+        em {
+          font-family: 'roboto';
+          font-size: 24px;
         }
       }
+    }
+    .item {
       .toggle_trigger {
         top: 50%;
         transform: translateY(-50%);
@@ -649,7 +639,7 @@ ul.noti {
         }
       }
     }
-    .panel {
+    .gauge {
       dt {
         margin-top: 4px;
         display: block;
