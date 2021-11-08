@@ -1176,6 +1176,9 @@ ul.noti {
     margin-top: 0;
     padding-top: 0;
     background-color: #fff;
+    .item {
+      transition: all 0.05s !important;
+    }
     .panel {
       margin-bottom: 24px;
     }
@@ -1185,6 +1188,21 @@ ul.noti {
           width: 100%;
           border-color: #AAA;
         }
+      }
+    }
+    /*****/
+    .open {
+      display: block;
+    }
+    .close {
+      display: none;
+    }
+    .item[data-status="expanded"] {
+      .open {
+        display: none;
+      }
+      .close {
+        display: block;
       }
     }
   }
