@@ -608,7 +608,6 @@ ul.noti {
       color: #999;
       font-size: 13px;
       padding-left: 2px;
-      margin-bottom: 20px;
     }
   }
   .gauging_sec {
@@ -1237,9 +1236,6 @@ ul.noti {
       font-weight: 800;
       margin-bottom: 4px;
     }
-    .figs {
-      font-size: 30px;
-    }
     & + .btn_wrap {
       padding-left: 20px;
       padding-right: 20px;
@@ -1309,24 +1305,23 @@ ul.noti {
         margin-bottom: 6px;
       }
       .fig {
-        display: block;
+        &._result {
+          color: #D8DBDD;
+        }
         input {
           border: 0;
-          color: inherit;
           font-family: 'roboto';
+          color: inherit;
           font-size: 24px;
           &::placeholder {
-            color: inherit;
             font-family: inherit;
+            color: inherit;
             font-size: inherit;
           }
           &.empty {
-            background-color: transparent;
             color: #D8DBDD;
+            background-color: transparent;
           }
-        }
-        &._result {
-          color: #D8DBDD;
         }
       }
     }
@@ -1378,6 +1373,14 @@ ul.noti {
         text-align: right;
         color: #009AFF;
         font-weight: 700;
+      }
+    }
+    .empty {
+      td {
+        width: 100%;
+        text-align: center;
+        color: #000;
+        font-weight: 400;
       }
     }
     td:nth-of-type(1), th:nth-of-type(1) {
