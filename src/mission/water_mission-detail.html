@@ -48,8 +48,15 @@
               다 같이 물 마시기에 도전에 보시는건 어떠세요?
             </p>
             <div class="frm ">
-              <input type="number" placeholder="00" name="mission-inp" id="mission-inp"/>
-              <span class="placeholder">나의 목표</span> <span class="unit">잔</span>
+              <span class="placeholder">나의 목표</span>
+              <!-- 20211108 인풋 업다운버튼 -->
+              <div class="amount">
+                <button class="calc _minus" type="button" data-inc="-1"><span class="a11y">수량빼기</span></button>
+                <button class="calc _plus" type="button" data-inc="1"><span class="a11y">수량더하기</span></button>
+                <input type="number" placeholder="00" name="mission-inp" id="mission-inp"/>
+                <span class="unit">잔</span>
+              </div>              
+              <!--// 20211108 인풋 업다운버튼 -->
             </div>
             <div class="frm progress-frm">
               <span class="placeholder">도전 진행률</span> <span class="percent">70%</span>
@@ -123,5 +130,17 @@
 		}
 	})
 	<!-- //footer -->
+  
+  <!-- 20211108 인풋 업다운버튼 -->
+	<script>
+		$('.amount button.calc').click(function() {
+			var $btn = $(this);
+			$('.amount input').val(function(i, val) {
+				val = val * 1 + $btn.data('inc');
+				return (val <= 0 ? '' : '') + val;
+			});
+		});
+	</script>
+  <!--// 20211108 인풋 업다운버튼 -->
 </body>
 </html>
