@@ -990,3 +990,64 @@ html {
     }
   }
 }
+
+#openevent-main {
+  .date {
+    position: absolute;
+    top: 43.333%;
+    left: 9.375%;
+    width: 75%;
+    font-family: 'roboto';
+    color: #FFFA5C;
+    font-size: 4.167vw;
+    font-weight: 700;
+  }
+  .cont_inner {
+    .btn_wrap {
+      position: absolute;
+      left: 13px;
+      right: 13px;
+      bottom: 80px;
+      width: calc(100% - 26px);
+      .btn {
+        height: 44px;
+        line-height: 44px;
+        padding: 0;
+      }
+    }
+  }
+  .gray-btn {
+    border-radius: 0;
+  }
+}
+#app-location_popup-fn {
+  .contents {
+    max-width: 290px;
+  }
+  .inner {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  p {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  span {
+    display: block;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+  .title {
+    margin-bottom: 12px;
+  }
+  .tit {
+    margin-bottom: 10px;
+  }
+  label {
+    font-weight: 700;
+  }
+  .gray-btn {
+    border-radius: 0;
+  }
+}

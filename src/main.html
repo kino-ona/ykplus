@@ -580,6 +580,46 @@
   </div>
   <!--// 서버 오류 팝업 -->
 
+  <!-- 20211108 오픈이벤트 팝업 -->
+  <div class="overlay-popup" role="dialog" id="openevent-main" aria-labelledby="openevent-main" aria-modal="true">
+    <div class="contents">
+			<div class="cont_inner">
+				<p class="date">2001. 12. 01. ~ 12. 15.</p>       
+				<div class="btn_wrap">
+					<button class="btn">이벤트 자세히 보기</button>
+				</div>
+			</div>
+			<p class="img"><img src="./assets/images/common/img-openevent.png"/></p>
+      <div class="btn_wrap">
+        <a href="#" onclick="closeLayer('#openevent-main');return false;" class="btn gray-btn">오늘 하루 열지 않기</a>
+        <a href="#" onclick="closeLayer('#openevent-main');return false;" class="btn primary">닫기</a>
+      </div>
+    </div>
+    <div class="overlay-dimmed"></div>
+  </div>
+  <!--// 20211108 오픈이벤트 팝업 -->
+	
+	<!-- 20211108 어플 사용자의 위치 허용 팝업 -->
+  <div class="overlay-popup app-location_popup" role="dialog" id="app-location_popup-fn" aria-labelledby="app-location_popup-opener" aria-modal="true">
+    <div class="contents">
+      <div class="inner">
+				<p class="title">‘오늘플러스’이(가) 사용자의 위치에 접근하도록 허용하시겠습니까?</p>
+				<span>주문을 취소하시면 지급 예정된 적립금, 제휴적립금은 모두 취소되며, 주문을 되돌릴 수 없습니다.</span>
+				<p class="tit">앱을 사용하는 동안</p>
+				<ul>
+					<li><p class="chkwrap"><input type="checkbox" id="check-01"><label for="check-01">허용</label></p></li>
+					<li><p class="chkwrap"><input type="checkbox" id="check-02"><label for="check-02">허용 안 함</label></p></li>
+				</ul>
+      </div>
+      <div class="btn_wrap">
+        <a href="#" class="btn gray-btn" onclick="closeLayer('#app-location_popup-fn');return false;">취소</a>
+        <a href="#" class="btn primary" onclick="closeLayer('#app-location_popup-fn');return false;">확인</a>
+      </div>
+    </div>
+    <div class="overlay-dimmed"></div>
+  </div>
+  <!--// 20211108 어플 사용자의 위치 허용 팝업 -->
+
 	<!-- footer -->
 	@@include('./inc/footer.inc',{
 		"webroot":".",
@@ -593,6 +633,10 @@
 	<!-- //footer -->
 </body>
 <script>
+	// 20211108 s
+	openLayer('#openevent-main'); // 오픈이벤트 팝업
+	openLayer('#app-location_popup-fn'); // 사용자의 위치 허용 팝업
+	// 20211108 e
 	// openLayer('#error-layer01'); // 네트워크오류 팝업
 	// openLayer('#error-layer02'); // 서버오류 팝업
 
