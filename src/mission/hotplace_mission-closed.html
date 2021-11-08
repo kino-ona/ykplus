@@ -64,18 +64,45 @@
               <div class="stat left">
                 <input type="text" disabled value="연희동 경의선 숲길"><button class="btn small btn-attached" type="button"><i> </i> 첨부완료</button>
               </div>
+              <!-- 20211108 첨부완료 이미지 팝업 -->
+              <div id="gallery_area01" class="gallery_area">
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn02.png);" data-imgsrc="../assets/images/dummy/replies_thumn02.png"></div></div>
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn03.png);" data-imgsrc="../assets/images/dummy/replies_thumn03.png"></div></div>
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn01.png);" data-imgsrc="../assets/images/dummy/replies_thumn01.png"></div></div>
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn02.png);" data-imgsrc="../assets/images/dummy/replies_thumn02.png"></div></div>
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn03.png);" data-imgsrc="../assets/images/dummy/replies_thumn03.png"></div></div>
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn01.png);" data-imgsrc="../assets/images/dummy/replies_thumn01.png"></div></div>
+              </div>
+              <!--// 20211108 첨부완료 이미지 팝업 -->
             </li>
             <li class="inp_wrap">
               <div class="day">3곳</div>
               <div class="stat left">
                 <input type="text" disabled value="한남 블루보틀"><button class="btn small btn-attached" type="button"><i> </i> 첨부완료</button>
               </div>
+              <!-- 20211108 첨부완료 이미지 팝업 -->
+              <div id="gallery_area02" class="gallery_area">
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn03.png);" data-imgsrc="../assets/images/dummy/replies_thumn03.png"></div></div>
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn01.png);" data-imgsrc="../assets/images/dummy/replies_thumn01.png"></div></div>
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn02.png);" data-imgsrc="../assets/images/dummy/replies_thumn02.png"></div></div>
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn03.png);" data-imgsrc="../assets/images/dummy/replies_thumn03.png"></div></div>
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn01.png);" data-imgsrc="../assets/images/dummy/replies_thumn01.png"></div></div>
+              </div>
+              <!--// 20211108 첨부완료 이미지 팝업 -->
             </li>
             <li class="inp_wrap">
               <div class="day">4곳</div>
               <div class="stat left">
                 <input type="text" disabled value="연희동 경의선 숲길"><button class="btn small btn-attached" type="button"><i> </i> 첨부완료</button>
               </div>
+              <!-- 20211108 첨부완료 이미지 팝업 -->
+              <div id="gallery_area03" class="gallery_area">
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn01.png);" data-imgsrc="../assets/images/dummy/replies_thumn01.png"></div></div>
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn02.png);" data-imgsrc="../assets/images/dummy/replies_thumn02.png"></div></div>
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn03.png);" data-imgsrc="../assets/images/dummy/replies_thumn03.png"></div></div>
+                <div class="figure"><div class="imgbg" style="background-image:url(../assets/images/dummy/replies_thumn01.png);" data-imgsrc="../assets/images/dummy/replies_thumn01.png"></div></div>
+              </div>
+              <!--// 20211108 첨부완료 이미지 팝업 -->
             </li>
           </ul>
           <!--// disabled 타입 -->
@@ -107,6 +134,16 @@
 	</div>
 	<!--// contents body -->
 
+  <!-- 20211108 이미지 전체보기 팝업 -->
+  <div id="lightbox-overlay" class="lightbox-overlay">
+    <button onclick="lightboxClose()" class="btn_close"><i></i><span class="a11y">닫기</span></button>
+    <div id="postgallerySwp" class="swiper-container">
+      <div class="swiper-wrapper">
+      </div>
+    </div>
+  </div>
+  <!--// 20211108 이미지 전체보기 팝업 -->
+
 	<!-- footer -->
 	@@include('../inc/footer.inc',{
 		"webroot":"..",
@@ -118,5 +155,47 @@
 		}
 	})
 	<!-- //footer -->
+
+  <!-- 20211108 첨부완료 이미지 팝업 -->
+  <script>
+    /** gallery arrange **/
+    $('.gallery_area').each(function(){ 
+      var figCnt = $(this).find('.figure').length;
+  
+      if(figCnt > 3) {
+        $(this).addClass('morethree');
+        $(this).find('.figure:nth-child(3)').append('<p class=figcnt>+' + (figCnt - 3) + '장</p>')
+      }
+      if(figCnt < 2) {
+        $(this).addClass('onlyone')
+      }
+    })
+  
+    /** gallery pop **/
+    var lightbox = $('#lightbox-overlay'),
+        lightboximg = lightbox.find('.lightbox-img');
+    $('.gallery_area').each(function(){     
+      var parentGall = $(this),
+        btnGall = $(this).siblings('.stat').find('button.btn');
+  
+      btnGall.click(function(){
+        $('#postgallerySwp').find('.swiper-wrapper').empty();	
+  
+        parentGall.find('.figure').each(function(){
+          var figCnt = $(this).length/2;
+          var imgSrc = $(this).find('.imgbg').attr('data-imgsrc');
+  
+          for (var i = 0; i <= figCnt; i++) {
+            $('#postgallerySwp').find('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + imgSrc + '" class="lightbox-img" /></div>')
+          }
+        })
+        lightbox.addClass('visible');
+        $('body').addClass('noscroll');
+  
+        defaultSwipe('postgallerySwp', '1.05', 8);
+      });
+    });
+    </script>
+    <!-- 20211108 첨부완료 이미지 팝업 -->
 </body>
 </html>
