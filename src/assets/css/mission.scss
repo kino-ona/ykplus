@@ -1320,22 +1320,26 @@ ul.noti {
         margin-bottom: 6px;
       }
       .fig {
-        &._result {
-          color: #D8DBDD;
-        }
         input {
+          padding-left:0;
           border: 0;
           font-family: 'roboto';
-          color: inherit;
+          color: #000;
           font-size: 24px;
           &::placeholder {
             font-family: inherit;
-            color: inherit;
+            color: #D8DBDD;
             font-size: inherit;
           }
           &.empty {
             color: #D8DBDD;
             background-color: transparent;
+            &:read-only {
+              color:#000;
+            }
+          }
+          &:read-only {
+            color:#000;
           }
         }
       }
