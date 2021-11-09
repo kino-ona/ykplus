@@ -263,9 +263,9 @@ html {
     }
   }
 }
-.shopmain_sec {
-  padding-bottom:40px;
-}
+// .shopmain_sec {
+//   padding-bottom:40px;
+// }
 
 .talk_swipe-navi {
   &.swiper-pagination {
@@ -521,6 +521,9 @@ html {
           font-size:20px;
         }
       }
+      .info {
+        height: auto;
+      }
       .name {
         min-height:24px;
       }
@@ -538,7 +541,7 @@ html {
     }
     .info {
       margin-top: 5px;
-      height: auto;
+      // height: auto;
     }
     .name {
       min-height:39px;
@@ -607,6 +610,15 @@ html {
           background-image: url(../images/icons/ic_down.png);
         }
       }
+    }
+  }
+  .price {
+    .origin {
+      display: block;
+      clear: both;
+    }
+    .sale {
+      display: inline-block;
     }
   }
 }
