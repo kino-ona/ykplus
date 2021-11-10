@@ -774,6 +774,7 @@ body {
 		position: relative;
 		padding: 20px;
 		border-bottom: 1px solid #E5E5E5;
+		margin-bottom: 0;
 		h2 {
 			font-size: 15px;
 			font-weight: 800;
@@ -809,6 +810,7 @@ body {
 		.imgbg {
 			position: relative;
 			border-radius: 20px;
+			overflow: hidden;
 			padding-bottom: 100%;
 			background: {
 				repeat: no-repeat;
