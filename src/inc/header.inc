@@ -30,13 +30,15 @@
 		</div>
 		<ul class="cate_list">
 			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd01.png" alt="디펜드"/></p>디펜드</a></li>
-			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd02.png" alt="편안한 오늘"/></p>편안한 오늘</a></li>
-			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd03.png" alt="건강한 오늘"/></p>건강한 오늘</a></li>
-			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd04.png" alt="깨끗한 오늘"/></p>깨끗한 오늘</a></li>
-			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd05.png" alt="아름다운 오늘"/></p>아름다운 오늘</a></li>
-			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd06.png" alt="편리한 오늘"/></p>편리한 오늘</a></li>
+			<!-- 20211110 삭제 및 이름 수정 -->
+			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd02.png" alt="편안한 오늘"/></p>더 편안한 오늘</a></li>
+			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd03.png" alt="건강한 오늘"/></p>더 건강한 오늘</a></li>
+			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd04.png" alt="깨끗한 오늘"/></p>더 깨끗한 오늘</a></li>
+			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd05.png" alt="아름다운 오늘"/></p>더 아름다운 오늘</a></li>
+			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd06.png" alt="편리한 오늘"/></p>더 편리한 오늘</a></li>
 			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd07.png" alt="간병케어"/></p>간병케어</a></li>
-			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd08.png" alt="오늘의 도전"/></p>오늘의 도전</a></li>
+			<!--// 20211110 삭제 및 이름 수정
+				<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd08.png" alt="오늘의 도전"/></p>오늘의 도전</a></li> -->
 		</ul>
 	</section>
 	<section class="today_talk">
@@ -47,19 +49,19 @@
 		<div id="utilSwp_talk" class="swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img01.png);"><span class="label">트렌드 따라잡기</span></p>
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img01.png);"><span class="label">일상을 공유해요!</span></p><!-- 20211110 이름 수정 //-->
 				</a></div>
 				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img02.png);"><span class="label">톡톡퀴즈</span></p>
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img02.png);"><span class="label">살림 노하우 &amp; <br>인테리어</span></p><!-- 20211110 이름 수정 //-->
 				</a></div>
 				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img01.png);"><span class="label">오늘의 학습</span></p>
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img01.png);"><span class="label">우리집 <br>반려동물 &amp; 식물</span></p><!-- 20211110 이름 수정 //-->
 				</a></div>
 				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img02.png);"><span class="label">설문조사</span></p>
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img02.png);"><span class="label">나의 건강</span></p><!-- 20211110 이름 수정 //-->
 				</a></div>
 				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img01.png);"><span class="label">이런 거 어때요?</span></p>
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img01.png);"><span class="label">우리동네 <br>핫플레이스</span></p><!-- 20211110 이름 수정 //-->
 				</a></div>
 			</div>
 		</div>
@@ -93,7 +95,7 @@
 		<div id="utilSwp_info" class="swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img01.png);"><span class="label">건강정보</span></p>
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img01.png);"><span class="label">건강운동</span></p><!-- 20211110 이름 수정 //-->
 				</a></div>
 				<div class="swiper-slide"><a href="#">
 					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img02.png);"><span class="label">커리어</span></p>
@@ -102,7 +104,7 @@
 					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img01.png);"><span class="label">자산관리</span></p>
 				</a></div>
 				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img02.png);"><span class="label">여행/문화</span></p>
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img02.png);"><span class="label">여행문화</span></p><!-- 20211110 이름 수정 //-->
 				</a></div>
 				<div class="swiper-slide"><a href="#">
 					<p class="imgbg" style="background-image: url(@@webroot/assets/images/dummy/dummy_img01.png);"><span class="label">라이프스타일</span></p>
@@ -121,12 +123,13 @@
 		<ul class="cate_list">
 			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd01.png" alt="디펜드"/></p>디펜드</a></li>
 			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd09.png" alt="크리넥스"/></p>크리넥스</a></li>
+			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd13.png" alt="스카트"/></p>스카트</a></li>
+			<!-- 20211110 삭제
 			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd10.png" alt="좋은느낌"/></p>좋은느낌</a></li>
 			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd11.png" alt="화이트"/></p>화이트</a></li>
 			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd12.png" alt="라네이처"/></p>라네이처</a></li>
-			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd13.png" alt="스카트"/></p>스카트</a></li>
 			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd14.png" alt="크리넥스 마이비데"/></p>크리넥스 마이비데</a></li>
-			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd15.png" alt="티엔"/></p>티엔</a></li>
+			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd15.png" alt="티엔"/></p>티엔</a></li> -->
 		</ul>
 	</section>
 	<section class="today_event">

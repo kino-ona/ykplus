@@ -836,6 +836,7 @@ body {
 	}
 	.today_talk, .today_info {
 		.swiper-slide {
+			border-radius: 20px;
 			.label {
 				position: absolute;
 				left: 50%;
@@ -846,6 +847,7 @@ body {
 				line-height: 1.25;
 				font-weight: 700;
 				text-align: center;
+				white-space: nowrap;
 				padding: 6px 9px;
 				border-radius: 15px;
 				border: 1px solid #fff;
