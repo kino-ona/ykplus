@@ -808,11 +808,12 @@ body {
 		position: relative;
 		.imgbg {
 			position: relative;
+			border-radius: 20px;
 			padding-bottom: 100%;
 			background: {
 				repeat: no-repeat;
 				position: center center;
-				size: 100%;
+				size: cover;
 			}
 		}
 	}
@@ -836,7 +837,6 @@ body {
 	}
 	.today_talk, .today_info {
 		.swiper-slide {
-			border-radius: 20px;
 			.label {
 				position: absolute;
 				left: 50%;
