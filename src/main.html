@@ -579,25 +579,6 @@
     <div class="overlay-dimmed"></div>
   </div>
   <!--// 서버 오류 팝업 -->
-
-  <!-- 20211108 오픈이벤트 팝업 -->
-  <div class="overlay-popup" role="dialog" id="openevent-main" aria-labelledby="openevent-main" aria-modal="true">
-    <div class="contents">
-			<div class="cont_inner">
-				<p class="date">2001. 12. 01. ~ 12. 15.</p>       
-				<div class="btn_wrap">
-					<button class="btn">이벤트 자세히 보기</button>
-				</div>
-			</div>
-			<p class="img"><img src="./assets/images/common/img-openevent.png"/></p>
-      <div class="btn_wrap">
-        <a href="#" onclick="closeLayer('#openevent-main');return false;" class="btn gray-btn">오늘 하루 열지 않기</a>
-        <a href="#" onclick="closeLayer('#openevent-main');return false;" class="btn primary">닫기</a>
-      </div>
-    </div>
-    <div class="overlay-dimmed"></div>
-  </div>
-  <!--// 20211108 오픈이벤트 팝업 -->
 	
 	<!-- 20211108 어플 사용자의 위치 허용 팝업 -->
   <div class="overlay-popup app-location_popup" role="dialog" id="app-location_popup-fn" aria-labelledby="app-location_popup-opener" aria-modal="true">
@@ -634,7 +615,6 @@
 </body>
 <script>
 	// 20211108 s
-	openLayer('#openevent-main'); // 오픈이벤트 팝업
 	openLayer('#app-location_popup-fn'); // 사용자의 위치 허용 팝업
 	// 20211108 e
 	// openLayer('#error-layer01'); // 네트워크오류 팝업
