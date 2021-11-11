@@ -1145,3 +1145,54 @@ body {
 		}
 	}
 }
+
+
+/** splash **/
+.splash {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: {
+		image: url(../images/common/launch.png);
+		repeat: no-repeat;
+		position: center center;
+		size: cover;
+	}
+	.launch {
+		position: absolute;
+		top: 50%;
+		right: 8.333vw;//30px;
+		width: 36.667vw;//132px;
+		height: 7.500vw;//27px;
+		@include transform(translate(0, -50%));
+		background: {
+			image: url(../images/common/logo-white.png);
+			repeat: no-repeat;
+			position: center center;
+			size: 100%;
+		}
+		p {
+			position: absolute;
+			top: calc(100% + 7.778vw);//28px
+			left: 0;
+			color: #fff;
+			font-size: 3.889vw;//14px;
+			line-height: 6.667vw;//24px;
+			font-weight: 700;
+			letter-spacing: -0.002em;
+		}
+	}
+	.launch_foo {
+		position: absolute;
+		right: 8.333vw;//30px;
+		bottom: 13.889vw;//50px;
+		width: 22.778vw;//82px;
+		height: 5.556vw;//20px;
+		background: {
+			image: url(../images/common/logo-foo.png);
+			repeat: no-repeat;
+			position: center center;
+			size: 100%;
+		}
+	}
+}
