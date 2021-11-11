@@ -6,12 +6,30 @@
 		"webroot":"."
 	})
 </head>
-<body>
+<body onload="randomSlogan();">
   <div class="splash">
     <h1 class="launch"><span class="a11y">오늘플러스</span>
-      <p>당신의 오늘,<br>즐거움을 더하세요!</p>
+      <p id="slogan">당신의 오늘,<br>즐거움을 더하세요!</p>
     </h1>
     <div class="launch_foo"><span class="a11y">유한킴벌리</span></div>
   </div>
 </body>
+<script>
+  var pArr = new Array();
+  pArr[1] = '당신의 오늘,<br>111111 더하세요!';
+  pArr[2] = '당신의 오늘,<br>222222 더하세요!';
+  pArr[3] = '당신의 오늘,<br>333333 더하세요!';
+
+  function randomSlogan(){      
+    var target = document.getElementById('slogan'),
+      pLength = pArr.length - 1;
+    
+    var size = Math.ceil(Math.random()*pLength);
+
+    target.innerHTML = pArr[size];
+
+    console.log('pLength is ' + pLength);
+    console.log('size is ' + size);
+  }
+</script>
 </html>
