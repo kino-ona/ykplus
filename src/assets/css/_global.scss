@@ -941,6 +941,7 @@ body {
 		}
 		&:not(:last-child) {
 			&::after {
+				margin-top: 2px;
 				position: absolute;
 				right: 0;
 				content: '|';
@@ -983,12 +984,18 @@ body {
 		margin-top:28px;
 		> p {
 			padding-bottom:8px;
-			font-weight: 700;
 			color:#666666;
+		}
+		strong {
+			a {
+				font-weight: inherit;
+			}
 		}
 	}
 	.etc {
-		margin-top:15px;
+		margin-top: 12px;
+		padding-top: 5px;
+		border-top: 1px solid #D9DBDD;
 		a {
 			position:relative;
 			display: inline-block;
