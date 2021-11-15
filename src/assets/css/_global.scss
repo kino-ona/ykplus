@@ -954,7 +954,7 @@ body {
 }
 .footer {
 	background-color: #F5F7F8;
-	padding:30px 20px 120px;
+	padding:20px 20px 123px;
 	.row {
 		display: block;
 		padding-left:0;
@@ -983,8 +983,17 @@ body {
 		display: block;
 		margin-top:28px;
 		> p {
-			padding-bottom:8px;
-			color:#666666;
+			padding-bottom:10px;
+			color:#000;
+			&:last-of-type {
+				color:#666;
+				span {
+					display: block;
+					margin-top:10px;
+					font-size: 13px;
+					color:#666;
+				}
+			}
 		}
 		strong {
 			a {
@@ -1002,11 +1011,15 @@ body {
 			margin-top:15px;
 			margin-right:5px;
 			padding-right:10px;
+			font-size:13px;
 			color:#666666;
 			strong {
 				font-weight: 700;
 				font-size:inherit;
 				color:inherit;
+			}
+			&.point {
+				font-weight: 700;
 			}
 			&:after {
 				content: '';
