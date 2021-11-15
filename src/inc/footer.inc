@@ -1,4 +1,12 @@
 @@if (footer.visibles==='show') { 
+	<!-- 20211115 -->
+	<ul class="quickmenu">
+		<li><a href="#">로그아웃</a></li>
+		<li><a href="#">로그인</a></li>
+		<li><a href="#">고객센터</a></li>
+		<li><a href="#">공지사항</a></li>
+	</ul>
+	<!--// 20211115 -->
 	<footer class="footer">
 		<div class="row">
 			<p class="logo"><span class="a11y">유한킴벌리</span></p>
@@ -11,7 +19,7 @@
 			</div>
 			<div class="etc">
 				<a href="#">이용약관</a>
-				<a href="#">프리미엄 멤버십 이용약관</a>
+				<!-- 20211115 삭제 <a href="#">프리미엄 멤버십 이용약관</a> -->
 				<a href="#">제휴확인</a>
 				<a href="#"><strong>개인정보 처리방침</strong></a>
 				<a href="#">사업자정보 확인</a>
