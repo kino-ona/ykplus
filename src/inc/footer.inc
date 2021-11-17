@@ -4,7 +4,7 @@
 		<li><a href="#">로그아웃</a></li>
 		<li><a href="#">로그인</a></li>
 		<li><a href="#">고객센터</a></li>
-		<li><a href="#">공지사항</a></li>
+		<!-- <li><a href="#">공지사항</a></li> 삭제 -->
 	</ul>
 	<!--// 20211115 -->
 	<footer class="footer">
