@@ -5443,6 +5443,17 @@
 					background-color: #D8DBDD;
 				} 
 			}
+			span._closed {
+				display: inline-block;
+				width: 100%;
+				max-width: 30%;
+				min-width: 160px;
+				padding: 14px 36px;
+				color: #fff;
+				line-height: 1.333;
+				border-radius: 32px;
+				background-color: #D8DBDD;
+			}
 		}
 	}
 	.more {
