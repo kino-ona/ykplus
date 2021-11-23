@@ -1098,6 +1098,10 @@ body {
 			i {
 				margin-top:0;
 				@include iconX($size:8px, $thick: 2px, $color: #4892F6, $padding: 2px, $display: inline-block, $position: relative); 
+				width: 10px;
+				height: 10px;
+				margin-left: 2px;
+				margin-right: 2px;
 				&:before {
 					-webkit-transform: translate(-50%, 0) rotate(0);
 					transform: translate(-50%, 0) rotate(0);
