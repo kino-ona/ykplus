@@ -51,15 +51,17 @@
 				<div class="swiper-slide"><a href="#">
 					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_talk-01.png);"><span class="label">일상을 공유해요!</span></p><!-- 20211110 이름 및 이미지 수정 //-->
 				</a></div>
-				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_talk-02.png);"><span class="label">살림 노하우 &amp; <br>인테리어</span></p><!-- 20211110 이름 및 이미지 수정 //-->
-				</a></div>
+				<!-- 20211119 
+					<div class="swiper-slide"><a href="#">
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_talk-02.png);"><span class="label">살림 노하우 &amp; <br>인테리어</span></p>
+				</a></div> -->
 				<div class="swiper-slide"><a href="#">
 					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_talk-03.png);"><span class="label">우리집 <br>반려동물 &amp; 식물</span></p><!-- 20211110 이름 및 이미지 수정 //-->
 				</a></div>
-				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_talk-04.png);"><span class="label">나의 건강</span></p><!-- 20211110 이름 및 이미지 수정 //-->
-				</a></div>
+				<!-- 20211119 
+					<div class="swiper-slide"><a href="#">
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_talk-04.png);"><span class="label">나의 건강</span></p>
+				</a></div> -->
 				<div class="swiper-slide"><a href="#">
 					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_talk-05.png);"><span class="label">우리동네 <br>핫플레이스</span></p><!-- 20211110 이름 및 이미지 수정 //-->
 				</a></div>
@@ -95,16 +97,22 @@
 		<div id="utilSwp_info" class="swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-01.png);"><span class="label">건강운동</span></p><!-- 20211110 이름 및 이미지 수정 //-->
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-01.png);"><span class="label">오플+ 인터뷰</span></p><!-- 20211119 //-->
 				</a></div>
 				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-02.png);"><span class="label">커리어</span></p><!-- 20211110 이름 및 이미지 수정 //-->
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-01.png);"><span class="label">5분 똑똑</span></p><!-- 20211119 //-->
+				</a></div>
+				<div class="swiper-slide"><a href="#">
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-01.png);"><span class="label">건강/운동</span></p><!-- 20211119 //-->
+				</a></div>
+				<div class="swiper-slide"><a href="#">
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-02.png);"><span class="label">커리어/취업</span></p><!-- 20211119 //-->
 				</a></div>
 				<div class="swiper-slide"><a href="#">
 					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-03.png);"><span class="label">자산관리</span></p><!-- 20211110 이름 및 이미지 수정 //-->
 				</a></div>
 				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-04.png);"><span class="label">여행문화</span></p><!-- 20211110 이름 및 이미지 수정 //-->
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-04.png);"><span class="label">여행/문화</span></p><!-- 20211119 //-->
 				</a></div>
 				<div class="swiper-slide"><a href="#">
 					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-05.png);"><span class="label">라이프스타일</span></p><!-- 20211110 이름 및 이미지 수정 //-->
