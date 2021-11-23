@@ -599,6 +599,7 @@ html {
         width: 10px;
         height: 8px;
         background: {
+          image: url(../images/icons/ic_same.png);
           size: 100%;
           position: center center;
           repeat: no-repeat;
@@ -922,7 +923,7 @@ html {
   .ranking_list {
     padding: 0 10px;
     margin-bottom: 22px;
-    li {
+    li, div {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -945,15 +946,18 @@ html {
         width: 10px;
         height: 8px;
         background: {
-          size: 100%;
+          image: url(../images/icons/ic_same.png);
+          size: 8px;
           position: center center;
           repeat: no-repeat;
         }
         &.ic_up {
           background-image: url(../images/icons/ic_up.png);
+          background-size: 100%;
         }
         &.ic_down {
           background-image: url(../images/icons/ic_down.png);
+          background-size: 100%;
         }
       }
     }
