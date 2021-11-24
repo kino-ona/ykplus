@@ -1100,6 +1100,18 @@ a.btn {
 				padding:10px 20px;
 			}
 		}
+		&.ranking {
+			clear:left;
+			width:100% !important;
+			margin-right:0;
+			margin-left:0;
+			background-color:transparent;
+			.ranking_list {
+				padding-left:22px;
+				padding-right:22px;
+				margin-top:22px;
+			}
+		}
     .btn-buy {
       border:1px solid #099AFF;
       color:#099AFF;
