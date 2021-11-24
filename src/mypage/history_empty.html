@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"히스토리",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"히스토리"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-manage_list">
+			<ul class="noti_head">
+				<li class="row">
+					최근 30일 동안 관심을 가지셨던 상품이 보여집니다.
+				</li>
+			</ul>
+      <div class="my-history">
+        <div class="empty_data _full">
+          <p><i class="mark"></i>최근 본 상품이 없습니다.</p>
+        </div>
+      </div>
+      
+		</div>
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+</body>
+
+</html>

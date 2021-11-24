@@ -1083,6 +1083,25 @@ textarea {
       }
     }
   }
+  .noti_head {
+    border-top: 1px solid #E5E5E5;
+    height: 54px;
+    background-color: #F5F7F8;
+    .row {
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    li {
+      color: #999;
+      font-size: 13px;
+      &::before {
+        content: '·';
+        display: inline-block;
+        padding-right: 4px;
+      }
+    }
+  }
   .ui-accordion .item {
     position: relative;
     padding: 0;
@@ -1852,4 +1871,120 @@ textarea {
       line-height: 18px;
     }
   }
+}
+
+.my-history {
+  .empty_data._full {
+    height: calc(100vh - 210px);
+  }
+  .btn_wrap {
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 120px;
+    .btn {
+      width: 100%;
+    }
+  }
+}
+.views_info {
+	border-bottom:8px solid #F5F7F8;
+	.title {
+		position:relative;
+		width: 100%;
+		height: 59px;
+		display:inline-flex;
+		align-items:center;
+		padding-left:20px;
+		padding-right:20px;
+    font-size: 15px;
+    font-weight: 700;
+		border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 0;
+    b {
+      font-family: 'roboto';
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      margin-right: 4px;
+    }
+		.btn {
+			border:0;
+			position: absolute;
+			right:0px;
+			width:64px;
+			height:40px;
+			&[aria-pressed="true"] {
+				i {
+					@include iconAngle($direction: 'up', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
+				vertical-align: middle;
+				}
+			}
+			&.small {
+				width:auto;
+				height:28px;
+				border:1px solid #AAA;
+			}
+		}
+		i {
+			@include iconAngle($direction: 'down', $width: 15px, $height: 8px, $thick: 1px, $color: #111, $display: inline-block);
+		vertical-align: middle;
+		}
+	}
+}
+.views_list {
+	.item {
+    position: relative;
+    padding-left:20px;
+    padding-right:20px;
+		&:after {
+			@extend %clearer;
+		}
+		.btn {
+			i {
+				@include iconAngle($direction: 'right', $width: 6px, $height: 10px, $thick: 1px, $color: #111, $display: inline-block);
+				vertical-align: middle;
+			}
+		}
+	}
+	.thumb {
+		position:relative;
+		float:left;
+		width: 90px;
+		margin-right:12px;
+		> p {
+			width: 90px;
+			padding:15px;
+			background-color: #F5F7F8;
+			border-radius: 20px;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			-ms-border-radius: 20px;
+			-o-border-radius: 20px;
+		}
+	}
+	.details {
+		float:left;
+		width:calc(100% - 102px);
+		margin-top:2px;
+		padding-bottom:25px;
+		.name {
+			@include ellipse(2);
+			line-height:1.3;
+			a {
+				font-size:inherit;
+			}
+		}
+    .price {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      font-size: 18px;
+      text-align: right;
+      .unit {
+        font-weight: 800;
+        vertical-align: top;
+      }
+    }
+	}
 }

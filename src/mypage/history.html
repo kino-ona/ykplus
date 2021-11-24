@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"히스토리",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"히스토리"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-manage_list">
+      <ul class="noti_head">
+				<li class="row">
+					최근 30일 동안 관심을 가지셨던 상품이 보여집니다.
+				</li>
+			</ul>
+      <div class="my-history">
+        <div class="views_info">
+          <p class="title"><b>2021.11.24</b> 오늘</p>
+          <div class="views_list">
+            <!-- item -->
+            <div class="item">
+              <div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+              <div class="details">
+                <p class="name">
+                  <a href="#" onclick="alert('lnk');">크리넥스 KF-AD 마스크 5P</a>
+                </p>
+                <p class="price">999,000<span class="unit">원</span></p>
+              </div>
+            </div>
+            <!--// item -->
+          </div>
+        </div>
+        <div class="views_info">
+          <p class="title"><b>2021.11.21</b> 월</p>
+          <div class="views_list">
+            <div class="item soldout">
+              <div class="thumb"><span class="status-txt"><span>일시품절</span></span> <!-- 20210928 soldout 케이스 //-->
+                <p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p>
+              </div>
+              <div class="details">
+                <p class="name">
+                  <a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+                </p>
+                <p class="price">999,000<span class="unit">원</span></p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+              <div class="details">
+                <p class="name">
+                  <a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+                </p>
+                <p class="price">999,000<span class="unit">원</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="views_info">
+          <p class="title"><b>2021.11.20</b> 일</p>
+          <div class="views_list">
+            <div class="item soldout">
+              <div class="thumb"><span class="status-txt"><span>일시품절</span></span> <!-- 20210928 soldout 케이스 //-->
+                <p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p>
+              </div>
+              <div class="details">
+                <p class="name">
+                  <a href="#" onclick="alert('lnk');">대형 크리넥스 KF-AD 라이트핏 1P</a>
+                </p>
+                <p class="price">999,000<span class="unit">원</span></p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+              <div class="details">
+                <p class="name">
+                  <a href="#" onclick="alert('lnk');">크리넥스 KF-AD 라이트핏 쿨 마스크 대형크리넥스 KF-AD 라이트핏 쿨 마스크 대형 1P</a>
+                </p>
+                <p class="price">999,000<span class="unit">원</span></p>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <div class="btn_wrap">
+          <button class="btn primary">더보기</button>
+        </div>
+		  </div>
+		</div>
+
+	</div>
+	<!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"show"
+		}
+	})
+	<!-- //footer -->
+</body>
+
+</html>
