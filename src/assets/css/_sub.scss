@@ -2187,7 +2187,7 @@
 			right: 0;
 			bottom: 0;
 			top: 0;
-      background-color: rgba(0, 0, 0, .2);
+      background-color: rgba(0, 0, 0, .15);
 			span {
 				position: absolute;
 				bottom: 30px;
@@ -2220,7 +2220,7 @@
 				top: 0;
 				bottom: 0;
 				background: {
-					image: linear-gradient(rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .6) 100%);
+					image: linear-gradient(rgba(0, 0, 0, .15) 0%, rgba(0, 0, 0, .6) 100%);
 				}
 			}
 			.figure {
