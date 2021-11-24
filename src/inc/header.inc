@@ -97,10 +97,10 @@
 		<div id="utilSwp_info" class="swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-01.png);"><span class="label">오플+ 인터뷰</span></p><!-- 20211119 //-->
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-07.png);"><span class="label">오플+ 인터뷰</span></p><!-- 20211124 이미지 //-->
 				</a></div>
 				<div class="swiper-slide"><a href="#">
-					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-01.png);"><span class="label">5분 똑똑</span></p><!-- 20211119 //-->
+					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-08.png);"><span class="label">5분 똑똑</span></p><!-- 20211124 이미지 //-->
 				</a></div>
 				<div class="swiper-slide"><a href="#">
 					<p class="imgbg" style="background-image: url(@@webroot/assets/images/common/bg_info-01.png);"><span class="label">건강/운동</span></p><!-- 20211119 //-->
