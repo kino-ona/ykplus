@@ -11,7 +11,7 @@
 		<div class="row">
 			<p class="logo"><span class="a11y">유한킴벌리</span></p>
 			<div class="info">
-				<p>유한킴벌리(주) 사업자정보</p>
+				<p>유한킴벌리(주)</p><!-- 20211124 //-->
 				<p><strong>고객센터 <a href="tel:080-500-5200">080-500-5200</a></strong></p>
 				<p>평일 09:00 ~ 17:30 / 점심 12:00~13:00 <span>(주말/공휴일 휴무)</span></p>
 			</div>
