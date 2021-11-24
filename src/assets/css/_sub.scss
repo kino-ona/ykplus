@@ -3629,12 +3629,16 @@
 		margin-right: 12px;
 		margin-top:11px;
 		width: auto;
-		height: 16px;
+		height: 20px;
 		padding: 0;
 		line-height: 16px;
 		vertical-align: top;
 		background-color: transparent;
 		border: none;
+		border-radius: 0;
+		i {
+			margin-left:0;
+		}
 	}
 	.search_wrap {
 		position: relative;
