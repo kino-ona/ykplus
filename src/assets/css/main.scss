@@ -750,12 +750,16 @@ html {
   }
 }
 .cta_wrap {
-  display: flex;
-  justify-content: space-between;
-  .banner {
-    &:last-of-type {
-      margin-left: 8px;
-    }
+  margin-bottom: 20px;
+  a {
+    display: block;
+    padding: 0 20px;
+  }
+  .img {
+    display: flex;
+  }
+  img {
+    flex: 1;
   }
 }
 .sec_info {
