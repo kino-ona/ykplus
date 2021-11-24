@@ -58,6 +58,9 @@ function headFixed(){
 		} else {
 			$header.removeClass('hide').addClass('show')
 		}
+		if (st == 0) {
+			$header.removeClass('hide').addClass('show')
+		}
 
 		if($('.header .dropdown_list').find('.item_box').hasClass('active')) {
 			$('.header .dropdown_list').find('.dropdown_value').attr('aria-expanded', 'false');
