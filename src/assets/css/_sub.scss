@@ -1924,6 +1924,9 @@
 		margin-top: 0;
 		border-bottom: 1px solid #E5E5E5;
 		.item {
+			display: flex;
+			align-items: center;
+			min-height:64px;
 			&.active {
 				border-color: #E5E5E5;
 				background-color: #fff;
@@ -1931,10 +1934,15 @@
 			&:last-of-type {
 				border-bottom: 0;
 			}
+			&:nth-child(2n + 1) {
+				clear:left;
+			}
 		}
 		button {
-			padding: 15px 20px;
+			padding:0 20px;
 			text-align: left;
+			word-break: keep-all;
+			letter-spacing: -.05rem;
 			&.active {
 				border-color: #E5E5E5;
 				background-color: #fff;
