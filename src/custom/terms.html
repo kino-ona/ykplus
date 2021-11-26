@@ -120,12 +120,13 @@
 	})
 	<!-- //footer -->
   <!-- <script>
-    let term = document.querySelector('.detail_data');
-    let dropdownbox = document.querySelector('.dropdown_list .item_box');
-    let targetOptions = document.querySelector('.dropdown_list .list_box .option');
-    targetOptions.addEventListener('click', function() {
-      let optionNum = $(this).attr('data-option-num');
-      $('[data-option-num="' + optionNum + '"]').css('display', 'block').siblings('.detail_data').css('display', 'none');
+    let targetOpts = document.querySelector('.dropdown_list .list_box .option');
+    targetOpts.addEventListener('click', function() {
+      $('.detail_data').removeClass('curr');
+      $(this).addClass('curr');
+      let targetNum = $(this).attr('data-option-num');
+      console.log(targetNum);
+      $('.detail_data[data-option-num="' + targetNum + '"]').css('display', 'block').siblings('.detail_data').css('display', 'none');
     });
   </script> -->
 </body>
