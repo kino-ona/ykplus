@@ -3253,9 +3253,12 @@
 		margin-top: -21px;
 	}
 }
-
+.tab-navigation + .info_wrap {
+	margin-top: -20px;
+}
 /** Information **/
 .info_wrap {
+
 	.subtop_kv {
 		.kv_inner .title_wrap {
 			width:calc(100% - 40px);
