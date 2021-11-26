@@ -5188,6 +5188,9 @@
 		}
 		
 	.detail_data {
+		&.active {
+			display: block;
+		}
 		display: none;
 		padding: 25px 20px;
 		border-bottom: 1px solid #E5E5E5;
