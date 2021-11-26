@@ -85,38 +85,43 @@
       </div>
       <!--// 추천태그 -->
 
-      <div class="sch_cont">
+      <!-- 20211126 카테고리 변경 -->
+      <div class="sch_cont category">
         <p class="head">카테고리</p>
         <!-- 210901 리스트 디자인 변경 -->
-        <ul class="cate_list">
-          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd01.png" alt="디펜드"/></p>디펜드</a></li>
-          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd02.png" alt="편안한 오늘"/></p>편안한 오늘</a></li>
-          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd03.png" alt="건강한 오늘"/></p>건강한 오늘</a></li>
-          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd04.png" alt="깨끗한 오늘"/></p>깨끗한 오늘</a></li>
-          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd05.png" alt="아름다운 오늘"/></p>아름다운 오늘</a></li>
-          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd06.png" alt="편리한 오늘"/></p>편리한 오늘</a></li>
-          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd07.png" alt="간병케어"/></p>간병케어</a></li>
-          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd08.png" alt="오늘의 도전"/></p>오늘의 도전</a></li>
-        </ul>
+        <div class="tab-navigation tabletype">
+          <div class="tab-row">
+            <p class="item"><button role="tab" aria-label="요실금 패드/라이너" aria-selected="true">요실금 패드/라이너</button></p>
+            <p class="item"><button role="tab" aria-label="요실금 언더웨어" aria-selected="false">요실금 언더웨어</button></p>
+            <p class="item"><button role="tab" aria-label="테이프형/패드/위생매트" aria-selected="false">테이프형/패드/위생매트</button></p>
+            <p class="item"><button role="tab" aria-label="간병용품" aria-selected="false">간병용품</button></p>
+            <p class="item"><button role="tab" aria-label="변실금 전용 제품" aria-selected="false">변실금 전용 제품</button></p>
+            <p class="item"><button role="tab" aria-label="산모 전용 제품" aria-selected="false">산모 전용 제품</button></p>
+            <p class="item"><button role="tab" aria-label="생활/가정용품" aria-selected="false">생활/가정용품</button></p>
+          </div>
+        </div>
         <!--// 210901 리스트 디자인 변경 -->
       </div>
-      <!--// 추천태그 -->
+      <!--// 20211126 카테고리 변경 -->
+      <!--// 카테고리 -->
 
-      <div class="sch_cont">
-        <p class="head">브랜드 찾기</p>
+      <!-- 20211126 브랜드 변경 -->
+      <div class="sch_cont brands">
+        <p class="head">브랜드</p>
         <!-- 210901 리스트 디자인 변경 -->
         <ul class="cate_list">
           <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd01.png" alt="디펜드"/></p>디펜드</a></li>
           <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd09.png" alt="크리넥스"/></p>크리넥스</a></li>
-          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd10.png" alt="좋은느낌"/></p>좋은느낌</a></li>
+          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd13.png" alt="스카트"/></p>스카트</a></li>
+          <!-- <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd10.png" alt="좋은느낌"/></p>좋은느낌</a></li>
           <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd11.png" alt="화이트"/></p>화이트</a></li>
           <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd12.png" alt="라네이처"/></p>라네이처</a></li>
-          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd13.png" alt="스카트"/></p>스카트</a></li>
           <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd14.png" alt="크리넥스 마이비데"/></p>크리넥스 마이비데</a></li>
-          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd15.png" alt="티엔"/></p>티엔</a></li>
+          <li><a href="#"><p class="img"><img src="../assets/images/sub/cate_brd15.png" alt="티엔"/></p>티엔</a></li> -->
         </ul>
         <!--// 210901 리스트 디자인 변경 -->
       </div>
+      <!--// 20211126 브랜드 변경 -->
       <!--// 브랜드 찾기 -->
 
     </div>
@@ -128,7 +133,7 @@
 	@@include('../inc/footer.inc',{
 		"webroot":"..",
 		"footer": {
-			"visibles":"show"
+			"visibles":"hide"
 		},
 		"appbar": {
 			"visibles":"show"

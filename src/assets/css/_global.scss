@@ -878,22 +878,22 @@ body {
 	}
 	.gnb_map {
 		border-bottom: none;
-	}
-	.cate_map {
-		width: 100%;
-		&::after {
-			@extend %clearer;
-		}
-		li {
-			width: 50%;
-			float: left;
-			border-bottom: 1px solid #E5E5E5;
-			> a {
-				display: inline-block;
-				padding: 15px 20px;
+		.tab-navigation {
+			border-top: 0;
+			margin-top: 0;
+			.item {
+				&.active {
+					border-color: #E5E5E5;
+					background-color: #fff;
+				}
 			}
-			&:nth-of-type(2n-1) {
-				border-right: 1px solid #E5E5E5;
+			button {
+				padding: 15px 20px;
+				text-align: left;
+				&.active {
+					border-color: #E5E5E5;
+					background-color: #fff;
+				}
 			}
 		}
 	}

@@ -28,18 +28,22 @@
 			<h2><i class="today_txt"><span class="a11y">오늘 플러스</span></i>마켓</h2>
 			<a href="#" class="btn_all">전체보기 <i> </i></a>
 		</div>
+		<!-- 20211126 카테고리 변경 -->
 		<ul class="cate_list">
-			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd01.png" alt="디펜드"/></p>디펜드</a></li>
 			<!-- 20211110 삭제 및 이름 수정 -->
-			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd02.png" alt="편안한 오늘"/></p>더 편안한 오늘</a></li>
+			<!-- <li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd02.png" alt="편안한 오늘"/></p>더 편안한 오늘</a></li>
 			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd03.png" alt="건강한 오늘"/></p>더 건강한 오늘</a></li>
 			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd04.png" alt="깨끗한 오늘"/></p>더 깨끗한 오늘</a></li>
 			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd05.png" alt="아름다운 오늘"/></p>더 아름다운 오늘</a></li>
-			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd06.png" alt="편리한 오늘"/></p>더 편리한 오늘</a></li>
-			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd07.png" alt="간병케어"/></p>간병케어</a></li>
+			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd06.png" alt="편리한 오늘"/></p>더 편리한 오늘</a></li> -->
 			<!--// 20211110 삭제 및 이름 수정
 				<li><a href="#"><p class="img"><img src="@@webroot/assets/images/sub/cate_brd08.png" alt="오늘의 도전"/></p>오늘의 도전</a></li> -->
+			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/common/cate1.png" alt="위생케어"/></p>위생케어</a></li>
+			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/common/cate2.png" alt="간병케어"/></p>간병케어</a></li>
+			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/common/cate3.png" alt="산모케어"/></p>산모케어</a></li>
+			<li><a href="#"><p class="img"><img src="@@webroot/assets/images/common/cate4.png" alt="리빙케어"/></p>리빙케어</a></li>
 		</ul>
+		<!--// 20211126 카테고리 변경 -->
 	</section>
 	<section class="today_talk">
 		<div class="sec_heading">
@@ -67,27 +71,6 @@
 				</a></div>
 			</div>
 		</div>
-	</section>
-	<section class="gnb_map">
-		<div class="sec_heading">
-			<h2>카테고리</h2>
-		</div>
-		<ul class="cate_map">
-			<li><a href="#"><span>디펜드</span></a></li>
-			<li><a href="#"><span>누워있을 때</span></a></li>
-			<li><a href="#"><span>욕실도구</span></a></li>
-			<li><a href="#"><span>스킨케어</span></a></li>
-			<li><a href="#"><span>헤어케어</span></a></li>
-			<li><a href="#"><span>식사할 때</span></a></li>
-			<li><a href="#"><span>풋케어</span></a></li>
-			<li><a href="#"><span>간병용품</span></a></li>
-			<li><a href="#"><span>앉아있을 때</span></a></li>
-			<li><a href="#"><span>이동보조도구</span></a></li>
-			<li><a href="#"><span>이동할 때</span></a></li>
-			<li><a href="#"><span>욕실도구</span></a></li>
-			<li><a href="#"><span>생활할 때</span></a></li>
-			<li><a href="#"><span>주방도구</span></a></li>
-		</ul>
 	</section>
 	<section class="today_info">
 		<div class="sec_heading">
@@ -166,6 +149,24 @@
 			<div class="swiper-pagination"></div>
 		</div>
 	</section>
+	<!-- 20211126 노출 순서 변경 --> 
+	<section class="gnb_map">
+		<div class="sec_heading">
+			<h2>카테고리</h2>
+		</div>
+    <div class="tab-navigation tabletype">
+      <div class="tab-row">
+				<p class="item"><button role="tab" aria-label="요실금 패드/라이너" aria-selected="true">요실금 패드/라이너</button></p>
+				<p class="item"><button role="tab" aria-label="요실금 언더웨어" aria-selected="false">요실금 언더웨어</button></p>
+				<p class="item"><button role="tab" aria-label="테이프형/패드/위생매트" aria-selected="false">테이프형/패드/위생매트</button></p>
+				<p class="item"><button role="tab" aria-label="간병용품" aria-selected="false">간병용품</button></p>
+				<p class="item"><button role="tab" aria-label="변실금 전용 제품" aria-selected="false">변실금 전용 제품</button></p>
+				<p class="item"><button role="tab" aria-label="산모 전용 제품" aria-selected="false">산모 전용 제품</button></p>
+				<p class="item"><button role="tab" aria-label="생활/가정용품" aria-selected="false">생활/가정용품</button></p>
+      </div>
+		</div>
+	</section>
+	<!--// 20211126 노출 순서 변경 --> 
 	<!-- 20211025 로그아웃 버튼 -->
 	<section class="btn_wrap">
 		<button class="btn primary aftr_login">로그아웃</button>
