@@ -1874,6 +1874,7 @@ textarea {
 }
 
 .my-history {
+  padding-bottom: 120px;
   .empty_data._full {
     height: calc(100vh - 210px);
   }
@@ -1881,7 +1882,6 @@ textarea {
     margin-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 120px;
     .btn {
       width: 100%;
     }
