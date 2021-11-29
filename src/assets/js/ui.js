@@ -58,7 +58,7 @@ function headFixed(){
 		} else {
 			$header.removeClass('hide').addClass('show')
 		}
-		if (st == 0) {
+		if (st < 2) {
 			$header.removeClass('hide').addClass('show')
 		}
 
@@ -374,15 +374,17 @@ var tabposSet = function(){
 /** default swiper function
 ****************************************/
 function defaultSwipe(swipeId, $perView, $space){
-	var $id = eval(swipeId);
-	if( !$perView ) $perView = "auto";
-	if( !$space ) $space = 0;
+	if ($('#' + swipeId).length > 0) {
+		var $id = eval(swipeId);
+		if (!$perView) $perView = "auto";
+		if (!$space) $space = 0;
 
-	var reviewSwipe = new Swiper($id, {
-		slidesPerView: $perView,
-		spaceBetween: $space,
-		speed: 400,
-	});
+		var reviewSwipe = new Swiper($id, {
+			slidesPerView: $perView,
+			spaceBetween: $space,
+			speed: 400,
+		});
+	}
 }
 
 

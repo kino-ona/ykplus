@@ -17,7 +17,7 @@
 			</div>
 			<div class="etc">
 				<!-- 20211115 -->
-				<a href="#">이용약관</a>
+				<a href="@@webroot/custom/terms.html">이용약관</a>
 				<!-- <a href="#">프리미엄 멤버십 이용약관</a> 삭제 //-->
 				<a href="#">제휴확인</a>
 				<a href="#" class="point">개인정보처리방침</a>
