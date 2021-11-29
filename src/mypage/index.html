@@ -25,12 +25,17 @@
 		<div class="my_wrap my-main">
 			<section class="sec_myprofile">
         <div class="row">
-          <p class="img"><img src="../assets/images/dummy/dummy_img01.png"><span class="a11y">사용자 프로필사진</span></p>
+          <!-- 20211129 프로필/정보 수정 버튼 -->
+          <p class="img">
+            <img src="../assets/images/dummy/dummy_img01.png"><span class="a11y">사용자 프로필사진</span>
+            <button onclick="location.href='edit_profile.html'" class="btn_edit-pic"> <i> </i></button>
+          </p>
           <h2>
             <span class="bf_login">로그인 해주세요.</span>
             <span class="aftr_login"><i>김유한</i>님, 반갑습니다! <span>구름이 아빠</span></span>
           </h2>
-          <button onclick="location.href='myprofile.html'" class="btn_edit">수정</button>
+          <button class="btn_edit">내정보수정</button>
+          <!--// 20211129 프로필/정보 수정 버튼 -->
         </div>
 			</section>
       <section class="sec_myinfo">

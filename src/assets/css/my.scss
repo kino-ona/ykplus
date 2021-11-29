@@ -569,13 +569,13 @@ textarea {
   //****************************************/
   .sec_myprofile {
     .img {
-      width: 56px;
-      max-width: 56px;      
+      width: 100%;
+      max-width: 56px;   
+      min-width: 56px;   
       position: relative;
       display: inline-block;
       padding-bottom: 56px;
       border-radius: 50%;
-      overflow: hidden;
       img {
         position: absolute;
         left: 50%;
@@ -612,6 +612,21 @@ textarea {
 				font-weight: inherit;
 			}	
 		}
+    .btn_edit {
+      margin-top: 0;
+      font-size: 13px;
+    }
+    .btn_edit-pic {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      bottom: 0;
+      right: 0;
+      i {
+        flex: 1;
+        background-image: url(../images/icons/icon_pic-color.png);
+      }
+    }
   } 
   .sec_myshipping {
     .title {
