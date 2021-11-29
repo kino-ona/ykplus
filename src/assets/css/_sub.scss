@@ -5139,6 +5139,9 @@
 				padding-top: 20px;
 				.btn_opener {
 					position: relative;
+					i {
+						right:26px;
+					}
 					i::before {
 						width: 8px;
 						height: 8px;
