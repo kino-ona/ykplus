@@ -374,12 +374,14 @@ var tabposSet = function(){
 /** default swiper function
 ****************************************/
 function defaultSwipe(swipeId, $perView, $space){
-	if ($('#' + swipeId).length > 0) {
+	var setEle = $('#'+swipeId);
+	
+	if(setEle.length > 0) {
 		var $id = eval(swipeId);
 		if (!$perView) $perView = "auto";
 		if (!$space) $space = 0;
 
-		var reviewSwipe = new Swiper($id, {
+		var defaultSwipe = new Swiper($id, {
 			slidesPerView: $perView,
 			spaceBetween: $space,
 			speed: 400,
@@ -482,7 +484,10 @@ function youtube_play_api(){
 var lightboxClose = function () {
 	$('#lightbox-overlay').removeClass('visible');
 	$('body').removeClass('noscroll');
-	$('#postgallerySwp').find('.swiper-wrapper').empty();	
+
+	$('#postgallerySwp').remove();
+	$('.lightbox-overlay').append('<div id="postgallerySwp" class="swiper-container"><div class="swiper-wrapper"></div></div>');
+
 }
 
 var loadingshow = function () {
