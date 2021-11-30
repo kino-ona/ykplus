@@ -5125,6 +5125,10 @@
 			margin-top: 0;
 		}
 	}
+	.scroll_body {
+		width:100%;
+		overflow-x: auto;
+	}
 	.sec_terms, .sec_privacy {
 		padding-top: 0;
 		padding-bottom: 0;
