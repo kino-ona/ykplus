@@ -150,8 +150,6 @@
 		}
 	}
 	.thumb {
-		float:left;
-		position:relative;
 		width:6rem;
 		height:6rem;
 		margin-left:1.667rem;
@@ -162,10 +160,6 @@
 			top:0;
 			width:6rem;
 			height:6rem;
-			padding:15px;
-			background-color: #F5F7F8;
-			border-radius: 20px;
-			overflow: hidden;
 		}
 	}
 	.details {
@@ -759,20 +753,7 @@
 		}
 	}
 	.thumb {
-		position:relative;
-		float:left;
-		width: 90px;
 		margin-right:12px;
-		> p {
-			width: 90px;
-			padding:15px;
-			background-color: #F5F7F8;
-			border-radius: 20px;
-			-webkit-border-radius: 20px;
-			-moz-border-radius: 20px;
-			-ms-border-radius: 20px;
-			-o-border-radius: 20px;
-		}
 	}
 	.details {
 		float:left;

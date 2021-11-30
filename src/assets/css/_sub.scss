@@ -3,6 +3,7 @@
 
 .algorithm_sec {
 	text-align: left;
+	// background-color: red;
 	.row {
 		padding-left: 25px;
 	}
@@ -12,17 +13,21 @@
 	}
 	.swiper-slide {
 		border-radius: 0;
+		padding-right: 20px;
 		a {
 			width: 100%;
 			display: inline-block;
 		}
 		.img {
 			position:relative;
-			padding:15px;
-			background-color: #F5F7F8;
+			padding: 10px;
+			background-color: #fff;
 			border-radius: 20px;
 			margin-bottom: 15px;
 			overflow: hidden;
+		}
+		&:not(:last-of-type) {
+			border-right: 1px solid #F0F0F0;
 		}
 	}
 	.tit_wrap {
@@ -1899,7 +1904,7 @@
 			width:19%;
 			padding:10px;
 			border-radius: 20px;
-			background-color: #F5F7F8;
+			background-color: #fff;
 			text-align: center;
 			overflow: hidden;
 		}
@@ -2249,17 +2254,6 @@
     }
 		.kv_inner {
 			position: relative;
-			// &::before {
-			// 	content: '';
-			// 	position: absolute;
-			// 	left: 0;
-			// 	right: 0;
-			// 	top: 0;
-			// 	bottom: 0;
-			// 	background: {
-			// 		image: linear-gradient(rgba(0, 0, 0, .15) 0%, rgba(0, 0, 0, .6) 100%);
-			// 	}
-			// }
 			.figure {
 				padding-top: 92.31%;
 			}
@@ -4266,8 +4260,13 @@
 	}
 	.product_list {
 		margin-bottom: 0;
-		.item.banner {
-			border-bottom: 1px solid #F0F0F0;
+		.item {
+			> a {
+				max-height: 274px;
+			}
+			&.banner {
+				border-bottom: 1px solid #F0F0F0;
+			}
 		}
 		.video {
 			border-radius: 10px;
@@ -4281,10 +4280,7 @@
 			margin-bottom: 16px;
 		}
 		.prdinfo {
-			padding:15px 25px 20px;
-			.name {
-				min-height: 42px;
-			}
+			padding: 15px 25px 20px;
 		}
 		.details {
 			margin-top: 10px;
@@ -4419,6 +4415,12 @@
 			justify-content: space-between;
 		}
 		.item {
+			padding-bottom: 20px;
+			border-bottom: 1px solid #F0F0F0;
+			&:last-child {
+				padding-bottom: 0;
+				border-bottom: 0;
+			}
 			&:not(:last-of-type) {
 				margin-bottom: 20px;
 			}
@@ -4431,7 +4433,7 @@
 				padding-bottom: 25.72%;
 				margin-right:20px;
 				border-radius: 20px;
-				background-color: #F5F7F8;
+				background-color: #fff;
 				img {
 					max-width: 70%;
 					position: absolute;
@@ -5725,6 +5727,12 @@
 			justify-content: space-between;
 		}
 		.item {
+			padding-bottom: 20px;
+			border-bottom: 1px solid #F0F0F0;
+			&:last-child {
+				padding-bottom: 0;
+				border-bottom: 0;
+			}
 			&:not(:last-of-type) {
 				margin-bottom: 20px;
 			}
@@ -5737,7 +5745,7 @@
 				padding-bottom: 25.72%;
 				margin-right:20px;
 				border-radius: 20px;
-				background-color: #F5F7F8;
+				background-color: #fff;
 				img {
 					max-width: 70%;
 					position: absolute;
