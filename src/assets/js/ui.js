@@ -374,7 +374,9 @@ var tabposSet = function(){
 /** default swiper function
 ****************************************/
 function defaultSwipe(swipeId, $perView, $space){
-	if ($('#' + swipeId).length > 0) {
+	var setEle = $('#'+swipeId);
+	
+	if(setEle.length > 0) {
 		var $id = eval(swipeId);
 		if (!$perView) $perView = "auto";
 		if (!$space) $space = 0;
