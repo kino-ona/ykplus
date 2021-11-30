@@ -712,6 +712,12 @@ html {
       justify-content: space-between;
     }
     .item {
+			padding-bottom: 20px;
+			border-bottom: 1px solid #F0F0F0;
+			&:last-of-type {
+				padding-bottom: 0;
+				border-bottom: 0;
+			}
       &:not(:last-of-type) {
         margin-bottom: 25px;
       }
@@ -719,7 +725,6 @@ html {
     .item_conts {
       max-width: 100%;
       width: 100%;
-      padding-right: 20px;
       .name {
         line-height: 1.25rem;
         font-weight: 700;
@@ -731,7 +736,7 @@ html {
       position: relative;
       max-width: 78px;
       margin-right: 20px;
-      background-color: #F5F7F8;
+      background-color: #fff;
       border-radius: 20px;
       overflow:hidden;
       img {
@@ -1042,16 +1047,13 @@ html {
       right:-8px;
     }
     .item {
-      width:calc(100% - 40px);
-      padding:20px 0;
-      margin-left:20px;
-      margin-right:20px;
       .name {
         max-width:83%;
         @include ellipse(2);
       }
       .info {
         margin-top:15px;
+        padding-left: 0;
       }
       &:first-child {
         padding-top:0;

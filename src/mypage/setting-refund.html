@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"환불계좌 관리",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"환불계좌 관리"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-setting ">
+      <div class="shipping-address">
+        <!-- 계좌 추가 -->
+        <div class="address-add">
+          <dl class="vertical _readonly">
+            <dt>예금주</dt>
+            <dd>
+              김유한
+            </dd>
+          </dl>
+          <dl class="vertical">
+            <dt>환불계좌​</dt>
+            <dd>
+              <input type="text" value="" placeholder="계좌번호를 입력해주세요!​"> 
+            </dd>
+          </dl>
+          <dl class="vertical">
+            <dt>은행</dt>
+            <dd>
+              <input type="text" placeholder="은행 선택" readonly>
+              <a href="#" class="btn small btn-zipcode">계좌확인하기</a>
+            </dd>
+          </dl>
+          <div class="privacy_agree">
+            <p class="title">[선택] 개인정보 수집이용 동의</p>
+            <table cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <th>수집 및 이용목적</th>
+                  <th>수집·이용항목</th>
+                  <th>보유 및 이용기간</th>
+                </tr>
+                <tr>
+                  <td>계좌확인 및 환불계좌 관리를 통한 서비스 편의제공</td>
+                  <td>예금주, 은행명, 계좌번호</td>
+                  <td><strong>계좌번호 삭제 시까지 혹은 회원탈퇴 시까지</strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="desc">고객님께서는 개인정보 수집 및 이용(선택) 동의에 거부하실 수 있습니다. 단, 거부할 경우 환불 시 마다 환불계좌를 등록해야 합니다.</p>
+            <p class="radiowrap"><input type="radio" name="privacy_agree" id="privacy0"><label for="privacy0">동의</label></p>
+            <p class="radiowrap"><input type="radio" name="privacy_agree" id="privacy1" checked="checked"><label for="privacy1">미동의</label></p>
+          </div>
+        </div>
+        <!--// 계좌 추가 -->  
+
+        <div class="fixed_bottom"> 
+          <div class="fixed_btn"><a href="#" class="btn blue-btn">확인</a></div>
+        </div>
+      </div>
+		</div>
+	</div>
+</body>

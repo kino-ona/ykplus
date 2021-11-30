@@ -253,16 +253,6 @@ textarea {
     vertical-align: middle;
   }
 }
-.thumb {
-  float:left;
-  position:relative;
-  > p {
-    padding: 15px;
-    background-color: #F5F7F8;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-}
 .details {
   .name {
     @include ellipse(2);
@@ -872,6 +862,86 @@ textarea {
       }
     }
   }
+  .vertical {
+    &._readonly {
+      display: flex;
+      dt {
+        margin-right: 40px;
+      }
+      dd {
+        font-weight: 700;
+      }
+    }
+  }
+  table {
+    width: 100%;
+    margin: 0 auto 12px;
+    border: 0;
+    border-bottom: 1px solid #D8DBDD;
+    * {
+      word-break: keep-all;
+      border-collapse: collapse;
+    }
+    td, th {
+      flex: 1;
+      text-align: center;
+    }
+    td {
+      &:not(:first-of-type) {
+        border-left: 1px solid #D8DBDD;
+      }
+      &:not(:last-of-type) {
+        border-right: 1px solid #D8DBDD;
+      }
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+  th {
+    border-top: 0;
+    padding: 17px 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #F5F7F8;
+    &:not(:first-of-type) {
+      border-left: 1px solid #D8DBDD;
+    }
+  }
+  td {
+    padding: 12px 8px;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: left;
+    background-color: #fff;
+    &:not(:first-of-type) {
+      border-left: 1px solid #D8DBDD;
+    }
+    * {
+      color: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+    }
+  }
+  tr {
+    &:not(:first-of-type) {
+      border-top: 1px solid #D8DBDD;
+    }
+  }
+  .privacy_agree {
+    margin-top: 30px;
+  }
+  .desc {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .btn.small {
+    font-weight: 700;
+  }
 }
 
 .my-manage_list {
@@ -1443,11 +1513,7 @@ textarea {
     }
     .thumb {
       z-index: 1;
-      width: 90px;
       margin-right:12px;
-      > p {
-        width: 90px;
-      }
     }
     .details {
       float:left;
@@ -1963,20 +2029,7 @@ textarea {
 		}
 	}
 	.thumb {
-		position:relative;
-		float:left;
-		width: 90px;
 		margin-right:12px;
-		> p {
-			width: 90px;
-			padding:15px;
-			background-color: #F5F7F8;
-			border-radius: 20px;
-			-webkit-border-radius: 20px;
-			-moz-border-radius: 20px;
-			-ms-border-radius: 20px;
-			-o-border-radius: 20px;
-		}
 	}
 	.details {
 		float:left;
