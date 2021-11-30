@@ -5217,6 +5217,9 @@
 			font-size: 13px;
 			margin-bottom: 20px;
 		}
+		dt {
+			margin-bottom:12px;
+		}
 		dd {
 			padding-left: 10px;
 			margin-bottom: 20px;
@@ -5234,7 +5237,7 @@
 		}
 	}
 	.sec_privacy {
-		p {
+		p:not(.headtxt) {
 			font-size: 13px;
 			line-height: 1.5;
 			margin-bottom: 20px;
@@ -5251,7 +5254,7 @@
 			}
 		}
 		td {
-			padding: 17px 12px;
+			padding: 12px 8px;
 			font-size: 13px;
 			line-height: 1.5;
 			text-align: left;
@@ -5277,7 +5280,7 @@
 			border: 0;
 			border-bottom: 1px solid #D8DBDD;
 			* {
-				word-break: break-all;
+				word-break: keep-all;
 				border-collapse: collapse;
 			}
 			td {
@@ -5305,7 +5308,7 @@
 			}
 		}
 		.title {
-			font-size: 15px;
+			font-size: 15px !important;
 		}
 		dd {
 			color: #000;
