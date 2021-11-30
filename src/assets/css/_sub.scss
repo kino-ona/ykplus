@@ -501,7 +501,7 @@
 		background-color: #fff;
 		margin-bottom: 8px;
 		.prdkv_wrap {
-			background-color: #F5F7F8;
+			background-color: #fff;
 			position: relative;
 			.swiper-pagination {
 				bottom: 22px;
@@ -1303,6 +1303,14 @@
 		.tit_wrap {
 			h4 {
 				font-weight: 500;
+			}
+		}
+		.swiper-slide {
+			.img {
+				width: 100px;
+				padding: 0;
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}
@@ -4258,6 +4266,7 @@
 	}
 	.product_list {
 		margin-bottom: 0;
+		border-bottom: 0;
 		.item {
 			> a {
 				max-height: 274px;
@@ -4426,14 +4435,13 @@
 				float:left;
 				position: relative;
 				overflow: hidden;
-				width:calc(41% - 20px);
-				min-width: 78px;
+				// width:calc(41% - 20px);
+				min-width: 100px;
 				padding-bottom: 25.72%;
 				margin-right:20px;
 				border-radius: 20px;
 				background-color: #fff;
 				img {
-					max-width: 70%;
 					position: absolute;
 					top: 50%;
 					left: 50%;
@@ -4465,37 +4473,6 @@
 			.sale {
 				display: block;
 				font-size: 13px;
-			}
-		}
-	}
-	.algorithm_sec {
-		border-top: 8px solid #F5F7F8;
-		.tit {
-			margin-top: 20px;
-			padding: 0 20px 20px;
-			font-weight: 800;
-			border-bottom: 1px solid #E5E5E5;
-		}
-		.price {
-			margin-top: 10px;
-		}	
-		.origin {
-			margin-left: 0;
-			transform: translateY(1px);
-			span {
-				font-size: 15px;
-				font-weight: 800;
-				transform: translateY(-1px);
-			}
-		}
-		.sale {
-			vertical-align: sub;
-		}
-		.discount {
-			font-size: 1.125rem;
-			margin-right: 4px;
-			em {
-				font-size: inherit;
 			}
 		}
 	}
@@ -4538,7 +4515,36 @@
 		border-top: none;
 	}
 	.algorithm_sec {
+		border-top: 8px solid #F5F7F8;
 		padding-bottom: 25px;
+		.tit {
+			margin-top: 20px;
+			padding: 0 20px 20px;
+			font-weight: 800;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		.price {
+			margin-top: 10px;
+		}	
+		.origin {
+			margin-left: 0;
+			transform: translateY(1px);
+			span {
+				font-size: 15px;
+				font-weight: 800;
+				transform: translateY(-1px);
+			}
+		}
+		.sale {
+			vertical-align: sub;
+		}
+		.discount {
+			font-size: 1.125rem;
+			margin-right: 4px;
+			em {
+				font-size: inherit;
+			}
+		}
 		.tab-navigation {
 			border-top: 0;
 			margin-top: 0;
@@ -5738,14 +5744,13 @@
 				float:left;
 				position: relative;
 				overflow: hidden;
-				width:calc(41% - 20px);
-				min-width: 78px;
+				// width:calc(41% - 20px);
+				min-width: 100px;
 				padding-bottom: 25.72%;
 				margin-right:20px;
 				border-radius: 20px;
 				background-color: #fff;
 				img {
-					max-width: 70%;
 					position: absolute;
 					top: 50%;
 					left: 50%;

@@ -447,7 +447,7 @@ html {
     position:relative;
     margin-left:-20px;
     margin-right:-20px;
-    padding-bottom:24px;
+    padding-bottom: 32px;
   }
   .swiper-slide {
     border-radius: 0;
@@ -458,6 +458,7 @@ html {
   .product_list {
     margin-left:0;
     margin-right:0;
+    border-bottom: 0;
     .info {
       height: 95px;
     }
@@ -487,7 +488,7 @@ html {
   }
   .best_swipe {
     position:relative;
-    padding-bottom:24px;
+    padding-bottom: 28px;
   }
   .swiper-pagination.bullet-type{
     bottom: -12px;
@@ -495,10 +496,6 @@ html {
   .swiper-slide {
     width:100% !important;
     border-radius: 0;
-    .product_list {
-      margin-left:0;
-      margin-right:0;
-    }
   }
   ._mix {
     .item {
@@ -561,12 +558,16 @@ html {
     }
   }
   .product_list {
+    margin-left:0;
+    margin-right:0;
+    margin-bottom: 0;
+    border-bottom: 0;
     .figure {
       padding-bottom: 83.34%;
     }
     .info {
       margin-top: 5px;
-      // height: auto;
+      height: 115px;
     }
     .name {
       min-height:39px;
@@ -728,12 +729,15 @@ html {
     .item {
 			padding-bottom: 20px;
 			border-bottom: 1px solid #F0F0F0;
-			&:last-of-type {
-				padding-bottom: 0;
-				border-bottom: 0;
+			&:first-of-type {
+        border-top: 1px solid #F0F0F0;
+				padding-top: 17px;
 			}
       &:not(:last-of-type) {
         margin-bottom: 20px;
+      }
+      &:last-of-type {
+        border-bottom: 1px solid #F0F0F0;
       }
     }
     .item_conts {
@@ -937,6 +941,7 @@ html {
     margin-left:-24px;
     margin-right:-24px;
     margin-bottom: 10px;
+		border-bottom: 0;
     .item {
       position:relative;
       // &:nth-of-type(2n-1) {
@@ -1056,6 +1061,8 @@ html {
     padding-top:0;
   }
   .product_list {
+    border-top: 0;
+		border-bottom: 0;
     .chkwrap.likechk {
       top:28px;
       right:-8px;
