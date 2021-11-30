@@ -4258,8 +4258,13 @@
 	}
 	.product_list {
 		margin-bottom: 0;
-		.item.banner {
-			border-bottom: 1px solid #F0F0F0;
+		.item {
+			> a {
+				max-height: 274px;
+			}
+			&.banner {
+				border-bottom: 1px solid #F0F0F0;
+			}
 		}
 		.video {
 			border-radius: 10px;
@@ -4273,10 +4278,7 @@
 			margin-bottom: 16px;
 		}
 		.prdinfo {
-			padding:15px 25px 20px;
-			.name {
-				min-height: 42px;
-			}
+			padding: 15px 25px 20px;
 		}
 		.details {
 			margin-top: 10px;

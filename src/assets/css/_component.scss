@@ -1064,12 +1064,12 @@ a.btn {
 	.item {
 		position:relative;
 		float:left;
-		width: 50%;
+		width: calc(50% - 1px);
 		background-color: #fff;
-		border-bottom: 1px solid red;
+		border-bottom: 1px solid #F0F0F0;
 		&:nth-of-type(2n-1) {
-			width: calc(50% - 1px);
-			border-right: 1px solid red;
+			width: 50%;
+			border-right: 1px solid #F0F0F0;
 		}
 		> a {
 			display: block;
@@ -1102,6 +1102,7 @@ a.btn {
 			}
 		}
 		&.ranking {
+			border: 0;
 			clear:left;
 			width:100% !important;
 			margin-right:0;
@@ -1229,8 +1230,16 @@ a.btn {
 			margin: 0 20px;
 			background-color: #fff;
 			border-bottom: 1px solid #F0F0F0;
+			&:nth-of-type(2n-1) {
+				width: auto;
+				border-right: 0;
+			}
+			> a {
+				max-height: unset;
+			}
 			&:last-child {
-				border-bottom:0;
+				padding-bottom: 0;
+				border-bottom: 0;
 			}
 			&:after {
 				@extend %clearer;
@@ -1268,8 +1277,7 @@ a.btn {
 			}
 		}
 		.name {
-			@include ellipse(1);
-			height: 21px;
+			@include ellipse(2);
 		}
 		.price {
 			margin-top:4px;
@@ -1486,9 +1494,13 @@ a.btn {
 	}
 	button {
 		width: 100%;
-		padding: 13px 0;
+		padding: 13px 20px;
+		@include ellipse(2);
 	}
 	p {
+		&:last-child {
+			padding-right: 0;
+		}
 		span {
 			font-size: 13px;
 			font-weight: 500;
