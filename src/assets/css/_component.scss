@@ -1477,8 +1477,8 @@ a.btn {
 	}
 }
 .tab-navigation.tabletype {
-	border-top: 1px solid #E5E5E5;
-	border-bottom: none;
+	border-top: 1px solid #F0F0F0;
+	border-bottom: 0;
 	max-height: unset;
 	padding-bottom: 1px;
 	border-bottom: none;
@@ -1507,9 +1507,9 @@ a.btn {
 		margin: 0;
 		color: #666;
 		text-align: center;
-		border-bottom: 1px solid #E5E5E5;
+		border-bottom: 1px solid #F0F0F0;
 		&:nth-of-type(2n - 1) {
-			border-right: 1px solid #E5E5E5;
+			border-right: 1px solid #F0F0F0;
 		}
 		&:nth-child(2n + 1) {
 			clear:left;
