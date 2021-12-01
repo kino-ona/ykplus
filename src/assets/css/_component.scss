@@ -1480,9 +1480,19 @@ a.btn {
 	border-top: 1px solid #E5E5E5;
 	border-bottom: none;
 	max-height: unset;
-	padding-bottom: 0;
+	padding-bottom: 1px;
 	border-bottom: none;
 	margin-bottom: 0;
+	&:after {
+		content: '';
+		position: absolute;
+		left:0;
+		bottom:1px;
+		display:block;
+		width:100%;
+		height:1px; 
+		background-color: #E5E5E5;
+	}
 	.tab-row {
 		display: block;
     padding-bottom: 0;
@@ -1500,6 +1510,9 @@ a.btn {
 		border-bottom: 1px solid #E5E5E5;
 		&:nth-of-type(2n - 1) {
 			border-right: 1px solid #E5E5E5;
+		}
+		&:nth-child(2n + 1) {
+			clear:left;
 		}
 	}
 	button {
