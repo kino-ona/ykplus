@@ -2707,11 +2707,14 @@
 				border-bottom: 1px solid #F0F0F0;
 				font-size: 15px;
 				line-height: 24px;
-				p, span {
+				a, p, span {
+					display: inline-block;
+					max-height:96px;
 					font-size: inherit;
 					line-height: inherit;
 					font-weight: inherit;
 					vertical-align: inherit;
+					@include ellipse(4);
 				}
 			}
 			.para {
