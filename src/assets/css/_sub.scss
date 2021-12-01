@@ -1966,7 +1966,7 @@
 	.product_list {
 		border-top: 0;
 		border-bottom: 0;
-		.item:nth-of-type(2n-1) {
+		.item:nth-of-type(2n + 1) {
 			clear: left;
 		}
 		.item:nth-of-type(2n) {
@@ -4741,6 +4741,21 @@
 			}
 		}
 	}
+	> .product_list {
+		.item:nth-of-type(2n + 1) {
+			clear: left;
+		}
+		.item:nth-of-type(2n) {
+			clear: right;
+		}
+		.item {
+			@media screen and (min-width: 441px) {
+				> a {
+					max-height: 290px;
+				}
+			}
+		}
+	}
 }
 .personalagr_popup {
 	.terms_dl {
@@ -4766,7 +4781,6 @@
 		}
 	}
 }
-
 
 /** Member/Custom **/
 .custom_wrap {
