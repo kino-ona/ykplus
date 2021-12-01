@@ -1078,6 +1078,16 @@ a.btn {
 			height: 100%;
 			max-height: 242px;
 		}
+    @media screen and (min-width: 391px) {
+      > a {
+        max-height: 247px;
+      }
+    }
+    @media screen and (min-width: 431px) {
+      > a {
+        max-height: 257px;
+      }
+    }
 		.figure {
 			position: relative;
 			padding: 20px 25px;
@@ -1093,27 +1103,25 @@ a.btn {
 			}
 		}
 		&.banner {
-			clear:left;
 			width:100% !important;
-			margin-right:0;
-			margin-left:0;
-			background-color:transparent;
+			margin: 20px 0 10px;
+			clear:left;
 			text-align: center;
+			background-color:transparent;
+			border-bottom: 0;
 			> a {
-				padding:10px 20px;
+				padding: 0 20px;
 			}
 		}
 		&.ranking {
-			border: 0;
-			clear:left;
 			width:100% !important;
-			margin-right:0;
-			margin-left:0;
+			margin: 22px 0 0;
+			clear:left;
+			padding-bottom: 30px;
 			background-color:transparent;
 			.ranking_list {
 				padding-left:22px;
 				padding-right:22px;
-				margin-top:22px;
 			}
 		}
     .btn-buy {
@@ -1199,7 +1207,7 @@ a.btn {
 		margin-bottom:20px;
 		display: inline-block;
 		height:95px;
-		padding:0 25px;
+		padding:0 20px;
 	}
 	.name {
 		display: inline-block;

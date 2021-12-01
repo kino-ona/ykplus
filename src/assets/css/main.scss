@@ -508,7 +508,17 @@ html {
   .item {
     position: relative;
     > a {
-      max-height: unset;
+      max-height: 313px;
+    }
+    @media screen and (min-width: 400px) {
+      > a {
+        max-height: 333px;
+      }
+    }
+    @media screen and (min-width: 460px) {
+      > a {
+        max-height: 348px;
+      }
     }
     .num {
       display: inline-block;
@@ -654,6 +664,9 @@ html {
     }
   }
 }
+
+
+
 .sec_mdpick {
   margin-top: 25px;
   padding-left: 0;
@@ -968,7 +981,6 @@ html {
   }
   .ranking_list {
     padding: 0 10px;
-    margin-bottom: 22px;
     li, div {
       width: 100%;
       display: flex;
@@ -1055,7 +1067,9 @@ html {
   }
   .borad_wrap {
     padding-top:0;
-    
+    .btn_wrap {
+      margin-top: 24px;
+    }
   }
   .list_sort {
     padding-top:0;

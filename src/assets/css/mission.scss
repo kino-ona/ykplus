@@ -670,11 +670,11 @@ ul.noti {
         .info {
           width:calc(100% - 135px);
           margin-top: 15px;
-          padding: 0 15px 0 0;
+          padding: 0 25px 0 0;
         }
         .chkwrap.likechk {
           top: 25px;
-          right: 10px;
+          right: 0;
         }
         &:last-of-type {
           padding-bottom:0;

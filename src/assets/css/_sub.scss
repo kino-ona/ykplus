@@ -1963,6 +1963,16 @@
 			}
 		}
 	}
+	.product_list {
+		border-top: 0;
+		border-bottom: 0;
+		.item:nth-of-type(2n-1) {
+			clear: left;
+		}
+		.item:nth-of-type(2n) {
+			clear: right;
+		}
+	}
 	&.category {
 		padding-bottom: 0;
 	}
@@ -4267,6 +4277,7 @@
 		border-bottom: 1px solid #E5E5E5;
 	}
 	.product_list {
+		border-top: 0;
 		margin-bottom: 0;
 		border-bottom: 0;
 		.item {
@@ -4550,6 +4561,9 @@
 		.tab-navigation {
 			border-top: 0;
 			margin-top: 0;
+		}
+		.item_list .item .figure {
+			min-width: 70px;
 		}
 	}
 	.brandintro_sec {
@@ -5809,6 +5823,9 @@
 			em {
 				font-size: 0.813rem;
 			}
+		}
+		.item_list .item .figure {
+			min-width: 70px;
 		}
 	}
 	.replyarea_wrap {
