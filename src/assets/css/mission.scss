@@ -333,6 +333,8 @@ ul.noti {
     border:1px solid #D8DBDD;
     border-radius: 50%;
     background-color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
     &._minus {
       left:0;
     }
@@ -977,10 +979,13 @@ ul.noti {
         }
         .amount {
           position: relative;
-          margin-right: 20px;
-          flex: 1.2;
           display: flex;
           justify-content: space-between;
+          flex: 1.2;
+          height: 56px;
+          min-height: 56px;
+          align-items: center; 
+          margin-right: 20px;
           input[type=number] {
             width: calc(100% - 60px);
             padding: 0;
