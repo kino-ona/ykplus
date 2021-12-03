@@ -1277,6 +1277,14 @@ textarea {
       width: 100%;
     }
   }
+  #MyscrapMenu{
+    .title {
+      width: calc(100% - 30px);
+      max-height:78px;
+      @include ellipse(4);
+      line-height:1.3;
+    }
+  }
 }
 
 .my-manage_reviews {
