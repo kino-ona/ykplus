@@ -4,6 +4,7 @@
 		<li><a href="#">로그아웃</a></li>
 		<li><a href="#">로그인</a></li>
 		<li><a href="#">고객센터</a></li>
+		<li><a href="#">APP 다운</a></li><!-- 20211206 //--> 
 		<!-- <li><a href="#">공지사항</a></li> 삭제 -->
 	</ul>
 	<!--// 20211115 -->
@@ -19,8 +20,8 @@
 				<!-- 20211115 -->
 				<a href="@@webroot/custom/terms.html">이용약관</a>
 				<!-- <a href="#">프리미엄 멤버십 이용약관</a> 삭제 //-->
-				<a href="#">제휴확인</a>
-				<a href="#" class="point">개인정보처리방침</a>
+				<a href="@@webroot/custom/alliance.html">제휴문의</a><!-- 20211206 //--> 
+				<a href="@@webroot/custom/privacy.html" class="point">개인정보처리방침</a><!-- 20211206 //--> 
 				<a href="#">사업자정보확인</a>
 				<!--// 20211115 -->
 			</div>
