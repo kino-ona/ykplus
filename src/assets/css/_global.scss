@@ -713,7 +713,7 @@ body {
 		}
 		.myinfo {
 			display: flex;
-			margin: 0 20px 20px;
+			margin: 0 20px 16px;
 			padding: 20px 0;
 			justify-content: space-around;
 			background-color:#F5F7F8;
@@ -755,6 +755,15 @@ body {
 						color: #009AFF;
 					}
 				}
+			}
+		}
+		.btn_wrap {
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-bottom: 20px;
+			.btn {
+				width: 100%;
+				border-color: #E5E5E5;
 			}
 		}
 	}	

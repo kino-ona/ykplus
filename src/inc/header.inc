@@ -21,6 +21,11 @@
 				<li class="coupon"><a href="#"><span>3</span>쿠폰</a></li>
 				<li class="point"><a href="#"><span>630</span>포인트</a></li>
 			</ul>
+			<!-- 20211207 -->
+			<div class="btn_wrap">
+				<button class="btn primary">포인트 전환하기</button>
+			</div>
+			<!--// 20211207 -->
 		</div>
 	</div>
 	<section class="today_market">
