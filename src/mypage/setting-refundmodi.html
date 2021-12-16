@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"환불계좌 관리",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"환불계좌 관리"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+	<div class="contents_body">
+		
+		<div class="my_wrap my-setting ">
+      <div class="shipping-address">
+        <div class="address-add">
+          <dl class="vertical _readonly">
+            <dt>예금주</dt>
+            <dd>
+              김유한
+            </dd>
+          </dl>
+          <dl class="vertical">
+            <dt>환불계좌</dt>
+            <dd>
+              <input type="text" value="123451-2345678" placeholder="계좌번호를 입력해주세요!">
+            </dd>
+          </dl>
+          <dl class="vertical">
+            <dt>은행</dt>
+            <dd>
+              <input type="text" value="우리은행" placeholder="은행 선택" readonly>
+            </dd>
+          </dl>
+        </div>
+
+        <div class="fixed_bottom"> 
+          <div class="fixed_btn"><a href="#" class="btn gray-btn">삭제</a></div>
+          <div class="fixed_btn"><a href="#" class="btn blue-btn">계좌확인</a></div>
+        </div>
+      </div>
+		</div>
+	</div>
+</body>
