@@ -477,6 +477,15 @@
 				border:1px solid #AAA;
 			}
 		}
+		.btn_wrap {
+			position:absolute;
+			right:20px;
+			display: inline-block;
+			width:auto;
+			.btn {
+				position:relative;
+			}
+		}
 		.btn-receipt {
 			right:20px;
 		}
@@ -782,7 +791,6 @@
 	.price_data {
 		clear:both;
 		margin:0 -20px 0;
-		// border-top:1px solid #F0F0F0;
 		dl {
 			&:first-of-type {
 				padding-top:20px;
@@ -790,6 +798,21 @@
 			}
 		}
 	}
+}
+.order_btmbtn {
+	display: flex;
+	width:100%;
+	margin-top:20px;
+	padding-top:20px;
+	border-top:1px solid #F0F0F0;
+	.btn {
+		flex:1;
+		margin-left:5px;
+		&:first-child {
+			margin-left:0;
+		}
+	}
+
 }
 .total_price {
 	padding-bottom:24px;
@@ -1217,22 +1240,25 @@
 			}
 		}
 		.btn_wrap {
+			display: flex;
+			flex-wrap: wrap;
 			margin-top:20px;
 			padding-left:0;
 			padding-right:0;
 			.btn {
 				display: inline-block;
-				width:calc(50% - 3px);
+				flex-basis: calc(50% - 3px);
+    		flex-grow: 1;
 				height:38px;
-				margin-right:2px;
+				margin-left:4px;
 				margin-bottom:5px;
 				border-radius: 8px;
 				background-color: #F5F7F8;
 				border:0;
 				font-weight:400;
 				font-size:13px;
-				&:nth-child(2n) {
-					margin-right:0;
+				&:nth-child(odd) {
+					margin-left:0;
 				}
 			}
 		}
@@ -1325,7 +1351,7 @@
 			display: flex;
 			.btn {
 				flex:1;
-				margin-left:10px;
+				margin-left:5px;
 				&:first-of-type {
 					margin-left:0;
 				}
@@ -1410,6 +1436,13 @@
 		& + .vertical {
 			margin-top:20px;
 		}
+	}
+}
+.bank_info {
+	padding:25px 20px;
+	border-top:1px solid #F0F0F0;
+	.vertical {
+		margin-bottom:15px;
 	}
 }
 .addrSearch {

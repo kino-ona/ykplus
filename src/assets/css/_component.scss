@@ -498,6 +498,12 @@ a.btn {
 	}
 }
 
+.required {
+	display: inline-block;
+	font-size:10px;
+	color:#009AFF;
+}
+
 /** Layer Popup 
 ****************************************/
 .layer_body {
@@ -824,9 +830,17 @@ a.btn {
 	}
 }
 
-
 /** Form Field 
 ****************************************/
+.errorfrm {
+	border-color:#FF2B4C !important; 
+}
+.errortxt {
+	clear:both;
+	padding:10px 0;
+	font-size:11px !important;
+	color:#FF2B4C !important;
+}
 .frm_field {
 	display: flex;
 	justify-content: space-between;

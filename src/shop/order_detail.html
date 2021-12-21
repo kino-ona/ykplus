@@ -57,7 +57,10 @@
           <div class="order_list">
 						<!-- item -->
 						<div class="item">
-							<div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
+							<p class="chkwrap"><input type="checkbox" id="check-01"><label for="check-01"><span class="a11y">상품 선택</span></label></p>
+							<div class="thumb">
+								<p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p>
+							</div>
 							<div class="details">
                 <p class="status">배송완료</p>
 								<p class="name">
@@ -69,7 +72,6 @@
 								</div>
 							</div>
               <div class="btn_wrap">
-                <a href="#" class="btn func-btn">주문취소</a>
                 <a href="#" class="btn func-btn">반품요청</a>
               </div>
               <div class="btn_wrap">
@@ -79,6 +81,7 @@
             </div>
 						<!--// item -->
             <div class="item soldout"> <!-- 20210928 soldout 케이스 //-->
+							<p class="chkwrap"><input type="checkbox" id="check-02"><label for="check-02"><span class="a11y">상품 선택</span></label></p>
 							<div class="thumb"><span class="status-txt"><span>일시품절</span></span> <!-- 20210928 soldout 케이스 //-->
 								<p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p>
 							</div>
@@ -93,11 +96,11 @@
 								</div>
 							</div>
               <div class="btn_wrap">
-                <a href="#" class="btn func-btn">주문취소</a>
                 <a href="#" class="btn func-btn">반품요청</a>
               </div>
             </div>
             <div class="item">
+							<p class="chkwrap"><input type="checkbox" id="check-03"><label for="check-03"><span class="a11y">상품 선택</span></label></p>
 							<div class="thumb"><p><img src="../assets/images/dummy/product_thumn01.png" alt="상품명"></p></div>
 							<div class="details">
                 <p class="status">입금전취소 - 구매자</p>
@@ -110,11 +113,17 @@
 								</div>
 							</div>
               <div class="btn_wrap">
-                <a href="#" class="btn func-btn">주문취소</a>
                 <a href="#" class="btn func-btn">반품요청</a>
               </div>
             </div>
           </div>
+
+					<!-- 20211221 버튼 영역 추가 -->
+					<div class="btn_wrap order_btmbtn">
+						<a href="#" class="btn secondary">선택상품 반품신청</a>
+						<a href="#" class="btn secondary">주문취소</a>
+					</div>
+					<!--// 20211221 버튼 영역 추가 -->
         </div>
       </div>
       <!--// 주문상품 -->
