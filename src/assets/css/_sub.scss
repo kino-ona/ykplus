@@ -3287,6 +3287,7 @@
 	}
 	.product_list {
 		.item.banner {
+			border-right: 0;
 			.more {
 				padding-top: 16px;
 			}
@@ -4021,6 +4022,7 @@
 					display: block;
 					border:1px solid #E5E5E5;
 					border-radius: 6px;
+					cursor: pointer;
 					background-color: #fff;
 					background: {
 						repeat: no-repeat;
@@ -4295,6 +4297,7 @@
 				max-height: 274px;
 			}
 			&.banner {
+				border-right: 0;
 				border-bottom: 1px solid #F0F0F0;
 			}
 		}
@@ -5596,6 +5599,8 @@
 		margin-bottom: 20px;
 	}
   .product_list {
+		border-top: 0;
+		border-bottom: 0;
     margin-left:-24px;
     margin-right:-24px;
 		padding-top: 20px;

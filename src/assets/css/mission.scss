@@ -431,6 +431,7 @@ ul.noti {
     }
   }
   .product_list {
+    border-bottom: 0;
     .tit {
       text-align: left;
       position: absolute;
@@ -448,6 +449,7 @@ ul.noti {
       }
     }
     .item.banner {
+      border: 0;
       overflow: hidden;
       margin-bottom: 10px; 
       > a {
@@ -672,7 +674,7 @@ ul.noti {
         .info {
           width:calc(100% - 135px);
           margin-top: 15px;
-          padding: 0 25px 0 0;
+          padding: 0 28px 0 0;
         }
         .chkwrap.likechk {
           top: 25px;
@@ -1562,6 +1564,8 @@ ul.noti {
     padding-top: 20px;
   }
   .product_list {
+    border-top: 0;
+    border-bottom: 0;
     margin-left:-20px;
     margin-right:-20px;
     margin-bottom: 0;
