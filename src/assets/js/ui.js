@@ -28,10 +28,10 @@ var popupLayer = function() {
 	$(document).on('click', '[aria-haspopup="dialog"]:not(".manual_fn")', function(e){
 		var diaId = '#' + $(this).attr('aria-controls');
 		openLayer(diaId);
-		console.log(diaId)
+		//console.log(diaId)
 		e.preventDefault();
 	});
-	$(document).on('click', '[role="dialog"] .overlay_closer button, .btn_close', function(e){
+	$(document).on('click', '[role="dialog"] .overlay_closer button, [role="dialog"] .btn_close', function(e){
 		closeLayer('#' + $(this).closest('[role="dialog"]').attr('id'));
 		e.preventDefault();
 	});
