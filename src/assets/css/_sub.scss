@@ -2318,6 +2318,10 @@
 		}
 		.product_list {
 			margin-top: 16px;
+			margin-bottom: 20px;
+			li:not(:last-of-type) {
+				border-bottom: 1px solid #F0F0F0;
+			}
 		}
 		.see_more {
 			border: none;
@@ -3614,11 +3618,13 @@
 	}
 	.product_list {
 		padding: 0 20px;
+		border: none;
 		.item {
 			width: calc(50% - 10px);
 			background-color: transparent;
 			padding: 0;
 			margin: 0 0 20px 0;
+			border: none;
 			border-bottom: none;
 			&:nth-of-type(2n) {
 				float: right;
@@ -4757,7 +4763,16 @@
 					max-height: 290px;
 				}
 			}
+			@media screen and (min-width: 551px) {
+				> a {
+					max-height: none;
+				}
+			}
 		}
+	}
+	.subtop_kv + .borad_wrap .product_list .item.banner > a {
+		max-height: none;
+		padding-bottom: 20px;
 	}
 }
 .personalagr_popup {
@@ -5538,6 +5553,8 @@
   .product_list {
     margin-left:-24px;
     margin-right:-24px;
+		padding-top: 20px;
+		margin-bottom: 20px;
     .item {
 			margin-top: 0;
 			margin-bottom: 20px;
