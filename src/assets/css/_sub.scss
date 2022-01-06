@@ -25,6 +25,7 @@
 			border-radius: 20px;
 			margin-bottom: 15px;
 			overflow: hidden;
+			text-align: center;
 		}
 		&:not(:last-of-type) {
 			border-right: 1px solid #F0F0F0;
@@ -4770,9 +4771,54 @@
 			}
 		}
 	}
-	.subtop_kv + .borad_wrap .product_list .item.banner > a {
-		max-height: none;
-		padding-bottom: 20px;
+	.subtop_kv + .borad_wrap .product_list .item.banner {
+		> a {
+			max-height: none;
+			padding-bottom: 20px;
+		}
+	}
+	.brandcf_sec + .algorithm_sec .swiper-slide {
+		> a {
+			position: relative;
+			padding-bottom: 198.53%;
+			@media screen and (min-width: 396px) {
+				padding-bottom: 191.04%;
+			}
+			@media screen and (min-width: 426px) {
+				padding-bottom: 182.38%;
+			}
+			@media screen and (min-width: 481px) {
+				padding-bottom: 170%;
+			}
+			@media screen and (min-width: 531px) {
+				padding-bottom: 161.29%;
+			}
+			@media screen and (min-width: 641px) {
+				padding-bottom: 148.23%;
+			}
+			@media screen and (min-width: 768px) {
+				padding-bottom: 131.14%;
+			}
+			@media screen and (min-width: 921px) {
+				padding-bottom: 125.19%;
+			}
+			@media screen and (min-width: 981px) {
+				padding-bottom: 122.44%;
+			}
+			> * {
+				position: absolute;
+			}
+			.img {
+				top: 0;
+			}
+			.price {
+				bottom: 0;
+			}
+			.prd_name {
+				bottom: 45px;
+			}
+		}
+
 	}
 }
 .personalagr_popup {
