@@ -500,7 +500,8 @@ html {
   }
   ._mix {
     .item {
-      width:calc(50% - 2px);
+      width: 50%;
+      margin-left: 0 !important;
     }
     li:nth-of-type(2) {
       border-right: 1px solid #F0F0F0;
