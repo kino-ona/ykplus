@@ -5847,6 +5847,12 @@
 				// width:calc(41% - 20px);
 				min-width: 100px;
 				padding-bottom: 25.72%;
+				@media screen and (min-width: 461px) {
+					padding-bottom: 16%;
+				}
+				@media screen and (min-width: 768px) {
+					padding-bottom: 11%;
+				}
 				margin-right:20px;
 				border-radius: 20px;
 				background-color: #fff;
