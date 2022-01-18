@@ -555,7 +555,7 @@
 					width: 100%;
 					position: relative;
 					> a {
-						font-size:13px;
+						font-size:15px;
 						i {
 							transform: translate(-0.25rem, -0.05rem);
 							width: 10px;
@@ -579,8 +579,8 @@
 				.prd_name {
 					padding-top: 15px;
 					max-width: 95%;
-					font-size: 20px;
-					line-height: 1.75rem;
+					font-size: 22px;
+					line-height: 2rem;
 				}
 				.price {
 					display: flex;
@@ -609,6 +609,7 @@
 						margin-left: 8px;
 						padding-bottom: 4px;
 						vertical-align: bottom;	
+						font-size:14px;
 					}
 					.discount {
 						margin-right:6px;

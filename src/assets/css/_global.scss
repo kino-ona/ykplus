@@ -296,7 +296,7 @@ hr {
 		a {
 			display: block;
 			text-align: center;
-			font-size: 13px;
+			font-size: 14px;
 			letter-spacing: -0.002em;
 		}
 		display: inline-block;
@@ -459,8 +459,8 @@ body {
 }
 .today_txt {
 	display: inline-block;
-	width:2.938rem;
-	height:1.625rem;
+	width:51px;
+	height:26px;
 	margin-right:5px;
 	background: {
 		image: url(../images/common/txtlogo.png);
@@ -725,7 +725,7 @@ body {
 					display: block;
 					width: 100%;
 					text-align: center;
-					font-size: 13px;
+					font-size: 14px;
 					span {
 						display: block;
 						font-family: "roboto";
@@ -785,12 +785,13 @@ body {
 		border-bottom: 1px solid #E5E5E5;
 		margin-bottom: 0;
 		h2 {
-			font-size: 15px;
+			font-size: 17px;
 			font-weight: 800;
 			line-height: 1.35;
 		}
 		.today_txt {
-			width: 34px;
+			margin-top:2px;
+			width: 38px;
 			height: 18px;
 		}
 		.btn_all {

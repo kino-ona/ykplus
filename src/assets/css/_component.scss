@@ -1234,7 +1234,7 @@ a.btn {
 	}
 	.name {
 		display: inline-block;
-		font-size: 15px;
+		font-size: 16px;
 		font-weight: 700;
 		line-height: 1.4;
 		letter-spacing: -0.02em;
@@ -1446,7 +1446,7 @@ a.btn {
 		&.active {
 			span {
 				color: #000;
-				font-weight: 700;
+				font-weight: 800;
 				&:after {
 					content: '';
 					margin-top: 4px;
@@ -1477,7 +1477,7 @@ a.btn {
 		padding: 8px 16px;
 		border: 1px solid #E5E5E5;
 		span {
-			font-size: 13px;
+			font-size: 14px;
 			color: #999;
 			line-height: 1;
 		}
