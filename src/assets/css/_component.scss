@@ -241,7 +241,7 @@ a.btn {
 	p {
 		margin-left:12px;
 		color:#999;
-		font-size:12px;
+		font-size:13px;
 		font-weight: 700;
 		&:first-child {
 			margin-left:0;
@@ -249,6 +249,7 @@ a.btn {
 		}
 	}	
 	i {
+		background-size:18px;
 		background-position:center top -2px;
 	}
 	.btn-scrap {
@@ -261,7 +262,7 @@ a.btn {
 	.cnt {
 		margin-left:4px;
 		color:inherit;
-		font-size:13px;
+		font-size:14px;
 	}
 	[class*='clicked'] {
 		+ .cnt {

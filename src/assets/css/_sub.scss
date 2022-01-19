@@ -259,6 +259,7 @@
 }
 .para {
 	p {
+		font-size:16px;
 		color: #000;
 		line-height: 1.8;
 		& + .img {
@@ -502,10 +503,11 @@
 		background-color: #fff;
 		margin-bottom: 8px;
 		.prdkv_wrap {
-			background-color: #fff;
 			position: relative;
+			margin-top:64px;
+			background-color: #fff;
 			.swiper-pagination {
-				bottom: 22px;
+				bottom:0;
 				width: 100%;
 				.swiper-pagination-bullet {
 					display: inline-block;
@@ -536,12 +538,18 @@
 			.img {
 				display: inline-block;
 				position: absolute;
-				left: 50%;
-				top: 50%;
-				// max-width: 210px;
-				max-width: 240px;
+				position:relative;
 				width: 100%;
-				transform: translate(-50%, -50%);
+				height:100%;
+				img {
+					position:absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					width:100%;
+					height:100%;
+					object-fit: cover;
+				}
 			}
 		}
 		.prdinfo {
@@ -2711,7 +2719,7 @@
 			.edit {
 				padding:0 20px 30px;
 				border-bottom: 1px solid #F0F0F0;
-				font-size: 15px;
+				font-size: 16px;
 				line-height: 24px;
 				a, p, span {
 					display: inline-block;
@@ -2802,6 +2810,7 @@
 				}
 				.tit {
 					max-width: 80%;
+					font-size:18px;
 					margin: 0 auto;
 				}
 				.desc {
@@ -3028,6 +3037,7 @@
 			padding-top: 30px;
 			p {
 				line-height: 1.6;
+				font-size:16px;
 				font-weight: 700;
 				text-align: center;
 				em {
@@ -4184,7 +4194,7 @@
 			background-color: #fff;
 			box-shadow: 5px 10px 15px rgba(0, 0, 0, .1);
 			p {
-				font-size: 13px;
+				font-size: 15px;
 				line-height: 1.6;
 				font-weight: 700;
 			}
@@ -4220,9 +4230,9 @@
 			text-align: left;
 		}
 		h3 {
-			font-size: 18px;
+			font-size: 20px;
 			line-height: 1.6;
-			font-weight: 700;
+			font-weight: 800;
 			margin-bottom: 12px;
 		}
 		.desc {
@@ -4948,15 +4958,15 @@
 		}
 		h3 {
 			font-family: "roboto";
-			font-size: 1.5rem;
+			font-size: 24px;
 			font-weight: 800;
 			margin-bottom: 8px;
 		}
 		.working_time {
 			p {
 				color: #666;
-				font-size: 13px;
-				line-height: 20px;
+				font-size: 15px;
+				line-height: 22px;
 				letter-spacing: -0.002em;
 			}
 		}
@@ -4967,13 +4977,13 @@
 		border-bottom: 1px solid #E5E5E5;
 		.title {
 			font-size: 18px;
-			line-height: 28px;
-			font-weight: 700;
+			line-height: 30px;
+			font-weight: 800;
 		}
 		.date {
 			margin-top: 6px;
 			color: #666;
-			font-size: 13px;
+			font-size: 14px;
 			line-height: 20px;
 			vertical-align: middle;
 		}
@@ -4986,6 +4996,7 @@
 		width: 100%;
 		padding-left: 16px;
 		padding-right: 16px;
+		font-size:16px;
 		color: #999;
 		vertical-align: bottom;
 	}
@@ -5003,10 +5014,11 @@
 		}
 	}
 	.ui-accordion {
-		margin-top: 18px;
+		margin-top: 20px;
 		border-top: none;
 		.title {
 			font-weight: 800;
+			font-size:16px;
 			padding-left: 20px;
 			padding-bottom: 16px;
 			border-bottom: 1px solid #E5E5E5;
@@ -5045,13 +5057,14 @@
 			span {
 				color: #111;
 				font-weight: 400;
+				font-size:16px;
 				vertical-align: initial;
 			}
 			&.active {
 				border-width: 0.1rem;
 				border-color: #000;
 				span {
-					font-weight: 700;
+					font-weight: 800;
 				}
 			}
 		}
@@ -5117,7 +5130,7 @@
 				.date {
 					font-family: "roboto";
 					color: #999;
-					font-size: 0.813rem;
+					font-size: 14px;
 					vertical-align: middle;
 				}
 			}
@@ -5131,6 +5144,7 @@
 				.txt {
 					margin-right:5px;
 					font-weight: 700;
+					font-size:16px;
 					@include ellipse(1);
 				}
 			}
@@ -5171,16 +5185,17 @@
 							text-align: center;
 						}
 						span {
-							margin-top: 8px;
+							margin-top: 13px;
 							display: inline-block;
 							color: #999;
-							font-size: 0.813rem;
+							font-size: 14px;
 							line-height: 1;
 						}
 					}
 					.tit {
-						padding-right: 18px;
+						padding-right: 20px;
 						line-height: 1.5rem;
+						font-size:16px;
 						font-weight: 700;
 					}
 				}
@@ -5191,6 +5206,7 @@
 				p {
 					position: relative;
 					margin-left: 35px;
+					font-size:16px;
 					line-height: 1.5rem;
 					&::before {
 						content: 'A';
@@ -5355,7 +5371,7 @@
 	}
 	.sec_privacy {
 		p:not(.headtxt) {
-			font-size: 13px;
+			font-size: 14px;
 			line-height: 1.5;
 			margin-bottom: 20px;
 		}
@@ -5464,7 +5480,7 @@
 				}
 				.tit {
 					padding-left: 55px;
-					font-size: 13px;
+					font-size: 15px;
 					line-height: 24px;
 					@include ellipse(2);
 				}
@@ -5494,6 +5510,7 @@
 			margin-top: 10px;
 			margin-bottom: 20px;
 			.tit {
+				font-size:16px;
 				font-weight: 800;
 				margin-bottom: 10px;
 			}
@@ -5652,7 +5669,7 @@
 				padding: 1.667% 2.222%;
 				border-radius: 6px;
 				color: #fff;
-				font-size: 0.75rem;
+				font-size: 13px;
 				font-weight: 700;
 				background-color: #2D3D4A;
 				&::after {
@@ -5679,14 +5696,14 @@
 			padding-left: 20px;
 			padding-right: 20px;
 			font-size: 18px;
-			font-weight: 700;
-			line-height: 1.5rem;
+			font-weight: 800;
+			line-height: 30px;
 		}
 		.note {
 			padding: 10px 20px 20px;
 			border-bottom: 1px solid #E5E5E5;
 			color: #999;
-			font-size: 13px;
+			font-size: 14px;
 			line-height: 1.6;
 			span {
 				font-family: 'roboto';
@@ -5695,6 +5712,7 @@
 				line-height: inherit;
 				font-weight: inherit;
 				margin-left: 10px;
+				vertical-align: baseline;
 			}
 		}
 		> .row {
@@ -6038,6 +6056,7 @@
 			}
 			.message {
 				padding-top: 16px;
+				font-size:16px;
 				line-height: 1.5rem;
 			}
 			.btn_wrap {
@@ -6080,7 +6099,7 @@
 				}
 				.tit {
 					padding-left: 55px;
-					font-size: 13px;
+					font-size: 14px;
 					line-height: 24px;
 				}
 			}
