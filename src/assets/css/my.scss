@@ -1073,16 +1073,18 @@ textarea {
       }
     }
     .thumb {
-      width:6rem;
-      height:6rem;
-      margin-left:1.667rem;
+      width:6.5rem;
+      height:6.5rem;
+      margin-left:15px;
       overflow: hidden;
+      z-index: 0;
       > p {
         position:absolute;
         right:0;
         top:0;
         width:6rem;
         height:6rem;
+        padding:0;
       }
     }
     .details {
@@ -2037,11 +2039,13 @@ textarea {
 		}
 	}
 	.thumb {
+    width:25%;
 		margin-right:12px;
 	}
 	.details {
 		float:left;
 		width:calc(100% - 102px);
+    width:70%;
 		margin-top:2px;
 		padding-bottom:25px;
 		.name {

@@ -685,8 +685,6 @@ html {
   }
 }
 
-
-
 .sec_mdpick {
   margin-top: 25px;
   padding-left: 0;
@@ -791,9 +789,9 @@ html {
       background-color: #fff;
       border-radius: 20px;
       overflow:hidden;
-      img {
-        padding: 10px;
-      }
+      // img {
+      //   padding: 10px;
+      // }
     }
   }
   .price {

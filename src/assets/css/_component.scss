@@ -1095,31 +1095,32 @@ a.btn {
 		> a {
 			display: block;
 			height: 100%;
-			max-height: 242px;
+			// max-height: 242px;
 		}
-    @media screen and (min-width: 391px) {
-      > a {
-        max-height: 247px;
-      }
-    }
-    @media screen and (min-width: 431px) {
-      > a {
-        max-height: 257px;
-      }
-    }
-    @media screen and (min-width: 469px) {
-      > a {
-        max-height: none;
-      }
-    }
+    // @media screen and (min-width: 391px) {
+    //   > a {
+    //     max-height: 247px;
+    //   }
+    // }
+    // @media screen and (min-width: 431px) {
+    //   > a {
+    //     max-height: 257px;
+    //   }
+    // }
+    // @media screen and (min-width: 469px) {
+    //   > a {
+    //     max-height: none;
+    //   }
+    // }
 		.figure {
 			position: relative;
 			padding: 20px 25px;
 			// padding-bottom: 83.34%;
-			padding-bottom: 58.98%;
+			// padding-bottom: 58.98%;
+			padding-bottom:89.30%;
 			overflow: hidden;
 			img {
-				max-width: 60%;
+				max-width: 80%;
 				position: absolute;
 				top:50%;
 				left:50%;
@@ -1164,8 +1165,9 @@ a.btn {
 				.figure {
 					padding-bottom: 50.6%;
 					img {
-						top:45%;
+						top:48%;
 						max-width: 40%;
+						max-width:60%;
 						padding:0;
 					}
 				}
@@ -1975,7 +1977,7 @@ a.btn {
   float:left;
   background-color: #fff;
   > p {
-    padding: 10px;
+    // padding: 10px;
     border-radius: 20px;
     overflow: hidden;
   }

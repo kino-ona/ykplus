@@ -4304,9 +4304,9 @@
 		margin-bottom: 0;
 		border-bottom: 0;
 		.item {
-			> a {
-				max-height: 274px;
-			}
+			// > a {
+			// 	max-height: 274px;
+			// }
 			&.banner {
 				border-right: 0;
 				border-bottom: 1px solid #F0F0F0;
@@ -5934,7 +5934,7 @@
 			}
 		}
 		.item_list .item .figure {
-			min-width: 70px;
+			min-width: 100px;
 		}
 	}
 	.replyarea_wrap {
