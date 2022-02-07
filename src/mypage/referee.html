@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc',{
+		"pagetitle":"추천인",
+		"webroot":".."
+	})
+	<link rel="stylesheet" href="../assets/css/my.css"/>
+</head>
+<body>
+	<div class="skipnavigation"><a href="#container">Skip to Conatiner</a></div>
+	<!-- header  -->
+	@@include('../inc/header.inc',{ 
+		"webroot":"..",
+		"headtype": {
+			"layout":"orderhead"
+		},
+		"subtitle":"추천인"
+	})
+	<!-- //header -->
+
+	<!-- contents body -->
+  <div class="contents_body">
+    <ul class="note_head">
+      <li class="row">
+        친구에게 오늘플러스 가입을 추천하면 <em>적립금을 드립니다.</em>
+      </li>
+    </ul>
+    <div class="my_wrap my-referee">
+			<div class="my-topsec">
+        <ul>
+          <li>
+            <span class="title">나의 추천 보상 적립금</span>
+            <span class="figs"><b>5,000</b><span class="unit">원</span></span>
+          </li>
+          <li>
+            <span class="title">추천 받은 횟수</span>
+            <span class="figs"><b>2</b><span class="unit">회</span></span>
+          </li>
+        </ul>
+        <div class="btn_wrap">
+				  <a href="#" class="btn">나의 적립금 확인하기</a>
+        </div>
+			</div>
+			<section class="section">
+				<div class="para">
+					<div class="row">
+            <p>
+              내역이 없습니다.
+              <table cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <th>적립일</th>
+                    <th>적립금</th>
+                  </tr>
+                  <tr>
+                    <td>2021.07.02</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <td>2021.07.02</td>
+                    <td>1500</td>
+                  </tr>
+                  <tr>
+                    <td>2021.07.01</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <td>2021.07.01</td>
+                    <td>500</td>
+                  </tr>
+                  <tr>
+                    <td>2021.07.01</td>
+                    <td>5000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </p>
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<div class="row">
+						<button class="btn primary">더보기</button>
+					</div>
+				</div>
+			</section>
+      <dl class="desc">
+        <dt>알려드립니다.</dt>
+        <dd>적립된 적립금은 가입 후 마이페이지 > 적립금에서 바로 확인하세요.</dd>
+        <dd>추천은 통합회원만 가능하며, 통합회원 가입 시에만 해당됩니다.</dd>
+        <dd>추천 보상 적립금은  최대 10번까지 적립 가능하며, 추천 1회 당 5,000원 자동 적립됩니다.</dd>
+        <dd>각 적립금별 유효기간을 확인 후 기간 내 사용해주세요. 사용기한 연장이 불가하오니 유의해주세요.</dd>
+        <dd>추천인 혜택은 현 시점 기준이며, 추후 변경될 수 있습니다.</dd>
+      </dl>
+    </div>
+  </div>
+  <!--// contents body -->
+
+	<!-- footer -->
+	@@include('../inc/footer.inc',{
+		"webroot":"..",
+		"footer": {
+			"visibles":"hide"
+		},
+		"appbar": {
+			"visibles":"hide"
+		}
+	})
+	<!-- //footer -->
+</body>
+</html>
