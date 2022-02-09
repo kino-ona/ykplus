@@ -1003,9 +1003,11 @@ textarea {
     margin-bottom: 10px;
   }
   .btn_edit {
-    margin-top: 0;
+    right: 20px;
+    padding: 10px;
     color: #999;
     font-size: 13px;
+    z-index: 10;
   }
   .title {
     font-weight: 700;
